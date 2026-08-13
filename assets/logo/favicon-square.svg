@@ -1,9 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" fill="#0B2447"/>
-  <mask id="fcut" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
-    <rect width="64" height="64" fill="#fff"/>
-    <path d="M8 38 Q24 10 40 38" stroke="#000" stroke-width="15" fill="none"/>
-  </mask>
-  <path d="M24 42 Q40 70 56 42" stroke="#FFFFFF" stroke-width="6" fill="none" stroke-linecap="butt" mask="url(#fcut)"/>
-  <path d="M8 38 Q24 10 40 38" stroke="#FFFFFF" stroke-width="7" fill="none" stroke-linecap="butt"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" role="img" aria-label="對頻設計 tonpin">
+  <rect width="16" height="16" fill="#0B2447"/>
+  <path d="M2 10.5 Q5.5 3.5 9 10.5 T15.5 10.5" stroke="#FFFFFF" stroke-width="2.2" fill="none" stroke-linecap="butt"/>
+  <circle cx="5.5" cy="6.4" r="1.8" fill="#F5B942"/>
 </svg>
