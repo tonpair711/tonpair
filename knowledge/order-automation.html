@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{if(localStorage.getItem('amp-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+<title>對頻設計｜小店訂單自動化｜LINE 接單與表單自動整理</title>
+<meta name="description" content="LINE 私訊接單、自己一筆一筆抄進 Excel，對帳對到眼睛痠？這篇整理小店最常見的三種自動化做法、各自的成本與適用情境，也講清楚哪些事其實不建議自動化。">
+<link rel="canonical" href="https://tonpin.pages.dev/knowledge/order-automation">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="../assets/logo/favicon.svg?v=2">
+<link rel="apple-touch-icon" href="../assets/logo/apple-touch-icon.png?v=2">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="對頻設計">
+<meta property="og:title" content="對頻設計｜小店訂單自動化｜LINE 接單與表單自動整理">
+<meta property="og:description" content="LINE 私訊接單、自己一筆一筆抄進 Excel，對帳對到眼睛痠？這篇整理小店最常見的三種自動化做法、各自的成本與適用情境，也講清楚哪些事其實不建議自動化。">
+<meta property="og:url" content="https://tonpin.pages.dev/knowledge/order-automation">
+<meta property="og:image" content="https://tonpin.pages.dev/assets/og/og-image.png">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="對頻設計｜小店訂單自動化｜LINE 接單與表單自動整理">
+<meta name="twitter:description" content="LINE 私訊接單、自己一筆一筆抄進 Excel，對帳對到眼睛痠？這篇整理小店最常見的三種自動化做法、各自的成本與適用情境，也講清楚哪些事其實不建議自動化。">
+<meta name="twitter:image" content="https://tonpin.pages.dev/assets/og/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@900&family=Outfit:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="../assets/style.css?v=1">
+<script defer src="../assets/main.js?v=1"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "name": "LINE 訂單、手抄表單怎麼自動化？小店常見的三種做法",
+  "url": "https://tonpin.pages.dev/knowledge/order-automation",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "我現在都用 LINE 接單、手抄，真的有需要改嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "先算一件事：一天抄幾筆、一筆抄多久、月底對帳又要花幾小時。很多老闆算完會發現，一個月花在抄寫與對帳上的時間，比想像中多得多。 另外一個常見的問題是漏單與抄錯——不是不認真，是私訊會被後面的訊息洗掉。如果你有過「客人來拿貨才發現沒記到」的經驗，那就不只是效率問題了。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "最簡單的自動化長什麼樣子？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "把「請私訊我」改成「請填這張表單」。品項、數量、取貨時間、聯絡方式，客人自己填，送出後資料直接落到 Google 試算表的一列。你不用抄，只要看那張表。 這一步用 Google 表單就能做，免費、當天就能上線，不需要任何開發。缺點是表單長得很陽春、不太像你的店；如果在意這點，可以把表單嵌進自己的網頁裡，看起來就是店的一部分。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "資料進 Google 試算表之後呢？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "接下來可以做兩件很有感的事：一是<strong>自動通知</strong>——有新訂單就自動寄信、或發訊息到你的手機，不用一直開著表單看；二是<strong>自動整理</strong>——當天的單自動彙整成一份出貨清單，月底的營收自動加總。 這一段就是「自動化腳本」在做的事，通常用 Google Apps Script 直接寫在你的試算表裡，不用另外租主機。規模不大，我們的自動化腳本從 NT$6,000 起。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "什麼情況需要客製工具，而不是現成表單？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "當「填完就結束」不夠用的時候。例如：客人要能自己選還有空的時段（表單不知道哪個時段滿了）、金額要依數量或方案自動算、客人要能查自己的點數或訂單紀錄、或你需要員工與老闆看到不同的畫面。 這些現成表單做不到，就要做工具。我們做過的 Loverolling 會員累點系統就是這一類——把紙本集點卡換成線上的累點、QR Code 與兌換，後台還分角色。這種規模從 NT$15,000 起，實際看功能。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "這種自動化要花多少錢、做多久？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "如果只是表單加試算表加通知，通常是幾千元的規模，一到兩週內可以上線，因為沒有太多要設計的東西。 如果是客製工具，時間主要花在把你的規則講清楚——哪些情況要擋、誰能看到什麼、例外怎麼處理。實務上開發不是最久的，把規則想清楚才是。所以第一次諮詢我們會問得比較細，那是為了不做出用不到的東西。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我的店員年紀比較大，學得會嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "會不會用，取決於介面設計成什麼樣，不是年紀。做給小店用的工具，原則是「一個畫面只做一件事、按鈕大、字大、不要有一堆選項」。如果一個功能需要教超過兩分鐘，通常是設計得不夠好，不是使用者的問題。 另外一個實務建議是：不要一次全換。先讓自動化跟原本的做法並行一兩週，確定沒問題再把本子收起來，店裡的抗拒會小很多。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "有沒有哪些事，其實不建議自動化？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "有三種：<strong>一是量太小的事</strong>——一天兩三筆，花錢做自動化不划算；<strong>二是規則一直在變的事</strong>，今天這樣算明天那樣算，寫成程式反而綁手綁腳；<strong>三是需要判斷與溫度的事</strong>，例如客訴回覆、熟客的特殊要求，自動回覆只會讓人更火。 自動化的目的是把重複、機械的部分交出去，把你的時間留給真正需要人的部分。全部都想自動化，通常會做出一個沒人想用的系統。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://tonpin.pages.dev/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "小店家知識庫",
+      "item": "https://tonpin.pages.dev/knowledge/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "LINE 訂單、手抄表單怎麼自動化？小店常見的三種做法",
+      "item": "https://tonpin.pages.dev/knowledge/order-automation"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要內容</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html">
+      <img src="../assets/logo/synchord-mark.svg" alt="對頻設計" width="34" height="34">
+      <span class="brand-text"><span class="brand-zh">對頻設計</span><span class="brand-en">tonpin</span></span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="主導覽">
+      <a href="../index.html">首頁</a>
+      <a href="../about.html">關於我們</a>
+      <a href="../services.html">服務項目</a>
+      <a href="../portfolio.html">案例</a>
+      <a href="../google-education.html">Google 認證服務</a>
+      <a href="../contact.html">聯絡我們</a>
+    </nav>
+    <a class="nav-cta" href="../contact.html">免費諮詢</a>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="切換深色模式">☾</button>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="開關選單">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="../index.html">首頁</a> ／ <a href="index.html">小店家知識庫</a> ／ LINE 訂單、手抄表單怎麼自動化？小店常見的三種做法</p>
+    <span class="eyebrow">AUTOMATION</span>
+    <h1 class="keep">LINE 訂單、手抄表單怎麼自動化？小店常見的三種做法</h1>
+    <p class="keep">接單其實不累，累的是同一筆資料要抄三次：LINE 上看一次、抄進本子一次、月底再打進 Excel 一次。自動化要解決的就是這件事——讓資料只被輸入一次。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap-narrow">
+    <div class="prose">
+      <div class="notice reveal" style="margin-top:0;max-width:none">
+        <strong style="display:block;color:var(--text);margin-bottom:8px">先講結論</strong>
+        <p class="keep">小店的自動化通常不需要什麼系統，多半是這三種：<strong>一、把接單從私訊改成表單；二、表單資料自動進 Google 試算表；三、資料進來時自動通知你</strong>。這三步做完，抄單這件事就消失了。</p>
+        <p class="keep">成本比一般人想的低：前兩步用 Google 表單加試算表就能做，不用寫程式；第三步需要一點腳本，通常幾千元的規模。真正要花錢的是第四步——當你需要客人自己選時段、算金額、或查自己的紀錄，那才叫客製工具。</p>
+      </div>
+
+      <h2 class="reveal" style="border-top:none;padding-top:0">從抄單到不用抄，中間發生什麼事</h2>
+      <div class="faq reveal">
+      <details class="faq-item">
+        <summary>我現在都用 LINE 接單、手抄，真的有需要改嗎？</summary>
+        <div class="faq-a">
+          <p class="keep">先算一件事：一天抄幾筆、一筆抄多久、月底對帳又要花幾小時。很多老闆算完會發現，一個月花在抄寫與對帳上的時間，比想像中多得多。</p>
+          <p class="keep">另外一個常見的問題是漏單與抄錯——不是不認真，是私訊會被後面的訊息洗掉。如果你有過「客人來拿貨才發現沒記到」的經驗，那就不只是效率問題了。</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>最簡單的自動化長什麼樣子？</summary>
+        <div class="faq-a">
+          <p class="keep">把「請私訊我」改成「請填這張表單」。品項、數量、取貨時間、聯絡方式，客人自己填，送出後資料直接落到 Google 試算表的一列。你不用抄，只要看那張表。</p>
+          <p class="keep">這一步用 Google 表單就能做，免費、當天就能上線，不需要任何開發。缺點是表單長得很陽春、不太像你的店；如果在意這點，可以把表單嵌進自己的網頁裡，看起來就是店的一部分。</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>資料進 Google 試算表之後呢？</summary>
+        <div class="faq-a">
+          <p class="keep">接下來可以做兩件很有感的事：一是<strong>自動通知</strong>——有新訂單就自動寄信、或發訊息到你的手機，不用一直開著表單看；二是<strong>自動整理</strong>——當天的單自動彙整成一份出貨清單，月底的營收自動加總。</p>
+          <p class="keep">這一段就是「自動化腳本」在做的事，通常用 Google Apps Script 直接寫在你的試算表裡，不用另外租主機。規模不大，我們的自動化腳本從 NT$6,000 起。</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>什麼情況需要客製工具，而不是現成表單？</summary>
+        <div class="faq-a">
+          <p class="keep">當「填完就結束」不夠用的時候。例如：客人要能自己選還有空的時段（表單不知道哪個時段滿了）、金額要依數量或方案自動算、客人要能查自己的點數或訂單紀錄、或你需要員工與老闆看到不同的畫面。</p>
+          <p class="keep">這些現成表單做不到，就要做工具。我們做過的 Loverolling 會員累點系統就是這一類——把紙本集點卡換成線上的累點、QR Code 與兌換，後台還分角色。這種規模從 NT$15,000 起，實際看功能。</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>這種自動化要花多少錢、做多久？</summary>
+        <div class="faq-a">
+          <p class="keep">如果只是表單加試算表加通知，通常是幾千元的規模，一到兩週內可以上線，因為沒有太多要設計的東西。</p>
+          <p class="keep">如果是客製工具，時間主要花在把你的規則講清楚——哪些情況要擋、誰能看到什麼、例外怎麼處理。實務上開發不是最久的，把規則想清楚才是。所以第一次諮詢我們會問得比較細，那是為了不做出用不到的東西。</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>我的店員年紀比較大，學得會嗎？</summary>
+        <div class="faq-a">
+          <p class="keep">會不會用，取決於介面設計成什麼樣，不是年紀。做給小店用的工具，原則是「一個畫面只做一件事、按鈕大、字大、不要有一堆選項」。如果一個功能需要教超過兩分鐘，通常是設計得不夠好，不是使用者的問題。</p>
+          <p class="keep">另外一個實務建議是：不要一次全換。先讓自動化跟原本的做法並行一兩週，確定沒問題再把本子收起來，店裡的抗拒會小很多。</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>有沒有哪些事，其實不建議自動化？</summary>
+        <div class="faq-a">
+          <p class="keep">有三種：<strong>一是量太小的事</strong>——一天兩三筆，花錢做自動化不划算；<strong>二是規則一直在變的事</strong>，今天這樣算明天那樣算，寫成程式反而綁手綁腳；<strong>三是需要判斷與溫度的事</strong>，例如客訴回覆、熟客的特殊要求，自動回覆只會讓人更火。</p>
+          <p class="keep">自動化的目的是把重複、機械的部分交出去，把你的時間留給真正需要人的部分。全部都想自動化，通常會做出一個沒人想用的系統。</p>
+        </div>
+      </details>
+      </div>
+
+      <div class="prose-cta reveal">
+        <h3>說說你現在是怎麼接單的</h3>
+        <p class="keep">我們會先判斷你的狀況要不要花錢——很多時候一張表單加一段腳本就解決了，不需要做系統。真的需要客製，我們才會提。</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <a class="btn btn-primary btn-sm" href="../contact.html?topic=%E8%87%AA%E5%8B%95%E5%8C%96%E8%85%B3%E6%9C%AC">預約免費諮詢</a>
+          <a class="btn btn-outline btn-sm" href="../services.html#pricing">看收費參考</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Read next</span>
+      <h2 class="section-title">延伸閱讀</h2>
+    </div>
+    <div class="grid grid-3">
+        <article class="card card-flat reveal" style="--rd:0.00s">
+          <h3><a href="website-cost.html">做網站要多少錢？</a></h3>
+          <p class="keep">如果自動化跟官網要一起做，先看費用怎麼組成。</p>
+          <p class="card-foot"><a class="link-arrow" href="website-cost.html">看這篇</a></p>
+        </article>
+        <article class="card card-flat reveal" style="--rd:0.08s">
+          <h3><a href="website-vs-fanpage.html">粉專、官網、商家檔案差在哪</a></h3>
+          <p class="keep">接單的入口該放哪裡？先把三者的角色分清楚。</p>
+          <p class="card-foot"><a class="link-arrow" href="website-vs-fanpage.html">看這篇</a></p>
+        </article>
+        <article class="card card-flat reveal" style="--rd:0.16s">
+          <h3><a href="../services.html">客製工具與自動化腳本</a></h3>
+          <p class="keep">小型客製工具 NT$15,000 起、自動化腳本 NT$6,000 起，收費公開。</p>
+          <p class="card-foot"><a class="link-arrow" href="../services.html">看這篇</a></p>
+        </article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="sticky-cta">
+  <a class="btn btn-primary" href="../contact.html">免費諮詢</a>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a class="brand" href="../index.html">
+          <img src="../assets/logo/synchord-mark.svg" alt="" width="34" height="34" aria-hidden="true">
+          <span class="brand-text"><span class="brand-zh">對頻設計</span><span class="brand-en">tonpin</span></span>
+        </a>
+        <p class="keep">幫你把店與服務好好放上網路，讓想找你的人找得到。網站開發、小型客製工具與 Google 認證服務的長期夥伴。</p>
+        <p class="footer-hours keep">收攤後才有空慢慢看？沒關係，信半夜寄來也可以——我們不會半夜回，但隔天一定回。</p>
+      </div>
+      <div>
+        <h4>網站導覽</h4>
+        <ul>
+          <li><a href="../about.html">關於我們</a></li>
+          <li><a href="../services.html">服務項目</a></li>
+          <li><a href="../portfolio.html">案例</a></li>
+          <li><a href="index.html">小店家知識庫</a></li>
+          <li><a href="../contact.html">聯絡我們</a></li>
+          <li><a href="https://www.hunglun.com/" target="_blank" rel="noopener">鴻綸科技 ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Google 認證服務</h4>
+        <ul>
+          <li><a href="../google-education.html">Google 認證服務</a></li>
+          <li><a href="../gemini-education.html">Gemini for Education</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 對頻設計. All rights reserved.</span>
+      <span><a href="mailto:steve.edu711@gmail.com">steve.edu711@gmail.com</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-line-ready="0">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{if(localStorage.getItem('amp-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+<title>對頻設計｜美容 SPA 官網案例｜單頁改 8 頁 SEO 架構</title>
+<meta name="description" content="伊登森活 Idun Beauty SPA 品牌官網案例：原本 8 個分頁塞在同一個網址、Google 只看得到一頁，重構成 8 個獨立頁面，每頁有專屬網址與在地商家結構化資料，並導流到 LINE 預約。">
+<link rel="canonical" href="https://tonpin.pages.dev/cases/idun-beauty-spa-website">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="../assets/logo/favicon.svg?v=2">
+<link rel="apple-touch-icon" href="../assets/logo/apple-touch-icon.png?v=2">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="對頻設計">
+<meta property="og:title" content="美容 SPA 品牌官網案例：從一頁式改成 8 頁 SEO 架構">
+<meta property="og:description" content="原本客人搜「台南 筋膜刀」找不到對應頁面。拆成 8 頁之後，每一項服務都有自己的網址可以被搜尋、被分享。">
+<meta property="og:url" content="https://tonpin.pages.dev/cases/idun-beauty-spa-website">
+<meta property="og:image" content="https://tonpin.pages.dev/assets/og/og-image.png">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="美容 SPA 品牌官網案例｜對頻設計">
+<meta name="twitter:description" content="從一頁式改成 8 頁 SEO 架構，網站現在還在營運，網址就在頁面上。">
+<meta name="twitter:image" content="https://tonpin.pages.dev/assets/og/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@900&family=Outfit:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="../assets/style.css?v=1">
+<script defer src="../assets/main.js?v=1"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://tonpin.pages.dev/cases/idun-beauty-spa-website#article",
+      "headline": "美容 SPA 品牌官網案例：從一頁式網站改成 8 頁 SEO 架構",
+      "description": "伊登森活 Idun Beauty SPA 品牌官網重構案例。原本 8 個分頁靠 JavaScript 切換、共用同一個網址，重構為 8 個各自獨立的靜態頁面，每頁有專屬標題、描述、canonical 與 LocalBusiness 結構化資料，並導流至 LINE 官方帳號預約。",
+      "inLanguage": "zh-Hant",
+      "isPartOf": { "@id": "https://tonpin.pages.dev/#website" },
+      "author": { "@id": "https://tonpin.pages.dev/#organization" },
+      "publisher": { "@id": "https://tonpin.pages.dev/#organization" },
+      "about": {
+        "@type": "BeautySalon",
+        "name": "伊登森活 Idun Beauty SPA",
+        "url": "https://idun10.pages.dev/",
+        "areaServed": "台南市東區"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://tonpin.pages.dev/" },
+        { "@type": "ListItem", "position": 2, "name": "案例", "item": "https://tonpin.pages.dev/portfolio" },
+        { "@type": "ListItem", "position": 3, "name": "伊登森活品牌官網", "item": "https://tonpin.pages.dev/cases/idun-beauty-spa-website" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "美容、SPA 這種店，官網做一頁式還是多頁式比較好？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "看你希望客人怎麼找到你。如果客人是先認識你、再上網看看，一頁式就夠了。但如果你希望有人搜「台南 水飛梭」時能找到你，就需要多頁——因為 Google 是一個網址收錄一次，所有服務擠在同一個網址裡，就只有一個機會被排進搜尋結果。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "什麼是「一頁式網站」？我的網站是嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "判斷方式很簡單：點網站上方的選單，如果網址列從頭到尾都沒有變、或只多了一個井號，那就是一頁式。內容是靠瀏覽器上的程式碼切換的，對訪客來說有分頁，但對搜尋引擎來說只有一頁。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "把一頁式改成多頁，原本的網站要整個重做嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不一定。伊登森活這個案子的視覺與文案大致沿用，主要重做的是網站的結構：把原本擠在一起的內容拆成各自獨立的頁面，補上每頁專屬的標題與描述，再把內部連結、網站地圖與 canonical 標籤對齊。外觀變動不大，但搜尋引擎看到的東西完全不同。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "什麼是結構化資料？在地小店需要嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "結構化資料是寫在網頁裡、給搜尋引擎看的標準格式欄位，例如店名、地址、營業時間、服務項目。人看不到，但 Google 與 AI 搜尋讀得懂。對有實體店面的在地商家特別有用，因為它讓搜尋引擎能確定「這家店在台南東區、做的是美容 SPA」，而不用自己從文章裡猜。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要內容</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html">
+      <img src="../assets/logo/synchord-mark.svg" alt="對頻設計" width="34" height="34">
+      <span class="brand-text"><span class="brand-zh">對頻設計</span><span class="brand-en">tonpin</span></span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="主導覽">
+      <a href="../index.html">首頁</a>
+      <a href="../about.html">關於我們</a>
+      <a href="../services.html">服務項目</a>
+      <a href="../portfolio.html" class="active" aria-current="page">案例</a>
+      <a href="../google-education.html">Google 認證服務</a>
+      <a href="../contact.html">聯絡我們</a>
+    </nav>
+    <a class="nav-cta" href="../contact.html">免費諮詢</a>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="切換深色模式">☾</button>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="開關選單">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-head">
+    <div class="wrap">
+      <p class="breadcrumb"><a href="../index.html">首頁</a> ／ <a href="../portfolio.html">案例</a> ／ 伊登森活品牌官網</p>
+      <span class="eyebrow">Case study</span>
+      <h1 class="keep">一頁式網站改成 8 頁，讓每項服務都能被搜到</h1>
+      <p class="keep">伊登森活 Idun Beauty SPA｜台南東區美容 SPA 品牌官網</p>
+      <div class="tags">
+        <span class="tag">網站開發</span><span class="tag">形象官網</span><span class="tag">SEO 多頁架構</span><span class="tag">結構化資料</span><span class="tag">LINE 預約導流</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="prose">
+
+        <h2>當時的狀況</h2>
+        <p class="keep">店在台南東區，做的是筋膜刀、水飛梭、魔磁肌塑這類療程。網站本來就有，看起來也不差——上面有選單，點了會換內容，品牌故事、空間照片、服務價格、交通位置都在。</p>
+        <p class="keep">問題是點下去的時候，瀏覽器上面那行網址從頭到尾沒有變過。整個網站的八個分頁，其實是塞在同一個檔案裡，靠瀏覽器上的程式碼切換畫面。對客人來說有八頁，對 Google 來說只有一頁。</p>
+        <p class="keep">實際的後果是這樣：有人在手機上搜「台南 水飛梭」，Google 手上只有這個網站的一個網址、一組標題，它沒有一個「水飛梭」的頁面可以拿出來排。想把服務頁傳給客人也傳不了，因為那個畫面沒有自己的網址，貼給對方只會回到首頁。</p>
+
+        <h2>為什麼是這個做法，不是別的</h2>
+        <p class="keep">當時有三條路。一是不動架構，只加關鍵字跟文案——最便宜，但問題出在只有一個網址，加再多字也是擠在同一頁，治不到根。二是整站重做，換成有後台的系統——功能最多，但預算與後續月費都往上跳，而且這家店的內容一年也改不了幾次，付月費養一套後台並不划算。</p>
+        <p class="keep">最後選的是第三條：<strong>視覺跟文案大致留著，只重做網站的結構</strong>。把原本擠在一起的內容拆成八個真正獨立的頁面，補上每頁自己的標題與描述，再把內部連結、網站地圖對齊。花費集中在「Google 看得到什麼」這件事上，看得見的外觀變動不大，但搜尋引擎看到的東西完全不一樣。</p>
+        <p class="keep">同樣重要的是：拆完之後它仍然是純靜態網站，放在 Cloudflare Pages 上，<strong>沒有資料庫、沒有伺服器月費</strong>。對一家實體店來說，這代表網站放著就會一直在，不會因為忘記續一筆月費就整站消失。</p>
+
+        <h2>實際做了什麼</h2>
+        <p class="keep">拆成八個各自獨立的頁面，每一頁都有自己的網址、自己的標題、自己的描述：</p>
+        <ul class="keep">
+          <li><strong>首頁</strong>——店的定位與主打療程</li>
+          <li><strong>關於伊登森活</strong>——品牌故事</li>
+          <li><strong>空間環境</strong>——店裡實際的樣子</li>
+          <li><strong>服務項目與價格</strong>——筋膜刀、水飛梭、魔磁肌塑、水光護理</li>
+          <li><strong>真實案例分享</strong>——療程前後的成果</li>
+          <li><strong>套裝課程</strong>——優惠方案</li>
+          <li><strong>本月寵粉優惠</strong>——會定期更新的那一頁</li>
+          <li><strong>門市地址與交通</strong>——地址、路線</li>
+        </ul>
+        <p class="keep">接著補上三件搜尋引擎會看、但客人看不到的東西。第一，每一頁都加上在地商家（LocalBusiness）結構化資料，把店名、地址、營業時間用 Google 讀得懂的格式寫進頁面裡，常見問答則放在首頁。第二，重新產生網站地圖（sitemap），把八個網址都列進去——原本的網站地圖還指向一個早期的舊網址，等於一直在告訴 Google 錯的地方。第三，統一內部連結與 canonical 標籤的寫法。</p>
+        <p class="keep">最後一項是實務上很容易忽略的細節：Cloudflare Pages 預設會把帶 <code>.html</code> 的網址轉址到不帶副檔名的乾淨網址。如果內部連結還寫舊格式，每一次點擊都會多繞一次轉址，而且 canonical 指的網址跟實際網址對不起來，搜尋引擎會收到互相矛盾的訊號。所以連結、canonical、sitemap 三處全部統一成同一種寫法。</p>
+        <p class="keep">預約動線的部分沒有做得很複雜：每一頁都能直接點到店家的 LINE 官方帳號。客人看完療程說明想問問看，不用滑到頁尾找電話、也不用自己去 LINE 搜 ID，點一下就進到對話視窗。</p>
+
+        <h2>交付了什麼、之後怎麼維護</h2>
+        <p class="keep">交付的是八個頁面的完整網站、網站地圖與 robots 設定、每頁的結構化資料，以及一套改內容的流程：內容的原始檔放在 <code>_parts</code> 資料夾，改完跑一次組頁指令，八頁會一起重新產生——這樣頁首頁尾不會東改一頁西漏一頁。</p>
+        <p class="keep">日常花費只有網域的年費，沒有主機月費。要換季節照片、調整當月優惠、加一個新療程頁，都可以另外算；沒有綁約，也不會因為沒續約就把網站關掉。</p>
+
+        <div class="case-fact reveal">
+          <h3>這個案子可以驗證的事實</h3>
+          <ul class="keep">
+            <li>網站現在還在營運，網址是 <a href="https://idun10.pages.dev/" target="_blank" rel="noopener">idun10.pages.dev</a>，八個頁面都可以各自點開、各自分享。</li>
+            <li>點任一頁，網址列會跟著變——這就是「有沒有真的拆開」最快的檢查方式。</li>
+            <li>每頁的結構化資料可以用 Google 的複合式搜尋結果測試工具自己驗，不用相信我們的說法。</li>
+          </ul>
+          <p class="keep"><strong>我們不會給你「流量成長多少 %」這種數字。</strong>那需要客戶的分析後台資料，我們沒有、也不會拿客戶的營運數字當自己的廣告。上面這幾件事，你自己點得到、驗得到。</p>
+        </div>
+
+      </div>
+
+      <div class="prose-cta reveal">
+        <h3>你的網站也是點了網址不會變的那種嗎？</h3>
+        <p class="keep">把你的網址丟給我們，我們會直接告訴你它是不是一頁式、拆開之後大概是什麼規模與價格帶。看完不做也沒關係，不會一直來推銷。</p>
+        <p>
+          <a class="btn btn-primary btn-sm" href="../contact.html?topic=%E7%B6%B2%E7%AB%99%E6%94%B9%E7%89%88%E8%88%87%E5%A2%9E%E4%BF%AE">預約免費諮詢</a>
+          <a class="btn btn-outline btn-sm" href="../services.html#pricing">看收費參考</a>
+        </p>
+      </div>
+
+      <h2 class="section-title" style="margin-top:56px">關於這個案子，常被問到的四件事</h2>
+
+      <details class="faq-item">
+        <summary>美容、SPA 這種店，官網做一頁式還是多頁式比較好？</summary>
+        <div class="faq-a">
+          <p class="keep">看你希望客人怎麼找到你。如果客人多半是先認識你、再上網看看，一頁式其實夠用，做起來也快。</p>
+          <p class="keep">但如果你希望有人搜「台南 水飛梭」的時候能找到你，就需要多頁。Google 是一個網址收錄一次，所有服務擠在同一個網址裡，就只有一次被排進搜尋結果的機會。</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>什麼是「一頁式網站」？我的網站是不是？</summary>
+        <div class="faq-a">
+          <p class="keep">現在就可以自己測：打開你的網站，點上方選單換一頁，看網址列那行字有沒有跟著變。完全沒變、或只多了一個井號，那就是一頁式。</p>
+          <p class="keep">內容是靠瀏覽器上的程式碼換掉的。對訪客來說有分頁，對搜尋引擎來說只有一頁。</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>要改成多頁，網站是不是要整個重做？</summary>
+        <div class="faq-a">
+          <p class="keep">不一定。伊登森活這個案子的視覺與文案大致沿用，重做的是結構——把內容拆成獨立頁面、補上每頁專屬的標題描述、對齊內部連結與網站地圖。</p>
+          <p class="keep">外觀變動不大，但搜尋引擎看到的東西完全不同。這也是為什麼它的價格落在改版而不是全新開發的區間。</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>結構化資料是什麼？在地小店真的需要嗎？</summary>
+        <div class="faq-a">
+          <p class="keep">它是寫在網頁裡、給搜尋引擎看的標準欄位：店名、地址、營業時間、服務項目。客人看不到，但 Google 跟 AI 搜尋讀得懂。</p>
+          <p class="keep">有實體店面的特別值得做。它讓搜尋引擎能確定「這家店在台南東區、做的是美容 SPA」，而不是自己從一堆文字裡猜。猜錯的代價，就是附近的人搜的時候你沒被排進去。</p>
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">More</span>
+        <h2 class="section-title">看看別的</h2>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-flat reveal" style="--rd:0.00s">
+          <h3>Loverolling 會員累點系統</h3>
+          <p class="keep">紙本集點卡搬到線上，客人不用下載 App，店員掃碼就能累點。</p>
+          <p class="card-foot"><a class="link-arrow" href="loverolling-member-system.html">看這個案例</a></p>
+        </article>
+        <article class="card card-flat reveal" style="--rd:0.08s">
+          <h3>小店家做網站要多少錢？</h3>
+          <p class="keep">費用到底是怎麼算出來的，一次講清楚，含比價該問的四題。</p>
+          <p class="card-foot"><a class="link-arrow" href="../knowledge/website-cost.html">看這篇</a></p>
+        </article>
+        <article class="card card-flat reveal" style="--rd:0.16s">
+          <h3>粉專、官網、Google 商家檔案</h3>
+          <p class="keep">先確認你現在到底需不需要官網，再談預算比較不會浪費。</p>
+          <p class="card-foot"><a class="link-arrow" href="../knowledge/website-vs-fanpage.html">看這篇</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="sticky-cta">
+  <div class="sticky-cta-row">
+    <a class="btn btn-line needs-line" href="LINE_URL_待填" target="_blank" rel="noopener">LINE 詢問</a>
+    <a class="btn btn-primary" href="../contact.html">免費諮詢</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a class="brand" href="../index.html">
+          <img src="../assets/logo/synchord-mark.svg" alt="" width="34" height="34" aria-hidden="true">
+          <span class="brand-text"><span class="brand-zh">對頻設計</span><span class="brand-en">tonpin</span></span>
+        </a>
+        <p class="keep">幫你把店與服務好好放上網路，讓想找你的人找得到。網站開發、小型客製工具與 Google 認證服務的長期夥伴。</p>
+        <p class="footer-hours keep">收攤後才有空慢慢看？沒關係，信半夜寄來也可以——我們不會半夜回，但隔天一定回。</p>
+        <ul class="channel-list" style="margin-top:20px;max-width:22em">
+          <li class="needs-line">
+            <a class="channel line" href="LINE_URL_待填" target="_blank" rel="noopener">
+              <svg class="channel-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.9 3 2.8 6.3 2.8 10.4c0 3.7 3.3 6.8 7.7 7.4.3.1.7.2.8.5.1.3.1.6 0 .9l-.1.8c0 .2-.2.9.8.5s5.3-3.1 7.2-5.3c1.3-1.4 2-2.9 2-4.8C21.2 6.3 17.1 3 12 3z"/></svg>
+              <span class="channel-txt"><b>LINE 官方帳號</b><span>加好友直接問</span></span>
+            </a>
+          </li>
+          <li>
+            <a class="channel" href="mailto:steve.edu711@gmail.com">
+              <svg class="channel-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <span class="channel-txt"><b>steve.edu711@gmail.com</b><span>寫信給我們</span></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h4>網站導覽</h4>
+        <ul>
+          <li><a href="../about.html">關於我們</a></li>
+          <li><a href="../services.html">服務項目</a></li>
+          <li><a href="../portfolio.html">案例</a></li>
+          <li><a href="../knowledge/">小店家知識庫</a></li>
+          <li><a href="../contact.html">聯絡我們</a></li>
+          <li><a href="https://www.hunglun.com/" target="_blank" rel="noopener">鴻綸科技 ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Google 認證服務</h4>
+        <ul>
+          <li><a href="../google-education.html">Google 認證服務</a></li>
+          <li><a href="../gemini-education.html">Gemini for Education</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 對頻設計. All rights reserved.</span>
+      <span><a href="mailto:steve.edu711@gmail.com">steve.edu711@gmail.com</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

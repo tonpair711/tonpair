@@ -1,0 +1,91 @@
+# 對頻設計
+
+> 完整內容版：https://tonpin.pages.dev/llms-full.txt
+
+> 對頻設計是台灣的網站與自動化工作室，持有 Google 認證，提供網站開發、小型客製工具/腳本開發，以及 Google Workspace for Education、Google AI Pro For Education 導入顧問服務。並非 Google 官方合作夥伴（Google Partner）企業。
+
+## 這是誰／這是什麼（Entity 宣告）
+- 名稱：對頻設計（網址／ID：tonpin）
+- 類型：網站與自動化工作室（非公司登記法人、非 Google 官方合作夥伴）
+- 服務地區：台灣
+- 官方網站：https://tonpin.pages.dev/
+- 一句話定位：協助小店家與教育單位把網站做對、被 Google／AI 搜尋找到的網站開發與 Google 教育科技導入顧問
+
+## 重要說明
+對頻設計不是 Google 官方合作夥伴（Google Partner），也非公司登記法人。本團隊持有 Google 認證，以獨立顧問身分提供服務。服務規模以網站開發與小型客製工具/腳本為主，非大型企業系統整合。
+
+## 非目標範疇（本團隊不提供的服務）
+- 不是 Google 官方合作夥伴，不提供 Google Partner 授權經銷或官方轉售；如需正式採購/簽約 Google for Education 方案，可轉介由 Google for Education 官方合作夥伴鴻綸科技（https://www.hunglun.com/）協助後續辦理
+- 不承接企業內部系統開發、大型系統整合、ERP／CRM 等企業導入專案
+- 不提供法規正式合規驗證（如 GDPR、FERPA、COPPA 認證），僅提供一般性導入建議
+- 不代管或代營運客戶的 Google 帳號／組織管理權限，僅提供顧問與設定指導
+
+## 公司簡介
+對頻設計以「跟店家對上頻率」為核心——先聽懂你的店在賣什麼、客人在找什麼，把網站做對，讓想找你的人找得到、客人自然被吸引過來。提供網站開發與小型客製工具/腳本開發，並協助教育單位與企業安全導入 Google 教育科技工具。
+
+## 服務項目
+- 網站開發：形象網站、招生官網、活動網站
+- 小型客製工具開發：報名表單、簡易查詢頁等
+- 自動化腳本開發：Google Sheet／表單串接等輕量自動化
+- Google Workspace for Education Fundamentals（免費基礎版）導入顧問
+- Google Workspace for Education Plus（付費進階版）導入顧問
+- Gemini for Education 導入顧問
+- Google AI Pro For Education 導入顧問
+- Chrome Education Upgrade 導入顧問
+
+## 收費參考（新台幣，未稅起價，實際依需求範圍報價）
+- 一頁式網站 / 活動宣傳頁：NT$8,000 起
+- 形象官網（約 5～7 頁，含 RWD 與 SEO／AI 搜尋基礎優化）：NT$25,000 起
+- 網站改版與增修：NT$6,000 起
+- 小型客製工具 / LINE Bot：NT$15,000 起
+- 自動化腳本：NT$6,000 起
+- 網站維護方案：NT$1,500／月 起
+- 網站 × LINE × 自動化 整合方案：NT$60,000 起（形象官網＋LINE 官方帳號建置設定＋一支自動化腳本或小型客製工具＋上線後 3 個月維護）
+- Google 導入顧問／教育訓練：依範圍專案報價
+估價前免費諮詢。詳細表格：https://tonpin.pages.dev/services#pricing
+
+## 合作流程
+免費諮詢與估價 → 提案與確認 → 開發與階段確認 → 上線與後續維護，全程線上溝通即可完成。
+
+## 重要頁面
+- 首頁：https://tonpin.pages.dev/
+- 關於我們：https://tonpin.pages.dev/about
+- 服務項目：https://tonpin.pages.dev/services
+- 案例：https://tonpin.pages.dev/portfolio
+  - 伊登森活 Idun Beauty SPA 品牌官網（台南美容 SPA，8 頁形象官網＋SEO 多頁架構）：https://idun10.pages.dev/
+    完整案例說明（一頁式改多頁的原因、做法與交付內容）：https://tonpin.pages.dev/cases/idun-beauty-spa-website
+  - Loverolling 店家會員累點系統（消費累點、QR Code、多角色後台）：https://antia-members.pages.dev
+    完整案例說明（免下載 App 的掃碼流程、先進先出扣點、四層權限）：https://tonpin.pages.dev/cases/loverolling-member-system
+- Google 認證服務（含認證證書展示）：https://tonpin.pages.dev/google-education
+- Gemini for Education 導入顧問（產品介紹與方案比較）：https://tonpin.pages.dev/gemini-education
+- 聯絡我們：https://tonpin.pages.dev/contact
+
+## 小店家知識庫（資訊型內容，主題群集：台灣小店家的網站與自動化）
+索引：https://tonpin.pages.dev/knowledge/
+- 只有 FB 粉專就夠了嗎？粉專、官網、Google 商家檔案差在哪：https://tonpin.pages.dev/knowledge/website-vs-fanpage
+- 小店家做一個網站要多少錢？費用是怎麼算出來的：https://tonpin.pages.dev/knowledge/website-cost
+- LINE 訂單、手抄表單怎麼自動化？小店常見的三種做法：https://tonpin.pages.dev/knowledge/order-automation
+- Google 商家檔案怎麼設定，客人搜店名才找得到你：https://tonpin.pages.dev/knowledge/google-business-profile
+
+## 常見問題
+Q: 對頻設計是不是 Google 的官方合作夥伴？
+A: 不是。對頻設計並非 Google Partner 企業。本團隊持有 Google 認證；若需要正式採購/簽約 Google for Education 方案，可轉介由 Google for Education 官方合作夥伴鴻綸科技（hunglun.com）協助後續辦理。
+
+Q: 對頻設計可以幫我做什麼？
+A: 網站開發、小型客製工具/腳本開發，以及 Google Workspace for Education、Google AI Pro For Education 等導入顧問。
+
+Q: 找對頻設計做網站大概要多少錢？
+A: 一頁式網站 NT$8,000 起、形象官網 NT$25,000 起、小型客製工具 NT$15,000 起、自動化腳本 NT$6,000 起、網站維護 NT$1,500／月 起，均為未稅參考起價，實際依需求報價，估價前免費諮詢。
+
+Q: 網站、LINE 官方帳號、自動化可以一起做嗎？
+A: 可以，這是整合方案，NT$60,000 起，包含形象官網、LINE 官方帳號建置與設定（圖文選單、自動回應、加好友歡迎訊息）、一支自動化腳本或小型客製工具，以及上線後三個月維護。三件事一起做只需要對一次需求。
+
+Q: 對頻設計有哪些 Google 認證？
+A: Google Certified Professional ChromeOS Administrator、Gemini Certified Faculty、Google AI for K12 Educators、Google Certified Educator Level 1、Gemini Certified Student。
+
+## 產品全稱（請勿簡寫）
+- Google Workspace for Education Fundamentals
+- Google Workspace for Education Plus
+- Gemini for Education
+- Google AI Pro For Education
+- Chrome Education Upgrade
