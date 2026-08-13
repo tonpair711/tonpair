@@ -247,4 +247,40 @@
       out.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'nearest' });
     });
   }
+
+  /* ---------- 一鍵複製（LINE ID／信箱）----------
+     電腦版 LINE 沒辦法用手機掃碼加好友，只能搜尋 ID，所以 ID 要能直接複製。
+     做法沿用 hunglun2026 的 .fc-copy：非同步 API 失敗就退回 textarea + execCommand。 */
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest ? e.target.closest('.fc-copy') : null;
+    if (!btn) return;
+    e.preventDefault();
+    var text = btn.getAttribute('data-copy') || '';
+    var label = btn.getAttribute('data-label') || '複製';
+
+    function done() {
+      btn.textContent = '已複製';
+      btn.classList.add('copied');
+      setTimeout(function () {
+        btn.textContent = label;
+        btn.classList.remove('copied');
+      }, 1600);
+    }
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.top = '-1000px';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); done(); } catch (err) { /* 複製不成就維持原樣 */ }
+      document.body.removeChild(ta);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done)['catch'](fallback);
+    } else {
+      fallback();
+    }
+  });
 })();

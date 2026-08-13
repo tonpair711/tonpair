@@ -863,3 +863,22 @@ label.check {
 }
 .case-fact h3 { margin-top: 0; }
 .case-fact > p:last-child { margin-bottom: 0; }
+
+/* 一鍵複製鈕（LINE ID／信箱）——電腦版加不了好友，ID 要能複製 */
+.channel-list li { display: flex; align-items: stretch; gap: 8px; }
+.channel-list li > .channel { flex: 1 1 auto; min-width: 0; }
+.channel-txt span em {
+  display: block; font-style: normal;
+  font-size: 0.74rem; color: var(--muted-faint); opacity: .85; margin-top: 1px;
+}
+.fc-copy {
+  flex: none; align-self: center;
+  padding: 8px 12px; border-radius: var(--radius);
+  border: 1px solid var(--line); background: var(--card);
+  color: var(--muted); font-family: inherit; font-size: 0.78rem; line-height: 1.2;
+  cursor: pointer; white-space: nowrap;
+  transition: border-color .2s ease, color .2s ease, background .2s ease;
+}
+.fc-copy:hover { border-color: var(--accent); color: var(--text); }
+.fc-copy.copied { border-color: #06c755; color: #06c755; }
+@media (max-width: 420px) { .fc-copy { padding: 8px 10px; font-size: 0.74rem; } }
