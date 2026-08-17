@@ -112,66 +112,23 @@
     });
   });
 
-  /* ---------- Hero 對頻波（2D canvas，取代原本的 Three.js 開場） ----------
-     兩條金色正弦波緩慢相位錯開、每 9 秒對上一次＝對頻意象。畫在 hero 背景，不擋互動；
-     離開可視範圍就停畫，手機降低取樣密度。 */
-  var canvas = document.getElementById('resonanceCanvas');
-  if (canvas && !reduced) {
-    var ctx = canvas.getContext('2d');
-    var w = 0, h = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
-    var running = true, t = 0;
-
-    function resize() {
-      var r = canvas.getBoundingClientRect();
-      w = r.width; h = r.height;
-      canvas.width = Math.round(w * dpr);
-      canvas.height = Math.round(h * dpr);
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    }
-
-    function wave(phase, amp, yBase, alpha, color) {
-      ctx.beginPath();
-      var step = w < 700 ? 8 : 5;
-      for (var x = 0; x <= w; x += step) {
-        var k = x / w;
-        // 兩端收斂、中段飽滿，避免線條在邊緣被硬切
-        var envelope = Math.sin(Math.PI * k);
-        var y = yBase
-          + Math.sin(k * 7.5 + phase) * amp * envelope
-          + Math.sin(k * 3.1 - phase * 0.6) * amp * 0.45 * envelope;
-        x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
-      }
-      ctx.strokeStyle = color;
-      ctx.globalAlpha = alpha;
-      ctx.lineWidth = 1.2;
-      ctx.stroke();
-    }
-
-    function frame() {
-      if (!running) return;
-      ctx.clearRect(0, 0, w, h);
-      var gold = getComputedStyle(document.documentElement).getPropertyValue('--gold-pure').trim() || '#f5b942';
-      var blue = getComputedStyle(document.documentElement).getPropertyValue('--accent-bright').trim() || '#19a7ce';
-      t += 0.006;
-      var mid = h * 0.58;
-      wave(t, h * 0.09, mid, 0.5, gold);
-      wave(t + 1.15, h * 0.07, mid + 26, 0.32, gold);
-      wave(t * 0.8 + 2.4, h * 0.11, mid - 34, 0.22, blue);
-      ctx.globalAlpha = 1;
-      requestAnimationFrame(frame);
-    }
-
-    resize();
-    window.addEventListener('resize', resize);
-    if ('IntersectionObserver' in window) {
-      new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting && !running) { running = true; requestAnimationFrame(frame); }
-          else if (!e.isIntersecting) { running = false; }
-        });
-      }, { threshold: 0 }).observe(canvas);
-    }
-    requestAnimationFrame(frame);
+  /* ---------- 視覺簽名：雙軸對頻線／分隔結點 ----------
+     .sig-line：兩條錯位髮絲線，進入視野加 .in 鎖定重合。
+     .divider：分隔線中央兩枚結點，進入視野向中間靠攏。
+     無 JS 或 reduced-motion 時 CSS 直接呈現「已對頻」狀態，不會有看不到的內容。 */
+  var sigEls = document.querySelectorAll('.sig-line, .divider');
+  if (sigEls.length && 'IntersectionObserver' in window && !reduced) {
+    var sigIo = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); sigIo.unobserve(e.target); }
+      });
+    }, { threshold: 0.6 });
+    sigEls.forEach(function (el) { sigIo.observe(el); });
+    setTimeout(function () {
+      document.querySelectorAll('.sig-line:not(.in), .divider:not(.in)').forEach(function (el) { el.classList.add('in'); });
+    }, 3000);
+  } else {
+    sigEls.forEach(function (el) { el.classList.add('in'); });
   }
 
   /* ---------- 手機底部諮詢列：捲過 hero 才浮現 ---------- */
