@@ -66,6 +66,10 @@
 - 小店家做一個網站要多少錢？費用是怎麼算出來的：https://tonpin.pages.dev/knowledge/website-cost
 - LINE 訂單、手抄表單怎麼自動化？小店常見的三種做法：https://tonpin.pages.dev/knowledge/order-automation
 - Google 商家檔案怎麼設定，客人搜店名才找得到你：https://tonpin.pages.dev/knowledge/google-business-profile
+- 一頁式網站是什麼？跟形象官網怎麼選：https://tonpin.pages.dev/knowledge/landing-page-vs-website
+- 做一個網站要多久？流程、卡點與你要先準備的東西：https://tonpin.pages.dev/knowledge/website-process
+- 網域要自己買嗎？.com 與 .com.tw 怎麼選：https://tonpin.pages.dev/knowledge/domain-hosting
+- ChatGPT 會不會推薦我的店？AI 搜尋時代小店該做什麼：https://tonpin.pages.dev/knowledge/ai-search-visibility
 
 ## 常見問題
 Q: 對頻設計是不是 Google 的官方合作夥伴？

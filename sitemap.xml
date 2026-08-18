@@ -61,6 +61,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://tonpin.pages.dev/knowledge/landing-page-vs-website</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tonpin.pages.dev/knowledge/website-process</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tonpin.pages.dev/knowledge/domain-hosting</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tonpin.pages.dev/knowledge/ai-search-visibility</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://tonpin.pages.dev/cases/idun-beauty-spa-website</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>

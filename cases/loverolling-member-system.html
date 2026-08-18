@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>(function(){try{if(localStorage.getItem('amp-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
-<title>對頻設計｜會員集點系統案例｜免下載 App 的掃碼累點</title>
+<title>會員集點系統案例｜免下載 App 的掃碼累點｜對頻設計</title>
 <meta name="description" content="Loverolling 店家會員累點系統案例：紙本集點卡搬到線上，客人不必下載 App，出示 QR Code 由店員掃碼累點；點數自動先扣快到期的，會員、店員、老闆各有各的權限。">
 <link rel="canonical" href="https://tonpin.pages.dev/cases/loverolling-member-system">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -130,11 +130,33 @@
   <section class="page-head">
     <div class="wrap">
       <p class="breadcrumb"><a href="../index.html">首頁</a> ／ <a href="../portfolio.html">案例</a> ／ Loverolling 會員累點系統</p>
-      <span class="eyebrow">Case study</span>
-      <h1 class="keep">集點卡搬到線上，但不要客人下載 App</h1>
-      <p class="keep">Loverolling｜店家會員累點系統</p>
-      <div class="tags">
-        <span class="tag">小型客製工具</span><span class="tag">會員系統</span><span class="tag">QR Code</span><span class="tag">權限分層</span><span class="tag">免月費雲端架構</span>
+      <div class="ph-grid">
+        <div class="ph-main">
+          <svg class="sig-line" viewBox="0 0 120 12" aria-hidden="true">
+            <line x1="0" y1="6" x2="120" y2="6" stroke="currentColor" stroke-opacity="0.15" stroke-width="1"/>
+            <line class="line-navy" x1="0" y1="6" x2="120" y2="6" stroke-width="1.5"/>
+            <line class="line-gold" x1="0" y1="6" x2="120" y2="6" stroke-width="1.5"/>
+          </svg>
+          <span class="eyebrow">Case study</span>
+          <h1 class="keep">集點卡搬到線上，但不要客人下載 App</h1>
+          <div class="tags">
+            <span class="tag">小型客製工具</span><span class="tag">會員系統</span><span class="tag">QR Code</span><span class="tag">權限分層</span><span class="tag">免月費雲端架構</span>
+          </div>
+        </div>
+        <aside class="ph-side">
+          <p class="ph-lede keep">Loverolling｜店家會員累點系統</p>
+          <nav class="ph-toc" aria-label="本頁內容">
+            <span class="ph-toc-title">本頁內容</span>
+            <ol>
+              <li><a href="#situation">當時的狀況</a></li>
+              <li><a href="#approach">為什麼是這個做法</a></li>
+              <li><a href="#work">實際做了什麼</a></li>
+              <li><a href="#delivery">交付與維護</a></li>
+              <li><a href="#faq">常被問到的四件事</a></li>
+            </ol>
+          </nav>
+          <p class="ph-actions"><a class="link-arrow" href="../portfolio.html">回案例列表</a></p>
+        </aside>
       </div>
     </div>
   </section>
@@ -143,16 +165,16 @@
     <div class="wrap">
       <div class="prose">
 
-        <h2>當時的狀況</h2>
+        <h2 id="situation">當時的狀況</h2>
         <p class="keep">店家原本用紙本集點卡。成本很低，問題不在成本——客人常常沒帶、卡掉了要重發，重發之後上次蓋到第幾格誰也說不準。店家這邊也是一筆糊塗帳：外面到底還有多少點沒被兌換，只能用感覺的。</p>
         <p class="keep">想換成數位的，第一個念頭通常是做 App。但現場的畫面是這樣：客人結完帳，你請他打開商店搜尋、下載、註冊，後面還排著三個人。多數客人會直接說「不用了啦」。集點卡最需要的是「當下三秒內完成」，App 剛好在這一步最慢。</p>
 
-        <h2>為什麼是這個做法，不是別的</h2>
+        <h2 id="approach">為什麼是這個做法，不是別的</h2>
         <p class="keep">選項有三個。做原生 App——功能最完整，但開發與上架成本高，而且會卡在剛才說的下載那一步。用市面上現成的集點服務——上手最快，但點數規則與畫面照對方的規格走，資料在對方手上，長期按月付費。第三是做成網頁版的客製系統。</p>
         <p class="keep">這個案子選第三個，理由很單純：<strong>客人端要零安裝</strong>。用手機瀏覽器打開就能看點數、出示 QR Code，不必經過商店、不必註冊帳號流程。同時規則（多少錢累幾點、點數多久到期、幾點折多少）能照這家店自己的做法設定，不用配合別人的規格。</p>
         <p class="keep">後端放在 Cloudflare 上，資料庫用它的 D1。這個組合對一家單店來說，<strong>日常沒有固定的伺服器月費</strong>，也不需要自己顧一台主機。要說代價，就是它是為這家店做的，不是通用產品——這也是為什麼我們會先問清楚規則再開工。</p>
 
-        <h2>實際做了什麼</h2>
+        <h2 id="work">實際做了什麼</h2>
         <p class="keep">現場的流程拆成三步，設計時就是照著櫃檯的動線走：</p>
         <ul class="keep">
           <li><strong>第一步</strong>——客人用手機打開頁面，出示自己的 QR Code。不用下載、不用等安裝。</li>
@@ -163,7 +185,7 @@
         <p class="keep">權限分成四層，各自看到不一樣的畫面。<strong>會員</strong>看得到自己的餘額、明細與 QR Code。<strong>店員</strong>只有現場會用到的動作：找會員、加點、扣點兌換。<strong>老闆</strong>在店員的基礎上多了會員管理、補扣點、規則設定與報表。<strong>管理員</strong>再多一層，負責開設與停用店員、老闆的帳號。</p>
         <p class="keep">這樣切的原因是防呆也是防弊：現場的手機不小心被拿去亂點，能造成的損害有限；而每一筆點數異動都留有紀錄，換班對帳有疑問時打開後台就查得到，不用在群組裡互相問「剛剛那筆是誰加的」。整套介面是手機優先設計的，因為店員實際上就是拿手機在做事，不會有人跑去開電腦。</p>
 
-        <h2>交付了什麼、之後怎麼維護</h2>
+        <h2 id="delivery">交付了什麼、之後怎麼維護</h2>
         <p class="keep">交付的是一套可以直接營運的系統：客人端、店員端、老闆後台、管理員帳號管理，加上一份給老闆看的操作說明頁，直接放在系統裡，店員換人也能自己看。密碼可以自己在系統內修改，不用來找我們。</p>
         <p class="keep">日常支出主要是網域年費，沒有另外的系統月費。點數規則、兌換比例這些老闆自己在後台就能改；要加新功能再另外談，沒有綁約。</p>
 
@@ -188,7 +210,7 @@
         </p>
       </div>
 
-      <h2 class="section-title" style="margin-top:56px">關於這個案子，常被問到的四件事</h2>
+      <h2 id="faq" class="section-title" style="margin-top:56px">關於這個案子，常被問到的四件事</h2>
 
       <details class="faq-item">
         <summary>做會員集點，為什麼不印紙本卡或叫客人下載 App？</summary>
