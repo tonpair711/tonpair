@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-line-ready="1">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{if(localStorage.getItem('amp-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+<title>SEO／AEO／GEO 是什麼？讓 Google 與 AI 都找得到你｜對頻設計</title>
+<meta name="description" content="SEO 顧的是 Google 排名，AEO 顧的是被 AI 直接當答案引用，GEO 顧的是在 ChatGPT、Gemini 這類生成式搜尋裡被提到。這頁說明三者差在哪、我們實際會做的九件事，以及這些工作包含在哪些方案裡。全台線上服務，不承諾排名。">
+<link rel="canonical" href="https://tonpin.pages.dev/services/seo-aeo-geo">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="../assets/logo/favicon.svg?v=4">
+<link rel="apple-touch-icon" href="../assets/logo/apple-touch-icon.png?v=4">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="對頻設計">
+<meta property="og:title" content="SEO／AEO／GEO：讓 Google 排得到，也讓 AI 提得到你">
+<meta property="og:description" content="三個名詞差在哪、我們實際會做的九件事、包含在哪些方案裡。全台線上，不承諾排名。">
+<meta property="og:url" content="https://tonpin.pages.dev/services/seo-aeo-geo">
+<meta property="og:image" content="https://tonpin.pages.dev/assets/og/og-image.png">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SEO／AEO／GEO 搜尋與 AI 能見度｜對頻設計">
+<meta name="twitter:description" content="讓 Google 排得到，也讓 AI 提得到你。做法、方案與老實話都寫在頁面上。">
+<meta name="twitter:image" content="https://tonpin.pages.dev/assets/og/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@900&family=Outfit:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="../assets/style.css?v=3">
+<script defer src="../assets/main.js?v=3"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://tonpin.pages.dev/services/seo-aeo-geo#service",
+      "name": "SEO／AEO／GEO 搜尋與 AI 能見度優化",
+      "description": "讓網站在 Google 搜尋排得到，也讓 AI 助理回答問題時引用得到。工作內容包含結構化資料標記、答案前置的內容結構、標題與描述改寫、llms.txt 內容索引、爬蟲政策檢查、網站地圖與收錄設定、內部連結整理、載入效能調整，以及 Search Console 設定與後續觀察。",
+      "serviceType": "搜尋引擎最佳化與 AI 搜尋能見度",
+      "provider": { "@id": "https://tonpin.pages.dev/#organization" },
+      "areaServed": { "@type": "Country", "name": "台灣" },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://tonpin.pages.dev/contact",
+        "availableLanguage": { "@type": "Language", "name": "中文（繁體）" }
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "包含這些工作的方案",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "price": "8800",
+            "priceCurrency": "TWD",
+            "description": "一頁式網站／活動宣傳頁，含 SEO 基礎設定",
+            "itemOffered": { "@type": "Service", "name": "一頁式網站建置" }
+          },
+          {
+            "@type": "Offer",
+            "price": "25000",
+            "priceCurrency": "TWD",
+            "description": "形象官網（約 5～7 頁），含 SEO／AI 搜尋（AEO）基礎優化",
+            "itemOffered": { "@type": "Service", "name": "形象官網建置" }
+          },
+          {
+            "@type": "Offer",
+            "price": "6000",
+            "priceCurrency": "TWD",
+            "description": "既有網站的改版與增修，可只針對搜尋與 AI 能見度的部分處理",
+            "itemOffered": { "@type": "Service", "name": "網站改版與增修" }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://tonpin.pages.dev/" },
+        { "@type": "ListItem", "position": 2, "name": "服務項目", "item": "https://tonpin.pages.dev/services" },
+        { "@type": "ListItem", "position": 3, "name": "SEO／AEO／GEO 搜尋與 AI 能見度", "item": "https://tonpin.pages.dev/services/seo-aeo-geo" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "SEO、AEO、GEO 三個到底差在哪？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO 顧的是 Google 這類搜尋引擎的排名位置，你的網站要出現在那一排連結裡；AEO 顧的是使用者問問題時，你的內容有沒有被拿去當成那個答案；GEO 顧的是 ChatGPT、Gemini 這類會直接生成一段話的工具，回答時會不會提到你。三者的技術基礎高度重疊——內容清楚、結構正確、機器讀得到——但著力點不同：SEO 在意排名，AEO 與 GEO 在意有沒有被引用。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "我只是開一家小店，需要做到這種程度嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "小店反而更需要，因為小店沒有廣告預算去買曝光。而且這裡面大部分工作是一次性的結構調整，不是每個月要繳的費用：把服務、價格、限制條件寫成完整句子，把常見問題用問答形式寫在頁面上，把結構化資料標好。做完之後它就一直在那裡發揮作用，不會因為停止付費就消失。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "做了就能保證排到第一頁、或保證被 AI 推薦嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不能，我們也不會這樣承諾。搜尋排名由 Google 決定，AI 引用哪些內容由各家模型決定，沒有任何外部業者能對結果打包票。能承諾的是把該做的技術基礎與內容結構做到位，而且每一項都說得出做了什麼、可以去哪裡驗證。如果有人跟你保證特定排名或保證上 AI 推薦，那是誇大。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "網站不是你們做的，可以只做這一段嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以。把網址給我們，我們先看過現況——目前有幾頁被收錄、標題與描述怎麼寫的、有沒有結構化資料、內容結構適不適合被引用、載入速度如何——再告訴你哪些是花小力氣就有效的、哪些要動到網站結構才治得到根。這類工作走網站改版與增修 NT$6,000 起，依實際範圍報價。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "這要另外收費嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "在對頻設計這裡不是另外賣的加購項目。一頁式網站 NT$8,800 起含 SEO 基礎設定，形象官網 NT$25,000 起含 SEO 與 AI 搜尋（AEO）基礎優化，都寫在收費參考表裡。既有網站要單獨處理這一段，走網站改版與增修 NT$6,000 起。我們的想法是：網站本來就該讓人找得到，不該再拆一筆費用出來賣。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "多久會看到效果？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "技術面的調整（結構化資料、網站地圖、爬蟲設定、載入速度）在搜尋引擎重新檢索之後就會反映，通常是數天到數週；內容面與排名的變化要以月為單位觀察，而且跟你的行業競爭程度有關。一個剛上線的新網站，前兩個月主要是在累積被收錄的頁數，不會馬上有排名。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "怎麼知道有沒有進步？看什麼數字？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "用 Google Search Console 看四個客觀數字：有多少頁真的被編入索引、搜尋曝光次數、點擊次數，以及使用者實際搜什麼字進來。這些不是感覺，是可以逐頁查的。被 AI 引用的情況比較難完整追蹤，但可以直接拿實際問題去問 AI，看看答案裡有沒有出現你的店。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要內容</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html">
+      <img src="../assets/logo/synchord-mark.svg" alt="對頻設計" width="34" height="34">
+      <span class="brand-text"><span class="brand-zh">對頻設計</span><span class="brand-en">tonpin</span></span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="主導覽">
+      <a href="../index.html">首頁</a>
+      <a href="../about.html">關於我們</a>
+      <a href="../services.html" class="active" aria-current="page">服務項目</a>
+      <a href="../portfolio.html">案例</a>
+      <a href="../google-education.html">Google 認證服務</a>
+      <a href="../contact.html">聯絡我們</a>
+    </nav>
+    <a class="nav-cta" href="../contact.html">免費諮詢</a>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="切換深色模式">☾</button>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="開關選單">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-head">
+    <div class="wrap">
+      <p class="breadcrumb"><a href="../index.html">首頁</a> ／ <a href="../services.html">服務項目</a> ／ SEO／AEO／GEO</p>
+      <div class="ph-grid">
+        <div class="ph-main">
+          <svg class="sig-line" viewBox="0 0 120 12" aria-hidden="true">
+            <line x1="0" y1="6" x2="120" y2="6" stroke="currentColor" stroke-opacity="0.15" stroke-width="1"/>
+            <line class="line-navy" x1="0" y1="6" x2="120" y2="6" stroke-width="1.5"/>
+            <line class="line-gold" x1="0" y1="6" x2="120" y2="6" stroke-width="1.5"/>
+          </svg>
+          <span class="eyebrow">Search &amp; AI visibility</span>
+          <h1 class="keep">讓 Google 排得到，也讓 AI 提得到你</h1>
+        </div>
+        <aside class="ph-side">
+          <p class="ph-lede keep">網站做好只是第一步。找不到，等於沒有——現在還多了一個問題：客人不一定在 Google 上找你，可能是直接問 AI。</p>
+          <nav class="ph-toc" aria-label="本頁內容">
+            <span class="ph-toc-title">本頁內容</span>
+            <ol>
+              <li><a href="#what">三個名詞各是什麼</a></li>
+              <li><a href="#how">我們實際會做的九件事</a></li>
+              <li><a href="#included">這些包含在哪些方案裡</a></li>
+              <li><a href="#honest">不會承諾的三件事</a></li>
+              <li><a href="#faq">常見問題</a></li>
+            </ol>
+          </nav>
+          <p class="ph-actions"><a class="link-arrow" href="../services.html#pricing">看收費參考</a></p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="prose">
+
+        <div class="notice reveal" style="margin-top:0;max-width:none">
+          <strong style="display:block;color:var(--text);margin-bottom:8px">先講結論</strong>
+          <p class="keep answer-line"><strong>SEO 顧的是在 Google 那一排連結裡排得到，AEO 顧的是你的內容被拿去當成答案，GEO 顧的是 ChatGPT、Gemini 這類工具回答時會提到你。三件事的技術基礎高度重疊，做法就是把內容寫清楚、把結構標對、讓機器讀得到。在對頻設計，這些工作包含在網站建置的價格裡，不是另外賣的加購項目。</strong></p>
+          <p class="keep">如果你只想知道「那我要付多少錢」：一頁式網站 NT$8,800 起含 SEO 基礎設定，形象官網 NT$25,000 起含 SEO 與 AEO 基礎優化，既有網站要單獨處理走網站改版與增修 NT$6,000 起。完整表格在<a href="../services.html#pricing">收費參考</a>。</p>
+        </div>
+
+        <h2 id="what" class="reveal" style="border-top:none;padding-top:0">三個名詞各是什麼</h2>
+        <p class="keep">這三個縮寫最近很常一起出現，講白話其實是同一件事的三個時期。</p>
+        <p class="keep"><strong>SEO（Search Engine Optimization，搜尋引擎最佳化）</strong>是大家最熟的那個：有人在 Google 打了「早午餐 外帶」，搜尋結果會列出一排連結，SEO 決定你排在哪裡、甚至有沒有出現。這件事二十年來沒有消失，現在仍然是最大的來源。</p>
+        <p class="keep"><strong>AEO（Answer Engine Optimization，答案引擎最佳化）</strong>處理的是另一種情況：使用者不想看十個連結，只想要一個答案。Google 搜尋結果最上面那段 AI 概覽、以及各種「精選摘要」，抓的都是網頁裡「問題正下方那一段直接回答」。答案埋在第三段的頁面，排名再好也不容易被抓出來。</p>
+        <p class="keep"><strong>GEO（Generative Engine Optimization，生成式引擎最佳化）</strong>則是 ChatGPT、Gemini、Perplexity 這種會直接生成一段話的工具。客人問「有沒有可以帶長輩去的餐廳」，AI 給的是一段推薦文字，而不是一排連結。你的店有沒有被寫進那段話裡，就是 GEO 在管的事。</p>
+        <p class="keep">要提醒一件事：<strong>GEO 這個縮寫也有人拿來指「地理」（Geographic）</strong>，兩種用法在網路上混著用。這頁講的一律是生成式引擎。</p>
+
+        <h2 id="how" class="reveal">我們實際會做的九件事</h2>
+        <p class="keep">與其講「全面優化」這種空話，直接列出實際動作。這九項不是每個網站都全部要做，但這是我們檢查的清單：</p>
+        <ul class="keep">
+          <li><strong>結構化資料（Schema.org）標記</strong>——用機器讀得懂的格式，把「這是一家什麼店、提供什麼服務、這頁在回答什麼問題」寫清楚，包含 FAQ、麵包屑與服務項目。</li>
+          <li><strong>答案前置的內容結構</strong>——每一頁的主要問題，正下方就要有 40～60 字的直接回答。這是 AI 概覽與精選摘要真正會抓的位置。</li>
+          <li><strong>標題與描述改寫</strong>——把最值錢的前幾個字讓給客人真正會搜的詞，不是拿來擺自己的品牌名。品牌名放後面就好。</li>
+          <li><strong>llms.txt 內容索引</strong>——把整個網站的重點整理成一份純文字檔給語言模型看。要老實說：這是社群慣例、不是官方規格，成本很低所以我們做，但不會拿它當賣點。</li>
+          <li><strong>爬蟲政策檢查</strong>——有些網站設定或外掛會預設把 AI 爬蟲擋掉。想被引用就不能擋，這件事一定要打開 robots.txt 確認過。</li>
+          <li><strong>網站地圖與收錄設定</strong>——sitemap.xml 要涵蓋全部頁面，並且在網站更新後主動通知搜尋引擎（IndexNow），不要傻等它自己來。</li>
+          <li><strong>內部連結整理</strong>——讓每一頁都連得到相關的頁面。這同時幫使用者也幫爬蟲，而且是零成本的。</li>
+          <li><strong>載入效能</strong>——手機上開太慢的網站，客人會退出去，搜尋引擎也看得到這件事。我們的做法是不堆外部框架、圖片給對尺寸。</li>
+          <li><strong>Search Console 設定與觀察</strong>——裝好之後才知道客人實際搜什麼字進來，接下來要補什麼內容才有依據，不是憑感覺猜。</li>
+        </ul>
+        <p class="keep">這些不是紙上談兵：我們自己的網站就是照這份清單做的——你現在讀的這一頁有結構化資料，網站根目錄有 <a href="../llms.txt">llms.txt</a>，robots.txt 對 AI 爬蟲是開放的。想確認我們有沒有做，打開原始碼就看得到。</p>
+
+        <h2 id="included" class="reveal">這些包含在哪些方案裡</h2>
+        <p class="keep">在對頻設計，搜尋與 AI 能見度不是另外賣的加購包，是網站本來就該有的東西。對照<a href="../services.html#pricing">收費參考</a>：</p>
+        <ul class="keep">
+          <li><strong>一頁式網站 / 活動宣傳頁（NT$8,800 起）</strong>——含 SEO 基礎設定：標題描述、結構化資料、網站地圖、爬蟲設定。單頁能做的深度有限，但該有的不會少。</li>
+          <li><strong>形象官網 約 5～7 頁（NT$25,000 起）</strong>——含 SEO 與 AI 搜尋（AEO）基礎優化。多頁式的好處是每一項服務都有自己的網址與標題，客人搜哪一項就有哪一頁可以排；這也是<a href="../cases/idun-beauty-spa-website.html">伊登森活那個案例</a>在處理的事。</li>
+          <li><strong>網站改版與增修（NT$6,000 起）</strong>——網站不是我們做的也可以，只針對搜尋與 AI 能見度處理。先看過現況再報實際範圍。</li>
+        </ul>
+        <p class="keep">如果你還沒有網站，先看<a href="../knowledge/landing-page-vs-website.html">一頁式與形象官網怎麼選</a>；已經有網站但搜不到，直接<a href="../contact.html?topic=%E7%B6%B2%E7%AB%99%E6%94%B9%E7%89%88%E8%88%87%E5%A2%9E%E4%BF%AE">把網址丟給我們看一下</a>。</p>
+
+        <h2 id="honest" class="reveal">不會承諾的三件事</h2>
+        <p class="keep">這一段是為了讓你好比較。有人會承諾這些，我們不會：</p>
+        <ul class="keep">
+          <li><strong>不承諾特定排名。</strong>排名是 Google 決定的，沒有外部業者控制得了。任何「保證第一頁」的說法都要小心。</li>
+          <li><strong>不承諾一定被 AI 推薦。</strong>引用哪些內容由各家模型決定，而且他們一直在改。我們能做的是把被引用的條件準備好。</li>
+          <li><strong>不做關鍵字塞法、不買連結。</strong>這類手法早就沒效，還有被搜尋引擎處罰的風險，對 AI 更是完全沒用——AI 讀的是句子，不是關鍵字密度。</li>
+        </ul>
+        <p class="keep">能承諾的是：每一項做了什麼都說得出來，而且你自己查得到。</p>
+
+        <h2 id="faq" class="reveal">常見問題</h2>
+        <div class="faq reveal">
+          <details class="faq-item">
+            <summary>SEO、AEO、GEO 三個到底差在哪？</summary>
+            <div class="faq-a">
+              <p class="keep">SEO 顧的是 Google 這類搜尋引擎的<strong>排名位置</strong>，你的網站要出現在那一排連結裡；AEO 顧的是使用者問問題時，你的內容有沒有<strong>被拿去當成那個答案</strong>；GEO 顧的是 ChatGPT、Gemini 這類會直接生成一段話的工具，回答時<strong>會不會提到你</strong>。</p>
+              <p class="keep">技術基礎高度重疊——內容清楚、結構正確、機器讀得到——但著力點不同：SEO 在意排名，AEO 與 GEO 在意有沒有被引用。所以不必把它們當成三筆預算，是同一件事做徹底。</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>我只是開一家小店，需要做到這種程度嗎？</summary>
+            <div class="faq-a">
+              <p class="keep">小店反而更需要，因為沒有廣告預算去買曝光。而且這裡面大部分是<strong>一次性的結構調整，不是每月要繳的費用</strong>：把服務、價格、限制條件寫成完整句子，把常見問題用問答形式寫在頁面上，把結構化資料標好。做完就一直在，不會因為停止付費就消失。</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>做了就能保證排到第一頁、或保證被 AI 推薦嗎？</summary>
+            <div class="faq-a">
+              <p class="keep">不能，我們也不會這樣承諾。排名由 Google 決定，AI 引用哪些內容由各家模型決定，<strong>沒有任何外部業者能對結果打包票</strong>。能承諾的是把該做的技術基礎與內容結構做到位，而且每一項都說得出做了什麼、可以去哪裡驗證。有人跟你保證特定排名，那是誇大。</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>網站不是你們做的，可以只做這一段嗎？</summary>
+            <div class="faq-a">
+              <p class="keep">可以。把網址給我們，我們先看過現況——目前有幾頁被收錄、標題與描述怎麼寫的、有沒有結構化資料、內容結構適不適合被引用、載入速度如何——再告訴你哪些是花小力氣就有效的、哪些要動到網站結構才治得到根。</p>
+              <p class="keep">這類工作走<strong>網站改版與增修 NT$6,000 起</strong>，依實際範圍報價。看完現況如果覺得不值得動，我們也會直接說。</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>這要另外收費嗎？</summary>
+            <div class="faq-a">
+              <p class="keep">不是另外賣的加購項目。一頁式網站（NT$8,800 起）含 SEO 基礎設定，形象官網（NT$25,000 起）含 SEO 與 AI 搜尋（AEO）基礎優化，都寫在<a href="../services.html#pricing">收費參考</a>表裡。既有網站要單獨處理這一段，走網站改版與增修（NT$6,000 起）。</p>
+              <p class="keep">我們的想法很單純：網站本來就該讓人找得到，不該再拆一筆費用出來賣。</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>多久會看到效果？</summary>
+            <div class="faq-a">
+              <p class="keep">技術面的調整（結構化資料、網站地圖、爬蟲設定、載入速度）在搜尋引擎重新檢索之後就會反映，通常是數天到數週；內容面與排名的變化要<strong>以月為單位</strong>觀察，而且跟行業競爭程度有關。剛上線的新網站前兩個月主要在累積被收錄的頁數，不會馬上有排名。</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>怎麼知道有沒有進步？看什麼數字？</summary>
+            <div class="faq-a">
+              <p class="keep">用 Google Search Console 看四個客觀數字：<strong>被編入索引的頁數、搜尋曝光次數、點擊次數，以及使用者實際搜什麼字進來</strong>。這些是可以逐頁查的，不是感覺。</p>
+              <p class="keep">被 AI 引用的情況比較難完整追蹤，但可以直接拿實際問題去問 AI，看答案裡有沒有出現你的店。這也是我們建議每個客戶都要裝 Search Console 的原因——沒有它，後面要補什麼內容只能用猜的。</p>
+            </div>
+          </details>
+        </div>
+
+        <h2 class="reveal">延伸閱讀</h2>
+        <ul class="keep">
+          <li><a href="../knowledge/ai-search-visibility.html">ChatGPT 會不會推薦我的店？AI 搜尋時代小店該做什麼 →</a></li>
+          <li><a href="../knowledge/google-business-profile.html">Google 商家檔案怎麼填才有用 →</a></li>
+          <li><a href="../knowledge/website-vs-fanpage.html">有粉專了還需要官網嗎？ →</a></li>
+        </ul>
+
+        <p class="keep" style="margin-top:36px">
+          <a class="btn btn-primary" href="../contact.html?topic=%E7%B6%B2%E7%AB%99%E6%94%B9%E7%89%88%E8%88%87%E5%A2%9E%E4%BF%AE">把網址給我們看一下</a>
+          <a class="btn btn-outline" href="../services.html#pricing">看收費參考</a>
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a class="brand" href="../index.html">
+          <img src="../assets/logo/synchord-mark.svg" alt="" width="34" height="34" aria-hidden="true">
+          <span class="brand-text"><span class="brand-zh">對頻設計</span><span class="brand-en">tonpin</span></span>
+        </a>
+        <p class="keep">幫你把店與服務好好放上網路，讓想找你的人找得到。網站開發、小型客製工具與 Google 認證服務的長期夥伴。</p>
+        <p class="footer-hours keep">收攤後才有空慢慢看？沒關係，信半夜寄來也可以——我們不會半夜回，但隔天一定回。</p>
+        <ul class="channel-list" style="margin-top:20px;max-width:22em">
+          <li class="needs-line">
+            <a class="channel line" href="https://line.me/R/ti/p/%40007bbtpd" target="_blank" rel="noopener">
+              <svg class="channel-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.9 3 2.8 6.3 2.8 10.4c0 3.7 3.3 6.8 7.7 7.4.3.1.7.2.8.5.1.3.1.6 0 .9l-.1.8c0 .2-.2.9.8.5s5.3-3.1 7.2-5.3c1.3-1.4 2-2.9 2-4.8C21.2 6.3 17.1 3 12 3z"/></svg>
+              <span class="channel-txt"><b>LINE 官方帳號</b><span>@007bbtpd<em>電腦版請在 LINE 搜尋 ID 加入</em></span></span>
+            </a><button type="button" class="fc-copy" data-copy="@007bbtpd" data-label="複製 ID" aria-label="複製 LINE 官方帳號 ID @007bbtpd">複製 ID</button>
+          </li>
+          <li>
+            <a class="channel" href="mailto:steve.edu711@gmail.com">
+              <svg class="channel-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <span class="channel-txt"><b>steve.edu711@gmail.com</b><span>寫信給我們</span></span>
+            </a><button type="button" class="fc-copy" data-copy="steve.edu711@gmail.com" data-label="複製信箱" aria-label="複製電子信箱 steve.edu711@gmail.com">複製信箱</button>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h4>網站導覽</h4>
+        <ul>
+          <li><a href="../about.html">關於我們</a></li>
+          <li><a href="../services.html">服務項目</a></li>
+          <li><a href="../portfolio.html">案例</a></li>
+          <li><a href="../knowledge/">小店家知識庫</a></li>
+          <li><a href="../contact.html">聯絡我們</a></li>
+          <li><a href="https://www.hunglun.com/" target="_blank" rel="noopener">鴻綸科技 ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Google 認證服務</h4>
+        <ul>
+          <li><a href="../google-education.html">Google 認證服務</a></li>
+          <li><a href="../gemini-education.html">Gemini for Education</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 對頻設計. All rights reserved.</span>
+      <span><a href="mailto:steve.edu711@gmail.com">steve.edu711@gmail.com</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

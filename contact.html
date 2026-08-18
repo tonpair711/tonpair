@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@900&family=Outfit:wght@600;700;800&display=swap">
 <link rel="stylesheet" href="assets/style.css?v=3">
-<script defer src="assets/main.js?v=2"></script>
+<script defer src="assets/main.js?v=3"></script>
 
 <script type="application/ld+json">
 {
@@ -106,7 +106,7 @@
     <div class="wrap">
       <div style="display:grid;gap:34px;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);align-items:start" class="contact-layout">
 
-        <form class="form-card reveal" id="contactForm" novalidate>
+        <form class="form-card reveal" id="contactForm" novalidate data-endpoint="">
           <div class="field-row">
             <div class="field">
               <label for="f-name">姓名 <span class="req">＊</span></label>
@@ -161,9 +161,16 @@
             <textarea id="f-msg" name="message" placeholder="例如：我開早餐店，想讓客人可以線上先點餐，不用一直看 LINE。"></textarea>
           </div>
 
+          <!-- 防機器人：真人看不到也 tab 不到，被填了就當垃圾訊息丟掉 -->
+          <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">
+            <label for="f-website">網址（請留空）</label>
+            <input type="text" id="f-website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+
           <button class="btn btn-primary btn-block" type="submit">送出諮詢</button>
           <p class="form-note keep">半夜送出也沒關係，我們隔天上班時間就會看到。</p>
-          <p class="form-sent keep" id="formStatus" hidden>已為你開啟郵件程式，按下寄出即完成。若沒有反應，請直接寄信到 <a href="mailto:steve.edu711@gmail.com">steve.edu711@gmail.com</a>。</p>
+          <p class="form-sent keep" id="formStatus" hidden>已收到，我們隔天上班時間就會回信給你。</p>
+          <p class="form-sent keep" id="formFallback" hidden>網路不太順，已改為開啟你的郵件程式，按下寄出即完成。若沒有反應，請直接寄信到 <a href="mailto:steve.edu711@gmail.com">steve.edu711@gmail.com</a>。</p>
         </form>
 
         <aside class="reveal" style="--rd:.1s">

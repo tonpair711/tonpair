@@ -140,7 +140,7 @@
     window.addEventListener('scroll', onScroll, { passive: true });
   }
 
-  /* ---------- 聯絡表單：?topic= 預填 ＋ mailto 送出 ---------- */
+  /* ---------- 聯絡表單：?topic= 預填 ＋ 送出（有端點就真的送，沒有／失敗才退回 mailto） ---------- */
   var topicSelect = document.querySelector('select[name="topic"]');
   if (topicSelect) {
     var topic = new URLSearchParams(location.search).get('topic');
@@ -154,9 +154,14 @@
 
   var contactForm = document.getElementById('contactForm');
   if (contactForm) {
+    var loadedAt = Date.now();
+
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      var d = new FormData(this);
+      var form = this;
+      // 表單掛 novalidate（不要瀏覽器自己跳泡泡打斷版面），必填欄位改在這裡自己檢查
+      if (form.checkValidity && !form.checkValidity()) { form.reportValidity(); return; }
+      var d = new FormData(form);
       var pains = d.getAll('pain').join('、') || '（未勾選）';
       var body = [
         '姓名：' + d.get('name'),
@@ -169,11 +174,66 @@
         '想說的話：',
         d.get('message') || '（未填）'
       ].join('\n');
-      location.href = 'mailto:steve.edu711@gmail.com?subject=' +
-        encodeURIComponent('【免費諮詢】' + d.get('topic')) +
-        '&body=' + encodeURIComponent(body);
-      var status = document.getElementById('formStatus');
-      if (status) status.hidden = false;
+
+      var ok = document.getElementById('formStatus');
+      var fallback = document.getElementById('formFallback');
+      var btn = form.querySelector('button[type="submit"]');
+
+      function openMail() {
+        location.href = 'mailto:steve.edu711@gmail.com?subject=' +
+          encodeURIComponent('【免費諮詢】' + d.get('topic')) +
+          '&body=' + encodeURIComponent(body);
+      }
+      function show(el) { if (el) el.hidden = false; }
+      function hide(el) { if (el) el.hidden = true; }
+
+      var endpoint = form.getAttribute('data-endpoint') || '';
+
+      // 沒有設定端點時，維持原本的 mailto 行為（端點掛掉也永遠有這條路可走）
+      if (!endpoint) { openMail(); show(fallback); return; }
+
+      // 機器人：填了隱藏欄位，或載入後 3 秒內就送出
+      if (d.get('website') || Date.now() - loadedAt < 3000) { show(ok); return; }
+
+      var payload = {
+        name: d.get('name') || '',
+        organization: d.get('organization') || '',
+        email: d.get('email') || '',
+        line: d.get('line') || '',
+        topic: d.get('topic') || '',
+        pains: pains,
+        message: d.get('message') || '',
+        page: location.href,
+        referrer: document.referrer || ''
+      };
+
+      hide(ok); hide(fallback);
+      var label = btn ? btn.textContent : '';
+      if (btn) { btn.disabled = true; btn.textContent = '傳送中…'; }
+
+      var done = false;
+      function finish(success) {
+        if (done) return;
+        done = true;
+        if (btn) { btn.disabled = false; btn.textContent = label; }
+        if (success) { show(ok); form.reset(); }
+        else { show(fallback); openMail(); }
+      }
+      // 端點沒回應就別讓使用者一直等，8 秒後改走 mailto
+      var timer = setTimeout(function () { finish(false); }, 8000);
+
+      // text/plain 不會觸發 CORS 預檢，Apps Script 才收得到
+      fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload)
+      }).then(function (r) {
+        clearTimeout(timer);
+        finish(r.ok);
+      }).catch(function () {
+        clearTimeout(timer);
+        finish(false);
+      });
     });
   }
 

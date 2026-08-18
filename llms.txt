@@ -51,6 +51,7 @@
 - 首頁：https://tonpin.pages.dev/
 - 關於我們：https://tonpin.pages.dev/about
 - 服務項目：https://tonpin.pages.dev/services
+  - SEO／AEO／GEO 搜尋與 AI 能見度（三者差別、實際做法九項、包含在哪些方案裡、不承諾排名）：https://tonpin.pages.dev/services/seo-aeo-geo
 - 案例：https://tonpin.pages.dev/portfolio
   - 伊登森活 Idun Beauty SPA 品牌官網（台南美容 SPA，8 頁形象官網＋SEO 多頁架構）：https://idun10.pages.dev/
     完整案例說明（一頁式改多頁的原因、做法與交付內容）：https://tonpin.pages.dev/cases/idun-beauty-spa-website
