@@ -1228,3 +1228,93 @@ label.check {
    視覺上比其他段落重一階，但不做成色塊——它本來就在「先講結論」框裡了。 */
 .prose .answer-line{font-size:1.06rem;line-height:1.85;margin-bottom:14px}
 .prose .answer-line strong{font-weight:700;color:var(--text)}
+
+/* ---------- 網站效果展示（首頁：現場演示的互動效果卡） ----------
+   每張卡片自己就是那個效果的實物，不用截圖也不用影片。
+   一律走既有變數與紙感規則（直角、髮絲線、金色只當點綴）；
+   reduced-motion 時全部停在最終狀態，內容仍完整可讀。 */
+.fx-grid { display: grid; gap: 22px; grid-template-columns: 1fr; }
+@media (min-width: 700px) { .fx-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .fx-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+.fx-card {
+  border: 1px solid var(--line);
+  background: var(--card);
+  display: flex; flex-direction: column;
+}
+.fx-stage {
+  position: relative;
+  height: 150px; padding: 18px;
+  display: flex; align-items: center; justify-content: center;
+  border-bottom: 1px solid var(--line-soft);
+  background: var(--bg-soft);
+  overflow: hidden;
+  text-align: center;
+}
+.fx-body { padding: 18px 20px 20px; }
+.fx-body h3 { font-size: 1.02rem; margin-bottom: 6px; }
+.fx-body p { font-size: 0.9rem; color: var(--muted); }
+.fx-replay {
+  margin-top: 12px; padding: 0; border: 0; background: none; cursor: pointer;
+  font: inherit; font-size: 0.84rem; color: var(--gold);
+  border-bottom: 1px solid currentColor; line-height: 1.4;
+}
+.fx-replay:hover { color: var(--ink); }
+
+/* 1. 捲動淡入 */
+.fx-reveal-box {
+  padding: 12px 18px; border: 1px solid var(--line-strong); background: var(--card);
+  font-size: 0.92rem;
+  opacity: 0; transform: translateY(14px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.fx-reveal-box.on { opacity: 1; transform: none; }
+
+/* 2. 打字機 */
+.fx-type { font-size: 0.98rem; color: var(--ink); }
+.fx-type::after {
+  content: ""; display: inline-block; width: 1px; height: 1.05em;
+  background: var(--gold-pure); margin-left: 3px; vertical-align: -2px;
+  animation: fx-caret 1s steps(1) infinite;
+}
+@keyframes fx-caret { 50% { opacity: 0; } }
+
+/* 3. 數字滾動 */
+.fx-num {
+  font-family: var(--font-en); font-weight: 700; font-size: 2.1rem;
+  color: var(--ink); letter-spacing: -0.01em;
+}
+.fx-num small { font-size: 0.9rem; font-weight: 600; color: var(--muted); margin-left: 4px; }
+
+/* 4. 3D 傾斜卡片 */
+.fx-tilt-wrap { perspective: 700px; }
+.fx-tilt {
+  width: 150px; padding: 20px 14px;
+  border: 1px solid var(--line-strong); background: var(--card);
+  font-size: 0.9rem;
+  box-shadow: 4px 4px 0 var(--gold-pure);
+  transition: transform 0.25s ease;
+  transform-style: preserve-3d;
+}
+
+/* 5. 金色流動標題 */
+.fx-flow {
+  font-family: var(--font-serif); font-weight: 900; font-size: 1.5rem;
+  background: linear-gradient(100deg, var(--ink) 0%, var(--ink) 38%, var(--gold-pure) 50%, var(--ink) 62%, var(--ink) 100%);
+  background-size: 260% 100%;
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+  animation: fx-flow 4.5s linear infinite;
+}
+@keyframes fx-flow { from { background-position: 130% 0; } to { background-position: -130% 0; } }
+
+/* 6. 對頻線（自家簽名） */
+.fx-sig { width: 150px; }
+.fx-sig .sig-line { width: 150px; margin: 0 auto; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fx-reveal-box { opacity: 1; transform: none; transition: none; }
+  .fx-type::after { animation: none; }
+  .fx-flow { animation: none; background: none; color: var(--ink); }
+  .fx-tilt { transition: none; }
+}

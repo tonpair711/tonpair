@@ -300,4 +300,102 @@
       fallback();
     }
   });
+
+  /* ---------- 首頁的網站效果展示：每張卡片就是那個效果本人 ----------
+     卡片進入視野時演一次，「再看一次」可重播。
+     reduced-motion 時一律直接呈現最終狀態（文字打完、數字到位、線已重合）。 */
+  var fxStages = document.querySelectorAll('[data-fx]');
+  if (fxStages.length) {
+
+    function fxType(stage, instant) {
+      var el = stage.querySelector('.fx-type');
+      if (!el) return;
+      var text = el.getAttribute('data-text') || '';
+      if (instant) { el.textContent = text; return; }
+      el.textContent = '';
+      var i = 0;
+      clearInterval(el._t);
+      el._t = setInterval(function () {
+        el.textContent = text.slice(0, ++i);
+        if (i >= text.length) clearInterval(el._t);
+      }, 110);
+    }
+
+    function fxCount(stage, instant) {
+      var el = stage.querySelector('[data-count-to]');
+      if (!el) return;
+      var target = parseInt(el.getAttribute('data-count-to'), 10) || 0;
+      var prefix = el.getAttribute('data-count-prefix') || '';
+      function paint(v) { el.textContent = prefix + v.toLocaleString('en-US'); }
+      if (instant) { paint(target); return; }
+      var start = null, dur = 1100;
+      cancelAnimationFrame(el._raf);
+      function step(ts) {
+        if (start === null) start = ts;
+        var p = Math.min((ts - start) / dur, 1);
+        // 先快後慢，停下來時比較有重量感
+        paint(Math.round(target * (1 - Math.pow(1 - p, 3))));
+        if (p < 1) el._raf = requestAnimationFrame(step);
+      }
+      el._raf = requestAnimationFrame(step);
+    }
+
+    function fxReveal(stage, instant) {
+      var box = stage.querySelector('.fx-reveal-box');
+      if (!box) return;
+      if (instant) { box.classList.add('on'); return; }
+      box.classList.remove('on');
+      setTimeout(function () { box.classList.add('on'); }, 60);
+    }
+
+    function fxSig(stage, instant) {
+      var line = stage.querySelector('.sig-line');
+      if (!line) return;
+      if (instant) { line.classList.add('in'); return; }
+      line.classList.remove('in');
+      setTimeout(function () { line.classList.add('in'); }, 80);
+    }
+
+    var players = { type: fxType, count: fxCount, reveal: fxReveal, sig: fxSig };
+
+    function play(stage, instant) {
+      var fn = players[stage.getAttribute('data-fx')];
+      if (fn) fn(stage, instant);
+    }
+
+    // 3D 傾斜：只在有滑鼠的裝置上做，觸控裝置維持靜止
+    document.querySelectorAll('[data-fx="tilt"]').forEach(function (stage) {
+      var card = stage.querySelector('.fx-tilt');
+      if (!card || reduced) return;
+      stage.addEventListener('mousemove', function (e) {
+        var r = stage.getBoundingClientRect();
+        var x = (e.clientX - r.left) / r.width - 0.5;
+        var y = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = 'rotateY(' + (x * 18).toFixed(2) + 'deg) rotateX(' + (-y * 18).toFixed(2) + 'deg)';
+      });
+      stage.addEventListener('mouseleave', function () { card.style.transform = ''; });
+    });
+
+    fxStages.forEach(function (stage) {
+      if (reduced) { play(stage, true); return; }
+      if (!('IntersectionObserver' in window)) { play(stage, true); return; }
+      var seen = false;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting && !seen) { seen = true; play(stage, false); io.unobserve(stage); }
+        });
+      }, { threshold: 0.5 });
+      io.observe(stage);
+      // 保險：3 秒後還沒演過就直接給最終狀態，不會有空白的卡片
+      setTimeout(function () { if (!seen) { seen = true; play(stage, true); } }, 3000);
+    });
+
+    document.querySelectorAll('[data-fx-replay]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var card = btn.closest('.fx-card');
+        var stage = card && card.querySelector('[data-fx]');
+        if (stage) play(stage, reduced);
+      });
+    });
+  }
 })();
