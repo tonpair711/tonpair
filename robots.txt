@@ -47,4 +47,4 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
-Sitemap: https://tonpin.pages.dev/sitemap.xml
+Sitemap: https://tonpair.com/sitemap.xml

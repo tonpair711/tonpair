@@ -1,12 +1,12 @@
 # 對頻設計 — 全站完整內容（llms-full.txt）
 
-> 本檔為 https://tonpin.pages.dev/ 全站可見文字的完整彙整，供 AI 助理與答案引擎引用。
+> 本檔為 https://tonpair.com/ 全站可見文字的完整彙整，供 AI 助理與答案引擎引用。
 > 站台摘要版見 /llms.txt。內容以網站頁面為準，如有出入以頁面為主。
 
 
 ---
 
-## 首頁｜https://tonpin.pages.dev/
+## 首頁｜https://tonpair.com/
 
 跳到主要內容
 對頻設計
@@ -241,7 +241,7 @@ steve.edu711@gmail.com
 
 ---
 
-## 關於我們｜https://tonpin.pages.dev/about
+## 關於我們｜https://tonpair.com/about
 
 跳到主要內容
 對頻設計
@@ -330,7 +330,7 @@ steve.edu711@gmail.com
 
 ---
 
-## 服務項目與收費｜https://tonpin.pages.dev/services
+## 服務項目與收費｜https://tonpair.com/services
 
 跳到主要內容
 對頻設計
@@ -538,7 +538,7 @@ steve.edu711@gmail.com
 
 ---
 
-## 案例｜https://tonpin.pages.dev/portfolio
+## 案例｜https://tonpair.com/portfolio
 
 跳到主要內容
 對頻設計
@@ -626,7 +626,7 @@ steve.edu711@gmail.com
 
 ---
 
-## Google 認證服務｜https://tonpin.pages.dev/google-education
+## Google 認證服務｜https://tonpair.com/google-education
 
 跳到主要內容
 對頻設計
@@ -739,7 +739,7 @@ steve.edu711@gmail.com
 
 ---
 
-## Gemini for Education 導入顧問｜https://tonpin.pages.dev/gemini-education
+## Gemini for Education 導入顧問｜https://tonpair.com/gemini-education
 
 跳到主要內容
 對頻設計
@@ -988,7 +988,7 @@ steve.edu711@gmail.com
 
 ---
 
-## 聯絡我們｜https://tonpin.pages.dev/contact
+## 聯絡我們｜https://tonpair.com/contact
 
 跳到主要內容
 對頻設計
@@ -1087,7 +1087,7 @@ steve.edu711@gmail.com
 
 ---
 
-## 服務：SEO／AEO／GEO 搜尋與 AI 能見度｜https://tonpin.pages.dev/services/seo-aeo-geo
+## 服務：SEO／AEO／GEO 搜尋與 AI 能見度｜https://tonpair.com/services/seo-aeo-geo
 
 跳到主要內容
 對頻設計
@@ -1236,7 +1236,7 @@ steve.edu711@gmail.com
 
 ---
 
-## 案例：伊登森活品牌官網（一頁式改 8 頁 SEO 架構）｜https://tonpin.pages.dev/cases/idun-beauty-spa-website
+## 案例：伊登森活品牌官網（一頁式改 8 頁 SEO 架構）｜https://tonpair.com/cases/idun-beauty-spa-website
 
 跳到主要內容
 對頻設計
@@ -1391,7 +1391,7 @@ steve.edu711@gmail.com
 
 ---
 
-## 案例：Loverolling 會員累點系統（免下載 App 的掃碼累點）｜https://tonpin.pages.dev/cases/loverolling-member-system
+## 案例：Loverolling 會員累點系統（免下載 App 的掃碼累點）｜https://tonpair.com/cases/loverolling-member-system
 
 跳到主要內容
 對頻設計
@@ -1539,7 +1539,7 @@ steve.edu711@gmail.com
 
 ---
 
-## 小店家知識庫（索引）｜https://tonpin.pages.dev/knowledge/
+## 小店家知識庫（索引）｜https://tonpair.com/knowledge/
 
 跳到主要內容
 對頻設計
@@ -1642,7 +1642,7 @@ steve.edu711@gmail.com
 
 ---
 
-## 只有 FB 粉專就夠了嗎？粉專、官網、Google 商家檔案差在哪｜https://tonpin.pages.dev/knowledge/website-vs-fanpage
+## 只有 FB 粉專就夠了嗎？粉專、官網、Google 商家檔案差在哪｜https://tonpair.com/knowledge/website-vs-fanpage
 
 跳到主要內容
 對頻設計
@@ -1761,7 +1761,7 @@ steve.edu711@gmail.com
 
 ---
 
-## 小店家做一個網站要多少錢？費用是怎麼算出來的｜https://tonpin.pages.dev/knowledge/website-cost
+## 小店家做一個網站要多少錢？費用是怎麼算出來的｜https://tonpair.com/knowledge/website-cost
 
 跳到主要內容
 對頻設計
@@ -1880,7 +1880,7 @@ steve.edu711@gmail.com
 
 ---
 
-## LINE 訂單、手抄表單怎麼自動化？小店常見的三種做法｜https://tonpin.pages.dev/knowledge/order-automation
+## LINE 訂單、手抄表單怎麼自動化？小店常見的三種做法｜https://tonpair.com/knowledge/order-automation
 
 跳到主要內容
 對頻設計
@@ -1999,7 +1999,7 @@ steve.edu711@gmail.com
 
 ---
 
-## Google 商家檔案怎麼設定，客人搜店名才找得到你｜https://tonpin.pages.dev/knowledge/google-business-profile
+## Google 商家檔案怎麼設定，客人搜店名才找得到你｜https://tonpair.com/knowledge/google-business-profile
 
 跳到主要內容
 對頻設計
@@ -2118,7 +2118,7 @@ steve.edu711@gmail.com
 
 ---
 
-## 一頁式網站是什麼？跟形象官網怎麼選｜https://tonpin.pages.dev/knowledge/landing-page-vs-website
+## 一頁式網站是什麼？跟形象官網怎麼選｜https://tonpair.com/knowledge/landing-page-vs-website
 
 跳到主要內容
 對頻設計
@@ -2237,7 +2237,7 @@ steve.edu711@gmail.com
 
 ---
 
-## 做一個網站要多久？流程、卡點與你要先準備的東西｜https://tonpin.pages.dev/knowledge/website-process
+## 做一個網站要多久？流程、卡點與你要先準備的東西｜https://tonpair.com/knowledge/website-process
 
 跳到主要內容
 對頻設計
@@ -2356,7 +2356,7 @@ steve.edu711@gmail.com
 
 ---
 
-## 網域要自己買嗎？.com 與 .com.tw 怎麼選｜https://tonpin.pages.dev/knowledge/domain-hosting
+## 網域要自己買嗎？.com 與 .com.tw 怎麼選｜https://tonpair.com/knowledge/domain-hosting
 
 跳到主要內容
 對頻設計
@@ -2475,7 +2475,7 @@ steve.edu711@gmail.com
 
 ---
 
-## ChatGPT 會不會推薦我的店？AI 搜尋時代小店該做什麼｜https://tonpin.pages.dev/knowledge/ai-search-visibility
+## ChatGPT 會不會推薦我的店？AI 搜尋時代小店該做什麼｜https://tonpair.com/knowledge/ai-search-visibility
 
 跳到主要內容
 對頻設計
