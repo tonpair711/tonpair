@@ -1,0 +1,331 @@
+/* ==========================================================================
+   對頻設計 tonpin — 科技風換皮 v3（2026-08-25）
+   路線：深底 hero ＋ 亮底內容區。金 → 對頻青 #22D3EE，明體 → 黑體 900。
+   做法：只覆寫 style.css 已有的設計變數，不重寫元件；style.css 之後載入。
+   目前只有 index.html 引用，其餘 18 頁維持舊皮，定案後再併回 style.css。
+   ========================================================================== */
+
+/* ---------- Token 覆寫：換色、換字 ---------- */
+:root {
+  /* 對頻青取代品牌金。--cyan-pure 用於 1px 線、圓點、發光；--cyan 用於淺底文字（對比 4.8:1） */
+  --gold-pure: #22d3ee;
+  --gold: #0e7490;
+  /* 標題全面改黑體重字重；變數名沿用 --font-serif，是所有 .section-title / h1 的字型出口 */
+  --font-serif: "Noto Sans TC", "PingFang TC", system-ui, sans-serif;
+  /* hero 專用深底 */
+  --hero-bg: #060d18;
+  --hero-bg2: #0b1727;
+}
+:root[data-theme="dark"] {
+  --gold-pure: #22d3ee;
+  --gold: #5ee0f5;          /* 深底放亮，對比 8.4:1 */
+  --hero-bg: #060d18;
+  --hero-bg2: #0b1727;
+}
+
+/* 黑體沒有明體的墨韻，字距要收一點才不鬆散 */
+.section-title, .hero h1 { letter-spacing: -0.015em; }
+
+/* ---------- Hero：深色開場 ---------- */
+.hero {
+  background: var(--hero-bg);
+  padding-top: 148px;                 /* 讓出疊上去的 header */
+  padding-bottom: 72px;
+  /* hero 內部整組換成深底用色，子元素不必逐一改 */
+  --ink: #eaf2fb;
+  --text: #eaf2fb;
+  --muted: rgba(234, 242, 251, 0.66);
+  --muted-faint: rgba(234, 242, 251, 0.44);
+  --line: rgba(234, 242, 251, 0.16);
+  --line-soft: rgba(234, 242, 251, 0.12);
+  --line-strong: rgba(234, 242, 251, 0.4);
+  --gold: #22d3ee;
+  --accent: #22d3ee;
+}
+/* 網格底紋：往下淡出，不干擾文字 */
+.hero::before {
+  content: "";
+  position: absolute; inset: 0; z-index: 0;
+  background-image:
+    linear-gradient(rgba(234, 242, 251, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(234, 242, 251, 0.045) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(120% 90% at 50% 0%, #000 30%, transparent 78%);
+          mask-image: radial-gradient(120% 90% at 50% 0%, #000 30%, transparent 78%);
+}
+/* 左上光暈 */
+.hero::after {
+  content: "";
+  position: absolute; z-index: 0;
+  width: 900px; height: 900px; left: -260px; top: -320px;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.16), transparent 62%);
+  pointer-events: none;
+}
+/* 對頻波 canvas：兩條青藍正弦波緩慢錯開又重合 */
+#tonWave {
+  position: absolute; inset: 0; z-index: 0;
+  width: 100%; height: 100%;
+  opacity: 0.9;
+  pointer-events: none;
+}
+.hero > .wrap { z-index: 2; }
+
+.hero h1 { font-weight: 900; }
+.hero h1 .amp { color: #22d3ee; }
+.hero-quote { color: rgba(234, 242, 251, 0.44); }
+.hero-price strong { color: #eaf2fb; }
+.hero-trust { border-top-color: rgba(234, 242, 251, 0.16); }
+
+/* 深底上的按鈕：主鈕改實心青，次鈕細框 */
+.hero .btn.btn-primary {
+  background: #22d3ee; color: #04121a; border-color: #22d3ee;
+  box-shadow: 0 8px 30px -8px rgba(34, 211, 238, 0.5);
+}
+.hero .btn.btn-primary:hover { background: #67e3f6; border-color: #67e3f6; color: #04121a; }
+.hero .btn.btn-ghost { color: #eaf2fb; border-color: rgba(234, 242, 251, 0.28); }
+.hero .btn.btn-ghost:hover { border-color: #22d3ee; color: #22d3ee; }
+.hero .link-arrow { color: #22d3ee; }
+.hero .link-arrow:hover { color: #67e3f6; }
+
+/* 舊的雙軸髮絲線簽名在深底上看不見，改由 canvas 波形擔任，直接收起來 */
+.hero .sig-line { display: none; }
+
+/* 作品截圖：深底要靠邊框與投影浮起來 */
+.hero .shot {
+  border: 1px solid rgba(234, 242, 251, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 40px 90px -30px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(34, 211, 238, 0.18);
+}
+.hero .shot-bar { background: #16273c; color: rgba(234, 242, 251, 0.5); }
+.hero .shot-bar i { background: rgba(234, 242, 251, 0.25); }
+.hero .shot-cap { color: rgba(234, 242, 251, 0.44); }
+
+/* hero 收尾：深底轉回亮底，中間補一道青線當交界 */
+.hero + .divider { margin-top: 0; }
+.hero-edge {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.55), transparent);
+}
+
+/* ---------- Header：疊在 hero 上，滾過去才變亮 ---------- */
+.site-header {
+  transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+body.home-hero .site-header {
+  position: fixed; left: 0; right: 0; top: 0;
+  background: transparent;
+  border-bottom-color: transparent;
+  -webkit-backdrop-filter: none; backdrop-filter: none;
+}
+body.home-hero .site-header .brand-zh { color: #eaf2fb; }
+body.home-hero .site-header .brand-en { color: rgba(234, 242, 251, 0.44); }
+body.home-hero .site-header .main-nav > a { color: rgba(234, 242, 251, 0.72); }
+body.home-hero .site-header .main-nav > a:hover { color: #22d3ee; }
+body.home-hero .site-header .theme-toggle,
+body.home-hero .site-header .nav-toggle { color: #eaf2fb; border-color: rgba(234, 242, 251, 0.24); }
+body.home-hero .site-header .nav-cta {
+  background: #22d3ee; color: #04121a; border-color: #22d3ee;
+}
+body.home-hero .site-header .nav-cta:hover { background: #67e3f6; color: #04121a !important; }
+/* 捲過 hero 之後恢復成一般（亮底）表頭 */
+body.home-hero .site-header.scrolled {
+  background: var(--header-bg);
+  border-bottom-color: var(--line);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+}
+body.home-hero .site-header.scrolled .brand-zh { color: var(--ink); }
+body.home-hero .site-header.scrolled .brand-en { color: var(--muted-faint); }
+body.home-hero .site-header.scrolled .main-nav > a { color: var(--text); }
+body.home-hero .site-header.scrolled .theme-toggle,
+body.home-hero .site-header.scrolled .nav-toggle { color: var(--ink); border-color: var(--line); }
+body.home-hero .site-header.scrolled .nav-cta { background: var(--ink); color: #fff; border-color: var(--ink); }
+/* 手機選單展開時一律要有底，否則字疊在 hero 上 */
+body.home-hero .site-header .main-nav.open { background: var(--card); }
+body.home-hero .site-header .main-nav.open > a { color: var(--text); }
+
+/* ---------- 案例區：作品扇形舞台 ---------- */
+.work-stage {
+  position: relative;
+  margin: 0 0 48px;
+  padding: 56px 0 0;
+  background: var(--hero-bg);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.work-stage::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 80% 70% at 50% 100%, rgba(34, 211, 238, 0.22), transparent 65%);
+}
+.work-stage-inner {
+  position: relative;
+  height: 300px;
+  display: flex; justify-content: center; align-items: flex-start;
+}
+.work-stage figure {
+  position: absolute;
+  margin: 0;
+  border: 1px solid rgba(234, 242, 251, 0.16);
+  border-radius: 9px 9px 0 0;
+  overflow: hidden;
+  box-shadow: 0 -10px 70px -20px rgba(34, 211, 238, 0.35), 0 30px 80px -30px #000;
+}
+.work-stage figure img { display: block; width: 100%; height: auto; }
+/* 各圖固定高度、只露上半截，下緣統一交給 stage-veil 漸隱——
+   不限高的話直式手機截圖會整個穿出舞台，壓到底下的說明 */
+.work-stage .w-main  { width: 460px; height: 250px; left: 50%; transform: translateX(-50%); z-index: 3; }
+.work-stage .w-left  { width: 330px; height: 210px; left: 8%;  top: 44px; transform: rotate(-4deg); z-index: 2; opacity: 0.85; }
+.work-stage .w-right { width: 186px; height: 226px; right: 13%; top: 30px; transform: rotate(4deg);  z-index: 2; opacity: 0.9; }
+.work-stage .stage-veil {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 110px; z-index: 4;
+  background: linear-gradient(transparent, var(--hero-bg));
+}
+.work-stage .stage-cap {
+  position: absolute; left: 0; right: 0; bottom: 18px; z-index: 5;
+  text-align: center;
+  color: rgba(234, 242, 251, 0.55);
+  font-size: 0.86rem;
+}
+
+/* ---------- 手機 ---------- */
+@media (max-width: 980px) {
+  .hero { padding-top: 116px; padding-bottom: 56px; }
+  /* 窄螢幕沒有右欄要讓，波形不必左側淡出，否則幾乎看不到 */
+  #tonWave { -webkit-mask-image: none; mask-image: none; opacity: 0.7; }
+  .work-stage { padding-top: 40px; }
+  .work-stage-inner { height: 220px; }
+  .work-stage .w-main  { width: 300px; height: 176px; }
+  .work-stage .w-left  { width: 180px; height: 140px; left: 2%; top: 34px; }
+  .work-stage .w-right { width: 108px; height: 158px; right: 3%; top: 24px; }
+  .work-stage .stage-veil { height: 110px; }
+}
+@media (max-width: 560px) {
+  /* 扇形在小螢幕會擠成一團，只留中間那張 */
+  .work-stage-inner { height: 190px; }
+  .work-stage .w-left, .work-stage .w-right { display: none; }
+  .work-stage .w-main { width: min(86%, 320px); height: 158px; }
+}
+
+/* ---------- reduced-motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  #tonWave { display: none; }
+  .site-header { transition: none; }
+}
+
+/* ---------- 補：style.css 裡寫死金色的幾處 ----------
+   這些沒有走變數，覆寫變數蓋不到，只能逐條指定。
+   （定案併回 style.css 時，這幾條應改成 var(--gold-pure) 從源頭解決） */
+.brush {
+  background-image: linear-gradient(transparent 62%, rgba(34, 211, 238, 0.38) 62%, rgba(34, 211, 238, 0.38) 92%, transparent 92%);
+}
+:root { --shadow-hard: 6px 6px 0 var(--gold-pure); }
+:root[data-theme="dark"] { --shadow-hard: 6px 6px 0 rgba(34, 211, 238, 0.4); }
+:root[data-theme="dark"] .section-deep::before { border-top-color: rgba(34, 211, 238, 0.35); }
+:root[data-theme="dark"] .plan.featured { box-shadow: 4px 4px 0 rgba(34, 211, 238, 0.4); }
+:root[data-theme="dark"] .shot-main { box-shadow: 10px 10px 0 rgba(34, 211, 238, 0.4); }
+
+/* ---------- 修：扇形舞台的說明壓在截圖上 ---------- */
+.work-stage { padding-bottom: 46px; }
+.work-stage .stage-veil { height: 150px; }
+.work-stage .stage-cap { bottom: 16px; }
+
+/* ---------- 修：深底上的 logo 圖形太暗 ---------- */
+body.home-hero .site-header:not(.scrolled) .brand img { filter: brightness(0) invert(1); opacity: 0.92; }
+
+/* ---------- 修：對頻波壓到文案 ----------
+   波形往下移到按鈕帶以下，左側再淡出，文字區保持乾淨 */
+#tonWave {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.35) 22%, #000 55%);
+          mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.35) 22%, #000 55%);
+}
+
+/* 深色模式下舞台底色跟頁面太接近，補一圈細框把邊界做出來 */
+:root[data-theme="dark"] .work-stage { border: 1px solid rgba(234, 242, 251, 0.1); }
+
+/* 右下浮起那張換成直式手機截圖，寬度沿用原本的 44% 會太高、蓋住主截圖，收窄 */
+.hero .shot-float { width: 26%; right: -18px; bottom: -26px; }
+.hero .hero-visual .shot-cap { padding-right: 30%; }
+@media (max-width: 999px) {
+  .hero .shot-float { width: 25%; right: -10px; bottom: -18px; }
+}
+
+/* ==========================================================================
+   2026-08-25 第二輪：改成蘋果那種排版（Steve：字太粗、很醜、沒質感）
+   依 Apple HIG / apple.com 實際規格：標題靠「字級大 ＋ 行高緊 ＋ 負字距」，
+   不是靠筆畫粗——大標一律 600，不用 700/900；內文 400。
+   另：英文與數字也統一 Noto Sans TC，全站不再出現第二種字型。
+   ========================================================================== */
+
+:root {
+  /* 英文、數字原本走 Outfit，改成跟中文同一支 */
+  --font-en: "Noto Sans TC", "PingFang TC", system-ui, sans-serif;
+  /* 蘋果風的圓角：卡片 12、大面積 18、按鈕走膠囊 */
+  --radius: 12px;
+  --radius-lg: 18px;
+}
+
+/* ---------- 標題：900 → 600 ----------
+   style.css 有 14 處寫死 font-weight:900（都搭 var(--font-serif)），
+   覆寫變數蓋不到字重，只能一次列完。併回 style.css 時應直接改那 14 處。 */
+:is(
+  .hero h1, .section-title, .brand-zh, .case-body h3, .prose-cta h3,
+  .plan-wide h3, .info-band .cert-head h3, .cert-band .cert-head h3,
+  .eyebrow, .card-num, .stat-num, .quote-big, h2, h3
+) { font-weight: 600; }
+
+.hero h1 {
+  font-size: clamp(2.2rem, 4.5vw, 3.3rem);
+  line-height: 1.14;
+  letter-spacing: -0.022em;
+  font-weight: 600;
+}
+.section-title {
+  font-size: clamp(1.85rem, 3.6vw, 2.9rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+/* 內文放寬一點行高，跟緊湊的標題拉開對比（Apple body 1.47） */
+.hero .lead, .section-sub { line-height: 1.55; letter-spacing: -0.003em; }
+.hero .lead { font-size: clamp(1.05rem, 1.7vw, 1.2rem); max-width: 30em; }
+
+/* 小標與品牌字也一起降重 */
+.brand-zh { font-weight: 600; letter-spacing: 0.02em; }
+.brand-en { font-weight: 500; letter-spacing: 0.28em; }
+
+/* eyebrow 小標：Apple 的做法是小、中等字重、正字距，不是全大寫加粗 */
+.eyebrow { font-weight: 500; letter-spacing: 0.14em; }
+
+/* 價格數字：同一支字型，靠字重與字級分層 */
+.hero-price strong { font-weight: 600; letter-spacing: -0.01em; }
+
+/* ---------- 按鈕：膠囊 ---------- */
+.btn { border-radius: 980px; padding: 14px 28px; font-weight: 500; letter-spacing: 0; }
+.btn-sm { border-radius: 980px; }
+.nav-cta { border-radius: 980px; font-weight: 500; }
+
+/* ---------- 圓角一致化 ---------- */
+.hero .shot { border-radius: var(--radius-lg); }
+.work-stage { border-radius: var(--radius-lg); }
+.work-stage figure { border-radius: 14px 14px 0 0; }
+.card { border-radius: var(--radius); }
+/* 卡片的錯位框跟著圓角走，否則邊角會露出直角 */
+.card::after { border-radius: var(--radius); }
+
+/* 大標放大後左欄要跟著加寬，否則「讓對的客人找到你。」的句號會被擠到下一行 */
+@media (min-width: 1000px) {
+  .hero-grid { grid-template-columns: 1.18fr 0.82fr; }
+}
+
+/* 價格兩項在手機會換行，中間的分隔點就孤零零留在行尾——窄螢幕直接收起來 */
+@media (max-width: 620px) {
+  .hero-price span { display: none; }
+  .hero-price { gap: 6px 12px; }
+}
+
+/* 圓角化之後，style.css 那道 10px 方形硬影會露出直角邊——hero 內統一改用發光陰影 */
+:root[data-theme="dark"] .hero .shot-main,
+.hero .shot-main {
+  box-shadow: 0 40px 90px -30px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(34, 211, 238, 0.18);
+}
