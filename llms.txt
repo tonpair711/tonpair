@@ -5,7 +5,7 @@
 > 對頻設計是台灣的網站與自動化工作室，持有 Google 認證，提供網站開發、小型客製工具/腳本開發，以及 Google Workspace for Education、Google AI Pro For Education 導入顧問服務。並非 Google 官方合作夥伴（Google Partner）企業。
 
 ## 這是誰／這是什麼（Entity 宣告）
-- 名稱：對頻設計（網址／ID：tonpin）
+- 名稱：對頻設計（網址／ID：tonpair）
 - 類型：網站與自動化工作室（非公司登記法人、非 Google 官方合作夥伴）
 - 服務地區：台灣
 - 官方網站：https://tonpair.com/
