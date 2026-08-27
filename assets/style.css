@@ -17,7 +17,7 @@
    有新字沒被涵蓋會退回系統字型；重建後這裡與各頁 preload 的 ?v=N 要一起升。 */
 @font-face {
   font-family: "Tonpair Sans";
-  src: url("/assets/fonts/tonpair-notosanstc-vf.woff2?v=2") format("woff2-variations");
+  src: url("/assets/fonts/tonpair-notosanstc-vf.woff2?v=3") format("woff2-variations");
   font-weight: 200 700;
   font-style: normal;
   font-display: swap;
@@ -1411,4 +1411,53 @@ label.check {
   .fx-type::after { animation: none; }
   .fx-flow { animation: none; background: none; color: var(--ink); }
   .fx-tilt { transition: none; }
+}
+
+
+/* ---------- 免費資源頁（resources/，2026-08-27） ---------- */
+/* 一張大卡：左圖右文，窄螢幕改上下堆疊。顏色全部走變數，深色模式跟著切 */
+.resource-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: clamp(20px, 3vw, 38px);
+  align-items: center;
+  padding: clamp(18px, 2.4vw, 30px);
+}
+.resource-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+}
+.resource-media a { display: block; }
+.resource-media a:hover img { border-color: var(--gold-pure); }
+.resource-points {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+.resource-points li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+/* 用邊框畫一個小勾，不用 emoji（全站 icon 一律 stroke 造型） */
+.resource-points li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.62em;
+  width: 9px;
+  height: 5px;
+  border-left: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+  transform: rotate(-45deg);
+}
+.resource-points strong { color: var(--ink); font-weight: 700; }
+@media (max-width: 860px) {
+  .resource-item { grid-template-columns: 1fr; }
 }
