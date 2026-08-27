@@ -11,3 +11,4 @@ https://www.tonpair.com/* https://tonpair.com/:splat 301
 # 寫了不會報錯、但完全不會生效（同一個檔案裡的純路徑規則在 pages.dev 上是正常的，
 # 所以不是部署問題，是產品限制）。官方指定做法是改用帳戶層級的 Bulk Redirects。
 # tonpair.pages.dev 要不要轉，就到 Cloudflare 儀表板（tonpair711 帳號）設 Bulk Redirects。
+
