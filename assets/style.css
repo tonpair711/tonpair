@@ -1,10 +1,27 @@
 /* ==========================================================================
-   對頻設計 tonpair — 全站設計系統 v2（2026-08-17 改版）
-   路線：象牙白紙感雜誌。三色收斂（象牙白紙／深墨藍／對頻金），
-   視覺簽名＝「雙軸對頻線」：兩條錯位髮絲線在互動中鎖定重合，
-   搭配金色硬質偏移陰影（不加 blur）。UI 不再使用亮藍與漸層。
-   無 build step，單一檔案，各頁只引用這支 ＋ main.js。
+   對頻設計 tonpair — 全站設計系統 v3（2026-08-27 收攏兩套皮）
+   路線：以 Apple 那類品牌的四個原則收掉原本「首頁科技風／內頁紙感」的分裂——
+     ① 一組字型：全站只用自架的 Noto Sans TC 可變字型，靠字重與字級分層，
+        不再混明體＋黑體＋Outfit 三家（也因此不必再外連 Google Fonts）
+     ② 一個重點色：對頻青 #22D3EE，其餘一律中性灰階與墨藍，金色全面退場
+     ③ 留白撐開：--sp-* 全數放大，內容自己會呼吸
+     ④ 柔和圓角：--radius 由直角改 14px，卡片與圖片有實體感
+   視覺簽名仍是「雙軸對頻線」＋硬質偏移陰影（不加 blur），只是顏色換成青。
+   無 build step，單一檔案，各頁只引用這支 ＋ main.js（首頁另有 tech.css 的 hero 版面）。
    ========================================================================== */
+
+/* ---------- 自架字型（2026-08-27）----------
+   原本 21 頁各自外連 Google Fonts 載三個家族；改成一支子集過的可變字型，
+   涵蓋全站實際用字、字重 200–700，約 321KB。
+   ⚠️ 改動任何頁面文字後要跑 `python -X utf8 _build/build_font.py --check`，
+   有新字沒被涵蓋會退回系統字型；重建後這裡與各頁 preload 的 ?v=N 要一起升。 */
+@font-face {
+  font-family: "Tonpair Sans";
+  src: url("/assets/fonts/tonpair-notosanstc-vf.woff2?v=2") format("woff2-variations");
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* ---------- Tokens：淺色（預設） ---------- */
 :root {
@@ -18,11 +35,11 @@
   --text: #122033;
   --ink: #0d2847;             /* 標題墨色 */
   --muted: #4a5868;           /* 內文說明 */
-  --muted-faint: #6b7891;
+  --muted-faint: #5a6479;      /* 2026-08-27 由 #6b7891 調深：原本在兩種紙色底上都不到 4.5:1 */
   --accent: #0d2847;          /* 連結與強調一律墨藍（UI 已刪亮藍） */
   --accent-deep: #0d2847;
-  --gold: #b8842a;            /* 淺底上的金字（對比 4.6:1） */
-  --gold-pure: #f5b942;       /* 對頻金：1px 線、硬影、4px 圓點，嚴禁大面積 */
+  --gold: #0e7490;            /* 淺底上的重點色文字：對頻青深版（對比 5.9:1） */
+  --gold-pure: #22d3ee;       /* 對頻青：1px 線、硬影、4px 圓點，嚴禁大面積 */
   --glow: rgba(13, 40, 71, 0.05);
   --header-bg: rgba(250, 247, 242, 0.92);
   --shadow-card: none;
@@ -31,21 +48,21 @@
   --on-deep: #eef4fb;
   --on-deep-muted: rgba(238, 244, 251, 0.72);
 
-  --font-sans: "Noto Sans TC", "PingFang TC", system-ui, sans-serif;
-  --font-serif: "Noto Serif TC", "Songti TC", Georgia, serif;
-  --font-en: "Outfit", "Noto Sans TC", system-ui, sans-serif;
+  --font-sans: "Tonpair Sans", "Noto Sans TC", "PingFang TC", system-ui, sans-serif;
+  --font-serif: "Tonpair Sans", "Noto Sans TC", "PingFang TC", system-ui, sans-serif;
+  --font-en: "Tonpair Sans", "Noto Sans TC", system-ui, sans-serif;
 
   --maxw: 1120px;
   --maxw-prose: 720px;
-  --radius: 0px;              /* 紙張裁切的銳利感：直角 */
-  --radius-lg: 2px;
+  --radius: 14px;             /* 柔和圓角：卡片、圖片、輸入框 */
+  --radius-lg: 10px;          /* 小元件：按鈕、標籤、導覽鈕 */
 
   /* 垂直節奏：非對稱（上緊下鬆），整體放鬆／收緊改這裡 */
-  --sp-hero-top: 96px;
-  --sp-hero-bottom: 120px;
-  --sp-section: 96px;
+  --sp-hero-top: 112px;
+  --sp-hero-bottom: 140px;
+  --sp-section: 120px;
   --sp-head-top: 64px;
-  --sp-head-bottom: 44px;
+  --sp-head-bottom: 52px;
 }
 
 /* ---------- Tokens：深色（夜刊模式，不是純黑） ---------- */
@@ -63,15 +80,43 @@
   --muted-faint: #8494ad;
   --accent: #cfdcec;
   --accent-deep: #e8edf2;
-  --gold: #f0be5f;            /* 深底可用亮金，對比 8.9:1 */
-  --gold-pure: #f5b942;
+  --gold: #5ee0f5;            /* 深底可用亮青，對比 8.4:1 */
+  --gold-pure: #22d3ee;
   --glow: rgba(232, 237, 242, 0.04);
   --header-bg: rgba(11, 19, 30, 0.92);
   --shadow-card: none;
   --shadow-lift: 0 14px 30px -18px rgba(0, 0, 0, 0.7);
-  --shadow-hard: 6px 6px 0 rgba(245, 185, 66, 0.4); /* 深底降低不透明度，維持硬邊不加 blur，保留品牌識別 */
+  --shadow-hard: 6px 6px 0 rgba(34, 211, 238, 0.4); /* 深底降低不透明度，維持硬邊不加 blur，保留品牌識別 */
   --on-deep: #e8edf2;
   --on-deep-muted: rgba(232, 237, 242, 0.7);
+}
+
+/* 黑體標題字距：字級越大收越多，避免鬆散（原 tech.css，2026-08-27 併入全站） */
+.section-title, .hero h1, h1, h2 { letter-spacing: -0.015em; }
+
+/* 內文連結：不能只靠顏色區分（WCAG 1.4.1）。
+   頁尾說明、卡片內文、文章段落裡的連結一律加底線；
+   按鈕、箭頭連結、導覽、標題裡的連結是整塊可點的元件，不適用，逐一排除。 */
+p a:not(.btn):not(.link-arrow):not(.channel),
+li a:not(.btn):not(.link-arrow):not(.channel):not(.tag),
+address a:not(.btn):not(.channel) {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
+}
+/* .notice 是一整塊說明文字（不是 <p>），裡面的連結一樣要加底線 */
+.notice a:not(.btn):not(.link-arrow) {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
+}
+.footer-grid ul a, .ph-toc a, .breadcrumb a, .nav a { text-decoration: none; }
+
+.sr-only {  /* 只給螢幕閱讀器的區塊標題：畫面上不占位，但補齊標題層級 */
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
 
 /* ---------- Base ---------- */
@@ -126,7 +171,7 @@ h1, h2, h3, h4 { line-height: 1.4; font-weight: 700; color: var(--ink); }
 
 .display {
   font-family: var(--font-serif);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.3;
   letter-spacing: -0.01em;
 }
@@ -185,7 +230,7 @@ h1, h2, h3, h4 { line-height: 1.4; font-weight: 700; color: var(--ink); }
 .brand:hover { text-decoration: none; }
 .brand img { height: 34px; width: auto; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.15; }
-.brand-zh { font-family: var(--font-serif); font-weight: 900; font-size: 1.02rem; color: var(--ink); letter-spacing: 0.04em; }
+.brand-zh { font-family: var(--font-serif); font-weight: 700; font-size: 1.02rem; color: var(--ink); letter-spacing: 0.04em; }
 .brand-en { font-family: var(--font-en); font-weight: 700; font-size: 0.64rem; letter-spacing: 0.32em; color: var(--muted-faint); }
 
 .main-nav { display: flex; align-items: center; gap: 2px; }
@@ -245,7 +290,7 @@ h1, h2, h3, h4 { line-height: 1.4; font-weight: 700; color: var(--ink); }
 }
 .hero h1 {
   font-family: var(--font-serif);
-  font-weight: 900;
+  font-weight: 700;
   font-size: clamp(2.2rem, 5.2vw, 3.75rem);
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -344,7 +389,7 @@ h1, h2, h3, h4 { line-height: 1.4; font-weight: 700; color: var(--ink); }
 .section-head.right .eyebrow { text-align: right; }
 .section-title {
   font-family: var(--font-serif);
-  font-weight: 900;
+  font-weight: 700;
   font-size: clamp(1.7rem, 3.4vw, 2.55rem);
   line-height: 1.25;
   letter-spacing: -0.01em;
@@ -624,7 +669,7 @@ table.price-table { width: 100%; border-collapse: collapse; min-width: 640px; fo
 }
 .case-media:hover { box-shadow: var(--shadow-hard); }
 .case-media img { width: 100%; }
-.case-body h3 { font-family: var(--font-serif); font-weight: 900; font-size: 1.4rem; margin: 12px 0 14px; }
+.case-body h3 { font-family: var(--font-serif); font-weight: 700; font-size: 1.4rem; margin: 12px 0 14px; }
 .case-body p { color: var(--muted); font-size: 0.96rem; }
 .case-detail {
   margin-top: 20px; padding: 20px 22px;
@@ -675,7 +720,7 @@ table.price-table { width: 100%; border-collapse: collapse; min-width: 640px; fo
   background: var(--bg);
 }
 .page-head h1 {
-  font-family: var(--font-serif); font-weight: 900;
+  font-family: var(--font-serif); font-weight: 700;
   font-size: clamp(1.8rem, 4vw, 2.6rem);
   letter-spacing: -0.01em;
   max-width: 18em;
@@ -746,7 +791,7 @@ table.price-table { width: 100%; border-collapse: collapse; min-width: 640px; fo
 /* 中文一行 35–40 字最好讀 */
 .prose > p, .prose > ul, .prose > ol { max-width: 40em; }
 .prose h2 {
-  font-family: var(--font-serif); font-weight: 900;
+  font-family: var(--font-serif); font-weight: 700;
   font-size: 1.5rem; line-height: 1.3;
   margin: 56px 0 20px;
   padding-left: 14px;
@@ -776,7 +821,7 @@ table.price-table { width: 100%; border-collapse: collapse; min-width: 640px; fo
   transform: translate(5px, 5px);
   pointer-events: none; z-index: -1;
 }
-.prose-cta h3 { font-family: var(--font-serif); font-weight: 900; font-size: 1.2rem; margin: 0 0 10px; }
+.prose-cta h3 { font-family: var(--font-serif); font-weight: 700; font-size: 1.2rem; margin: 0 0 10px; }
 .prose-cta p { color: var(--muted); font-size: 0.94rem; margin-bottom: 18px; }
 
 /* 雜誌引言頁（pull quote）：取代滿版深色金句區 */
@@ -797,7 +842,7 @@ table.price-table { width: 100%; border-collapse: collapse; min-width: 640px; fo
   color: var(--gold-pure); line-height: 0.6; display: block; margin-bottom: 18px;
 }
 .pull-quote p {
-  font-family: var(--font-serif); font-weight: 900;
+  font-family: var(--font-serif); font-weight: 700;
   font-size: clamp(1.35rem, 3vw, 1.9rem);
   line-height: 1.5; color: var(--ink);
 }
@@ -818,7 +863,7 @@ table.price-table { width: 100%; border-collapse: collapse; min-width: 640px; fo
   border: 1px dashed var(--line);
   pointer-events: none;
 }
-.info-band .cert-head h3 { color: var(--ink); font-family: var(--font-serif); font-weight: 900; font-size: 1.3rem; }
+.info-band .cert-head h2, .info-band .cert-head h3 { color: var(--ink); font-family: var(--font-serif); font-weight: 700; font-size: 1.3rem; }
 .info-band .cert-head p { color: var(--muted); margin-top: 10px; }
 .info-band h3 { color: var(--ink); }
 .info-band p { color: var(--muted); }
@@ -838,7 +883,7 @@ table.price-table { width: 100%; border-collapse: collapse; min-width: 640px; fo
   pointer-events: none;
 }
 :root[data-theme="dark"] .cert-band { background: #fff; }
-.cert-band .cert-head h3 { color: #0d2847; font-family: var(--font-serif); font-weight: 900; font-size: 1.3rem; }
+.cert-band .cert-head h2 { color: #0d2847; font-family: var(--font-serif); font-weight: 700; font-size: 1.3rem; }
 .cert-band .cert-head p { color: #4a5868; margin-top: 10px; }
 /* 證書告示框內的欄位分隔線（桌機） */
 @media (min-width: 900px) {
@@ -994,7 +1039,8 @@ label.check {
   color: var(--on-deep-muted);
 }
 .info-card .addr-line { font-weight: 600; color: var(--ink); }
-.footer-grid h4 {
+/* 頁尾欄位標題：2026-08-27 由 h4 改為 h2（頁面上沒有 h3，用 h4 會標題跳級） */
+.footer-grid h2 {
   font-family: var(--font-en);
   font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em;
   color: var(--muted-faint); text-transform: uppercase;
@@ -1060,7 +1106,7 @@ label.check {
   background: var(--card);
 }
 .plan-wide .plan-badge { left: auto; right: 0; top: 0; }
-.plan-wide h3 { font-family: var(--font-serif); font-weight: 900; font-size: 1.45rem; margin-top: 8px; }
+.plan-wide h3 { font-family: var(--font-serif); font-weight: 700; font-size: 1.45rem; margin-top: 8px; }
 .plan-wide .plan-note { color: var(--muted); margin-top: 10px; max-width: 34em; }
 .plan-wide .feature-list { margin-top: 20px; }
 .plan-wide-buy { text-align: right; border-left: 1px dashed var(--line); padding-left: 30px; }
@@ -1157,7 +1203,9 @@ label.check {
 .channel-list li > .channel { flex: 1 1 auto; min-width: 0; }
 .channel-txt span em {
   display: block; font-style: normal;
-  font-size: 0.74rem; color: var(--muted-faint); opacity: .85; margin-top: 1px;
+  /* 不要再加 opacity：--muted-faint 已經是壓到剛好過 4.5:1 的值，
+     疊一層 .85 會直接掉回 4.2:1（2026-08-27 axe 掃出來） */
+  font-size: 0.74rem; color: var(--muted-faint); margin-top: 1px;
 }
 .fc-copy {
   flex: none; align-self: center;
@@ -1345,7 +1393,7 @@ label.check {
 
 /* 5. 金色流動標題 */
 .fx-flow {
-  font-family: var(--font-serif); font-weight: 900; font-size: 1.5rem;
+  font-family: var(--font-serif); font-weight: 700; font-size: 1.5rem;
   background: linear-gradient(100deg, var(--ink) 0%, var(--ink) 38%, var(--gold-pure) 50%, var(--ink) 62%, var(--ink) 100%);
   background-size: 260% 100%;
   -webkit-background-clip: text; background-clip: text;

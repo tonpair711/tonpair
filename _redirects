@@ -1,0 +1,13 @@
+# Cloudflare Pages 轉址規則
+#
+# ── 主機名稱統一 ──
+# 正式網域是 https://tonpair.com（不帶 www），全站 canonical／og／sitemap 都指這裡。
+# www 目前也回 200，兩個主機名有同一份內容；canonical 一致的話 Google 多半會自己合併，
+# 但寫成 301 才是明確的訊號，也讓外部連結的權重不會分散。
+https://www.tonpair.com/* https://tonpair.com/:splat 301
+
+# ⚠️ 不要在這裡寫「*.pages.dev → 自訂網域」那種規則（2026-08-03 在鴻綸那邊實測過，無效）。
+# Cloudflare Pages 的 _redirects **不支援**以 *.pages.dev 為來源轉到自訂網域：
+# 寫了不會報錯、但完全不會生效（同一個檔案裡的純路徑規則在 pages.dev 上是正常的，
+# 所以不是部署問題，是產品限制）。官方指定做法是改用帳戶層級的 Bulk Redirects。
+# tonpair.pages.dev 要不要轉，就到 Cloudflare 儀表板（tonpair711 帳號）設 Bulk Redirects。

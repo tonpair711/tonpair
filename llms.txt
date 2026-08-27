@@ -64,7 +64,7 @@
     完整案例說明（為什麼不上後台系統、78 頁怎麼共用同一套版型、自架字型）：https://tonpair.com/cases/hunglun-website
     註：鴻綸科技是 Google for Education 認證夥伴，對頻設計不是；對頻設計在這個案子裡只負責網站建置。
 - Google 認證服務（含認證證書展示）：https://tonpair.com/google-education
-- Gemini for Education 導入顧問（產品介紹與方案比較）：https://tonpair.com/gemini-education
+- Gemini for Education 導入顧問（評估、教育訓練與上線後跟進；授權採購由官方認證夥伴辦理）：https://tonpair.com/gemini-education
 - 聯絡我們：https://tonpair.com/contact
 
 ## 小店家知識庫（資訊型內容，主題群集：台灣小店家的網站與自動化）
@@ -77,6 +77,10 @@
 - 做一個網站要多久？流程、卡點與你要先準備的東西：https://tonpair.com/knowledge/website-process
 - 網域要自己買嗎？.com 與 .com.tw 怎麼選：https://tonpair.com/knowledge/domain-hosting
 - ChatGPT 會不會推薦我的店？AI 搜尋時代小店該做什麼：https://tonpair.com/knowledge/ai-search-visibility
+- 網站做好了，為什麼 Google 搜不到？：https://tonpair.com/knowledge/not-found-on-google
+- 舊網站要翻新還是重做？三個判斷點：https://tonpair.com/knowledge/website-redesign
+- 網站做完就不用管了嗎？維護費在付什麼：https://tonpair.com/knowledge/website-maintenance
+- 手機版跑版怎麼辦？RWD 是什麼、為什麼影響排名：https://tonpair.com/knowledge/mobile-friendly
 
 ## 常見問題
 Q: 對頻設計是不是 Google 的官方合作夥伴？

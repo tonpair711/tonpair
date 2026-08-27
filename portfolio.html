@@ -24,10 +24,8 @@
 <meta name="twitter:description" content="兩個真的在營運的案例，網址就在頁面上，歡迎直接點進去逛。">
 <meta name="twitter:image" content="https://tonpair.com/assets/og/og-image.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@900&family=Outfit:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=6">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/tonpair-notosanstc-vf.woff2?v=2" crossorigin>
+<link rel="stylesheet" href="assets/style.css?v=7">
 <script defer src="assets/main.js?v=5"></script>
 
 <script type="application/ld+json">
@@ -115,7 +113,7 @@
   </div>
 </header>
 
-<main id="main">
+<main id="main" tabindex="-1">
 
   <section class="page-head">
     <div class="wrap">
@@ -130,10 +128,10 @@
           <span class="eyebrow">Works</span>
           <h1 class="keep">對上頻率的店</h1>
         </div>
-        <aside class="ph-side">
+        <div class="ph-side">
           <p class="ph-lede keep">三個真的在營運的案例——網址就在下面，歡迎直接點進去逛。</p>
           <p class="ph-actions"><a class="link-arrow" href="contact.html">聊聊你的店</a></p>
-        </aside>
+        </div>
       </div>
     </div>
   </section>
@@ -142,7 +140,8 @@
     <div class="wrap">
 
       <!-- 案例一 -->
-      <article class="case reveal">
+      <h2 class="sr-only">案例一覽</h2>
+        <article class="case reveal">
         <a class="case-media" href="https://idun10.pages.dev/" target="_blank" rel="noopener" aria-label="開啟伊登森活官網">
           <picture>
             <source srcset="assets/portfolio/case-idun.webp" type="image/webp">
@@ -275,7 +274,7 @@
         </ul>
       </div>
       <div>
-        <h4>網站導覽</h4>
+        <h2>網站導覽</h2>
         <ul>
           <li><a href="about.html">關於我們</a></li>
           <li><a href="services.html">服務項目</a></li>
@@ -286,7 +285,7 @@
         </ul>
       </div>
       <div>
-        <h4>Google 解決方案</h4>
+        <h2>Google 解決方案</h2>
         <ul>
           <li><a href="google-education.html">Google 解決方案</a></li>
           <li><a href="gemini-education.html">Gemini for Education</a></li>

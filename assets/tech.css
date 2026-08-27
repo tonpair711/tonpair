@@ -1,30 +1,19 @@
 /* ==========================================================================
-   對頻設計 tonpair — 科技風換皮 v3（2026-08-25）
-   路線：深底 hero ＋ 亮底內容區。金 → 對頻青 #22D3EE，明體 → 黑體 900。
-   做法：只覆寫 style.css 已有的設計變數，不重寫元件；style.css 之後載入。
-   目前只有 index.html 引用，其餘 18 頁維持舊皮，定案後再併回 style.css。
+   對頻設計 tonpair — 首頁 hero 深色開場 v4（2026-08-27）
+   ⚠️ 兩套皮已經收掉：顏色（對頻青）與字型（單一黑體家族）在 2026-08-27
+   全部併回 style.css，全站 21 頁一致。這支檔案剩下的只有「首頁 hero 的深底版面」，
+   它是首頁專屬的開場設計，不是另一套皮，只有 index.html 引用。
+   改顏色一律改 style.css 的 :root，不要在這裡另外定義。
    ========================================================================== */
 
-/* ---------- Token 覆寫：換色、換字 ---------- */
-:root {
-  /* 對頻青取代品牌金。--cyan-pure 用於 1px 線、圓點、發光；--cyan 用於淺底文字（對比 4.8:1） */
-  --gold-pure: #22d3ee;
-  --gold: #0e7490;
-  /* 標題全面改黑體重字重；變數名沿用 --font-serif，是所有 .section-title / h1 的字型出口 */
-  --font-serif: "Noto Sans TC", "PingFang TC", system-ui, sans-serif;
-  /* hero 專用深底 */
+/* 顏色與字型的 token 覆寫已於 2026-08-27 併入 style.css，全站一致。
+   這裡只留 hero 專用的兩個底色——它們是「首頁 hero 版面」的一部分，
+   ⚠️ 不可以拿掉：.hero 的 background 吃的就是 --hero-bg，少了它 hero 會變成
+   淺底配淺色字，整個開場等於看不見（2026-08-27 拿掉時踩過一次）。 */
+:root, :root[data-theme="dark"] {
   --hero-bg: #060d18;
   --hero-bg2: #0b1727;
 }
-:root[data-theme="dark"] {
-  --gold-pure: #22d3ee;
-  --gold: #5ee0f5;          /* 深底放亮，對比 8.4:1 */
-  --hero-bg: #060d18;
-  --hero-bg2: #0b1727;
-}
-
-/* 黑體沒有明體的墨韻，字距要收一點才不鬆散 */
-.section-title, .hero h1 { letter-spacing: -0.015em; }
 
 /* ---------- Hero：深色開場 ---------- */
 .hero {
@@ -125,7 +114,9 @@ body.home-hero .site-header .main-nav > a:hover { color: #22d3ee; }
 body.home-hero .site-header .theme-toggle,
 body.home-hero .site-header .nav-toggle { color: #eaf2fb; border-color: rgba(234, 242, 251, 0.24); }
 body.home-hero .site-header .nav-cta {
-  background: #22d3ee; color: #04121a; border-color: #22d3ee;
+  /* !important 是必要的：style.css 的 .nav-cta 寫了 color:#fff !important，
+     不加就會變成白字配對頻青（1.8:1，2026-08-27 axe 掃出來） */
+  background: #22d3ee; color: #04121a !important; border-color: #22d3ee;
 }
 body.home-hero .site-header .nav-cta:hover { background: #67e3f6; color: #04121a !important; }
 /* 捲過 hero 之後恢復成一般（亮底）表頭 */
@@ -139,7 +130,7 @@ body.home-hero .site-header.scrolled .brand-en { color: var(--muted-faint); }
 body.home-hero .site-header.scrolled .main-nav > a { color: var(--text); }
 body.home-hero .site-header.scrolled .theme-toggle,
 body.home-hero .site-header.scrolled .nav-toggle { color: var(--ink); border-color: var(--line); }
-body.home-hero .site-header.scrolled .nav-cta { background: var(--ink); color: #fff; border-color: var(--ink); }
+body.home-hero .site-header.scrolled .nav-cta { background: var(--ink); color: #fff !important; border-color: var(--ink); }
 /* 手機選單展開時一律要有底，否則字疊在 hero 上 */
 body.home-hero .site-header .main-nav.open { background: var(--card); }
 body.home-hero .site-header .main-nav.open > a { color: var(--text); }
