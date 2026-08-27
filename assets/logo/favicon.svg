@@ -1,5 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" role="img" aria-label="對頻設計 tonpair">
+  <!-- 16px 簡化版：圓形深藍底（SERP 會裁圓）＋白色雙框，線寬相對加粗才不會消失 -->
   <circle cx="8" cy="8" r="8" fill="#0B2447"/>
-  <path d="M2 10.5 Q5.5 3.5 9 10.5 T15.5 10.5" stroke="#FFFFFF" stroke-width="2.2" fill="none" stroke-linecap="butt"/>
-  <circle cx="5.5" cy="6.4" r="1.8" fill="#F5B942"/>
+  <mask id="tp-cut16" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+    <rect width="16" height="16" fill="#fff"/>
+    <rect x="6.6" y="6.8" width="6.2" height="6.2" rx="1.4" stroke="#000" stroke-width="2.6" fill="#000"/>
+  </mask>
+  <rect x="3.2" y="3" width="6.2" height="6.2" rx="1.4" stroke="#FFFFFF" stroke-width="1.5" fill="none" mask="url(#tp-cut16)"/>
+  <rect x="6.6" y="6.8" width="6.2" height="6.2" rx="1.4" stroke="#FFFFFF" stroke-width="1.5" fill="none"/>
+  <circle cx="9.7" cy="9.9" r="1" fill="#FFFFFF"/>
 </svg>

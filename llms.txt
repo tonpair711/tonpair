@@ -8,6 +8,9 @@
 - 名稱：對頻設計（網址／ID：tonpair）
 - 類型：網站與自動化工作室（非公司登記法人、非 Google 官方合作夥伴）
 - 服務地區：台灣
+- 工作室地址：台南市北區大興街226巷37號
+- 聯絡電話：0971-019-763
+- 電子信箱：tonpair711@gmail.com
 - 官方網站：https://tonpair.com/
 - 一句話定位：協助小店家與教育單位把網站做對、被 Google／AI 搜尋找到的網站開發與 Google 教育科技導入顧問
 
@@ -57,6 +60,9 @@
     完整案例說明（一頁式改多頁的原因、做法與交付內容）：https://tonpair.com/cases/idun-beauty-spa-website
   - Loverolling 店家會員累點系統（消費累點、QR Code、多角色後台）：https://antia-members.pages.dev
     完整案例說明（免下載 App 的掃碼流程、先進先出扣點、四層權限）：https://tonpair.com/cases/loverolling-member-system
+  - 鴻綸科技公司官網與教育科技知識庫（78 頁靜態網站、28 篇知識文章、結構化資料與無障礙）：https://www.hunglun.com/
+    完整案例說明（為什麼不上後台系統、78 頁怎麼共用同一套版型、自架字型）：https://tonpair.com/cases/hunglun-website
+    註：鴻綸科技是 Google for Education 認證夥伴，對頻設計不是；對頻設計在這個案子裡只負責網站建置。
 - Google 認證服務（含認證證書展示）：https://tonpair.com/google-education
 - Gemini for Education 導入顧問（產品介紹與方案比較）：https://tonpair.com/gemini-education
 - 聯絡我們：https://tonpair.com/contact

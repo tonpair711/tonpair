@@ -180,7 +180,7 @@
       var btn = form.querySelector('button[type="submit"]');
 
       function openMail() {
-        location.href = 'mailto:steve.edu711@gmail.com?subject=' +
+        location.href = 'mailto:tonpair711@gmail.com?subject=' +
           encodeURIComponent('【免費諮詢】' + d.get('topic')) +
           '&body=' + encodeURIComponent(body);
       }

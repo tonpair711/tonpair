@@ -685,6 +685,12 @@ table.price-table { width: 100%; border-collapse: collapse; min-width: 640px; fo
 .breadcrumb a { color: var(--muted-faint); }
 .breadcrumb a:hover { color: var(--ink); }
 
+/* 文章頁的「最後更新」（2026-08-27 SEO/GEO 這一輪加）：
+   Article schema 裡本來就有 dateModified，但生成式引擎判斷「內容新不新」時
+   看的是畫面上讀得到的日期，所以標題底下也要放一份可見的 <time>。 */
+.page-meta { font-size: 0.82rem; color: var(--muted-faint); margin-top: 14px; letter-spacing: .02em; }
+.page-meta time { font-variant-numeric: tabular-nums; }
+
 /* 內頁 hero v2（2026-08-18）：雜誌式左右分欄
    左欄＝對頻線＋標籤＋大標；右欄＝導言、本頁目次、單一動作。
    目次只放在章節 3 個以上的頁面；欄位不足時自動疊成單欄。 */
@@ -961,6 +967,33 @@ label.check {
 .footer-grid { display: grid; gap: 40px; grid-template-columns: 1.6fr 1fr 1fr; }
 .footer-about p { color: var(--muted); margin-top: 16px; max-width: 30em; }
 .footer-about .footer-hours { color: var(--muted-faint); font-size: 0.85rem; margin-top: 14px; }
+
+/* 頁尾聯絡資訊（地址／電話）：跟 channel-list 分開，維持清單的乾淨結構 */
+.footer-contact {
+  font-style: normal;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line-soft);
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+.footer-contact .fc-line { display: inline-flex; align-items: center; gap: 8px; color: inherit; }
+.footer-contact a.fc-line { border-bottom: 1px solid transparent; transition: color 0.2s ease, border-color 0.2s ease; }
+.footer-contact a.fc-line:hover { color: var(--ink); border-bottom-color: var(--gold-pure); text-decoration: none; }
+.footer-contact .fc-ico { width: 16px; height: 16px; flex: 0 0 16px; color: var(--muted-faint); }
+.footer-contact a.fc-line:hover .fc-ico { color: var(--gold); }
+
+/* 首頁深色 CTA 區的雙按鈕與地址註腳 */
+.cta-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+.cta-where {
+  margin-top: 22px;
+  font-size: 0.85rem;
+  color: var(--on-deep-muted);
+}
+.info-card .addr-line { font-weight: 600; color: var(--ink); }
 .footer-grid h4 {
   font-family: var(--font-en);
   font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em;
@@ -996,7 +1029,7 @@ label.check {
 }
 .channel:hover { border-color: var(--ink); text-decoration: none; }
 .channel-ico { flex: none; width: 22px; height: 22px; }
-.channel-txt { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.channel-txt { display: flex; flex-direction: column; gap: 1px; min-width: 0; flex: 1 1 auto; }
 .channel-txt b { font-weight: 500; font-size: 0.93rem; color: var(--text); }
 .channel-txt span { font-size: 0.8rem; color: var(--muted-faint); }
 .channel.line { border-color: rgba(6, 199, 85, 0.45); }
@@ -1137,6 +1170,19 @@ label.check {
 .fc-copy:hover { border-color: var(--ink); color: var(--text); }
 .fc-copy.copied { border-color: #06c755; color: #06c755; }
 @media (max-width: 420px) { .fc-copy { padding: 8px 10px; font-size: 0.74rem; } }
+
+/* 複製按鈕固定寬度：不然「複製 ID／複製信箱／複製電話」字數不同，
+   會把左邊的卡片擠成三種寬度，整排看起來像沒對齊 */
+.fc-copy { flex: none; min-width: 88px; justify-content: center; text-align: center; }
+@media (max-width: 420px) { .fc-copy { min-width: 76px; } }
+
+/* 頁尾的聯絡管道卡片不是導覽清單，要擋掉 .footer-grid ul/li 的框線與 › 箭頭 */
+.footer-grid .channel-list { border-top: none; }
+.footer-grid .channel-list li { border-bottom: none; }
+.footer-grid .channel-list li a { padding: 0; }
+.footer-grid .channel-list li > .channel { padding: 12px 14px; justify-content: flex-start; }
+.footer-grid .channel-list li a::after { content: none; }
+.footer-grid .channel-list li a:hover { padding-left: 0; }
 
 /* ══════════════════════════════════════════════════════════
    首頁版面（hero 左文右視覺＝Editorial 壓紙擺法）
