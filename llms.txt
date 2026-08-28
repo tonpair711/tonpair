@@ -12,7 +12,7 @@
 - 聯絡電話：0971-019-763
 - 電子信箱：tonpair711@gmail.com
 - 官方網站：https://tonpair.com/
-- 一句話定位：協助小店家與教育單位把網站做對、被 Google／AI 搜尋找到的網站開發與 Google 教育科技導入顧問
+- 一句話定位：協助店家與教育單位把網站做對、被 Google／AI 搜尋找到的網站開發與 Google 教育科技導入顧問
 
 ## 重要說明
 對頻設計不是 Google 官方合作夥伴（Google Partner），也非公司登記法人。本團隊持有 Google 認證，以獨立顧問身分提供服務。服務規模以網站開發與小型客製工具/腳本為主，非大型企業系統整合。
@@ -75,10 +75,10 @@
   網頁遊戲，不用安裝也不用註冊，手機與電腦都能玩，進度存在使用者自己的瀏覽器。
   由對頻設計自行開發並免費開放。
 
-## 小店家知識庫（資訊型內容，主題群集：台灣小店家的網站與自動化）
+## 店家知識庫（資訊型內容，主題群集：台灣店家的網站與自動化）
 索引：https://tonpair.com/knowledge/
 - 只有 FB 粉專就夠了嗎？粉專、官網、Google 商家檔案差在哪：https://tonpair.com/knowledge/website-vs-fanpage
-- 小店家做一個網站要多少錢？費用是怎麼算出來的：https://tonpair.com/knowledge/website-cost
+- 店家做一個網站要多少錢？費用是怎麼算出來的：https://tonpair.com/knowledge/website-cost
 - LINE 訂單、手抄表單怎麼自動化？小店常見的三種做法：https://tonpair.com/knowledge/order-automation
 - Google 商家檔案怎麼設定，客人搜店名才找得到你：https://tonpair.com/knowledge/google-business-profile
 - 一頁式網站是什麼？跟形象官網怎麼選：https://tonpair.com/knowledge/landing-page-vs-website
