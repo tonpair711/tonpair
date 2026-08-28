@@ -121,6 +121,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://tonpair.com/knowledge/seo-basics</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tonpair.com/knowledge/ssl-https</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tonpair.com/knowledge/membership-loyalty-system</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://tonpair.com/services/seo-aeo-geo</loc>
     <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>

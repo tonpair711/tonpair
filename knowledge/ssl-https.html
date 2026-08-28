@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{if(localStorage.getItem('amp-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+<title>網站要不要裝 SSL？小鎖頭、HTTPS 是什麼意思｜對頻設計</title>
+<meta name="description" content="瀏覽器網址列那個小鎖頭到底代表什麼？沒有的話客人會不會被擋、會不會不敢留資料？這篇講 HTTPS 是什麼、要不要花錢裝、會不會影響 Google 排名，以及舊網站怎麼補上。">
+<link rel="canonical" href="https://tonpair.com/knowledge/ssl-https">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="../assets/logo/favicon.svg?v=5">
+<link rel="apple-touch-icon" href="../assets/logo/apple-touch-icon.png?v=5">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="對頻設計">
+<meta property="og:title" content="網站要不要裝 SSL？小鎖頭、HTTPS 是什麼意思｜對頻設計">
+<meta property="og:description" content="瀏覽器網址列那個小鎖頭到底代表什麼？沒有的話客人會不會被擋、會不會不敢留資料？這篇講 HTTPS 是什麼、要不要花錢裝、會不會影響 Google 排名，以及舊網站怎麼補上。">
+<meta property="og:url" content="https://tonpair.com/knowledge/ssl-https">
+<meta property="og:image" content="https://tonpair.com/assets/og/og-image.png">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="網站要不要裝 SSL？小鎖頭、HTTPS 是什麼意思｜對頻設計">
+<meta name="twitter:description" content="瀏覽器網址列那個小鎖頭到底代表什麼？沒有的話客人會不會被擋、會不會不敢留資料？這篇講 HTTPS 是什麼、要不要花錢裝、會不會影響 Google 排名，以及舊網站怎麼補上。">
+<meta name="twitter:image" content="https://tonpair.com/assets/og/og-image.png">
+
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/tonpair-notosanstc-vf.woff2?v=3" crossorigin>
+<link rel="stylesheet" href="../assets/style.css?v=7">
+<script defer src="../assets/main.js?v=5"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "網址前面的小鎖頭是什麼？沒有會怎樣",
+  "description": "瀏覽器網址列那個小鎖頭到底代表什麼？沒有的話客人會不會被擋、會不會不敢留資料？這篇講 HTTPS 是什麼、要不要花錢裝、會不會影響 Google 排名，以及舊網站怎麼補上。",
+  "url": "https://tonpair.com/knowledge/ssl-https",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tonpair.com/knowledge/ssl-https"
+  },
+  "datePublished": "2026-08-29",
+  "dateModified": "2026-08-29",
+  "inLanguage": "zh-Hant-TW",
+  "author": {
+    "@id": "https://tonpair.com/#organization"
+  },
+  "publisher": {
+    "@id": "https://tonpair.com/#organization"
+  },
+  "isPartOf": {
+    "@type": "CollectionPage",
+    "@id": "https://tonpair.com/knowledge/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "name": "網址前面的小鎖頭是什麼？沒有會怎樣",
+  "url": "https://tonpair.com/knowledge/ssl-https",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "網址前面的小鎖頭是什麼？沒有會怎樣",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "網址前面的小鎖頭代表這個網站用 HTTPS 加密連線，資料傳輸過程不容易被竊聽或竄改。現在幾乎所有正式網站都應該要有，沒有的話瀏覽器會明顯標示「不安全」，客人容易被嚇跑，也會影響 Google 排名。裝 HTTPS 現在多半免費（隨主機服務附贈），不是額外的大筆支出。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "小鎖頭、HTTPS 到底在保護什麼？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "保護的是<strong>傳輸過程</strong>。客人在你網站上填資料（姓名、電話、想預約的時段）時，這些內容要從客人的手機傳到你的伺服器，中間會經過好幾個節點。有加密，內容像是被裝進上鎖的箱子；沒加密，內容是攤開來走的，理論上中途有心人能看到甚至竄改。 小鎖頭不代表你的網站完全沒有資安風險（那是另一個層次的事），但它是<strong>最基本、最該有</strong>的一層保護，而且現在做起來成本很低。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "沒有小鎖頭，瀏覽器真的會擋客人嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不會完全擋死，但會很明顯地警告。Chrome、Safari 這類主流瀏覽器，網址列會直接顯示「不安全」的字樣或警告圖示，尤其是網站上有表單要填的時候，警告會更明顯。 對第一次來的客人來說，這個瞬間的觀感影響很大——不管你的服務再好，客人看到「不安全」三個字，第一反應通常是先離開，不會停下來研究這是不是誤會。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "會不會影響 Google 排名？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "會，而且 Google 公開講過這是排名參考因素之一。更直接的影響是：同樣兩個網站排在搜尋結果，一個有鎖頭一個沒有，客人的點擊意願本來就不一樣，這件事間接又會影響排名表現。 簡單說：HTTPS 不是萬靈丹，但它是「不做會扣分」的那種基本功，跟前面提到的 <a class='text-brand-mid font-bold hover:underline' href='seo-basics.html'>SEO 基本功</a> 是同一類事情。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "要另外花一大筆錢裝 SSL 憑證嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "現在通常不用。以前 SSL 憑證確實要另外買、一年要繳費，但現在主流的主機與託管服務（包括對頻設計慣用的 Cloudflare Pages）大多<strong>免費內建</strong>，架站的時候就會自動處理好，不是要另外談的加購項目。 如果你發現自己的網站還在用付費 SSL、或是根本沒有，多半代表這個網站是用比較舊的方式架的，值得找人看一下是不是該考慮 <a class='text-brand-mid font-bold hover:underline' href='website-redesign.html'>翻新或重做</a>。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我的網站有線上表單／要收客人資料，是不是規定一定要有？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "只要網站上有任何表單要客人填資料（就算只是姓名電話），HTTPS 都應該視為必要條件，不是選配。這不只是為了排名或觀感，是對客人資料基本的保護態度。 如果之後有規劃線上金流、會員登入這類更進階的功能，資安要求只會更高，HTTPS 是最起碼的門檻，不是終點。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "舊網站沒有小鎖頭，要怎麼補裝？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "如果網站還在用舊式的主機（自己買虛擬主機、傳統代管那種），通常要向主機商申請憑證，可能要處理一些技術設定，也可能要付年費，這塊建議直接找懂的人幫忙裝，不建議自己土法煉鋼改設定。 如果是用 Cloudflare Pages、Netlify 這類現代的靜態網站託管，多半換過去就自動有了，這也是我們現在架站一律用這套的原因之一——省掉這整塊麻煩。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "除了 HTTPS，還有哪些簡單的信任訊號可以加？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "幾個成本低、效果實在的：<strong>清楚的聯絡方式（電話、地址、地圖）</strong>、真實的店家照片（不是網路抓來的示意圖）、明確寫出服務範圍與價格區間、以及會定期更新的內容（半年前的活動還掛在首頁，反而讓人懷疑這店還有沒有在經營）。 這些跟 HTTPS 一樣，都是「客人看一眼就會下意識判斷你可不可信」的小細節，做好不用花大錢，但需要有人盯著別讓它過期。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://tonpair.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "小店家知識庫",
+      "item": "https://tonpair.com/knowledge/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "網址前面沒有小鎖頭，客人會不會不信任？",
+      "item": "https://tonpair.com/knowledge/ssl-https"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要內容</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html">
+      <img src="../assets/logo/synchord-mark.svg" alt="對頻設計" width="34" height="34">
+      <span class="brand-text"><span class="brand-zh">對頻設計</span><span class="brand-en">tonpair</span></span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="主導覽">
+      <a href="../about.html">關於我們</a>
+      <a href="../services.html">服務項目</a>
+      <a href="../portfolio.html">案例</a>
+      <a href="../google-education.html">Google 解決方案</a>
+      <a href="../contact.html">聯絡我們</a>
+    </nav>
+    <a class="nav-cta" href="../contact.html">免費諮詢</a>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="切換深色模式">☾</button>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="開關選單">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="../index.html">首頁</a> ／ <a href="index.html">小店家知識庫</a> ／ 網址前面沒有小鎖頭，客人會不會不信任？</p>
+    <span class="eyebrow">TRUST</span>
+    <h1 class="keep">網址前面的小鎖頭是什麼？沒有會怎樣</h1>
+    <p class="keep">客人點進你的網站，瀏覽器跳出「不安全」三個字——這種第一印象，比網站排版醜還致命。</p>
+    <p class="page-meta">最後更新：<time datetime="2026-08-29">2026 年 8 月 29 日</time>　·　對頻設計</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap-narrow">
+    <div class="prose">
+      <div class="notice reveal" style="margin-top:0;max-width:none">
+        <strong style="display:block;color:var(--text);margin-bottom:8px">先講結論</strong>
+        <p class="keep answer-line"><strong>網址前面的小鎖頭代表這個網站用 HTTPS 加密連線，資料傳輸過程不容易被竊聽或竄改。現在幾乎所有正式網站都應該要有，沒有的話瀏覽器會明顯標示「不安全」，客人容易被嚇跑，也會影響 Google 排名。裝 HTTPS 現在多半免費（隨主機服務附贈），不是額外的大筆支出。</strong></p>
+        <p class="keep">小鎖頭代表的技術叫 <strong>HTTPS</strong>（比原本的 HTTP 多了一層加密）。差別在於：客人在你的網站上打的任何資料——填表單、輸入電話——傳輸過程有沒有被加密保護，不容易被中途攔截或竄改。</p>
+        <p class="keep">這件事現在已經是<strong>基本盤</strong>，不是加分項。沒有的網站，瀏覽器會主動跳警告，客人看到「不安全」三個字，十個有九個會直接關掉分頁。</p>
+      </div>
+
+      <h2 class="reveal" style="border-top:none;padding-top:0">小鎖頭、HTTPS，一次講清楚</h2>
+      <div class="faq reveal">
+      <details class="faq-item">
+        <summary>網址前面的小鎖頭是什麼？沒有會怎樣</summary>
+        <div class="faq-a">
+          <p class="keep">網址前面的小鎖頭代表這個網站用 HTTPS 加密連線，資料傳輸過程不容易被竊聽或竄改。現在幾乎所有正式網站都應該要有，沒有的話瀏覽器會明顯標示「不安全」，客人容易被嚇跑，也會影響 Google 排名。裝 HTTPS 現在多半免費（隨主機服務附贈），不是額外的大筆支出。</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>小鎖頭、HTTPS 到底在保護什麼？</summary>
+        <div class="faq-a">
+          <p class="keep">保護的是<strong>傳輸過程</strong>。客人在你網站上填資料（姓名、電話、想預約的時段）時，這些內容要從客人的手機傳到你的伺服器，中間會經過好幾個節點。有加密，內容像是被裝進上鎖的箱子；沒加密，內容是攤開來走的，理論上中途有心人能看到甚至竄改。</p>
+          <p class="keep">小鎖頭不代表你的網站完全沒有資安風險（那是另一個層次的事），但它是<strong>最基本、最該有</strong>的一層保護，而且現在做起來成本很低。</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>沒有小鎖頭，瀏覽器真的會擋客人嗎？</summary>
+        <div class="faq-a">
+          <p class="keep">不會完全擋死，但會很明顯地警告。Chrome、Safari 這類主流瀏覽器，網址列會直接顯示「不安全」的字樣或警告圖示，尤其是網站上有表單要填的時候，警告會更明顯。</p>
+          <p class="keep">對第一次來的客人來說，這個瞬間的觀感影響很大——不管你的服務再好，客人看到「不安全」三個字，第一反應通常是先離開，不會停下來研究這是不是誤會。</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>會不會影響 Google 排名？</summary>
+        <div class="faq-a">
+          <p class="keep">會，而且 Google 公開講過這是排名參考因素之一。更直接的影響是：同樣兩個網站排在搜尋結果，一個有鎖頭一個沒有，客人的點擊意願本來就不一樣，這件事間接又會影響排名表現。</p>
+          <p class="keep">簡單說：HTTPS 不是萬靈丹，但它是「不做會扣分」的那種基本功，跟前面提到的 <a class='text-brand-mid font-bold hover:underline' href='seo-basics.html'>SEO 基本功</a> 是同一類事情。</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>要另外花一大筆錢裝 SSL 憑證嗎？</summary>
+        <div class="faq-a">
+          <p class="keep">現在通常不用。以前 SSL 憑證確實要另外買、一年要繳費，但現在主流的主機與託管服務（包括對頻設計慣用的 Cloudflare Pages）大多<strong>免費內建</strong>，架站的時候就會自動處理好，不是要另外談的加購項目。</p>
+          <p class="keep">如果你發現自己的網站還在用付費 SSL、或是根本沒有，多半代表這個網站是用比較舊的方式架的，值得找人看一下是不是該考慮 <a class='text-brand-mid font-bold hover:underline' href='website-redesign.html'>翻新或重做</a>。</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>我的網站有線上表單／要收客人資料，是不是規定一定要有？</summary>
+        <div class="faq-a">
+          <p class="keep">只要網站上有任何表單要客人填資料（就算只是姓名電話），HTTPS 都應該視為必要條件，不是選配。這不只是為了排名或觀感，是對客人資料基本的保護態度。</p>
+          <p class="keep">如果之後有規劃線上金流、會員登入這類更進階的功能，資安要求只會更高，HTTPS 是最起碼的門檻，不是終點。</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>舊網站沒有小鎖頭，要怎麼補裝？</summary>
+        <div class="faq-a">
+          <p class="keep">如果網站還在用舊式的主機（自己買虛擬主機、傳統代管那種），通常要向主機商申請憑證，可能要處理一些技術設定，也可能要付年費，這塊建議直接找懂的人幫忙裝，不建議自己土法煉鋼改設定。</p>
+          <p class="keep">如果是用 Cloudflare Pages、Netlify 這類現代的靜態網站託管，多半換過去就自動有了，這也是我們現在架站一律用這套的原因之一——省掉這整塊麻煩。</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>除了 HTTPS，還有哪些簡單的信任訊號可以加？</summary>
+        <div class="faq-a">
+          <p class="keep">幾個成本低、效果實在的：<strong>清楚的聯絡方式（電話、地址、地圖）</strong>、真實的店家照片（不是網路抓來的示意圖）、明確寫出服務範圍與價格區間、以及會定期更新的內容（半年前的活動還掛在首頁，反而讓人懷疑這店還有沒有在經營）。</p>
+          <p class="keep">這些跟 HTTPS 一樣，都是「客人看一眼就會下意識判斷你可不可信」的小細節，做好不用花大錢，但需要有人盯著別讓它過期。</p>
+        </div>
+      </details>
+      </div>
+
+      <div class="prose-cta reveal">
+        <h3>不確定自己的網站有沒有小鎖頭？</h3>
+        <p class="keep">把網址給我們看一眼，30 秒就能確認有沒有 HTTPS，順便告訴你這個網站是不是該考慮升級了。</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <a class="btn btn-primary btn-sm" href="../contact.html?topic=%E7%B6%B2%E7%AB%99%E6%94%B9%E7%89%88%E8%88%87%E5%A2%9E%E4%BF%AE">預約免費諮詢</a>
+          <a class="btn btn-outline btn-sm" href="../services.html#pricing">看收費參考</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Read next</span>
+      <h2 class="section-title">延伸閱讀</h2>
+    </div>
+    <div class="grid grid-3">
+        <article class="card card-flat reveal" style="--rd:0.00s">
+          <h3><a href="website-redesign.html">舊網站要翻新還是重做？</a></h3>
+          <p class="keep">沒有 HTTPS、用很舊的方式架站，通常代表這個網站該考慮重做了。</p>
+          <p class="card-foot"><a class="link-arrow" href="website-redesign.html">看這篇</a></p>
+        </article>
+        <article class="card card-flat reveal" style="--rd:0.08s">
+          <h3><a href="website-maintenance.html">網站做完就不用管了嗎？</a></h3>
+          <p class="keep">安全性檢查是維護方案本來就會做的事，不是等出事才想到。</p>
+          <p class="card-foot"><a class="link-arrow" href="website-maintenance.html">看這篇</a></p>
+        </article>
+        <article class="card card-flat reveal" style="--rd:0.16s">
+          <h3><a href="../services.html">看看我們的服務與收費</a></h3>
+          <p class="keep">現在的方案一律含 HTTPS，不是另外加購的項目。</p>
+          <p class="card-foot"><a class="link-arrow" href="../services.html">看這篇</a></p>
+        </article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="sticky-cta">
+  <a class="btn btn-primary" href="../contact.html">免費諮詢</a>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a class="brand" href="../index.html">
+          <img src="../assets/logo/synchord-mark.svg" alt="" width="34" height="34" aria-hidden="true">
+          <span class="brand-text"><span class="brand-zh">對頻設計</span><span class="brand-en">tonpair</span></span>
+        </a>
+        <p class="keep">幫你把店與服務好好放上網路，讓想找你的人找得到。網站開發、小型客製工具與 Google 認證服務的長期夥伴。</p>
+        <p class="footer-hours keep">收攤後才有空慢慢看？沒關係，信半夜寄來也可以——我們不會半夜回，但隔天一定回。</p>
+        <address class="footer-contact">
+          <span class="fc-line"><svg class="fc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg><span>台南市北區大興街226巷37號</span></span>
+          <a class="fc-line" href="tel:0971019763"><svg class="fc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5z"/></svg><span>0971-019-763</span></a>
+        </address>
+      </div>
+      <div>
+        <h2>網站導覽</h2>
+        <ul>
+          <li><a href="../about.html">關於我們</a></li>
+          <li><a href="../services.html">服務項目</a></li>
+          <li><a href="../portfolio.html">案例</a></li>
+          <li><a href="index.html">小店家知識庫</a></li>
+          <li><a href="../contact.html">聯絡我們</a></li>
+          <li><a href="https://www.hunglun.com/" target="_blank" rel="noopener">鴻綸科技 ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Google 解決方案</h2>
+        <ul>
+          <li><a href="../google-education.html">Google 解決方案</a></li>
+          <li><a href="../gemini-education.html">Gemini for Education</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 對頻設計. All rights reserved.</span>
+      <span><a href="mailto:tonpair711@gmail.com">tonpair711@gmail.com</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

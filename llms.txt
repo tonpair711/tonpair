@@ -89,6 +89,9 @@
 - 舊網站要翻新還是重做？三個判斷點：https://tonpair.com/knowledge/website-redesign
 - 網站做完就不用管了嗎？維護費在付什麼：https://tonpair.com/knowledge/website-maintenance
 - 手機版跑版怎麼辦？RWD 是什麼、為什麼影響排名：https://tonpair.com/knowledge/mobile-friendly
+- 小店網站要做哪些 SEO 基本功，客人才搜得到你：https://tonpair.com/knowledge/seo-basics
+- 網址前面沒有小鎖頭，客人會不會不信任？：https://tonpair.com/knowledge/ssl-https
+- 要不要做會員或集點系統，先問這三個問題：https://tonpair.com/knowledge/membership-loyalty-system
 
 ## 常見問題
 Q: 對頻設計是不是 Google 的官方合作夥伴？
