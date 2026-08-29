@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{if(localStorage.getItem('amp-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+<title>結構化資料 Schema 是什麼？搜尋結果比較好看的原因｜對頻設計</title>
+<meta name="description" content="有些店在 Google 搜尋結果會顯示星等、常見問題、麵包屑導覽，有些店只有一行藍色連結——差別多半是結構化資料（Schema）。這篇用白話解釋它是什麼、有沒有做得到，以及找人做網站時該問什麼。">
+<link rel="canonical" href="https://tonpair.com/knowledge/schema-basics">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="../assets/logo/favicon.svg?v=5">
+<link rel="apple-touch-icon" href="../assets/logo/apple-touch-icon.png?v=5">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="對頻設計">
+<meta property="og:title" content="結構化資料 Schema 是什麼？搜尋結果比較好看的原因｜對頻設計">
+<meta property="og:description" content="有些店在 Google 搜尋結果會顯示星等、常見問題、麵包屑導覽，有些店只有一行藍色連結——差別多半是結構化資料（Schema）。這篇用白話解釋它是什麼、有沒有做得到，以及找人做網站時該問什麼。">
+<meta property="og:url" content="https://tonpair.com/knowledge/schema-basics">
+<meta property="og:image" content="https://tonpair.com/assets/og/og-image.png">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="結構化資料 Schema 是什麼？搜尋結果比較好看的原因｜對頻設計">
+<meta name="twitter:description" content="有些店在 Google 搜尋結果會顯示星等、常見問題、麵包屑導覽，有些店只有一行藍色連結——差別多半是結構化資料（Schema）。這篇用白話解釋它是什麼、有沒有做得到，以及找人做網站時該問什麼。">
+<meta name="twitter:image" content="https://tonpair.com/assets/og/og-image.png">
+
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/tonpair-notosanstc-vf.woff2?v=5" crossorigin>
+<link rel="stylesheet" href="../assets/style.css?v=7">
+<script defer src="../assets/main.js?v=5"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "結構化資料（Schema）是什麼？為什麼你的店在搜尋結果比較好看",
+  "description": "有些店在 Google 搜尋結果會顯示星等、常見問題、麵包屑導覽，有些店只有一行藍色連結——差別多半是結構化資料（Schema）。這篇用白話解釋它是什麼、有沒有做得到，以及找人做網站時該問什麼。",
+  "url": "https://tonpair.com/knowledge/schema-basics",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tonpair.com/knowledge/schema-basics"
+  },
+  "datePublished": "2026-08-30",
+  "dateModified": "2026-08-30",
+  "inLanguage": "zh-Hant-TW",
+  "author": {
+    "@id": "https://tonpair.com/#organization"
+  },
+  "publisher": {
+    "@id": "https://tonpair.com/#organization"
+  },
+  "isPartOf": {
+    "@type": "CollectionPage",
+    "@id": "https://tonpair.com/knowledge/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "name": "結構化資料（Schema）是什麼？為什麼你的店在搜尋結果比較好看",
+  "url": "https://tonpair.com/knowledge/schema-basics",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "結構化資料（Schema）是什麼？為什麼你的店在搜尋結果比較好看",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "結構化資料（Schema markup）是寫在網頁裡、給搜尋引擎看的一份「說明書」，用來標明「這是店名」「這是價格」「這是常見問題」。它不會改變網頁畫面上呈現的樣子，但能讓 Google 跟 AI 搜尋工具更準確理解頁面內容，進而顯示星等、FAQ 摺疊區、麵包屑這類加分外觀，也更容易被 AI 引用。做網站時可以直接問對方「這個網站有沒有做結構化資料」。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Schema 到底是什麼？我需要自己學怎麼寫嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Schema（也叫結構化資料）是一種寫在網頁程式碼裡、遵照 schema.org 這套共同規範寫成的標記，用來告訴搜尋引擎「這個網頁的這一塊是什麼類型的資訊」。你完全不需要自己學或自己寫，這是做網站的人該處理的技術工作，你只需要知道有這件事、知道可以問。 打個比方：網頁的文字是給客人看的菜單，Schema 是廚房後台貼的標籤——寫著哪道是主餐、哪道是甜點、多少錢。客人看不到標籤，但外送平台的系統靠這個標籤才知道怎麼分類上架。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "做了 Schema，我的搜尋結果會多出什麼？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "常見的加分外觀有幾種：<strong>星等評價</strong>（如果你有串接評論資料）、<strong>常見問題摺疊區</strong>（客人在搜尋結果就能直接展開看到問答，不用點進網站）、<strong>麵包屑導覽</strong>（顯示網站的分類路徑，例如「首頁 ／ 店家知識庫 ／ 這一篇」）、以及<strong>營業資訊卡</strong>（地址、電話、營業時間直接顯示）。 這些不是每個都保證會出現——最終顯不顯示是 Google 自己判斷的，但沒有做 Schema，這些加分外觀基本上不會出現，等於直接放棄了這個機會。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "這件事跟 AI 搜尋（ChatGPT、Perplexity）有關係嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "有關係。AI 工具在整理答案時，結構清楚的內容比一整段沒有標記的文字更容易被正確擷取與引用——尤其是常見問題型的 Schema（FAQPage），因為 AI 抓答案時，抓的正是一問一答這種清楚配對的格式。 換句話說，Schema 不只是給 Google 傳統搜尋用的，對想被 AI 引用的能見度（也就是所謂的 AEO／GEO）也有幫助。想多了解 AI 搜尋這塊可以看<a class='text-brand-mid font-bold hover:underline' href='ai-search-visibility.html'>ChatGPT 會不會推薦我的店</a>這篇。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "做 Schema 大概要多少錢？是額外收費的項目嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "在我們的做法裡，Schema 是網站基本功的一部分，不是額外加購項目——形象官網、一頁式網站的收費裡已經包含這件事，不會另外跟你收一筆「結構化資料費」。找其他人做網站時，建議直接問清楚這件事有沒有包含在報價裡，避免後面被追加。 如果你已經有網站、但當初做的人沒處理這塊，也可以當成小型的網站增修項目來補，不用整個網站重做。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "怎麼知道自己的網站有沒有做 Schema？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "最簡單的方式是用 Google 官方的<strong>「Rich Results Test」</strong>這個免費工具，貼上你的網址，它會告訴你這個頁面有沒有偵測到結構化資料、有沒有錯誤。不需要懂程式碼，看結果畫面上寫「檢測到」還是「未檢測到」就知道。 如果檢測結果是空的，代表這個頁面目前沒有結構化資料，可以拿這個結果去問你的網站廠商要不要補上。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "做了 Schema 就保證搜尋排名會變好嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不會，這是常見的誤會。Schema 本身<strong>不是排名因素</strong>，它的作用是讓搜尋結果「顯示得更完整、更好懂」，間接提高被點擊的機會，但不會直接把你的排名往前拉。任何跟你保證「做了 Schema 排名一定變好」的說法都要小心。 真正影響排名的是內容品質、網站速度、有沒有被正常收錄這些更基本的事，Schema 是錦上添花，不是萬靈丹。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://tonpair.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "店家知識庫",
+      "item": "https://tonpair.com/knowledge/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "結構化資料是什麼？為什麼你的店在搜尋結果比較好看",
+      "item": "https://tonpair.com/knowledge/schema-basics"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要內容</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html">
+      <img src="../assets/logo/synchord-mark.svg" alt="對頻設計" width="34" height="34">
+      <span class="brand-text"><span class="brand-zh">對頻設計</span><span class="brand-en">tonpair</span></span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="主導覽">
+      <a href="../about.html">關於我們</a>
+      <a href="../services.html">服務項目</a>
+      <a href="../portfolio.html">案例</a>
+      <a href="../google-education.html">Google 解決方案</a>
+      <a href="../contact.html">聯絡我們</a>
+    </nav>
+    <a class="nav-cta" href="../contact.html">免費諮詢</a>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="切換深色模式">☾</button>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="開關選單">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="../index.html">首頁</a> ／ <a href="index.html">店家知識庫</a> ／ 結構化資料是什麼？為什麼你的店在搜尋結果比較好看</p>
+    <span class="eyebrow">SEARCH</span>
+    <h1 class="keep">結構化資料（Schema）是什麼？為什麼你的店在搜尋結果比較好看</h1>
+    <p class="keep">同樣在 Google 搜東西，有些店的搜尋結果下面會多顯示星等評價、常見問題可以直接展開看、還有一排麵包屑導覽——不是那間店比較幸運，是網站背後多做了一件事：結構化資料。</p>
+    <p class="page-meta">最後更新：<time datetime="2026-08-30">2026 年 8 月 30 日</time>　·　對頻設計</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap-narrow">
+    <div class="prose">
+      <div class="notice reveal" style="margin-top:0;max-width:none">
+        <strong style="display:block;color:var(--text);margin-bottom:8px">先講結論</strong>
+        <p class="keep answer-line"><strong>結構化資料（Schema markup）是寫在網頁裡、給搜尋引擎看的一份「說明書」，用來標明「這是店名」「這是價格」「這是常見問題」。它不會改變網頁畫面上呈現的樣子，但能讓 Google 跟 AI 搜尋工具更準確理解頁面內容，進而顯示星等、FAQ 摺疊區、麵包屑這類加分外觀，也更容易被 AI 引用。做網站時可以直接問對方「這個網站有沒有做結構化資料」。</strong></p>
+        <p class="keep">結構化資料聽起來很技術，但概念很簡單：<strong>網頁上寫給人看的文字，跟寫給搜尋引擎看的「標籤」，是分開的兩份東西</strong>。人看到的還是一樣的畫面，但搜尋引擎額外多讀到一份說明——「這一段是店名」「這一段是價格」「這一段是常見問題與答案」。</p>
+        <p class="keep">有這份說明書，Google 跟 ChatGPT 這類工具比較容易「讀懂」你的網站在講什麼，也比較敢放心引用。這就是為什麼有些搜尋結果比別人多顯示一些東西，看起來比較完整、比較可信。</p>
+      </div>
+
+      <h2 class="reveal" style="border-top:none;padding-top:0">老闆最常問的幾題</h2>
+      <div class="faq reveal">
+      <details class="faq-item">
+        <summary>結構化資料（Schema）是什麼？為什麼你的店在搜尋結果比較好看</summary>
+        <div class="faq-a">
+          <p class="keep">結構化資料（Schema markup）是寫在網頁裡、給搜尋引擎看的一份「說明書」，用來標明「這是店名」「這是價格」「這是常見問題」。它不會改變網頁畫面上呈現的樣子，但能讓 Google 跟 AI 搜尋工具更準確理解頁面內容，進而顯示星等、FAQ 摺疊區、麵包屑這類加分外觀，也更容易被 AI 引用。做網站時可以直接問對方「這個網站有沒有做結構化資料」。</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Schema 到底是什麼？我需要自己學怎麼寫嗎？</summary>
+        <div class="faq-a">
+          <p class="keep">Schema（也叫結構化資料）是一種寫在網頁程式碼裡、遵照 schema.org 這套共同規範寫成的標記，用來告訴搜尋引擎「這個網頁的這一塊是什麼類型的資訊」。你完全不需要自己學或自己寫，這是做網站的人該處理的技術工作，你只需要知道有這件事、知道可以問。</p>
+          <p class="keep">打個比方：網頁的文字是給客人看的菜單，Schema 是廚房後台貼的標籤——寫著哪道是主餐、哪道是甜點、多少錢。客人看不到標籤，但外送平台的系統靠這個標籤才知道怎麼分類上架。</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>做了 Schema，我的搜尋結果會多出什麼？</summary>
+        <div class="faq-a">
+          <p class="keep">常見的加分外觀有幾種：<strong>星等評價</strong>（如果你有串接評論資料）、<strong>常見問題摺疊區</strong>（客人在搜尋結果就能直接展開看到問答，不用點進網站）、<strong>麵包屑導覽</strong>（顯示網站的分類路徑，例如「首頁 ／ 店家知識庫 ／ 這一篇」）、以及<strong>營業資訊卡</strong>（地址、電話、營業時間直接顯示）。</p>
+          <p class="keep">這些不是每個都保證會出現——最終顯不顯示是 Google 自己判斷的，但沒有做 Schema，這些加分外觀基本上不會出現，等於直接放棄了這個機會。</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>這件事跟 AI 搜尋（ChatGPT、Perplexity）有關係嗎？</summary>
+        <div class="faq-a">
+          <p class="keep">有關係。AI 工具在整理答案時，結構清楚的內容比一整段沒有標記的文字更容易被正確擷取與引用——尤其是常見問題型的 Schema（FAQPage），因為 AI 抓答案時，抓的正是一問一答這種清楚配對的格式。</p>
+          <p class="keep">換句話說，Schema 不只是給 Google 傳統搜尋用的，對想被 AI 引用的能見度（也就是所謂的 AEO／GEO）也有幫助。想多了解 AI 搜尋這塊可以看<a class='text-brand-mid font-bold hover:underline' href='ai-search-visibility.html'>ChatGPT 會不會推薦我的店</a>這篇。</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>做 Schema 大概要多少錢？是額外收費的項目嗎？</summary>
+        <div class="faq-a">
+          <p class="keep">在我們的做法裡，Schema 是網站基本功的一部分，不是額外加購項目——形象官網、一頁式網站的收費裡已經包含這件事，不會另外跟你收一筆「結構化資料費」。找其他人做網站時，建議直接問清楚這件事有沒有包含在報價裡，避免後面被追加。</p>
+          <p class="keep">如果你已經有網站、但當初做的人沒處理這塊，也可以當成小型的網站增修項目來補，不用整個網站重做。</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>怎麼知道自己的網站有沒有做 Schema？</summary>
+        <div class="faq-a">
+          <p class="keep">最簡單的方式是用 Google 官方的<strong>「Rich Results Test」</strong>這個免費工具，貼上你的網址，它會告訴你這個頁面有沒有偵測到結構化資料、有沒有錯誤。不需要懂程式碼，看結果畫面上寫「檢測到」還是「未檢測到」就知道。</p>
+          <p class="keep">如果檢測結果是空的，代表這個頁面目前沒有結構化資料，可以拿這個結果去問你的網站廠商要不要補上。</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>做了 Schema 就保證搜尋排名會變好嗎？</summary>
+        <div class="faq-a">
+          <p class="keep">不會，這是常見的誤會。Schema 本身<strong>不是排名因素</strong>，它的作用是讓搜尋結果「顯示得更完整、更好懂」，間接提高被點擊的機會，但不會直接把你的排名往前拉。任何跟你保證「做了 Schema 排名一定變好」的說法都要小心。</p>
+          <p class="keep">真正影響排名的是內容品質、網站速度、有沒有被正常收錄這些更基本的事，Schema 是錦上添花，不是萬靈丹。</p>
+        </div>
+      </details>
+      </div>
+
+      <div class="prose-cta reveal">
+        <h3>想知道自己的網站有沒有做好這些基本功？</h3>
+        <p class="keep">把網址給我們看一下，我們會照實告訴你現在缺了哪些、值不值得補——不會為了成交硬說什麼都要重做。</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <a class="btn btn-primary btn-sm" href="../contact.html?topic=%E9%82%84%E4%B8%8D%E7%A2%BA%E5%AE%9A%EF%BC%8C%E5%85%88%E8%81%8A%E8%81%8A">預約免費諮詢</a>
+          <a class="btn btn-outline btn-sm" href="../services.html#pricing">看收費參考</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Read next</span>
+      <h2 class="section-title">延伸閱讀</h2>
+    </div>
+    <div class="grid grid-3">
+        <article class="card card-flat reveal" style="--rd:0.00s">
+          <h3><a href="ai-search-visibility.html">ChatGPT 會不會推薦我的店？</a></h3>
+          <p class="keep">結構清楚的內容更容易被 AI 引用，這篇講 AI 搜尋時代該做什麼。</p>
+          <p class="card-foot"><a class="link-arrow" href="ai-search-visibility.html">看這篇</a></p>
+        </article>
+        <article class="card card-flat reveal" style="--rd:0.08s">
+          <h3><a href="seo-basics.html">小店網站 SEO 基本功</a></h3>
+          <p class="keep">Schema 只是基本功的其中一項，這篇有完整的清單。</p>
+          <p class="card-foot"><a class="link-arrow" href="seo-basics.html">看這篇</a></p>
+        </article>
+        <article class="card card-flat reveal" style="--rd:0.16s">
+          <h3><a href="not-found-on-google.html">網站做好了為什麼 Google 搜不到？</a></h3>
+          <p class="keep">搜尋結果的問題不只 Schema 一種，這篇教你自己先分辨是哪一種狀況。</p>
+          <p class="card-foot"><a class="link-arrow" href="not-found-on-google.html">看這篇</a></p>
+        </article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="sticky-cta">
+  <a class="btn btn-primary" href="../contact.html">免費諮詢</a>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a class="brand" href="../index.html">
+          <img src="../assets/logo/synchord-mark.svg" alt="" width="34" height="34" aria-hidden="true">
+          <span class="brand-text"><span class="brand-zh">對頻設計</span><span class="brand-en">tonpair</span></span>
+        </a>
+        <p class="keep">幫你把店與服務好好放上網路，讓想找你的人找得到。網站開發、小型客製工具與 Google 認證服務的長期夥伴。</p>
+        <p class="footer-hours keep">收攤後才有空慢慢看？沒關係，信半夜寄來也可以——我們不會半夜回，但隔天一定回。</p>
+        <address class="footer-contact">
+          <span class="fc-line"><svg class="fc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg><span>台南市北區大興街226巷37號</span></span>
+          <a class="fc-line" href="tel:0971019763"><svg class="fc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5z"/></svg><span>0971-019-763</span></a>
+        </address>
+      </div>
+      <div>
+        <h2>網站導覽</h2>
+        <ul>
+          <li><a href="../about.html">關於我們</a></li>
+          <li><a href="../services.html">服務項目</a></li>
+          <li><a href="../portfolio.html">案例</a></li>
+          <li><a href="index.html">店家知識庫</a></li>
+          <li><a href="../contact.html">聯絡我們</a></li>
+          <li><a href="https://www.hunglun.com/" target="_blank" rel="noopener">鴻綸科技 ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Google 解決方案</h2>
+        <ul>
+          <li><a href="../google-education.html">Google 解決方案</a></li>
+          <li><a href="../gemini-education.html">Gemini for Education</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 對頻設計. All rights reserved.</span>
+      <span><a href="mailto:tonpair711@gmail.com">tonpair711@gmail.com</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

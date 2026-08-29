@@ -92,6 +92,11 @@
 - 小店網站要做哪些 SEO 基本功，客人才搜得到你：https://tonpair.com/knowledge/seo-basics
 - 網址前面沒有小鎖頭，客人會不會不信任？：https://tonpair.com/knowledge/ssl-https
 - 要不要做會員或集點系統，先問這三個問題：https://tonpair.com/knowledge/membership-loyalty-system
+- 小店要不要寫文章、經營內容？先看這篇再決定：https://tonpair.com/knowledge/content-marketing
+- 結構化資料（Schema）是什麼？為什麼你的店在搜尋結果比較好看：https://tonpair.com/knowledge/schema-basics
+- SEO 要多久才看得到效果？合理的期待是什麼：https://tonpair.com/knowledge/seo-timeline
+- LINE 官方帳號怎麼經營？圖文選單與自動回覆實務：https://tonpair.com/knowledge/line-oa
+- 網站速度會不會影響排名？Core Web Vitals 是什麼：https://tonpair.com/knowledge/webperf
 
 ## 常見問題
 Q: 對頻設計是不是 Google 的官方合作夥伴？
