@@ -85,6 +85,7 @@
 - 做一個網站要多久？流程、卡點與你要先準備的東西：https://tonpair.com/knowledge/website-process
 - 網域要自己買嗎？.com 與 .com.tw 怎麼選：https://tonpair.com/knowledge/domain-hosting
 - ChatGPT 會不會推薦我的店？AI 搜尋時代小店該做什麼：https://tonpair.com/knowledge/ai-search-visibility
+- 為什麼品牌需要官方網站？Google 與 AI 都在找一個信任的來源：https://tonpair.com/knowledge/why-official-website
 - 網站做好了，為什麼 Google 搜不到？：https://tonpair.com/knowledge/not-found-on-google
 - 舊網站要翻新還是重做？三個判斷點：https://tonpair.com/knowledge/website-redesign
 - 網站做完就不用管了嗎？維護費在付什麼：https://tonpair.com/knowledge/website-maintenance
