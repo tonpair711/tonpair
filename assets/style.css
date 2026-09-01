@@ -60,11 +60,12 @@
   --radius-lg: 10px;          /* 小元件：按鈕、標籤、導覽鈕 */
 
   /* 垂直節奏：非對稱（上緊下鬆），整體放鬆／收緊改這裡 */
-  --sp-hero-top: 112px;
-  --sp-hero-bottom: 140px;
-  --sp-section: 120px;
-  --sp-head-top: 64px;
-  --sp-head-bottom: 52px;
+  /* 2026-08-31：Steve 反映全站空白太多，桌機版整體收緊約 30% */
+  --sp-hero-top: 80px;
+  --sp-hero-bottom: 96px;
+  --sp-section: 84px;
+  --sp-head-top: 48px;
+  --sp-head-bottom: 36px;
 }
 
 /* ---------- Tokens：深色（夜刊模式，不是純黑） ---------- */
@@ -386,7 +387,7 @@ h1, h2, h3, h4 { line-height: 1.4; font-weight: 700; color: var(--ink); }
 .section-deep p { color: var(--on-deep-muted); }
 .section-deep a { color: var(--gold-pure); }
 
-.section-head { margin-bottom: 48px; max-width: 42em; }
+.section-head { margin-bottom: 36px; max-width: 42em; }
 .section-head.right { margin-left: auto; text-align: right; }
 .section-head.right .eyebrow { text-align: right; }
 .section-title {
@@ -660,7 +661,7 @@ table.price-table { width: 100%; border-collapse: collapse; min-width: 640px; fo
 }
 
 /* ---------- 案例（portfolio 頁）：檔案夾式展覽卡 ---------- */
-.case { display: grid; gap: 34px; grid-template-columns: 1fr; margin-bottom: 72px; }
+.case { display: grid; gap: 34px; grid-template-columns: 1fr; margin-bottom: 52px; }
 @media (min-width: 900px) { .case { grid-template-columns: 1.05fr 1fr; align-items: center; } .case.flip .case-media { order: 2; } }
 .case-media {
   border: 1px solid var(--line-strong);
@@ -1146,7 +1147,7 @@ label.check {
 
 /* ---------- RWD ---------- */
 @media (max-width: 980px) {
-  :root { --sp-hero-top: 64px; --sp-hero-bottom: 80px; --sp-section: 68px; }
+  :root { --sp-hero-top: 48px; --sp-hero-bottom: 60px; --sp-section: 52px; }
   .nav-toggle { display: flex; }
   .main-nav {
     display: none;
