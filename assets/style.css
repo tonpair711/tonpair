@@ -17,7 +17,7 @@
    有新字沒被涵蓋會退回系統字型；重建後這裡與各頁 preload 的 ?v=N 要一起升。 */
 @font-face {
   font-family: "Tonpair Sans";
-  src: url("/assets/fonts/tonpair-notosanstc-vf.woff2?v=6") format("woff2-variations");
+  src: url("/assets/fonts/tonpair-notosanstc-vf.woff2?v=7") format("woff2-variations");
   font-weight: 200 700;
   font-style: normal;
   font-display: swap;
@@ -61,11 +61,12 @@
 
   /* 垂直節奏：非對稱（上緊下鬆），整體放鬆／收緊改這裡 */
   /* 2026-08-31：Steve 反映全站空白太多，桌機版整體收緊約 30% */
-  --sp-hero-top: 80px;
-  --sp-hero-bottom: 96px;
-  --sp-section: 84px;
-  --sp-head-top: 48px;
-  --sp-head-bottom: 36px;
+  /* 2026-09-02：Steve 說還是太空，再收一輪（section 84→60、hero 上緣 80→56） */
+  --sp-hero-top: 56px;
+  --sp-hero-bottom: 64px;
+  --sp-section: 60px;
+  --sp-head-top: 36px;
+  --sp-head-bottom: 30px;
 }
 
 /* ---------- Tokens：深色（夜刊模式，不是純黑） ---------- */
@@ -387,7 +388,7 @@ h1, h2, h3, h4 { line-height: 1.4; font-weight: 700; color: var(--ink); }
 .section-deep p { color: var(--on-deep-muted); }
 .section-deep a { color: var(--gold-pure); }
 
-.section-head { margin-bottom: 36px; max-width: 42em; }
+.section-head { margin-bottom: 28px; max-width: 42em; }
 .section-head.right { margin-left: auto; text-align: right; }
 .section-head.right .eyebrow { text-align: right; }
 .section-title {
@@ -771,7 +772,7 @@ table.price-table { width: 100%; border-collapse: collapse; min-width: 640px; fo
 .page-head .notice { margin-top: 34px; }
 
 @media (min-width: 900px) {
-  .ph-grid { grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr); gap: 56px; align-items: end; }
+  .ph-grid { grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr); gap: 56px; align-items: start; }
   .ph-side { border-left: 1px solid var(--line-soft); padding-left: 40px; }
   .ph-main h1 { max-width: 13em; }
 }
@@ -830,16 +831,16 @@ table.price-table { width: 100%; border-collapse: collapse; min-width: 640px; fo
 /* 雜誌引言頁（pull quote）：取代滿版深色金句區 */
 .pull-quote {
   max-width: 680px; margin: 0 auto;
-  padding: 56px 24px;
+  padding: 32px 24px;
   text-align: center;
   position: relative;
 }
 .pull-quote::before, .pull-quote::after {
   content: ""; display: block; height: 9px; position: relative;
   border-top: 1px solid var(--line);
-  margin-bottom: 40px;
+  margin-bottom: 28px;
 }
-.pull-quote::after { margin: 40px 0 0; }
+.pull-quote::after { margin: 28px 0 0; }
 .pull-quote .pq-mark {
   font-family: var(--font-en); font-weight: 400; font-size: 3.5rem;
   color: var(--gold-pure); line-height: 0.6; display: block; margin-bottom: 18px;
@@ -1147,7 +1148,7 @@ label.check {
 
 /* ---------- RWD ---------- */
 @media (max-width: 980px) {
-  :root { --sp-hero-top: 48px; --sp-hero-bottom: 60px; --sp-section: 52px; }
+  :root { --sp-hero-top: 40px; --sp-hero-bottom: 44px; --sp-section: 44px; }
   .nav-toggle { display: flex; }
   .main-nav {
     display: none;
