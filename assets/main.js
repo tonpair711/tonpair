@@ -399,3 +399,23 @@
     });
   }
 })();
+
+/* 累計瀏覽人次（Cloudflare Worker + KV，真實計數）
+   拿不到數字就整塊留著 hidden，不顯示任何預設／假數字。 */
+(function () {
+  var el = document.getElementById('visitCount');
+  if (!el) return;
+  // 只在正式網域上計數：本機預覽與稽核腳本不打這支 Worker，
+  // 免得（a）本機測試灌爆真實數字（b）CORS 失敗在稽核時被當成全站 console 錯誤。
+  var LIVE = ['tonpair.com', 'www.tonpair.com', 'tonpair.pages.dev'];
+  if (LIVE.indexOf(location.hostname) === -1) return;
+  fetch('https://tonpair-visits.tonpair711.workers.dev', { cache: 'no-store' })
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+    .then(function (d) {
+      if (typeof d.count !== 'number') return;
+      el.textContent = d.count.toLocaleString('en-US');
+      var box = el.closest('.visit-counter');
+      if (box) box.hidden = false;
+    })
+    .catch(function () { /* 靜默：維持 hidden，不顯示假數字 */ });
+})();

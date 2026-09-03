@@ -1465,3 +1465,7 @@ label.check {
 @media (max-width: 860px) {
   .resource-item { grid-template-columns: 1fr; }
 }
+
+/* 頁尾累計瀏覽人次（真實計數；拿不到數字時整塊 hidden，不顯示假數字） */
+.visit-counter { color: var(--muted); font-variant-numeric: tabular-nums; }
+.visit-counter #visitCount { font-family: var(--font-en); font-weight: 600; color: var(--ink); }
