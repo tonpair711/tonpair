@@ -397,6 +397,63 @@
         if (stage) play(stage, reduced);
       });
     });
+
+    // 8. 粒子連線背景：進視野才畫、離開就停，reduced-motion 直接不畫（CSS 已隱藏 canvas）
+    var particleStage = document.querySelector('[data-fx="particles"]');
+    if (particleStage && !reduced) {
+      var pCanvas = particleStage.querySelector('.fx-particles-canvas');
+      if (pCanvas && 'IntersectionObserver' in window) {
+        var pCtx = pCanvas.getContext('2d');
+        var pRaf = null, pDots = [], pW = 0, pH = 0;
+        var pColor = getComputedStyle(document.documentElement).getPropertyValue('--gold-pure').trim() || '#22d3ee';
+        function pResize() {
+          pW = pCanvas.width = pCanvas.offsetWidth;
+          pH = pCanvas.height = pCanvas.offsetHeight;
+        }
+        function pFrame() {
+          pCtx.clearRect(0, 0, pW, pH);
+          pDots.forEach(function (d) {
+            d.x += d.vx; d.y += d.vy;
+            if (d.x < 0 || d.x > pW) d.vx *= -1;
+            if (d.y < 0 || d.y > pH) d.vy *= -1;
+          });
+          pCtx.strokeStyle = pColor;
+          for (var i = 0; i < pDots.length; i++) {
+            for (var j = i + 1; j < pDots.length; j++) {
+              var dx = pDots[i].x - pDots[j].x, dy = pDots[i].y - pDots[j].y;
+              var dist = Math.sqrt(dx * dx + dy * dy);
+              if (dist < 70) {
+                pCtx.globalAlpha = 0.5 * (1 - dist / 70);
+                pCtx.beginPath();
+                pCtx.moveTo(pDots[i].x, pDots[i].y);
+                pCtx.lineTo(pDots[j].x, pDots[j].y);
+                pCtx.stroke();
+              }
+            }
+          }
+          pCtx.fillStyle = pColor; pCtx.globalAlpha = 0.85;
+          pDots.forEach(function (d) {
+            pCtx.beginPath(); pCtx.arc(d.x, d.y, d.r, 0, Math.PI * 2); pCtx.fill();
+          });
+          pRaf = requestAnimationFrame(pFrame);
+        }
+        function pStart() {
+          if (pRaf) return;
+          pResize();
+          if (!pDots.length) {
+            pDots = Array.from({ length: 34 }, function () {
+              return { x: Math.random() * pW, y: Math.random() * pH, r: 1.6 + Math.random() * 1.4, vx: (Math.random() - 0.5) * 0.4, vy: (Math.random() - 0.5) * 0.4 };
+            });
+          }
+          pFrame();
+        }
+        function pStop() { cancelAnimationFrame(pRaf); pRaf = null; }
+        window.addEventListener('resize', function () { if (pRaf) pResize(); });
+        new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) { en.isIntersecting ? pStart() : pStop(); });
+        }, { threshold: 0.2 }).observe(particleStage);
+      }
+    }
   }
 })();
 

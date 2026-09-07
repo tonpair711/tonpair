@@ -65,6 +65,7 @@
   - 鴻綸科技公司官網與教育科技知識庫（78 頁靜態網站、28 篇知識文章、結構化資料與無障礙）：https://www.hunglun.com/
     完整案例說明（為什麼不上後台系統、78 頁怎麼共用同一套版型、自架字型）：https://tonpair.com/cases/hunglun-website
     註：鴻綸科技是 Google for Education 認證夥伴，對頻設計不是；對頻設計在這個案子裡只負責網站建置。
+- 從草稿到上線（三個案例的過程，捲動式頁面）：https://tonpair.com/journey
 - Google 認證服務（含認證證書展示）：https://tonpair.com/google-education
 - Gemini for Education 導入顧問（評估、教育訓練與上線後跟進；授權採購由官方認證夥伴辦理）：https://tonpair.com/gemini-education
 - 聯絡我們：https://tonpair.com/contact

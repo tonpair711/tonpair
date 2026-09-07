@@ -17,7 +17,7 @@
    有新字沒被涵蓋會退回系統字型；重建後這裡與各頁 preload 的 ?v=N 要一起升。 */
 @font-face {
   font-family: "Tonpair Sans";
-  src: url("/assets/fonts/tonpair-notosanstc-vf.woff2?v=7") format("woff2-variations");
+  src: url("/assets/fonts/tonpair-notosanstc-vf.woff2?v=8") format("woff2-variations");
   font-weight: 200 700;
   font-style: normal;
   font-display: swap;
@@ -278,6 +278,61 @@ h1, h2, h3, h4 { line-height: 1.4; font-weight: 700; color: var(--ink); }
 .theme-toggle:hover, .nav-toggle:hover { border-color: var(--ink); }
 .nav-toggle { display: none; border-radius: var(--radius-lg); }
 .nav-toggle svg { width: 20px; height: 20px; stroke-width: 1.6; }
+#searchToggle svg { width: 17px; height: 17px; stroke-width: 2; }
+
+/* ---------- 站內搜尋（2026-09-07 新增） ---------- */
+html.search-lock { overflow: hidden; }
+.search-modal {
+  position: fixed; inset: 0; z-index: 300;
+  display: none;
+}
+.search-modal.open { display: block; }
+.search-modal-backdrop {
+  position: absolute; inset: 0;
+  background: rgba(7, 23, 43, 0.55);
+}
+.search-modal-panel {
+  position: relative; z-index: 1;
+  max-width: 640px; margin: 8vh auto 0;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 24px 60px -20px rgba(7, 23, 43, 0.4);
+  max-height: 78vh;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+}
+.search-modal-head {
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+}
+.search-modal-head svg { flex-shrink: 0; width: 18px; height: 18px; }
+.search-modal-head input {
+  flex: 1; border: 0; background: none; outline: none;
+  font: inherit; font-size: 1rem; color: var(--text);
+}
+.search-modal-close {
+  flex-shrink: 0; border: 0; background: none; cursor: pointer;
+  color: var(--muted); font-size: 0.95rem; padding: 4px;
+}
+.search-modal-close:hover { color: var(--ink); }
+.search-modal-empty { padding: 18px 20px; color: var(--muted); font-size: 0.92rem; }
+.search-modal-list { list-style: none; margin: 0; padding: 6px; overflow-y: auto; }
+.search-modal-list a {
+  display: block; padding: 10px 12px; border-radius: var(--radius-lg);
+  text-decoration: none; color: var(--text);
+}
+.search-modal-list a strong { display: block; font-size: 0.95rem; color: var(--ink); }
+.search-modal-list a span {
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;
+  overflow: hidden; font-size: 0.82rem; color: var(--muted); margin-top: 2px;
+}
+.search-modal-list a:hover, .search-modal-list a.active { background: var(--bg-soft); }
+@media (max-width: 640px) {
+  .search-modal-panel { margin: 0; max-width: none; height: 100%; max-height: none; border-radius: 0; border: 0; }
+}
 
 /* ---------- Hero ---------- */
 .hero {
@@ -1410,11 +1465,42 @@ label.check {
 .fx-sig { width: 150px; }
 .fx-sig .sig-line { width: 150px; margin: 0 auto; }
 
+/* 7. 玻璃霧面卡片 */
+.fx-glass-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 22% 28%, rgba(13, 40, 71, 0.55), transparent 55%),
+    radial-gradient(circle at 82% 22%, rgba(34, 211, 238, 0.4), transparent 50%),
+    radial-gradient(circle at 30% 82%, rgba(13, 40, 71, 0.5), transparent 55%);
+  animation: fx-glass-shift 6s ease-in-out infinite alternate;
+}
+@keyframes fx-glass-shift { from { filter: hue-rotate(0deg); } to { filter: hue-rotate(24deg); } }
+.fx-glass {
+  position: relative; z-index: 1;
+  padding: 14px 26px; border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  color: #fff; font-weight: 700; font-size: 0.95rem;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
+}
+
+/* 8. 粒子連線背景 */
+.fx-particles-wrap { padding: 0; }
+.fx-particles-canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.fx-particles-label {
+  position: relative; z-index: 1; font-size: 0.86rem; color: var(--muted);
+  background: var(--bg-soft); padding: 2px 10px; border-radius: 999px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .fx-reveal-box { opacity: 1; transform: none; transition: none; }
   .fx-type::after { animation: none; }
   .fx-flow { animation: none; background: none; color: var(--ink); }
   .fx-tilt { transition: none; }
+  .fx-glass-bg { animation: none; }
+  .fx-particles-canvas { display: none; }
 }
 
 
@@ -1469,3 +1555,33 @@ label.check {
 /* 頁尾累計瀏覽人次（真實計數；拿不到數字時整塊 hidden，不顯示假數字） */
 .visit-counter { color: var(--muted); font-variant-numeric: tabular-nums; }
 .visit-counter #visitCount { font-family: var(--font-en); font-weight: 600; color: var(--ink); }
+
+/* ---------- 沉浸式形象頁 journey.html（2026-09-07 新增） ----------
+   不做真的 scroll-jack（自己接管捲動），改用 position:sticky 的「圖片黏住、
+   文案捲過去」效果：純 CSS 排版行為，不是動畫，reduced-motion 不用特別處理。 */
+.jn-progress-track { position: sticky; top: 0; height: 3px; background: var(--line); z-index: 20; }
+.jn-progress-fill { height: 100%; width: 0%; background: var(--gold-pure); }
+
+.jn-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start;
+  padding: 90px 0; border-bottom: 1px solid var(--line-soft);
+}
+.jn-row:last-child { border-bottom: 0; }
+.jn-row.rev { direction: rtl; }
+.jn-row.rev > * { direction: ltr; }
+.jn-visual { position: sticky; top: 96px; }
+.jn-visual img { width: 100%; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow-lift); display: block; }
+.jn-copy { padding-top: 40px; min-height: 60vh; display: flex; flex-direction: column; justify-content: center; }
+.jn-step-tag { display: block; font-family: var(--font-en); font-size: 0.8rem; letter-spacing: 0.12em; color: var(--gold); margin-bottom: 14px; }
+.jn-copy h2 { font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom: 14px; }
+.jn-copy p { color: var(--muted); line-height: 1.8; margin-bottom: 10px; }
+@media (max-width: 860px) {
+  .jn-row, .jn-row.rev { grid-template-columns: 1fr; direction: ltr; }
+  .jn-visual { position: static; }
+  .jn-copy { min-height: auto; padding-top: 20px; }
+}
+
+.jn-stats { display: grid; gap: 30px; grid-template-columns: repeat(3, 1fr); text-align: center; }
+.jn-stat-num { display: block; font-family: var(--font-en); font-weight: 700; font-size: clamp(2rem, 5vw, 3rem); color: var(--gold-pure); }
+.jn-stat-label { display: block; color: var(--on-deep-muted); font-size: 0.9rem; margin-top: 6px; }
+@media (max-width: 700px) { .jn-stats { grid-template-columns: 1fr; gap: 36px; } }

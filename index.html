@@ -25,10 +25,11 @@
 <meta name="twitter:description" content="對頻設計，持有 Google 認證，提供網站開發與小型客製工具/腳本服務。一頁式網站 NT$8,800 起、形象官網 NT$25,000 起。">
 <meta name="twitter:image" content="https://tonpair.com/assets/og/og-image.png">
 
-<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/tonpair-notosanstc-vf.woff2?v=7" crossorigin>
-<link rel="stylesheet" href="assets/style.css?v=10">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/tonpair-notosanstc-vf.woff2?v=8" crossorigin>
+<link rel="stylesheet" href="assets/style.css?v=11">
 <link rel="stylesheet" href="assets/tech.css?v=11">
-<script defer src="assets/main.js?v=6"></script>
+<script defer src="assets/main.js?v=7"></script>
+<script defer src="assets/search.js?v=1"></script>
 <script defer src="assets/tech.js?v=2"></script>
 
 <script type="application/ld+json">
@@ -249,6 +250,7 @@
       <a href="contact.html">聯絡我們</a>
     </nav>
     <a class="nav-cta" href="contact.html">免費諮詢</a>
+    <button class="theme-toggle" id="searchToggle" type="button" aria-label="搜尋"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3" stroke-linecap="round"/></svg></button>
     <button class="theme-toggle" id="themeToggle" type="button" aria-label="切換深色模式">☾</button>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="開關選單">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
@@ -556,6 +558,28 @@
             <button class="fx-replay" type="button" data-fx-replay>再看一次</button>
           </div>
         </article>
+
+        <article class="fx-card reveal" style="--rd:.36s">
+          <div class="fx-stage" data-fx="glass">
+            <div class="fx-glass-bg" aria-hidden="true"></div>
+            <span class="fx-glass">霧面玻璃質感</span>
+          </div>
+          <div class="fx-body">
+            <h3>玻璃霧面卡片</h3>
+            <p class="keep">半透明毛玻璃疊在有色背景上，常用在浮動資訊條或數據卡片，比純白卡片多一層立體感。</p>
+          </div>
+        </article>
+
+        <article class="fx-card reveal" style="--rd:.42s">
+          <div class="fx-stage fx-particles-wrap" data-fx="particles">
+            <canvas class="fx-particles-canvas" aria-hidden="true"></canvas>
+            <span class="fx-particles-label keep">網路感背景</span>
+          </div>
+          <div class="fx-body">
+            <h3>粒子連線背景</h3>
+            <p class="keep">會動的細點跟連線，常放在科技感較重的品牌當底圖，畫面不用你做什麼，自己就有生命感。</p>
+          </div>
+        </article>
       </div>
 
       <p style="margin-top:38px" class="keep">
@@ -723,6 +747,7 @@
           <li><a href="about.html">關於我們</a></li>
           <li><a href="services.html">服務項目</a></li>
           <li><a href="portfolio.html">案例</a></li>
+          <li><a href="journey.html">從草稿到上線</a></li>
           <li><a href="knowledge/">店家知識庫</a></li>
           <li><a href="resources/">免費資源</a></li>
           <li><a href="contact.html">聯絡我們</a></li>
