@@ -87,6 +87,7 @@
 - 台南店家 LINE 官方帳號怎麼自動接單？關鍵字自動回覆實務：https://tonpair.com/knowledge/line-bot-order-automation
 - 台南店家 Google 商家檔案怎麼設定，客人搜店名才找得到你：https://tonpair.com/knowledge/google-business-profile
 - 台南店家一頁式網站是什麼？跟形象官網怎麼選：https://tonpair.com/knowledge/landing-page-vs-website
+- 自己用 Wix、Canva 架站，還是找人做？誠實比較：https://tonpair.com/knowledge/diy-website-builder
 - 做一個網站要多久？流程、卡點與你要先準備的東西：https://tonpair.com/knowledge/website-process
 - 網域要自己買嗎？.com 與 .com.tw 怎麼選：https://tonpair.com/knowledge/domain-hosting
 - ChatGPT 會不會推薦我的店？AI 搜尋時代小店該做什麼：https://tonpair.com/knowledge/ai-search-visibility
