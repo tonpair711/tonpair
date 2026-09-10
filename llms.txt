@@ -24,7 +24,7 @@
 - 不代管或代營運客戶的 Google 帳號／組織管理權限，僅提供顧問與設定指導
 
 ## 公司簡介
-對頻設計以「跟店家對上頻率」為核心——先聽懂你的店在賣什麼、客人在找什麼，把網站做對，讓想找你的人找得到、客人自然被吸引過來。提供網站開發與小型客製工具/腳本開發，並協助教育單位與企業安全導入 Google 教育科技工具。
+對頻設計以「跟店家對上頻率」為核心，先聽懂你的店在賣什麼、客人在找什麼，把網站做對，讓想找你的人找得到、客人自然被吸引過來。提供網站開發與小型客製工具/腳本開發，並協助教育單位與企業安全導入 Google 教育科技工具。
 
 ## 服務項目
 - 網站開發：形象網站、招生官網、活動網站
@@ -42,6 +42,7 @@
 - 網站改版與增修：NT$6,000 起
 - 小型客製工具 / LINE Bot：NT$15,000 起
 - LINE官方帳號圖文選單重塑：NT$6,800 起（不含自動回覆設定）
+- LINE官方帳號接單自動化：NT$9,800 起（圖文選單＋關鍵字自動回覆規則設定）
 - 會員集點系統快速部署：NT$25,000 起（部署＋換品牌＋教學，不含功能客製）
 - 自動化腳本：NT$6,000 起
 - 網站維護方案：NT$1,500／月 起
@@ -83,6 +84,7 @@
 - 只有 FB 粉專就夠了嗎？粉專、官網、Google 商家檔案差在哪：https://tonpair.com/knowledge/website-vs-fanpage
 - 店家做一個網站要多少錢？費用是怎麼算出來的：https://tonpair.com/knowledge/website-cost
 - LINE 訂單、手抄表單怎麼自動化？小店常見的三種做法：https://tonpair.com/knowledge/order-automation
+- LINE 官方帳號怎麼自動接單？關鍵字自動回覆實務：https://tonpair.com/knowledge/line-bot-order-automation
 - Google 商家檔案怎麼設定，客人搜店名才找得到你：https://tonpair.com/knowledge/google-business-profile
 - 一頁式網站是什麼？跟形象官網怎麼選：https://tonpair.com/knowledge/landing-page-vs-website
 - 做一個網站要多久？流程、卡點與你要先準備的東西：https://tonpair.com/knowledge/website-process

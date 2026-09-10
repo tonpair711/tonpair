@@ -131,15 +131,6 @@
     sigEls.forEach(function (el) { el.classList.add('in'); });
   }
 
-  /* ---------- 手機底部諮詢列：捲過 hero 才浮現 ---------- */
-  var sticky = document.querySelector('.sticky-cta');
-  if (sticky) {
-    document.body.classList.add('has-sticky-cta');
-    var onScroll = function () { sticky.classList.toggle('on', window.scrollY > 420); };
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-  }
-
   /* ---------- 聯絡表單：?topic= 預填 ＋ 送出（有端點就真的送，沒有／失敗才退回 mailto） ---------- */
   var topicSelect = document.querySelector('select[name="topic"]');
   if (topicSelect) {

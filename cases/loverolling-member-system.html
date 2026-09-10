@@ -24,9 +24,9 @@
 <meta name="twitter:description" content="紙本集點卡搬到線上，免下載 App，店員掃碼就累點。">
 <meta name="twitter:image" content="https://tonpair.com/assets/og/og-image.png">
 
-<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/tonpair-notosanstc-vf.woff2?v=8" crossorigin>
-<link rel="stylesheet" href="../assets/style.css?v=11">
-<script defer src="../assets/main.js?v=7"></script>
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/tonpair-notosanstc-vf.woff2?v=9" crossorigin>
+<link rel="stylesheet" href="../assets/style.css?v=13">
+<script defer src="../assets/main.js?v=8"></script>
 <script defer src="../assets/search.js?v=1"></script>
 
 <script type="application/ld+json">
@@ -68,7 +68,7 @@
           "name": "店家做會員集點，為什麼不直接印紙本卡或叫客人下載 App？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "紙本卡最大的問題不是成本，是客人常常沒帶、掉了，店家也無從知道有多少點數還沒被兌換。叫客人現場下載 App 則會卡在結帳台前——要開商店、搜尋、等下載、註冊，後面排隊的人在看，很多客人會直接說不用了。改用網頁版可以避開這兩件事：客人不必安裝任何東西，用手機打開頁面出示 QR Code 就好。"
+            "text": "紙本卡最大的問題不是成本，是客人常常沒帶、掉了，店家也無從知道有多少點數還沒被兌換。叫客人現場下載 App 則會卡在結帳台前，要開商店、搜尋、等下載、註冊，後面排隊的人在看，很多客人會直接說不用了。改用網頁版可以避開這兩件事：客人不必安裝任何東西，用手機打開頁面出示 QR Code 就好。"
           }
         },
         {
@@ -169,22 +169,22 @@
       <div class="prose">
 
         <h2 id="situation">當時的狀況</h2>
-        <p class="keep">店家原本用紙本集點卡。成本很低，問題不在成本——客人常常沒帶、卡掉了要重發，重發之後上次蓋到第幾格誰也說不準。店家這邊也是一筆糊塗帳：外面到底還有多少點沒被兌換，只能用感覺的。</p>
+        <p class="keep">店家原本用紙本集點卡。成本很低，問題不在成本，客人常常沒帶、卡掉了要重發，重發之後上次蓋到第幾格誰也說不準。店家這邊也是一筆糊塗帳：外面到底還有多少點沒被兌換，只能用感覺的。</p>
         <p class="keep">想換成數位的，第一個念頭通常是做 App。但現場的畫面是這樣：客人結完帳，你請他打開商店搜尋、下載、註冊，後面還排著三個人。多數客人會直接說「不用了啦」。集點卡最需要的是「當下三秒內完成」，App 剛好在這一步最慢。</p>
 
         <h2 id="approach">為什麼是這個做法，不是別的</h2>
-        <p class="keep">選項有三個。做原生 App——功能最完整，但開發與上架成本高，而且會卡在剛才說的下載那一步。用市面上現成的集點服務——上手最快，但點數規則與畫面照對方的規格走，資料在對方手上，長期按月付費。第三是做成網頁版的客製系統。</p>
+        <p class="keep">選項有三個。做原生 App，功能最完整，但開發與上架成本高，而且會卡在剛才說的下載那一步。用市面上現成的集點服務，上手最快，但點數規則與畫面照對方的規格走，資料在對方手上，長期按月付費。第三是做成網頁版的客製系統。</p>
         <p class="keep">這個案子選第三個，理由很單純：<strong>客人端要零安裝</strong>。用手機瀏覽器打開就能看點數、出示 QR Code，不必經過商店、不必註冊帳號流程。同時規則（多少錢累幾點、點數多久到期、幾點折多少）能照這家店自己的做法設定，不用配合別人的規格。</p>
-        <p class="keep">後端放在 Cloudflare 上，資料庫用它的 D1。這個組合對一家單店來說，<strong>日常沒有固定的伺服器月費</strong>，也不需要自己顧一台主機。要說代價，就是它是為這家店做的，不是通用產品——這也是為什麼我們會先問清楚規則再開工。</p>
+        <p class="keep">後端放在 Cloudflare 上，資料庫用它的 D1。這個組合對一家單店來說，<strong>日常沒有固定的伺服器月費</strong>，也不需要自己顧一台主機。要說代價，就是它是為這家店做的，不是通用產品，這也是為什麼我們會先問清楚規則再開工。</p>
 
         <h2 id="work">實際做了什麼</h2>
         <p class="keep">現場的流程拆成三步，設計時就是照著櫃檯的動線走：</p>
         <ul class="keep">
-          <li><strong>第一步</strong>——客人用手機打開頁面，出示自己的 QR Code。不用下載、不用等安裝。</li>
-          <li><strong>第二步</strong>——店員掃碼（或直接搜尋會員）叫出這個人的資料。</li>
-          <li><strong>第三步</strong>——輸入消費金額加點，或做扣點兌換。畫面上就這幾個按鈕，不用受訓。</li>
+          <li><strong>第一步</strong>，客人用手機打開頁面，出示自己的 QR Code。不用下載、不用等安裝。</li>
+          <li><strong>第二步</strong>，店員掃碼（或直接搜尋會員）叫出這個人的資料。</li>
+          <li><strong>第三步</strong>，輸入消費金額加點，或做扣點兌換。畫面上就這幾個按鈕，不用受訓。</li>
         </ul>
-        <p class="keep">點數規則做成後台可調，預設是消費滿一定金額累點、點數有使用期限，兌換時一點折抵固定金額。<strong>扣點採先進先出</strong>：每次兌換自動先扣掉最快到期的那一批。這件事看起來小，但它決定了客人手上的點數不會因為系統扣錯批次而白白過期——靠店員記是不可能記得的，只能寫在系統裡。</p>
+        <p class="keep">點數規則做成後台可調，預設是消費滿一定金額累點、點數有使用期限，兌換時一點折抵固定金額。<strong>扣點採先進先出</strong>：每次兌換自動先扣掉最快到期的那一批。這件事看起來小，但它決定了客人手上的點數不會因為系統扣錯批次而白白過期，靠店員記是不可能記得的，只能寫在系統裡。</p>
         <p class="keep">權限分成四層，各自看到不一樣的畫面。<strong>會員</strong>看得到自己的餘額、明細與 QR Code。<strong>店員</strong>只有現場會用到的動作：找會員、加點、扣點兌換。<strong>老闆</strong>在店員的基礎上多了會員管理、補扣點、規則設定與報表。<strong>管理員</strong>再多一層，負責開設與停用店員、老闆的帳號。</p>
         <p class="keep">這樣切的原因是防呆也是防弊：現場的手機不小心被拿去亂點，能造成的損害有限；而每一筆點數異動都留有紀錄，換班對帳有疑問時打開後台就查得到，不用在群組裡互相問「剛剛那筆是誰加的」。整套介面是手機優先設計的，因為店員實際上就是拿手機在做事，不會有人跑去開電腦。</p>
 
@@ -196,7 +196,7 @@
           <h3>這個案子可以驗證的事實</h3>
           <ul class="keep">
             <li>系統現在還在營運，網址是 <a href="https://antia-members.pages.dev/" target="_blank" rel="noopener">antia-members.pages.dev</a>，登入頁可以直接開來看。</li>
-            <li>客人端不需要安裝任何東西——用手機瀏覽器打開就是全部，這點你自己開一次就知道。</li>
+            <li>客人端不需要安裝任何東西，用手機瀏覽器打開就是全部，這點你自己開一次就知道。</li>
             <li>四種角色的權限是分開的，不是同一個畫面藏幾個按鈕而已。</li>
           </ul>
           <p class="keep"><strong>我們不會給你「會員數成長多少」「回購率提高幾 %」這種數字。</strong>那是客戶的營運資料，我們沒有、也不會拿來當自己的廣告。上面這幾件事，你自己點得到、驗得到。</p>
@@ -206,7 +206,7 @@
 
       <div class="prose-cta reveal">
         <h3>你的集點卡也在補來補去嗎？</h3>
-        <p class="keep">說一下你現在的做法——幾點換什麼、有沒有期限、誰負責蓋章——我們會回你一個做起來大概是什麼規模、哪些地方可以先不用做。估價不收費。</p>
+        <p class="keep">說一下你現在的做法，幾點換什麼、有沒有期限、誰負責蓋章，我們會回你一個做起來大概是什麼規模、哪些地方可以先不用做。估價不收費。</p>
         <p>
           <a class="btn btn-primary btn-sm" href="../contact.html?topic=%E5%B0%8F%E5%9E%8B%E5%AE%A2%E8%A3%BD%E5%B7%A5%E5%85%B7%20%2F%20LINE%20Bot">預約免費諮詢</a>
           <a class="btn btn-outline btn-sm" href="../services.html#pricing">看收費參考</a>
@@ -219,7 +219,7 @@
         <summary>做會員集點，為什麼不印紙本卡或叫客人下載 App？</summary>
         <div class="faq-a">
           <p class="keep">紙本卡的問題不是成本，是客人沒帶、卡掉了，而店家也不知道外面還有多少點沒兌換。</p>
-          <p class="keep">App 的問題在結帳台前：要開商店、搜尋、下載、註冊，後面還有人在排。很多客人到這一步就放棄了。網頁版可以避開這兩件事——不必安裝，打開就能出示 QR Code。</p>
+          <p class="keep">App 的問題在結帳台前：要開商店、搜尋、下載、註冊，後面還有人在排。很多客人到這一步就放棄了。網頁版可以避開這兩件事，不必安裝，打開就能出示 QR Code。</p>
         </div>
       </details>
 
@@ -234,7 +234,7 @@
       <details class="faq-item">
         <summary>點數有期限的話，要怎麼扣才不會有爭議？</summary>
         <div class="faq-a">
-          <p class="keep">先進先出——每次兌換都優先扣掉最快到期的那一批。這樣客人手上的點數不會因為扣錯批次白白過期。</p>
+          <p class="keep">先進先出，每次兌換都優先扣掉最快到期的那一批。這樣客人手上的點數不會因為扣錯批次白白過期。</p>
           <p class="keep">這件事只能寫在系統邏輯裡。靠現場的人判斷該扣哪一筆，遲早會出錯，而且出錯的時候通常是客人在櫃檯前面。</p>
         </div>
       </details>
@@ -278,13 +278,6 @@
 
 </main>
 
-<div class="sticky-cta">
-  <div class="sticky-cta-row">
-    <a class="btn btn-line needs-line" href="https://line.me/R/ti/p/%40007bbtpd" target="_blank" rel="noopener">LINE 詢問</a>
-    <a class="btn btn-primary" href="../contact.html">免費諮詢</a>
-  </div>
-</div>
-
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-grid">
@@ -294,7 +287,7 @@
           <span class="brand-text"><span class="brand-zh">對頻設計</span><span class="brand-en">tonpair</span></span>
         </a>
         <p class="keep">幫你把店與服務好好放上網路，讓想找你的人找得到。網站開發、小型客製工具與 Google 認證服務的長期夥伴。</p>
-        <p class="footer-hours keep">收攤後才有空慢慢看？沒關係，信半夜寄來也可以——我們不會半夜回，但隔天一定回。</p>
+        <p class="footer-hours keep">收攤後才有空慢慢看？沒關係，信半夜寄來也可以，我們不會半夜回，但隔天一定回。</p>
         <address class="footer-contact">
           <span class="fc-line"><svg class="fc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg><span>台南市北區大興街226巷37號</span></span>
           <a class="fc-line" href="tel:0971019763"><svg class="fc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5z"/></svg><span>0971-019-763</span></a>
@@ -342,5 +335,11 @@
   </div>
 </footer>
 
+<div class="contact-fab" role="complementary" aria-label="快速聯絡">
+  <span class="fab-label">線上諮詢</span>
+  <a class="fab-line needs-line" href="https://line.me/R/ti/p/%40007bbtpd" target="_blank" rel="noopener" aria-label="對頻設計 LINE 官方帳號 @007bbtpd" title="LINE 官方帳號（電腦版請搜尋 ID：@007bbtpd）"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.9 3 2.8 6.3 2.8 10.4c0 3.7 3.3 6.8 7.7 7.4.3.1.7.2.8.5.1.3.1.6 0 .9l-.1.8c0 .2-.2.9.8.5s5.3-3.1 7.2-5.3c1.3-1.4 2-2.9 2-4.8C21.2 6.3 17.1 3 12 3z"/></svg></a>
+  <a class="fab-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%8F%B0%E5%8D%97%E5%B8%82%E5%8C%97%E5%8D%80%E5%A4%A7%E8%88%88%E8%A1%97226%E5%B7%B737%E8%99%9F" target="_blank" rel="noopener" aria-label="對頻設計工作室地址（Google 地圖）" title="台南市北區大興街226巷37號"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg></a>
+  <a class="fab-mail" href="mailto:tonpair711@gmail.com" aria-label="寄信給 tonpair711@gmail.com" title="寄信給 tonpair711@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+</div>
 </body>
 </html>

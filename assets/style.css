@@ -17,7 +17,7 @@
    有新字沒被涵蓋會退回系統字型；重建後這裡與各頁 preload 的 ?v=N 要一起升。 */
 @font-face {
   font-family: "Tonpair Sans";
-  src: url("/assets/fonts/tonpair-notosanstc-vf.woff2?v=8") format("woff2-variations");
+  src: url("/assets/fonts/tonpair-notosanstc-vf.woff2?v=9") format("woff2-variations");
   font-weight: 200 700;
   font-style: normal;
   font-display: swap;
@@ -1044,16 +1044,6 @@ label.check {
 .info-card h3 { font-size: 0.76rem; font-weight: 600; letter-spacing: 0.18em; color: var(--muted-faint); text-transform: uppercase; font-family: var(--font-en); margin-bottom: 10px; }
 .info-card p, .info-card a { color: var(--text); font-size: 0.98rem; }
 
-/* ---------- 手機底部固定諮詢列 ---------- */
-.sticky-cta {
-  display: none;
-  position: fixed; left: 0; right: 0; bottom: 0; z-index: 55;
-  padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
-  background: var(--header-bg);
-  backdrop-filter: blur(10px);
-  border-top: 1px solid var(--line);
-}
-.sticky-cta .btn { width: 100%; justify-content: center; padding: 13px 20px; }
 
 /* ---------- Footer：雜誌版權頁（頂端一條對頻線） ---------- */
 .site-footer {
@@ -1148,10 +1138,6 @@ label.check {
 .btn-line { background: #06c755; color: #fff !important; border-color: #06c755; }
 .btn-line:hover { background: #05a948; border-color: #05a948; color: #fff !important; }
 
-/* 手機底部 CTA：一顆時滿版，兩顆時等分 */
-.sticky-cta-row { display: flex; gap: 8px; }
-.sticky-cta-row .btn { flex: 1; width: auto; }
-
 /* ---------- 整合方案（寬版錨定卡） ---------- */
 .plan-wide {
   position: relative;   /* .plan-badge 是 absolute，沒有這行會跑到別的祖先去定位 */
@@ -1227,8 +1213,6 @@ label.check {
   .form-card { padding: 26px 20px 24px; }
   .cert-band { padding: 34px 22px; }
   .hero-cta .btn { width: 100%; justify-content: center; }
-  .sticky-cta.on { display: block; }
-  body.has-sticky-cta { padding-bottom: 74px; }
   .section-head.right { text-align: left; margin-left: 0; }
   .section-head.right .eyebrow { text-align: left; }
   .compare-col.after { box-shadow: 4px 4px 0 rgba(13, 40, 71, 0.08); }
@@ -1585,3 +1569,32 @@ label.check {
 .jn-stat-num { display: block; font-family: var(--font-en); font-weight: 700; font-size: clamp(2rem, 5vw, 3rem); color: var(--gold-pure); }
 .jn-stat-label { display: block; color: var(--on-deep-muted); font-size: 0.9rem; margin-top: 6px; }
 @media (max-width: 700px) { .jn-stats { grid-template-columns: 1fr; gap: 36px; } }
+
+/* ---------- 懸浮聯絡按鈕（2026-09-07 新增，全尺寸統一顯示） ----------
+   原本手機另有一條 .sticky-cta 底部諮詢列，2026-09-07 拿掉、統一改成這顆
+   右下角圓鈕群——手機也要有懸浮按鈕，不要兩套並存。免費諮詢的主要入口
+   則是 header 的 .nav-cta（sticky header，捲到哪都看得到）。 */
+.contact-fab {
+  position: fixed; right: 16px; z-index: 60;
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  display: flex; align-items: center; gap: 10px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 999px;
+  padding: 8px 12px; box-shadow: var(--shadow-lift);
+}
+.fab-label { font-size: 0.82rem; font-weight: 600; color: var(--ink); white-space: nowrap; padding: 0 2px; }
+.contact-fab a {
+  width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--ink); color: #fff;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.contact-fab a:hover { transform: scale(1.08); opacity: 0.88; }
+.contact-fab a svg { width: 20px; height: 20px; }
+.contact-fab a.fab-line { background: #06c755; }
+.contact-fab a.fab-line svg { width: 22px; height: 22px; }
+.contact-fab a.fab-map, .contact-fab a.fab-mail { background: var(--card); border: 1px solid var(--line); color: var(--ink); }
+@media (max-width: 420px) {
+  .fab-label { display: none; }
+  .contact-fab { padding: 6px; gap: 6px; }
+  .contact-fab a { width: 36px; height: 36px; }
+}

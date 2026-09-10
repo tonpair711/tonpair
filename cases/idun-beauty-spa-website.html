@@ -24,9 +24,9 @@
 <meta name="twitter:description" content="從一頁式改成 8 頁 SEO 架構，網站現在還在營運，網址就在頁面上。">
 <meta name="twitter:image" content="https://tonpair.com/assets/og/og-image.png">
 
-<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/tonpair-notosanstc-vf.woff2?v=8" crossorigin>
-<link rel="stylesheet" href="../assets/style.css?v=11">
-<script defer src="../assets/main.js?v=7"></script>
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/tonpair-notosanstc-vf.woff2?v=9" crossorigin>
+<link rel="stylesheet" href="../assets/style.css?v=13">
+<script defer src="../assets/main.js?v=8"></script>
 <script defer src="../assets/search.js?v=1"></script>
 
 <script type="application/ld+json">
@@ -67,7 +67,7 @@
           "name": "美容、SPA 這種店，官網做一頁式還是多頁式比較好？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "看你希望客人怎麼找到你。如果客人是先認識你、再上網看看，一頁式就夠了。但如果你希望有人搜「台南 水飛梭」時能找到你，就需要多頁——因為 Google 是一個網址收錄一次，所有服務擠在同一個網址裡，就只有一個機會被排進搜尋結果。"
+            "text": "看你希望客人怎麼找到你。如果客人是先認識你、再上網看看，一頁式就夠了。但如果你希望有人搜「台南 水飛梭」時能找到你，就需要多頁，因為 Google 是一個網址收錄一次，所有服務擠在同一個網址裡，就只有一個機會被排進搜尋結果。"
           }
         },
         {
@@ -168,40 +168,40 @@
       <div class="prose">
 
         <h2 id="situation">當時的狀況</h2>
-        <p class="keep">店在台南東區，做的是筋膜刀、水飛梭、魔磁肌塑這類療程。網站本來就有，看起來也不差——上面有選單，點了會換內容，品牌故事、空間照片、服務價格、交通位置都在。</p>
+        <p class="keep">店在台南東區，做的是筋膜刀、水飛梭、魔磁肌塑這類療程。網站本來就有，看起來也不差，上面有選單，點了會換內容，品牌故事、空間照片、服務價格、交通位置都在。</p>
         <p class="keep">問題是點下去的時候，瀏覽器上面那行網址從頭到尾沒有變過。整個網站的八個分頁，其實是塞在同一個檔案裡，靠瀏覽器上的程式碼切換畫面。對客人來說有八頁，對 Google 來說只有一頁。</p>
         <p class="keep">實際的後果是這樣：有人在手機上搜「台南 水飛梭」，Google 手上只有這個網站的一個網址、一組標題，它沒有一個「水飛梭」的頁面可以拿出來排。想把服務頁傳給客人也傳不了，因為那個畫面沒有自己的網址，貼給對方只會回到首頁。</p>
 
         <h2 id="approach">為什麼是這個做法，不是別的</h2>
-        <p class="keep">當時有三條路。一是不動架構，只加關鍵字跟文案——最便宜，但問題出在只有一個網址，加再多字也是擠在同一頁，治不到根。二是整站重做，換成有後台的系統——功能最多，但預算與後續月費都往上跳，而且這家店的內容一年也改不了幾次，付月費養一套後台並不划算。</p>
+        <p class="keep">當時有三條路。一是不動架構，只加關鍵字跟文案，最便宜，但問題出在只有一個網址，加再多字也是擠在同一頁，治不到根。二是整站重做，換成有後台的系統，功能最多，但預算與後續月費都往上跳，而且這家店的內容一年也改不了幾次，付月費養一套後台並不划算。</p>
         <p class="keep">最後選的是第三條：<strong>視覺跟文案大致留著，只重做網站的結構</strong>。把原本擠在一起的內容拆成八個真正獨立的頁面，補上每頁自己的標題與描述，再把內部連結、網站地圖對齊。花費集中在「Google 看得到什麼」這件事上，看得見的外觀變動不大，但搜尋引擎看到的東西完全不一樣。</p>
         <p class="keep">同樣重要的是：拆完之後它仍然是純靜態網站，放在 Cloudflare Pages 上，<strong>沒有資料庫、沒有伺服器月費</strong>。對一家實體店來說，這代表網站放著就會一直在，不會因為忘記續一筆月費就整站消失。</p>
 
         <h2 id="work">實際做了什麼</h2>
         <p class="keep">拆成八個各自獨立的頁面，每一頁都有自己的網址、自己的標題、自己的描述：</p>
         <ul class="keep">
-          <li><strong>首頁</strong>——店的定位與主打療程</li>
-          <li><strong>關於伊登森活</strong>——品牌故事</li>
-          <li><strong>空間環境</strong>——店裡實際的樣子</li>
-          <li><strong>服務項目與價格</strong>——筋膜刀、水飛梭、魔磁肌塑、水光護理</li>
-          <li><strong>真實案例分享</strong>——療程前後的成果</li>
-          <li><strong>套裝課程</strong>——優惠方案</li>
-          <li><strong>本月寵粉優惠</strong>——會定期更新的那一頁</li>
-          <li><strong>門市地址與交通</strong>——地址、路線</li>
+          <li><strong>首頁</strong>，店的定位與主打療程</li>
+          <li><strong>關於伊登森活</strong>，品牌故事</li>
+          <li><strong>空間環境</strong>，店裡實際的樣子</li>
+          <li><strong>服務項目與價格</strong>，筋膜刀、水飛梭、魔磁肌塑、水光護理</li>
+          <li><strong>真實案例分享</strong>，療程前後的成果</li>
+          <li><strong>套裝課程</strong>，優惠方案</li>
+          <li><strong>本月寵粉優惠</strong>，會定期更新的那一頁</li>
+          <li><strong>門市地址與交通</strong>，地址、路線</li>
         </ul>
-        <p class="keep">接著補上三件搜尋引擎會看、但客人看不到的東西。第一，每一頁都加上在地商家（LocalBusiness）結構化資料，把店名、地址、營業時間用 Google 讀得懂的格式寫進頁面裡，常見問答則放在首頁。第二，重新產生網站地圖（sitemap），把八個網址都列進去——原本的網站地圖還指向一個早期的舊網址，等於一直在告訴 Google 錯的地方。第三，統一內部連結與 canonical 標籤的寫法。</p>
+        <p class="keep">接著補上三件搜尋引擎會看、但客人看不到的東西。第一，每一頁都加上在地商家（LocalBusiness）結構化資料，把店名、地址、營業時間用 Google 讀得懂的格式寫進頁面裡，常見問答則放在首頁。第二，重新產生網站地圖（sitemap），把八個網址都列進去，原本的網站地圖還指向一個早期的舊網址，等於一直在告訴 Google 錯的地方。第三，統一內部連結與 canonical 標籤的寫法。</p>
         <p class="keep">最後一項是實務上很容易忽略的細節：Cloudflare Pages 預設會把帶 <code>.html</code> 的網址轉址到不帶副檔名的乾淨網址。如果內部連結還寫舊格式，每一次點擊都會多繞一次轉址，而且 canonical 指的網址跟實際網址對不起來，搜尋引擎會收到互相矛盾的訊號。所以連結、canonical、sitemap 三處全部統一成同一種寫法。</p>
         <p class="keep">預約動線的部分沒有做得很複雜：每一頁都能直接點到店家的 LINE 官方帳號。客人看完療程說明想問問看，不用滑到頁尾找電話、也不用自己去 LINE 搜 ID，點一下就進到對話視窗。</p>
 
         <h2 id="delivery">交付了什麼、之後怎麼維護</h2>
-        <p class="keep">交付的是八個頁面的完整網站、網站地圖與 robots 設定、每頁的結構化資料，以及一套改內容的流程：內容的原始檔放在 <code>_parts</code> 資料夾，改完跑一次組頁指令，八頁會一起重新產生——這樣頁首頁尾不會東改一頁西漏一頁。</p>
+        <p class="keep">交付的是八個頁面的完整網站、網站地圖與 robots 設定、每頁的結構化資料，以及一套改內容的流程：內容的原始檔放在 <code>_parts</code> 資料夾，改完跑一次組頁指令，八頁會一起重新產生，這樣頁首頁尾不會東改一頁西漏一頁。</p>
         <p class="keep">日常花費只有網域的年費，沒有主機月費。要換季節照片、調整當月優惠、加一個新療程頁，都可以另外算；沒有綁約，也不會因為沒續約就把網站關掉。</p>
 
         <div class="case-fact reveal">
           <h3>這個案子可以驗證的事實</h3>
           <ul class="keep">
             <li>網站現在還在營運，網址是 <a href="https://idun10.pages.dev/" target="_blank" rel="noopener">idun10.pages.dev</a>，八個頁面都可以各自點開、各自分享。</li>
-            <li>點任一頁，網址列會跟著變——這就是「有沒有真的拆開」最快的檢查方式。</li>
+            <li>點任一頁，網址列會跟著變，這就是「有沒有真的拆開」最快的檢查方式。</li>
             <li>每頁的結構化資料可以用 Google 的複合式搜尋結果測試工具自己驗，不用相信我們的說法。</li>
           </ul>
           <p class="keep"><strong>我們不會給你「流量成長多少 %」這種數字。</strong>那需要客戶的分析後台資料，我們沒有、也不會拿客戶的營運數字當自己的廣告。上面這幾件事，你自己點得到、驗得到。</p>
@@ -239,7 +239,7 @@
       <details class="faq-item">
         <summary>要改成多頁，網站是不是要整個重做？</summary>
         <div class="faq-a">
-          <p class="keep">不一定。伊登森活這個案子的視覺與文案大致沿用，重做的是結構——把內容拆成獨立頁面、補上每頁專屬的標題描述、對齊內部連結與網站地圖。</p>
+          <p class="keep">不一定。伊登森活這個案子的視覺與文案大致沿用，重做的是結構，把內容拆成獨立頁面、補上每頁專屬的標題描述、對齊內部連結與網站地圖。</p>
           <p class="keep">外觀變動不大，但搜尋引擎看到的東西完全不同。這也是為什麼它的價格落在改版而不是全新開發的區間。</p>
         </div>
       </details>
@@ -283,13 +283,6 @@
 
 </main>
 
-<div class="sticky-cta">
-  <div class="sticky-cta-row">
-    <a class="btn btn-line needs-line" href="https://line.me/R/ti/p/%40007bbtpd" target="_blank" rel="noopener">LINE 詢問</a>
-    <a class="btn btn-primary" href="../contact.html">免費諮詢</a>
-  </div>
-</div>
-
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-grid">
@@ -299,7 +292,7 @@
           <span class="brand-text"><span class="brand-zh">對頻設計</span><span class="brand-en">tonpair</span></span>
         </a>
         <p class="keep">幫你把店與服務好好放上網路，讓想找你的人找得到。網站開發、小型客製工具與 Google 認證服務的長期夥伴。</p>
-        <p class="footer-hours keep">收攤後才有空慢慢看？沒關係，信半夜寄來也可以——我們不會半夜回，但隔天一定回。</p>
+        <p class="footer-hours keep">收攤後才有空慢慢看？沒關係，信半夜寄來也可以，我們不會半夜回，但隔天一定回。</p>
         <address class="footer-contact">
           <span class="fc-line"><svg class="fc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg><span>台南市北區大興街226巷37號</span></span>
           <a class="fc-line" href="tel:0971019763"><svg class="fc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5z"/></svg><span>0971-019-763</span></a>
@@ -347,5 +340,11 @@
   </div>
 </footer>
 
+<div class="contact-fab" role="complementary" aria-label="快速聯絡">
+  <span class="fab-label">線上諮詢</span>
+  <a class="fab-line needs-line" href="https://line.me/R/ti/p/%40007bbtpd" target="_blank" rel="noopener" aria-label="對頻設計 LINE 官方帳號 @007bbtpd" title="LINE 官方帳號（電腦版請搜尋 ID：@007bbtpd）"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.9 3 2.8 6.3 2.8 10.4c0 3.7 3.3 6.8 7.7 7.4.3.1.7.2.8.5.1.3.1.6 0 .9l-.1.8c0 .2-.2.9.8.5s5.3-3.1 7.2-5.3c1.3-1.4 2-2.9 2-4.8C21.2 6.3 17.1 3 12 3z"/></svg></a>
+  <a class="fab-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%8F%B0%E5%8D%97%E5%B8%82%E5%8C%97%E5%8D%80%E5%A4%A7%E8%88%88%E8%A1%97226%E5%B7%B737%E8%99%9F" target="_blank" rel="noopener" aria-label="對頻設計工作室地址（Google 地圖）" title="台南市北區大興街226巷37號"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg></a>
+  <a class="fab-mail" href="mailto:tonpair711@gmail.com" aria-label="寄信給 tonpair711@gmail.com" title="寄信給 tonpair711@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+</div>
 </body>
 </html>
