@@ -82,11 +82,11 @@
 ## 店家知識庫（資訊型內容，主題群集：台灣店家的網站與自動化）
 索引：https://tonpair.com/knowledge/
 - 只有 FB 粉專就夠了嗎？粉專、官網、Google 商家檔案差在哪：https://tonpair.com/knowledge/website-vs-fanpage
-- 店家做一個網站要多少錢？費用是怎麼算出來的：https://tonpair.com/knowledge/website-cost
+- 台南店家做一個網站要多少錢？費用是怎麼算出來的：https://tonpair.com/knowledge/website-cost
 - LINE 訂單、手抄表單怎麼自動化？小店常見的三種做法：https://tonpair.com/knowledge/order-automation
-- LINE 官方帳號怎麼自動接單？關鍵字自動回覆實務：https://tonpair.com/knowledge/line-bot-order-automation
-- Google 商家檔案怎麼設定，客人搜店名才找得到你：https://tonpair.com/knowledge/google-business-profile
-- 一頁式網站是什麼？跟形象官網怎麼選：https://tonpair.com/knowledge/landing-page-vs-website
+- 台南店家 LINE 官方帳號怎麼自動接單？關鍵字自動回覆實務：https://tonpair.com/knowledge/line-bot-order-automation
+- 台南店家 Google 商家檔案怎麼設定，客人搜店名才找得到你：https://tonpair.com/knowledge/google-business-profile
+- 台南店家一頁式網站是什麼？跟形象官網怎麼選：https://tonpair.com/knowledge/landing-page-vs-website
 - 做一個網站要多久？流程、卡點與你要先準備的東西：https://tonpair.com/knowledge/website-process
 - 網域要自己買嗎？.com 與 .com.tw 怎麼選：https://tonpair.com/knowledge/domain-hosting
 - ChatGPT 會不會推薦我的店？AI 搜尋時代小店該做什麼：https://tonpair.com/knowledge/ai-search-visibility
@@ -101,7 +101,7 @@
 - 小店要不要寫文章、經營內容？先看這篇再決定：https://tonpair.com/knowledge/content-marketing
 - 結構化資料（Schema）是什麼？為什麼你的店在搜尋結果比較好看：https://tonpair.com/knowledge/schema-basics
 - SEO 要多久才看得到效果？合理的期待是什麼：https://tonpair.com/knowledge/seo-timeline
-- LINE 官方帳號怎麼經營？圖文選單與自動回覆實務：https://tonpair.com/knowledge/line-oa
+- 台南店家 LINE 官方帳號怎麼經營？圖文選單與自動回覆實務：https://tonpair.com/knowledge/line-oa
 - 網站速度會不會影響排名？Core Web Vitals 是什麼：https://tonpair.com/knowledge/webperf
 
 ## 常見問題
