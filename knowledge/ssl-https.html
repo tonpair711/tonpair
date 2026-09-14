@@ -25,8 +25,8 @@
 <meta name="twitter:image" content="https://tonpair.com/assets/og/og-image.png">
 
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/tonpair-notosanstc-vf.woff2?v=11" crossorigin>
-<link rel="stylesheet" href="../assets/style.css?v=13">
-<script defer src="../assets/main.js?v=8"></script>
+<link rel="stylesheet" href="../assets/style.css?v=14">
+<script defer src="../assets/main.js?v=9"></script>
 <script defer src="../assets/search.js?v=1"></script>
 
 <script type="application/ld+json">
@@ -193,6 +193,22 @@
   </div>
 </section>
 
+
+<section class="section" style="padding-top:0;padding-bottom:0">
+  <div class="wrap-narrow">
+    <nav class="faq-jump reveal" aria-label="常見問題快速跳轉">
+      <span class="faq-jump-label">常見問題</span>
+        <a href="#faq-1">小鎖頭、HTTPS 到底在保護什麼？</a>
+        <a href="#faq-2">沒有小鎖頭，瀏覽器真的會擋客人嗎？</a>
+        <a href="#faq-3">會不會影響 Google 排名？</a>
+        <a href="#faq-4">要另外花一大筆錢裝 SSL 憑證嗎？</a>
+        <a href="#faq-5">我的網站有線上表單／要收客人資料，是不是規定一定要有？</a>
+        <a href="#faq-6">舊網站沒有小鎖頭，要怎麼補裝？</a>
+        <a href="#faq-7">除了 HTTPS，還有哪些簡單的信任訊號可以加？</a>
+    </nav>
+  </div>
+</section>
+
 <section class="section">
   <div class="wrap-narrow">
     <div class="prose">
@@ -205,55 +221,55 @@
 
       <h2 class="reveal" style="border-top:none;padding-top:0">小鎖頭、HTTPS，一次講清楚</h2>
       <div class="faq reveal">
-      <details class="faq-item">
+      <details class="faq-item" id="faq-0">
         <summary>網址前面的小鎖頭是什麼？沒有會怎樣</summary>
         <div class="faq-a">
           <p class="keep">網址前面的小鎖頭代表這個網站用 HTTPS 加密連線，資料傳輸過程不容易被竊聽或竄改。現在幾乎所有正式網站都應該要有，沒有的話瀏覽器會明顯標示「不安全」，客人容易被嚇跑，也會影響 Google 排名。裝 HTTPS 現在多半免費（隨主機服務附贈），不是額外的大筆支出。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-1">
         <summary>小鎖頭、HTTPS 到底在保護什麼？</summary>
         <div class="faq-a">
           <p class="keep">保護的是<strong>傳輸過程</strong>。客人在你網站上填資料（姓名、電話、想預約的時段）時，這些內容要從客人的手機傳到你的伺服器，中間會經過好幾個節點。有加密，內容像是被裝進上鎖的箱子；沒加密，內容是攤開來走的，理論上中途有心人能看到甚至竄改。</p>
           <p class="keep">小鎖頭不代表你的網站完全沒有資安風險（那是另一個層次的事），但它是<strong>最基本、最該有</strong>的一層保護，而且現在做起來成本很低。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-2">
         <summary>沒有小鎖頭，瀏覽器真的會擋客人嗎？</summary>
         <div class="faq-a">
           <p class="keep">不會完全擋死，但會很明顯地警告。Chrome、Safari 這類主流瀏覽器，網址列會直接顯示「不安全」的字樣或警告圖示，尤其是網站上有表單要填的時候，警告會更明顯。</p>
           <p class="keep">對第一次來的客人來說，這個瞬間的觀感影響很大，不管你的服務再好，客人看到「不安全」三個字，第一反應通常是先離開，不會停下來研究這是不是誤會。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-3">
         <summary>會不會影響 Google 排名？</summary>
         <div class="faq-a">
           <p class="keep">會，而且 Google 公開講過這是排名參考因素之一。更直接的影響是：同樣兩個網站排在搜尋結果，一個有鎖頭一個沒有，客人的點擊意願本來就不一樣，這件事間接又會影響排名表現。</p>
           <p class="keep">簡單說：HTTPS 不是萬靈丹，但它是「不做會扣分」的那種基本功，跟前面提到的 <a class='text-brand-mid font-bold hover:underline' href='seo-basics.html'>SEO 基本功</a> 是同一類事情。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-4">
         <summary>要另外花一大筆錢裝 SSL 憑證嗎？</summary>
         <div class="faq-a">
           <p class="keep">現在通常不用。以前 SSL 憑證確實要另外買、一年要繳費，但現在主流的主機與託管服務（包括對頻設計慣用的 Cloudflare Pages）大多<strong>免費內建</strong>，架站的時候就會自動處理好，不是要另外談的加購項目。</p>
           <p class="keep">如果你發現自己的網站還在用付費 SSL、或是根本沒有，多半代表這個網站是用比較舊的方式架的，值得找人看一下是不是該考慮 <a class='text-brand-mid font-bold hover:underline' href='website-redesign.html'>翻新或重做</a>。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-5">
         <summary>我的網站有線上表單／要收客人資料，是不是規定一定要有？</summary>
         <div class="faq-a">
           <p class="keep">只要網站上有任何表單要客人填資料（就算只是姓名電話），HTTPS 都應該視為必要條件，不是選配。這不只是為了排名或觀感，是對客人資料基本的保護態度。</p>
           <p class="keep">如果之後有規劃線上金流、會員登入這類更進階的功能，資安要求只會更高，HTTPS 是最起碼的門檻，不是終點。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-6">
         <summary>舊網站沒有小鎖頭，要怎麼補裝？</summary>
         <div class="faq-a">
           <p class="keep">如果網站還在用舊式的主機（自己買虛擬主機、傳統代管那種），通常要向主機商申請憑證，可能要處理一些技術設定，也可能要付年費，這塊建議直接找懂的人幫忙裝，不建議自己土法煉鋼改設定。</p>
           <p class="keep">如果是用 Cloudflare Pages、Netlify 這類現代的靜態網站託管，多半換過去就自動有了，這也是我們現在架站一律用這套的原因之一，省掉這整塊麻煩。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-7">
         <summary>除了 HTTPS，還有哪些簡單的信任訊號可以加？</summary>
         <div class="faq-a">
           <p class="keep">幾個成本低、效果實在的：<strong>清楚的聯絡方式（電話、地址、地圖）</strong>、真實的店家照片（不是網路抓來的示意圖）、明確寫出服務範圍與價格區間、以及會定期更新的內容（半年前的活動還掛在首頁，反而讓人懷疑這店還有沒有在經營）。</p>

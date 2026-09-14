@@ -25,8 +25,8 @@
 <meta name="twitter:image" content="https://tonpair.com/assets/og/og-image.png">
 
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/tonpair-notosanstc-vf.woff2?v=11" crossorigin>
-<link rel="stylesheet" href="../assets/style.css?v=13">
-<script defer src="../assets/main.js?v=8"></script>
+<link rel="stylesheet" href="../assets/style.css?v=14">
+<script defer src="../assets/main.js?v=9"></script>
 <script defer src="../assets/search.js?v=1"></script>
 
 <script type="application/ld+json">
@@ -185,6 +185,21 @@
   </div>
 </section>
 
+
+<section class="section" style="padding-top:0;padding-bottom:0">
+  <div class="wrap-narrow">
+    <nav class="faq-jump reveal" aria-label="常見問題快速跳轉">
+      <span class="faq-jump-label">常見問題</span>
+        <a href="#faq-1">Schema 到底是什麼？我需要自己學怎麼寫嗎？</a>
+        <a href="#faq-2">做了 Schema，我的搜尋結果會多出什麼？</a>
+        <a href="#faq-3">這件事跟 AI 搜尋（ChatGPT、Perplexity）有關係嗎？</a>
+        <a href="#faq-4">做 Schema 大概要多少錢？是額外收費的項目嗎？</a>
+        <a href="#faq-5">怎麼知道自己的網站有沒有做 Schema？</a>
+        <a href="#faq-6">做了 Schema 就保證搜尋排名會變好嗎？</a>
+    </nav>
+  </div>
+</section>
+
 <section class="section">
   <div class="wrap-narrow">
     <div class="prose">
@@ -197,48 +212,48 @@
 
       <h2 class="reveal" style="border-top:none;padding-top:0">老闆最常問的幾題</h2>
       <div class="faq reveal">
-      <details class="faq-item">
+      <details class="faq-item" id="faq-0">
         <summary>結構化資料（Schema）是什麼？為什麼你的店在搜尋結果比較好看</summary>
         <div class="faq-a">
           <p class="keep">結構化資料（Schema markup）是寫在網頁裡、給搜尋引擎看的一份「說明書」，用來標明「這是店名」「這是價格」「這是常見問題」。它不會改變網頁畫面上呈現的樣子，但能讓 Google 跟 AI 搜尋工具更準確理解頁面內容，進而顯示星等、FAQ 摺疊區、麵包屑這類加分外觀，也更容易被 AI 引用。做網站時可以直接問對方「這個網站有沒有做結構化資料」。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-1">
         <summary>Schema 到底是什麼？我需要自己學怎麼寫嗎？</summary>
         <div class="faq-a">
           <p class="keep">Schema（也叫結構化資料）是一種寫在網頁程式碼裡、遵照 schema.org 這套共同規範寫成的標記，用來告訴搜尋引擎「這個網頁的這一塊是什麼類型的資訊」。你完全不需要自己學或自己寫，這是做網站的人該處理的技術工作，你只需要知道有這件事、知道可以問。</p>
           <p class="keep">打個比方：網頁的文字是給客人看的菜單，Schema 是廚房後台貼的標籤，寫著哪道是主餐、哪道是甜點、多少錢。客人看不到標籤，但外送平台的系統靠這個標籤才知道怎麼分類上架。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-2">
         <summary>做了 Schema，我的搜尋結果會多出什麼？</summary>
         <div class="faq-a">
           <p class="keep">常見的加分外觀有幾種：<strong>星等評價</strong>（如果你有串接評論資料）、<strong>常見問題摺疊區</strong>（客人在搜尋結果就能直接展開看到問答，不用點進網站）、<strong>麵包屑導覽</strong>（顯示網站的分類路徑，例如「首頁 ／ 店家知識庫 ／ 這一篇」）、以及<strong>營業資訊卡</strong>（地址、電話、營業時間直接顯示）。</p>
           <p class="keep">這些不是每個都保證會出現，最終顯不顯示是 Google 自己判斷的，但沒有做 Schema，這些加分外觀基本上不會出現，等於直接放棄了這個機會。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-3">
         <summary>這件事跟 AI 搜尋（ChatGPT、Perplexity）有關係嗎？</summary>
         <div class="faq-a">
           <p class="keep">有關係。AI 工具在整理答案時，結構清楚的內容比一整段沒有標記的文字更容易被正確擷取與引用，尤其是常見問題型的 Schema（FAQPage），因為 AI 抓答案時，抓的正是一問一答這種清楚配對的格式。</p>
           <p class="keep">換句話說，Schema 不只是給 Google 傳統搜尋用的，對想被 AI 引用的能見度（也就是所謂的 AEO／GEO）也有幫助。想多了解 AI 搜尋這塊可以看<a class='text-brand-mid font-bold hover:underline' href='ai-search-visibility.html'>ChatGPT 會不會推薦我的店</a>這篇。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-4">
         <summary>做 Schema 大概要多少錢？是額外收費的項目嗎？</summary>
         <div class="faq-a">
           <p class="keep">在我們的做法裡，Schema 是網站基本功的一部分，不是額外加購項目，形象官網、一頁式網站的收費裡已經包含這件事，不會另外跟你收一筆「結構化資料費」。找其他人做網站時，建議直接問清楚這件事有沒有包含在報價裡，避免後面被追加。</p>
           <p class="keep">如果你已經有網站、但當初做的人沒處理這塊，也可以當成小型的網站增修項目來補，不用整個網站重做。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-5">
         <summary>怎麼知道自己的網站有沒有做 Schema？</summary>
         <div class="faq-a">
           <p class="keep">最簡單的方式是用 Google 官方的<strong>「Rich Results Test」</strong>這個免費工具，貼上你的網址，它會告訴你這個頁面有沒有偵測到結構化資料、有沒有錯誤。不需要懂程式碼，看結果畫面上寫「檢測到」還是「未檢測到」就知道。</p>
           <p class="keep">如果檢測結果是空的，代表這個頁面目前沒有結構化資料，可以拿這個結果去問你的網站廠商要不要補上。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-6">
         <summary>做了 Schema 就保證搜尋排名會變好嗎？</summary>
         <div class="faq-a">
           <p class="keep">不會，這是常見的誤會。Schema 本身<strong>不是排名因素</strong>，它的作用是讓搜尋結果「顯示得更完整、更好懂」，間接提高被點擊的機會，但不會直接把你的排名往前拉。任何跟你保證「做了 Schema 排名一定變好」的說法都要小心。</p>

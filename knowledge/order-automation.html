@@ -25,8 +25,8 @@
 <meta name="twitter:image" content="https://tonpair.com/assets/og/og-image.png">
 
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/tonpair-notosanstc-vf.woff2?v=11" crossorigin>
-<link rel="stylesheet" href="../assets/style.css?v=13">
-<script defer src="../assets/main.js?v=8"></script>
+<link rel="stylesheet" href="../assets/style.css?v=14">
+<script defer src="../assets/main.js?v=9"></script>
 <script defer src="../assets/search.js?v=1"></script>
 
 <script type="application/ld+json">
@@ -193,6 +193,22 @@
   </div>
 </section>
 
+
+<section class="section" style="padding-top:0;padding-bottom:0">
+  <div class="wrap-narrow">
+    <nav class="faq-jump reveal" aria-label="常見問題快速跳轉">
+      <span class="faq-jump-label">常見問題</span>
+        <a href="#faq-1">我現在都用 LINE 接單、手抄，真的有需要改嗎？</a>
+        <a href="#faq-2">最簡單的自動化長什麼樣子？</a>
+        <a href="#faq-3">資料進 Google 試算表之後呢？</a>
+        <a href="#faq-4">什麼情況需要客製工具，而不是現成表單？</a>
+        <a href="#faq-5">這種自動化要花多少錢、做多久？</a>
+        <a href="#faq-6">我的店員年紀比較大，學得會嗎？</a>
+        <a href="#faq-7">有沒有哪些事，其實不建議自動化？</a>
+    </nav>
+  </div>
+</section>
+
 <section class="section">
   <div class="wrap-narrow">
     <div class="prose">
@@ -205,55 +221,55 @@
 
       <h2 class="reveal" style="border-top:none;padding-top:0">從抄單到不用抄，中間發生什麼事</h2>
       <div class="faq reveal">
-      <details class="faq-item">
+      <details class="faq-item" id="faq-0">
         <summary>LINE 訂單、手抄表單怎麼自動化？小店常見的三種做法</summary>
         <div class="faq-a">
           <p class="keep">小店訂單自動化最常見的三種做法是：用 Google 表單收單自動進試算表、用 LINE 官方帳號的圖文選單把客人導去表單、以及做一個自己的線上點單頁。共同目標只有一個，讓同一筆資料只被輸入一次，不要在 LINE、本子、Excel 之間抄三遍。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-1">
         <summary>我現在都用 LINE 接單、手抄，真的有需要改嗎？</summary>
         <div class="faq-a">
           <p class="keep">先算一件事：一天抄幾筆、一筆抄多久、月底對帳又要花幾小時。很多老闆算完會發現，一個月花在抄寫與對帳上的時間，比想像中多得多。</p>
           <p class="keep">另外一個常見的問題是漏單與抄錯，不是不認真，是私訊會被後面的訊息洗掉。如果你有過「客人來拿貨才發現沒記到」的經驗，那就不只是效率問題了。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-2">
         <summary>最簡單的自動化長什麼樣子？</summary>
         <div class="faq-a">
           <p class="keep">把「請私訊我」改成「請填這張表單」。品項、數量、取貨時間、聯絡方式，客人自己填，送出後資料直接落到 Google 試算表的一列。你不用抄，只要看那張表。</p>
           <p class="keep">這一步用 Google 表單就能做，免費、當天就能上線，不需要任何開發。缺點是表單長得很陽春、不太像你的店；如果在意這點，可以把表單嵌進自己的網頁裡，看起來就是店的一部分。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-3">
         <summary>資料進 Google 試算表之後呢？</summary>
         <div class="faq-a">
           <p class="keep">接下來可以做兩件很有感的事：一是<strong>自動通知</strong>，有新訂單就自動寄信、或發訊息到你的手機，不用一直開著表單看；二是<strong>自動整理</strong>，當天的單自動彙整成一份出貨清單，月底的營收自動加總。</p>
           <p class="keep">這一段就是「自動化腳本」在做的事，通常用 Google Apps Script 直接寫在你的試算表裡，不用另外租主機。規模不大，我們的自動化腳本從 NT$6,000 起。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-4">
         <summary>什麼情況需要客製工具，而不是現成表單？</summary>
         <div class="faq-a">
           <p class="keep">當「填完就結束」不夠用的時候。例如：客人要能自己選還有空的時段（表單不知道哪個時段滿了）、金額要依數量或方案自動算、客人要能查自己的點數或訂單紀錄、或你需要員工與老闆看到不同的畫面。</p>
           <p class="keep">這些現成表單做不到，就要做工具。我們做過的 Loverolling 會員累點系統就是這一類，把紙本集點卡換成線上的累點、QR Code 與兌換，後台還分角色。這種規模從 NT$15,000 起，實際看功能。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-5">
         <summary>這種自動化要花多少錢、做多久？</summary>
         <div class="faq-a">
           <p class="keep">如果只是表單加試算表加通知，通常是幾千元的規模，一到兩週內可以上線，因為沒有太多要設計的東西。</p>
           <p class="keep">如果是客製工具，時間主要花在把你的規則講清楚，哪些情況要擋、誰能看到什麼、例外怎麼處理。實務上開發不是最久的，把規則想清楚才是。所以第一次諮詢我們會問得比較細，那是為了不做出用不到的東西。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-6">
         <summary>我的店員年紀比較大，學得會嗎？</summary>
         <div class="faq-a">
           <p class="keep">會不會用，取決於介面設計成什麼樣，不是年紀。做給小店用的工具，原則是「一個畫面只做一件事、按鈕大、字大、不要有一堆選項」。如果一個功能需要教超過兩分鐘，通常是設計得不夠好，不是使用者的問題。</p>
           <p class="keep">另外一個實務建議是：不要一次全換。先讓自動化跟原本的做法並行一兩週，確定沒問題再把本子收起來，店裡的抗拒會小很多。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-7">
         <summary>有沒有哪些事，其實不建議自動化？</summary>
         <div class="faq-a">
           <p class="keep">有三種：<strong>一是量太小的事</strong>，一天兩三筆，花錢做自動化不划算；<strong>二是規則一直在變的事</strong>，今天這樣算明天那樣算，寫成程式反而綁手綁腳；<strong>三是需要判斷與溫度的事</strong>，例如客訴回覆、熟客的特殊要求，自動回覆只會讓人更火。</p>

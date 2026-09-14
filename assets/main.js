@@ -467,3 +467,18 @@
     })
     .catch(function () { /* 靜默：維持 hidden，不顯示假數字 */ });
 })();
+
+/* FAQ 快速跳轉：點 .faq-jump 的連結或帶 #faq-N 進站時，把對應的手風琴題目展開再捲過去，
+   不然使用者跳到的是一個關起來的 <details>，看起來像沒反應。 */
+(function () {
+  function openTarget(hash) {
+    if (!hash) return;
+    var el = document.querySelector(hash);
+    if (el && el.tagName === 'DETAILS') el.open = true;
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('.faq-jump a[href^="#"]');
+    if (a) openTarget(a.getAttribute('href'));
+  });
+  if (location.hash) openTarget(location.hash);
+})();

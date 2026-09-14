@@ -25,8 +25,8 @@
 <meta name="twitter:image" content="https://tonpair.com/assets/og/og-image.png">
 
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/tonpair-notosanstc-vf.woff2?v=11" crossorigin>
-<link rel="stylesheet" href="../assets/style.css?v=13">
-<script defer src="../assets/main.js?v=8"></script>
+<link rel="stylesheet" href="../assets/style.css?v=14">
+<script defer src="../assets/main.js?v=9"></script>
 <script defer src="../assets/search.js?v=1"></script>
 
 <script type="application/ld+json">
@@ -193,6 +193,22 @@
   </div>
 </section>
 
+
+<section class="section" style="padding-top:0;padding-bottom:0">
+  <div class="wrap-narrow">
+    <nav class="faq-jump reveal" aria-label="常見問題快速跳轉">
+      <span class="faq-jump-label">常見問題</span>
+        <a href="#faq-1">會員或集點系統，到底能幫小店做到什麼？</a>
+        <a href="#faq-2">跟 LINE 官方帳號本身的集點功能，差在哪？要選哪一個？</a>
+        <a href="#faq-3">什麼規模的店適合做，什麼規模還不用？</a>
+        <a href="#faq-4">做一套會員系統大概要多少錢、多久？</a>
+        <a href="#faq-5">客人的資料要怎麼保管？會不會有法規上的問題？</a>
+        <a href="#faq-6">可以先從小規模開始，之後再擴充嗎？</a>
+        <a href="#faq-7">除了 Loverolling，還有其他小店在用類似的系統嗎？</a>
+    </nav>
+  </div>
+</section>
+
 <section class="section">
   <div class="wrap-narrow">
     <div class="prose">
@@ -205,55 +221,55 @@
 
       <h2 class="reveal" style="border-top:none;padding-top:0">會員系統怎麼判斷要不要做</h2>
       <div class="faq reveal">
-      <details class="faq-item">
+      <details class="faq-item" id="faq-0">
         <summary>要不要做會員或集點系統，先問這三個問題</summary>
         <div class="faq-a">
           <p class="keep">會員或集點系統適合回購率高、想留住熟客的店，不適合每個客人都只來一次的店。判斷方式看三件事：客人回不回購、有沒有人力維護後台、以及跟 LINE 官方帳號原生的集點功能是不是已經夠用。真的要做，小型客製系統約 NT$15,000 起。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-1">
         <summary>會員或集點系統，到底能幫小店做到什麼？</summary>
         <div class="faq-a">
           <p class="keep">核心是<strong>把「回購」這件事變得看得到、管得動</strong>。以前集點靠紙卡，蓋滿幾點換東西，這個做法的問題是店家自己也不知道到底有多少熟客、平均多久回來一次，資料全部在客人的口袋裡，蓋完就丟。</p>
           <p class="keep">線上系統把這些資料留在店家手上：誰是常客、多久沒來了、集點快滿了可以主動提醒。對想做行銷活動或判斷生意狀況的店，這是很實際的差別。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-2">
         <summary>跟 LINE 官方帳號本身的集點功能，差在哪？要選哪一個？</summary>
         <div class="faq-a">
           <p class="keep">LINE 官方帳號有自帶的簡易集點卡功能，<strong>成本低、設定快</strong>，對大部分小店已經夠用，如果你只是想要「掃碼蓋章、集滿換一杯」這種單純需求，用 LINE 內建的就好，不用另外做系統。</p>
           <p class="keep">需要另外客製的情況，是你要的東西超出 LINE 內建功能，例如：要串接自己的商品資料庫、要有專屬的會員等級與規則、要跟現有的訂單或庫存系統打通、或希望資料完全掌握在自己手上不綁在單一平台。這類需求我們實際做過一套（Loverolling 店家會員累點系統，QR Code 掃碼累點＋後台管理），可以參考 <a class='text-brand-mid font-bold hover:underline' href='https://antia-members.pages.dev/' target='_blank' rel='noopener'>實際上線的畫面</a>。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-3">
         <summary>什麼規模的店適合做，什麼規模還不用？</summary>
         <div class="faq-a">
           <p class="keep">適合做的訊號：<strong>熟客占營收比重高、客人本來就會重複消費（美容美甲、健身、飲料店這類）、而且店裡有人力願意去看後台數據、規劃集點活動</strong>。</p>
           <p class="keep">還不需要的訊號：客人多半是一次性消費（婚宴、特定活動類）、店裡人手已經很緊繃、或是連基本的 Google 商家檔案跟菜單頁面都還沒顧好。系統做出來沒人維護，比沒做還浪費，這種情況建議先把 <a class='text-brand-mid font-bold hover:underline' href='order-automation.html'>訂單自動化</a> 這類更基礎的事情做好。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-4">
         <summary>做一套會員系統大概要多少錢、多久？</summary>
         <div class="faq-a">
           <p class="keep">屬於<strong>小型客製工具</strong>的範圍，NT$15,000 起，實際依功能複雜度（要不要分等級、要不要串金流、要不要跟現有系統整合）報價。時程通常抓幾週，比做一個形象官網久，因為牽涉到後台邏輯設計。</p>
           <p class="keep">如果同時也還沒有官網，會建議一起評估 <a class='text-brand-mid font-bold hover:underline' href='../services.html#pricing'>網站 × LINE × 自動化整合方案</a>，一次把「被找到」跟「留住客人」兩件事一起處理，會比分開發包划算。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-5">
         <summary>客人的資料要怎麼保管？會不會有法規上的問題？</summary>
         <div class="faq-a">
           <p class="keep">會員系統一定會存到客人的個資（至少是電話或 LINE 帳號），基本原則是<strong>只存必要的欄位、講清楚用途、不要拿去做原本沒說的用途</strong>。我們不會替客戶宣稱符合特定法規認證，但會在系統設計時盡量把資料存取範圍收到最小，這是設計時就該考慮的事，不是上線後才補。</p>
           <p class="keep">如果你的產業對個資有特別的規範要求，這件事要跟我們明講，我們會據實告知能不能做到、做不到的部分要不要找專業法務另外確認，不會隨便打包票。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-6">
         <summary>可以先從小規模開始，之後再擴充嗎？</summary>
         <div class="faq-a">
           <p class="keep">可以，而且我們會建議這樣做。先從最單純的功能上線（例如純粹的掃碼累點），實際跑一兩個月看客人用不用得習慣、店員操作順不順，再決定要不要加會員等級、生日禮、推薦好友這類進階功能。</p>
           <p class="keep">一次把所有想像得到的功能都做進去，常見的結果是做太多用不到、或是設計得太複雜連店員自己都搞不清楚怎麼操作。</p>
         </div>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" id="faq-7">
         <summary>除了 Loverolling，還有其他小店在用類似的系統嗎？</summary>
         <div class="faq-a">
           <p class="keep">目前我們公開的案例是 Loverolling 這一個，實際在營運中。我們不會為了增加案例數量而誇大或捏造其他店家的成果，如果你想更了解實際運作情況、甚至想直接問問看那間店的使用感受，可以在諮詢時提出，我們會盡量安排。</p>
