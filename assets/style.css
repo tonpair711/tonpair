@@ -17,7 +17,7 @@
    有新字沒被涵蓋會退回系統字型；重建後這裡與各頁 preload 的 ?v=N 要一起升。 */
 @font-face {
   font-family: "Tonpair Sans";
-  src: url("/assets/fonts/tonpair-notosanstc-vf.woff2?v=11") format("woff2-variations");
+  src: url("/assets/fonts/tonpair-notosanstc-vf.woff2?v=13") format("woff2-variations");
   font-weight: 200 700;
   font-style: normal;
   font-display: swap;
@@ -1613,9 +1613,13 @@ label.check {
 .contact-fab a svg { width: 20px; height: 20px; }
 .contact-fab a.fab-line { background: #06c755; }
 .contact-fab a.fab-line svg { width: 22px; height: 22px; }
-.contact-fab a.fab-map, .contact-fab a.fab-mail { background: var(--card); border: 1px solid var(--line); color: var(--ink); }
+.contact-fab a.fab-map, .contact-fab a.fab-mail { background: #fff; border: 1px solid var(--line); }
+.contact-fab a.fab-map img { width: 26px; height: 26px; }
+.contact-fab a.fab-mail img { width: 24px; height: 18px; }
 @media (max-width: 420px) {
   .fab-label { display: none; }
   .contact-fab { padding: 6px; gap: 6px; }
   .contact-fab a { width: 36px; height: 36px; }
+  .contact-fab a.fab-map img { width: 22px; height: 22px; }
+  .contact-fab a.fab-mail img { width: 21px; height: 16px; }
 }
