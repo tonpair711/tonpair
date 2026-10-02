@@ -45,6 +45,7 @@
 - 小型客製工具 / LINE Bot：NT$15,000 起
 - LINE官方帳號圖文選單重塑：NT$6,800 起（不含自動回覆設定）
 - LINE官方帳號接單自動化：NT$9,800 起（圖文選單＋關鍵字自動回覆規則設定）
+- Google 商家評論邀請包：NT$3,600 起（商家檔案建置／權限整理＋評論邀請頁面，常見加購項目）
 - 會員集點系統快速部署：NT$25,000 起（部署＋換品牌＋教學，不含功能客製）
 - 自動化腳本：NT$6,000 起
 - 網站維護方案：NT$1,500／月 起
@@ -108,6 +109,11 @@
 - SEO 要多久才看得到效果？合理的期待是什麼：https://tonpair.com/knowledge/seo-timeline
 - 台南店家 LINE 官方帳號怎麼經營？圖文選單與自動回覆實務：https://tonpair.com/knowledge/line-oa
 - 網站速度會不會影響排名？Core Web Vitals 是什麼：https://tonpair.com/knowledge/webperf
+- Google 評論怎麼經營？怎麼請客人留、負評怎麼回：https://tonpair.com/knowledge/google-reviews
+- Google Search Console 是什麼？店家新手要看哪幾個地方：https://tonpair.com/knowledge/search-console
+- 客人搜「附近的店」，為什麼沒有出現我？：https://tonpair.com/knowledge/local-search-near-me
+- AI 把我的店講錯了，怎麼辦？：https://tonpair.com/knowledge/ai-wrong-info
+- Google 搜尋上面的 AI 摘要，會讓客人不點進我的網站嗎？：https://tonpair.com/knowledge/ai-overviews
 
 ## 常見問題
 Q: 對頻設計是不是 Google 的官方合作夥伴？

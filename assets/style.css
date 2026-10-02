@@ -17,7 +17,7 @@
    有新字沒被涵蓋會退回系統字型；重建後這裡與各頁 preload 的 ?v=N 要一起升。 */
 @font-face {
   font-family: "Tonpair Sans";
-  src: url("/assets/fonts/tonpair-notosanstc-vf.woff2?v=13") format("woff2-variations");
+  src: url("/assets/fonts/tonpair-notosanstc-vf.woff2?v=14") format("woff2-variations");
   font-weight: 200 700;
   font-style: normal;
   font-display: swap;
@@ -658,6 +658,8 @@ html.search-lock { overflow: hidden; }
 .plan .price small { font-size: 0.9rem; font-weight: 600; color: var(--muted-faint); letter-spacing: 0; }
 .plan .feature-list { margin: 22px 0 26px; flex: 1; }
 .plan .btn { margin-top: auto; }
+.plan-addon { font-size: 0.82rem; color: var(--muted-faint); margin: 0 0 14px; line-height: 1.6; }
+.plan-addon .link-arrow { font-size: inherit; }
 
 /* ---------- 價目表：報紙目錄式 ---------- */
 /* 手機可左右滑動；兩側漸層陰影提示還有內容（scroll shadow 技法） */

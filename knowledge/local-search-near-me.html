@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{if(localStorage.getItem('amp-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+<title>客人搜「附近的店」為什麼沒有我？在地搜尋入門｜對頻設計</title>
+<meta name="description" content="客人在 Google 搜「台南 早午餐」「附近 美甲」，地圖上跳出三家店，卻沒有你。這篇用白話講 Google 怎麼決定在地搜尋要顯示誰，以及店家自己能動手改的幾個地方。">
+<link rel="canonical" href="https://tonpair.com/knowledge/local-search-near-me">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="../assets/logo/favicon.svg?v=5">
+<link rel="apple-touch-icon" href="../assets/logo/apple-touch-icon.png?v=5">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="對頻設計">
+<meta property="og:title" content="客人搜「附近的店」為什麼沒有我？在地搜尋入門｜對頻設計">
+<meta property="og:description" content="客人在 Google 搜「台南 早午餐」「附近 美甲」，地圖上跳出三家店，卻沒有你。這篇用白話講 Google 怎麼決定在地搜尋要顯示誰，以及店家自己能動手改的幾個地方。">
+<meta property="og:url" content="https://tonpair.com/knowledge/local-search-near-me">
+<meta property="og:image" content="https://tonpair.com/assets/og/og-image.png">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="客人搜「附近的店」為什麼沒有我？在地搜尋入門｜對頻設計">
+<meta name="twitter:description" content="客人在 Google 搜「台南 早午餐」「附近 美甲」，地圖上跳出三家店，卻沒有你。這篇用白話講 Google 怎麼決定在地搜尋要顯示誰，以及店家自己能動手改的幾個地方。">
+<meta name="twitter:image" content="https://tonpair.com/assets/og/og-image.png">
+
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/tonpair-notosanstc-vf.woff2?v=14" crossorigin>
+<link rel="stylesheet" href="../assets/style.css?v=14">
+<script defer src="../assets/main.js?v=9"></script>
+<script defer src="../assets/search.js?v=1"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "客人搜「附近的店」，為什麼沒有出現我？",
+  "description": "客人在 Google 搜「台南 早午餐」「附近 美甲」，地圖上跳出三家店，卻沒有你。這篇用白話講 Google 怎麼決定在地搜尋要顯示誰，以及店家自己能動手改的幾個地方。",
+  "url": "https://tonpair.com/knowledge/local-search-near-me",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tonpair.com/knowledge/local-search-near-me"
+  },
+  "datePublished": "2026-10-02",
+  "dateModified": "2026-10-02",
+  "inLanguage": "zh-Hant-TW",
+  "author": {
+    "@id": "https://tonpair.com/#organization"
+  },
+  "publisher": {
+    "@id": "https://tonpair.com/#organization"
+  },
+  "isPartOf": {
+    "@type": "CollectionPage",
+    "@id": "https://tonpair.com/knowledge/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "name": "客人搜「附近的店」，為什麼沒有出現我？",
+  "url": "https://tonpair.com/knowledge/local-search-near-me",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "客人搜「附近的店」，為什麼沒有出現我？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Google 公開說過，在地搜尋主要看三件事：相關性（你的店跟客人搜的東西有多吻合）、距離（離客人多遠）、知名度（評論、網路上被提到的程度）。距離改不了，能動手的是另外兩項：把 Google 商家檔案的類別與服務填準確，讓官網、商家檔案、各平台上的店名地址電話一字不差，持續累積真實評論。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "為什麼搜店名找得到，搜「台南 早午餐」就找不到？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "因為 Google 要先知道你「是一家早午餐店」。很多店家的商家檔案類別隨手選了一個大類（例如只寫「餐廳」），服務項目也沒填，Google 沒有足夠的線索把你跟「早午餐」連起來。 先檢查兩個地方：商家檔案的主要類別是不是最精確的那一個，服務與商品有沒有寫清楚；官網上有沒有用客人會搜的說法描述你在做什麼，例如寫「早午餐」，不要只寫「輕食料理」。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "店名、地址、電話寫法不一樣，會有影響嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "會。Google 會比對網路上各處的資料，判斷這些是不是同一家店。官網寫「大興街226巷37號」、商家檔案寫「大興街 226 巷 37 號 1 樓」、外送平台又是舊地址，資訊越不一致，Google 越不確定。 做法是<strong>定一個標準寫法，然後所有地方照抄</strong>：官網頁尾、商家檔案、FB 粉專、外送與訂位平台。搬家或換電話時，這份清單要一起改，舊資料留著比沒有更麻煩。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我的店在巷子裡，距離是不是很吃虧？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "距離確實改不了，客人在你隔壁搜，一定比在三公里外搜更容易看到你。但 Google 不是只看距離，相關性和知名度夠強，稍遠一點的店排在近的店前面很常見。 巷弄小店反而要把「怎麼找到你」寫清楚：官網和商家檔案放上地標、停車資訊、從大馬路怎麼走，客人找得到、來得了，留下的評論才會好。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "官網對在地搜尋有幫助嗎？不是只看商家檔案？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "有幫助。商家檔案可以填官網網址，Google 會把官網的內容當成判斷相關性的參考，官網上把服務、地區、價格寫得越具體，Google 越清楚你在做什麼、在哪裡做。 官網上也可以加「結構化資料」，用機器讀得懂的格式標出店名、地址、營業時間，等於幫 Google 再確認一次。原理可以看<a href='schema-basics'>這篇</a>。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "在官網塞很多「台南 美甲 推薦」這種關鍵字，有用嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "沒用，還可能扣分。一直重複地名加關鍵字，客人讀起來彆扭，Google 也會判斷成為了排名硬塞的內容。 比較好的寫法是像跟客人說話一樣自然帶到：「我們在台南北區，靠近公園路，平日晚上也有開」，地名自然出現，資訊也是真的對客人有用。店名欄位也一樣，不要為了排名在商家檔案的名稱裡加關鍵字，那是 Google 明文禁止的。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "評論對在地搜尋影響有多大？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "評論是知名度的一部分：數量、分數、有沒有持續的新評論都有影響，評論內容提到的字（例如「蛋餅很好吃」）也可能幫你出現在相關的搜尋裡。 但要用對方法，不能只挑滿意的客人邀、不能用折扣換。怎麼合規地請客人留評論、怎麼回負評，整理在<a href='google-reviews'>這篇</a>。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "這些自己可以做嗎？什麼時候需要找人？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "商家檔案的類別、服務、照片、回評論，老闆自己都做得到，也最清楚自己的店，建議自己顧。 需要找人的通常是官網那一段：內容要用客人會搜的說法重寫、加結構化資料、把各處資料整理成一致。這類調整可以看<a href='../services'>服務與收費</a>，或直接把網址傳給我們，先幫你看卡在哪一項。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://tonpair.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "店家知識庫",
+      "item": "https://tonpair.com/knowledge/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "客人搜「附近的店」，為什麼沒有出現我？",
+      "item": "https://tonpair.com/knowledge/local-search-near-me"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要內容</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">
+      <img src="../assets/logo/synchord-mark.svg" alt="對頻設計" width="34" height="34">
+      <span class="brand-text"><span class="brand-zh">對頻設計</span><span class="brand-en">tonpair</span></span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="主導覽">
+      <a href="../about">關於我們</a>
+      <a href="../services">服務項目</a>
+      <a href="../portfolio">案例</a>
+      <a href="./">常見問題</a>
+      <a href="../google-education">Google 解決方案</a>
+      <a href="../resources/">資源分享</a>
+      <a href="../contact">聯絡我們</a>
+    </nav>
+    <a class="nav-cta" href="../contact">免費諮詢</a>
+    <button class="theme-toggle" id="searchToggle" type="button" aria-label="搜尋"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3" stroke-linecap="round"/></svg></button>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="切換深色模式">☾</button>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="開關選單">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="/">首頁</a> ／ <a href="./">店家知識庫</a> ／ 客人搜「附近的店」，為什麼沒有出現我？</p>
+    <span class="eyebrow">LOCAL SEARCH</span>
+    <h1 class="keep">客人搜「附近的店」，為什麼沒有出現我？</h1>
+    <p class="keep">客人站在路口打開手機搜「附近 咖啡」，地圖上跳出來的那幾家店，就是今天最有機會被走進去的店。在地搜尋比的不是誰的網站最漂亮，是 Google 有沒有足夠的理由相信你就在這裡、做的就是這個。</p>
+    <p class="page-meta">最後更新：<time datetime="2026-10-02">2026 年 10 月 2 日</time>　·　對頻設計</p>
+  </div>
+</section>
+
+
+<section class="section" style="padding-top:0;padding-bottom:0">
+  <div class="wrap-narrow">
+    <nav class="faq-jump reveal" aria-label="常見問題快速跳轉">
+      <span class="faq-jump-label">常見問題</span>
+        <a href="#faq-1">為什麼搜店名找得到，搜「台南 早午餐」就找不到？</a>
+        <a href="#faq-2">店名、地址、電話寫法不一樣，會有影響嗎？</a>
+        <a href="#faq-3">我的店在巷子裡，距離是不是很吃虧？</a>
+        <a href="#faq-4">官網對在地搜尋有幫助嗎？不是只看商家檔案？</a>
+        <a href="#faq-5">在官網塞很多「台南 美甲 推薦」這種關鍵字，有用嗎？</a>
+        <a href="#faq-6">評論對在地搜尋影響有多大？</a>
+        <a href="#faq-7">這些自己可以做嗎？什麼時候需要找人？</a>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap-narrow">
+    <div class="prose">
+      <div class="notice reveal" style="margin-top:0;max-width:none">
+        <strong style="display:block;color:var(--text);margin-bottom:8px">先講結論</strong>
+        <p class="keep answer-line"><strong>Google 公開說過，在地搜尋主要看三件事：相關性（你的店跟客人搜的東西有多吻合）、距離（離客人多遠）、知名度（評論、網路上被提到的程度）。距離改不了，能動手的是另外兩項：把 Google 商家檔案的類別與服務填準確，讓官網、商家檔案、各平台上的店名地址電話一字不差，持續累積真實評論。</strong></p>
+        <p class="keep">先釐清一件事：<strong>搜店名找得到你，跟搜「附近的某某店」找得到你，是兩件不同的事。</strong>搜店名是客人已經認識你；搜類型是客人還不認識任何一家，Google 要幫他挑，這才是新客人真正的來源。</p>
+        <p class="keep">這篇講後者。商家檔案的基本設定我們另外寫在<a class='text-brand-mid font-bold hover:underline' href='google-business-profile'>這篇</a>，建議先把那邊的資料填完整再回來看。</p>
+      </div>
+
+      <h2 class="reveal" style="border-top:none;padding-top:0">老闆最常問的幾題</h2>
+      <div class="faq reveal">
+      <details class="faq-item" id="faq-0">
+        <summary>客人搜「附近的店」，為什麼沒有出現我？</summary>
+        <div class="faq-a">
+          <p class="keep">Google 公開說過，在地搜尋主要看三件事：相關性（你的店跟客人搜的東西有多吻合）、距離（離客人多遠）、知名度（評論、網路上被提到的程度）。距離改不了，能動手的是另外兩項：把 Google 商家檔案的類別與服務填準確，讓官網、商家檔案、各平台上的店名地址電話一字不差，持續累積真實評論。</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-1">
+        <summary>為什麼搜店名找得到，搜「台南 早午餐」就找不到？</summary>
+        <div class="faq-a">
+          <p class="keep">因為 Google 要先知道你「是一家早午餐店」。很多店家的商家檔案類別隨手選了一個大類（例如只寫「餐廳」），服務項目也沒填，Google 沒有足夠的線索把你跟「早午餐」連起來。</p>
+          <p class="keep">先檢查兩個地方：商家檔案的主要類別是不是最精確的那一個，服務與商品有沒有寫清楚；官網上有沒有用客人會搜的說法描述你在做什麼，例如寫「早午餐」，不要只寫「輕食料理」。</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-2">
+        <summary>店名、地址、電話寫法不一樣，會有影響嗎？</summary>
+        <div class="faq-a">
+          <p class="keep">會。Google 會比對網路上各處的資料，判斷這些是不是同一家店。官網寫「大興街226巷37號」、商家檔案寫「大興街 226 巷 37 號 1 樓」、外送平台又是舊地址，資訊越不一致，Google 越不確定。</p>
+          <p class="keep">做法是<strong>定一個標準寫法，然後所有地方照抄</strong>：官網頁尾、商家檔案、FB 粉專、外送與訂位平台。搬家或換電話時，這份清單要一起改，舊資料留著比沒有更麻煩。</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-3">
+        <summary>我的店在巷子裡，距離是不是很吃虧？</summary>
+        <div class="faq-a">
+          <p class="keep">距離確實改不了，客人在你隔壁搜，一定比在三公里外搜更容易看到你。但 Google 不是只看距離，相關性和知名度夠強，稍遠一點的店排在近的店前面很常見。</p>
+          <p class="keep">巷弄小店反而要把「怎麼找到你」寫清楚：官網和商家檔案放上地標、停車資訊、從大馬路怎麼走，客人找得到、來得了，留下的評論才會好。</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-4">
+        <summary>官網對在地搜尋有幫助嗎？不是只看商家檔案？</summary>
+        <div class="faq-a">
+          <p class="keep">有幫助。商家檔案可以填官網網址，Google 會把官網的內容當成判斷相關性的參考，官網上把服務、地區、價格寫得越具體，Google 越清楚你在做什麼、在哪裡做。</p>
+          <p class="keep">官網上也可以加「結構化資料」，用機器讀得懂的格式標出店名、地址、營業時間，等於幫 Google 再確認一次。原理可以看<a href='schema-basics'>這篇</a>。</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-5">
+        <summary>在官網塞很多「台南 美甲 推薦」這種關鍵字，有用嗎？</summary>
+        <div class="faq-a">
+          <p class="keep">沒用，還可能扣分。一直重複地名加關鍵字，客人讀起來彆扭，Google 也會判斷成為了排名硬塞的內容。</p>
+          <p class="keep">比較好的寫法是像跟客人說話一樣自然帶到：「我們在台南北區，靠近公園路，平日晚上也有開」，地名自然出現，資訊也是真的對客人有用。店名欄位也一樣，不要為了排名在商家檔案的名稱裡加關鍵字，那是 Google 明文禁止的。</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-6">
+        <summary>評論對在地搜尋影響有多大？</summary>
+        <div class="faq-a">
+          <p class="keep">評論是知名度的一部分：數量、分數、有沒有持續的新評論都有影響，評論內容提到的字（例如「蛋餅很好吃」）也可能幫你出現在相關的搜尋裡。</p>
+          <p class="keep">但要用對方法，不能只挑滿意的客人邀、不能用折扣換。怎麼合規地請客人留評論、怎麼回負評，整理在<a href='google-reviews'>這篇</a>。</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-7">
+        <summary>這些自己可以做嗎？什麼時候需要找人？</summary>
+        <div class="faq-a">
+          <p class="keep">商家檔案的類別、服務、照片、回評論，老闆自己都做得到，也最清楚自己的店，建議自己顧。</p>
+          <p class="keep">需要找人的通常是官網那一段：內容要用客人會搜的說法重寫、加結構化資料、把各處資料整理成一致。這類調整可以看<a href='../services'>服務與收費</a>，或直接把網址傳給我們，先幫你看卡在哪一項。</p>
+        </div>
+      </details>
+      </div>
+
+      <div class="prose-cta reveal">
+        <h3>想知道自己的店在在地搜尋卡在哪？</h3>
+        <p class="keep">告訴我們你的店名和客人最常搜的說法，我們幫你看商家檔案、官網和各平台的資料有沒有一致、缺了哪一塊。</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <a class="btn btn-primary btn-sm" href="../contact?topic=%E9%82%84%E4%B8%8D%E7%A2%BA%E5%AE%9A%EF%BC%8C%E5%85%88%E8%81%8A%E8%81%8A">預約免費諮詢</a>
+          <a class="btn btn-outline btn-sm" href="../services#pricing">看收費參考</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Read next</span>
+      <h2 class="section-title">延伸閱讀</h2>
+    </div>
+    <div class="grid grid-3">
+        <article class="card card-flat reveal" style="--rd:0.00s">
+          <h3><a href="google-business-profile">Google 商家檔案怎麼設定？</a></h3>
+          <p class="keep">在地搜尋的起點是商家檔案，類別與服務先填完整。</p>
+          <p class="card-foot"><a class="link-arrow" href="google-business-profile">看這篇</a></p>
+        </article>
+        <article class="card card-flat reveal" style="--rd:0.08s">
+          <h3><a href="google-reviews">Google 評論怎麼經營？</a></h3>
+          <p class="keep">評論是知名度的一大塊，這篇講怎麼邀、怎麼回才不踩政策。</p>
+          <p class="card-foot"><a class="link-arrow" href="google-reviews">看這篇</a></p>
+        </article>
+        <article class="card card-flat reveal" style="--rd:0.16s">
+          <h3><a href="schema-basics">結構化資料 Schema 是什麼？</a></h3>
+          <p class="keep">官網用機器讀得懂的格式標出店名地址，幫 Google 再確認一次。</p>
+          <p class="card-foot"><a class="link-arrow" href="schema-basics">看這篇</a></p>
+        </article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a class="brand" href="/">
+          <img src="../assets/logo/synchord-mark.svg" alt="" width="34" height="34" aria-hidden="true">
+          <span class="brand-text"><span class="brand-zh">對頻設計</span><span class="brand-en">tonpair</span></span>
+        </a>
+        <p class="keep">幫你把店與服務好好放上網路，讓想找你的人找得到。網站開發、小型客製工具與 Google 認證服務的長期夥伴。</p>
+        <p class="footer-hours keep">收攤後才有空慢慢看？沒關係，信半夜寄來也可以，我們不會半夜回，但隔天一定回。</p>
+        <address class="footer-contact">
+          <span class="fc-line"><svg class="fc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg><span>台南市北區大興街226巷37號</span></span>
+          <a class="fc-line" href="tel:0971019763"><svg class="fc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5z"/></svg><span>0971-019-763</span></a>
+        </address>
+      </div>
+      <div>
+        <h2>網站導覽</h2>
+        <ul>
+          <li><a href="../about">關於我們</a></li>
+          <li><a href="../services">服務項目</a></li>
+          <li><a href="../portfolio">案例</a></li>
+          <li><a href="./">店家知識庫</a></li>
+          <li><a href="../contact">聯絡我們</a></li>
+          <li><a href="https://www.hunglun.com/" target="_blank" rel="noopener">鴻綸科技 ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Google 解決方案</h2>
+        <ul>
+          <li><a href="../google-education">Google 解決方案</a></li>
+          <li><a href="../gemini-education">Gemini for Education</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 對頻設計. All rights reserved.</span>
+      <span class="visit-counter" hidden>累計瀏覽人次 <span id="visitCount"></span></span>
+      <span><a href="mailto:tonpair711@gmail.com">tonpair711@gmail.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="contact-fab" role="complementary" aria-label="快速聯絡">
+  <span class="fab-label">線上諮詢</span>
+  <a class="fab-line needs-line" href="https://line.me/R/ti/p/%40007bbtpd" target="_blank" rel="noopener" aria-label="對頻設計 LINE 官方帳號 @007bbtpd" title="LINE 官方帳號（電腦版請搜尋 ID：@007bbtpd）"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.9 3 2.8 6.3 2.8 10.4c0 3.7 3.3 6.8 7.7 7.4.3.1.7.2.8.5.1.3.1.6 0 .9l-.1.8c0 .2-.2.9.8.5s5.3-3.1 7.2-5.3c1.3-1.4 2-2.9 2-4.8C21.2 6.3 17.1 3 12 3z"/></svg></a>
+  <a class="fab-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%8F%B0%E5%8D%97%E5%B8%82%E5%8C%97%E5%8D%80%E5%A4%A7%E8%88%88%E8%A1%97226%E5%B7%B737%E8%99%9F" target="_blank" rel="noopener" aria-label="對頻設計工作室地址（Google 地圖）" title="台南市北區大興街226巷37號"><img width="160" height="160" src="../assets/icon-gmap-colorful.webp" alt="" loading="lazy" decoding="async"></a>
+  <a class="fab-mail" href="mailto:tonpair711@gmail.com" aria-label="寄信給 tonpair711@gmail.com" title="寄信給 tonpair711@gmail.com"><img width="88" height="66" src="../assets/icon-gmail.svg" alt="" loading="lazy" decoding="async"></a>
+</div>
+</body>
+</html>

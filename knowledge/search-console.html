@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{if(localStorage.getItem('amp-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+<title>Google Search Console 怎麼看？店家新手入門｜對頻設計</title>
+<meta name="description" content="想知道網站有沒有被 Google 找到、客人搜什麼字進來，不用猜，Google 有一個免費工具直接告訴你。這篇用老闆看得懂的方式，講 Search Console 要看哪幾個數字、看到異常該怎麼辦。">
+<link rel="canonical" href="https://tonpair.com/knowledge/search-console">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="../assets/logo/favicon.svg?v=5">
+<link rel="apple-touch-icon" href="../assets/logo/apple-touch-icon.png?v=5">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="對頻設計">
+<meta property="og:title" content="Google Search Console 怎麼看？店家新手入門｜對頻設計">
+<meta property="og:description" content="想知道網站有沒有被 Google 找到、客人搜什麼字進來，不用猜，Google 有一個免費工具直接告訴你。這篇用老闆看得懂的方式，講 Search Console 要看哪幾個數字、看到異常該怎麼辦。">
+<meta property="og:url" content="https://tonpair.com/knowledge/search-console">
+<meta property="og:image" content="https://tonpair.com/assets/og/og-image.png">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Google Search Console 怎麼看？店家新手入門｜對頻設計">
+<meta name="twitter:description" content="想知道網站有沒有被 Google 找到、客人搜什麼字進來，不用猜，Google 有一個免費工具直接告訴你。這篇用老闆看得懂的方式，講 Search Console 要看哪幾個數字、看到異常該怎麼辦。">
+<meta name="twitter:image" content="https://tonpair.com/assets/og/og-image.png">
+
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/tonpair-notosanstc-vf.woff2?v=14" crossorigin>
+<link rel="stylesheet" href="../assets/style.css?v=14">
+<script defer src="../assets/main.js?v=9"></script>
+<script defer src="../assets/search.js?v=1"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Google Search Console 是什麼？店家新手要看哪幾個地方",
+  "description": "想知道網站有沒有被 Google 找到、客人搜什麼字進來，不用猜，Google 有一個免費工具直接告訴你。這篇用老闆看得懂的方式，講 Search Console 要看哪幾個數字、看到異常該怎麼辦。",
+  "url": "https://tonpair.com/knowledge/search-console",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tonpair.com/knowledge/search-console"
+  },
+  "datePublished": "2026-10-02",
+  "dateModified": "2026-10-02",
+  "inLanguage": "zh-Hant-TW",
+  "author": {
+    "@id": "https://tonpair.com/#organization"
+  },
+  "publisher": {
+    "@id": "https://tonpair.com/#organization"
+  },
+  "isPartOf": {
+    "@type": "CollectionPage",
+    "@id": "https://tonpair.com/knowledge/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "name": "Google Search Console 是什麼？店家新手要看哪幾個地方",
+  "url": "https://tonpair.com/knowledge/search-console",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Google Search Console 是什麼？店家新手要看哪幾個地方",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Google Search Console 是 Google 提供給網站主人的免費後台，用來看網站在 Google 搜尋上的狀況。老闆只要會看兩個地方就夠：「成效」看客人搜了什麼字、看到幾次、點了幾次；「網頁」（索引報告）看哪些頁面被 Google 收進去、哪些沒有。每個月看一次，有異常再找人處理，不用天天盯。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Search Console 要錢嗎？一定要裝嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "免費。不裝網站也能被搜到，但你會完全看不到 Google 那邊發生了什麼事，網站沒被收錄、某一頁出錯，都要等客人反映才會知道。 它也是你主動通知 Google 的管道：網站新增一頁、改了重要內容，可以在這裡送出「要求建立索引」，比被動等 Google 自己來發現快。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "「成效」報告裡的曝光、點擊、點閱率、排名是什麼意思？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<strong>曝光</strong>是你的網站出現在搜尋結果裡的次數，客人不一定有看到；<strong>點擊</strong>是真的點進來的次數；<strong>點閱率</strong>是點擊除以曝光；<strong>平均排名</strong>是你在搜尋結果大概排第幾。 最值得看的是「查詢」那一欄，客人實際打了哪些字找到你。常常會發現客人用的說法跟你想的不一樣，例如你寫「美睫」，客人搜的是「接睫毛」，這就是改網站文字最好的參考。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "曝光很多但點擊很少，是哪裡出問題？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "通常是搜尋結果上的標題與說明不夠吸引人，或者排名在第二頁之後，客人根本沒捲到。先看那幾個字的平均排名：排在前十名卻沒人點，多半是標題沒講到客人要的；排在二三十名，是內容還不夠完整。 標題怎麼寫、內容怎麼補，基本功整理在<a href='seo-basics'>這篇</a>。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "「網頁」報告說有些頁面「未建立索引」，要緊嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "看是哪些頁。報告會列出原因，有一些是正常的，例如「頁面會重新導向」「替代頁面（有適當的標準網頁標記）」，代表 Google 知道那是重複的網址，收的是正確的那一個，不用處理。 要注意的是<strong>重要頁面（服務、價格、聯絡）出現在未建立索引的清單裡</strong>。剛上線的網站等幾週是正常的，超過一兩個月還是沒收，可以參考<a href='not-found-on-google'>這篇</a>的排查方向。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "資料可以看多久以前的？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "成效報告最多可以看過去 16 個月的資料，超過就看不到了。如果想比較前年同期，記得定期把報表匯出存起來。 資料也會延遲大約兩三天，今天改的東西，不會今天就反映在報表上，別一改完就急著看。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "網站是別人做的，我自己可以看嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以，也應該要可以。請當初製作的人把你的 Google 帳號加為「擁有者」，不是只有「使用者」，這樣就算以後換人維護，資料也不會跟著消失。 如果製作的人不願意給、或說沒有設，那是一個警訊：網站的基本資料不在你手上。換廠商或重新接手的狀況，可以看<a href='website-redesign'>這篇</a>。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "那 Bing 呢？台灣人不是都用 Google？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "台灣搜尋確實以 Google 為主，但 Bing 也有自己的網站主人工具（Bing Webmaster Tools），設定很快，還可以直接從 Search Console 匯入。 值得多做這一步的原因是 AI：有些 AI 助理的搜尋功能會參考 Bing 的資料，網站在 Bing 被收錄得完整，對被 AI 找到也有幫助。AI 搜尋要做哪些事，整理在<a href='ai-search-visibility'>這篇</a>。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": "https://tonpair.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "店家知識庫",
+      "item": "https://tonpair.com/knowledge/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Google Search Console 是什麼？店家新手怎麼看",
+      "item": "https://tonpair.com/knowledge/search-console"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要內容</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">
+      <img src="../assets/logo/synchord-mark.svg" alt="對頻設計" width="34" height="34">
+      <span class="brand-text"><span class="brand-zh">對頻設計</span><span class="brand-en">tonpair</span></span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="主導覽">
+      <a href="../about">關於我們</a>
+      <a href="../services">服務項目</a>
+      <a href="../portfolio">案例</a>
+      <a href="./">常見問題</a>
+      <a href="../google-education">Google 解決方案</a>
+      <a href="../resources/">資源分享</a>
+      <a href="../contact">聯絡我們</a>
+    </nav>
+    <a class="nav-cta" href="../contact">免費諮詢</a>
+    <button class="theme-toggle" id="searchToggle" type="button" aria-label="搜尋"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3" stroke-linecap="round"/></svg></button>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="切換深色模式">☾</button>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="開關選單">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="/">首頁</a> ／ <a href="./">店家知識庫</a> ／ Google Search Console 是什麼？店家新手怎麼看</p>
+    <span class="eyebrow">SEARCH CONSOLE</span>
+    <h1 class="keep">Google Search Console 是什麼？店家新手要看哪幾個地方</h1>
+    <p class="keep">網站做好之後，很多老闆只能靠「自己搜搜看」判斷有沒有效果。其實 Google 有一個免費工具，會直接告訴你：網站有幾頁被收進去、客人搜了什麼字看到你、有多少人點進來。</p>
+    <p class="page-meta">最後更新：<time datetime="2026-10-02">2026 年 10 月 2 日</time>　·　對頻設計</p>
+  </div>
+</section>
+
+
+<section class="section" style="padding-top:0;padding-bottom:0">
+  <div class="wrap-narrow">
+    <nav class="faq-jump reveal" aria-label="常見問題快速跳轉">
+      <span class="faq-jump-label">常見問題</span>
+        <a href="#faq-1">Search Console 要錢嗎？一定要裝嗎？</a>
+        <a href="#faq-2">「成效」報告裡的曝光、點擊、點閱率、排名是什麼意思？</a>
+        <a href="#faq-3">曝光很多但點擊很少，是哪裡出問題？</a>
+        <a href="#faq-4">「網頁」報告說有些頁面「未建立索引」，要緊嗎？</a>
+        <a href="#faq-5">資料可以看多久以前的？</a>
+        <a href="#faq-6">網站是別人做的，我自己可以看嗎？</a>
+        <a href="#faq-7">那 Bing 呢？台灣人不是都用 Google？</a>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap-narrow">
+    <div class="prose">
+      <div class="notice reveal" style="margin-top:0;max-width:none">
+        <strong style="display:block;color:var(--text);margin-bottom:8px">先講結論</strong>
+        <p class="keep answer-line"><strong>Google Search Console 是 Google 提供給網站主人的免費後台，用來看網站在 Google 搜尋上的狀況。老闆只要會看兩個地方就夠：「成效」看客人搜了什麼字、看到幾次、點了幾次；「網頁」（索引報告）看哪些頁面被 Google 收進去、哪些沒有。每個月看一次，有異常再找人處理，不用天天盯。</strong></p>
+        <p class="keep">先分清楚它跟 Google Analytics 的差別：<strong>Search Console 看的是「客人進來之前」，在 Google 搜尋結果上發生的事；Analytics 看的是「客人進來之後」，在網站裡做了什麼。</strong>想知道為什麼搜不到你，要看的是 Search Console。</p>
+        <p class="keep">設定本身要驗證網站的擁有權，通常在建站時由製作的人一起處理。我們交付的網站都會幫店家設好，並把權限加到老闆自己的 Google 帳號，網站不管誰做，資料都該在你手上。</p>
+      </div>
+
+      <h2 class="reveal" style="border-top:none;padding-top:0">老闆最常問的幾題</h2>
+      <div class="faq reveal">
+      <details class="faq-item" id="faq-0">
+        <summary>Google Search Console 是什麼？店家新手要看哪幾個地方</summary>
+        <div class="faq-a">
+          <p class="keep">Google Search Console 是 Google 提供給網站主人的免費後台，用來看網站在 Google 搜尋上的狀況。老闆只要會看兩個地方就夠：「成效」看客人搜了什麼字、看到幾次、點了幾次；「網頁」（索引報告）看哪些頁面被 Google 收進去、哪些沒有。每個月看一次，有異常再找人處理，不用天天盯。</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-1">
+        <summary>Search Console 要錢嗎？一定要裝嗎？</summary>
+        <div class="faq-a">
+          <p class="keep">免費。不裝網站也能被搜到，但你會完全看不到 Google 那邊發生了什麼事，網站沒被收錄、某一頁出錯，都要等客人反映才會知道。</p>
+          <p class="keep">它也是你主動通知 Google 的管道：網站新增一頁、改了重要內容，可以在這裡送出「要求建立索引」，比被動等 Google 自己來發現快。</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-2">
+        <summary>「成效」報告裡的曝光、點擊、點閱率、排名是什麼意思？</summary>
+        <div class="faq-a">
+          <p class="keep"><strong>曝光</strong>是你的網站出現在搜尋結果裡的次數，客人不一定有看到；<strong>點擊</strong>是真的點進來的次數；<strong>點閱率</strong>是點擊除以曝光；<strong>平均排名</strong>是你在搜尋結果大概排第幾。</p>
+          <p class="keep">最值得看的是「查詢」那一欄，客人實際打了哪些字找到你。常常會發現客人用的說法跟你想的不一樣，例如你寫「美睫」，客人搜的是「接睫毛」，這就是改網站文字最好的參考。</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-3">
+        <summary>曝光很多但點擊很少，是哪裡出問題？</summary>
+        <div class="faq-a">
+          <p class="keep">通常是搜尋結果上的標題與說明不夠吸引人，或者排名在第二頁之後，客人根本沒捲到。先看那幾個字的平均排名：排在前十名卻沒人點，多半是標題沒講到客人要的；排在二三十名，是內容還不夠完整。</p>
+          <p class="keep">標題怎麼寫、內容怎麼補，基本功整理在<a href='seo-basics'>這篇</a>。</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-4">
+        <summary>「網頁」報告說有些頁面「未建立索引」，要緊嗎？</summary>
+        <div class="faq-a">
+          <p class="keep">看是哪些頁。報告會列出原因，有一些是正常的，例如「頁面會重新導向」「替代頁面（有適當的標準網頁標記）」，代表 Google 知道那是重複的網址，收的是正確的那一個，不用處理。</p>
+          <p class="keep">要注意的是<strong>重要頁面（服務、價格、聯絡）出現在未建立索引的清單裡</strong>。剛上線的網站等幾週是正常的，超過一兩個月還是沒收，可以參考<a href='not-found-on-google'>這篇</a>的排查方向。</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-5">
+        <summary>資料可以看多久以前的？</summary>
+        <div class="faq-a">
+          <p class="keep">成效報告最多可以看過去 16 個月的資料，超過就看不到了。如果想比較前年同期，記得定期把報表匯出存起來。</p>
+          <p class="keep">資料也會延遲大約兩三天，今天改的東西，不會今天就反映在報表上，別一改完就急著看。</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-6">
+        <summary>網站是別人做的，我自己可以看嗎？</summary>
+        <div class="faq-a">
+          <p class="keep">可以，也應該要可以。請當初製作的人把你的 Google 帳號加為「擁有者」，不是只有「使用者」，這樣就算以後換人維護，資料也不會跟著消失。</p>
+          <p class="keep">如果製作的人不願意給、或說沒有設，那是一個警訊：網站的基本資料不在你手上。換廠商或重新接手的狀況，可以看<a href='website-redesign'>這篇</a>。</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-7">
+        <summary>那 Bing 呢？台灣人不是都用 Google？</summary>
+        <div class="faq-a">
+          <p class="keep">台灣搜尋確實以 Google 為主，但 Bing 也有自己的網站主人工具（Bing Webmaster Tools），設定很快，還可以直接從 Search Console 匯入。</p>
+          <p class="keep">值得多做這一步的原因是 AI：有些 AI 助理的搜尋功能會參考 Bing 的資料，網站在 Bing 被收錄得完整，對被 AI 找到也有幫助。AI 搜尋要做哪些事，整理在<a href='ai-search-visibility'>這篇</a>。</p>
+        </div>
+      </details>
+      </div>
+
+      <div class="prose-cta reveal">
+        <h3>不知道自己的網站有沒有設 Search Console？</h3>
+        <p class="keep">把網址傳給我們，我們幫你看看有沒有設好、目前收錄的狀況大概如何，就算網站不是我們做的也可以問。</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <a class="btn btn-primary btn-sm" href="../contact?topic=%E7%B6%B2%E7%AB%99%E6%94%B9%E7%89%88%E8%88%87%E5%A2%9E%E4%BF%AE">預約免費諮詢</a>
+          <a class="btn btn-outline btn-sm" href="../services#pricing">看收費參考</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Read next</span>
+      <h2 class="section-title">延伸閱讀</h2>
+    </div>
+    <div class="grid grid-3">
+        <article class="card card-flat reveal" style="--rd:0.00s">
+          <h3><a href="not-found-on-google">網站做好了，為什麼 Google 搜不到？</a></h3>
+          <p class="keep">Search Console 顯示沒收錄時，下一步看這篇的排查方向。</p>
+          <p class="card-foot"><a class="link-arrow" href="not-found-on-google">看這篇</a></p>
+        </article>
+        <article class="card card-flat reveal" style="--rd:0.08s">
+          <h3><a href="seo-basics">小店網站 SEO 基本功</a></h3>
+          <p class="keep">從「查詢」報告看到客人用的字之後，回來改網站的方法在這裡。</p>
+          <p class="card-foot"><a class="link-arrow" href="seo-basics">看這篇</a></p>
+        </article>
+        <article class="card card-flat reveal" style="--rd:0.16s">
+          <h3><a href="../services/seo-aeo-geo">SEO／AEO／GEO 服務</a></h3>
+          <p class="keep">Search Console 設定、內容調整與結構化資料，我們怎麼幫店家做。</p>
+          <p class="card-foot"><a class="link-arrow" href="../services/seo-aeo-geo">看這篇</a></p>
+        </article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a class="brand" href="/">
+          <img src="../assets/logo/synchord-mark.svg" alt="" width="34" height="34" aria-hidden="true">
+          <span class="brand-text"><span class="brand-zh">對頻設計</span><span class="brand-en">tonpair</span></span>
+        </a>
+        <p class="keep">幫你把店與服務好好放上網路，讓想找你的人找得到。網站開發、小型客製工具與 Google 認證服務的長期夥伴。</p>
+        <p class="footer-hours keep">收攤後才有空慢慢看？沒關係，信半夜寄來也可以，我們不會半夜回，但隔天一定回。</p>
+        <address class="footer-contact">
+          <span class="fc-line"><svg class="fc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg><span>台南市北區大興街226巷37號</span></span>
+          <a class="fc-line" href="tel:0971019763"><svg class="fc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5z"/></svg><span>0971-019-763</span></a>
+        </address>
+      </div>
+      <div>
+        <h2>網站導覽</h2>
+        <ul>
+          <li><a href="../about">關於我們</a></li>
+          <li><a href="../services">服務項目</a></li>
+          <li><a href="../portfolio">案例</a></li>
+          <li><a href="./">店家知識庫</a></li>
+          <li><a href="../contact">聯絡我們</a></li>
+          <li><a href="https://www.hunglun.com/" target="_blank" rel="noopener">鴻綸科技 ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Google 解決方案</h2>
+        <ul>
+          <li><a href="../google-education">Google 解決方案</a></li>
+          <li><a href="../gemini-education">Gemini for Education</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 對頻設計. All rights reserved.</span>
+      <span class="visit-counter" hidden>累計瀏覽人次 <span id="visitCount"></span></span>
+      <span><a href="mailto:tonpair711@gmail.com">tonpair711@gmail.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="contact-fab" role="complementary" aria-label="快速聯絡">
+  <span class="fab-label">線上諮詢</span>
+  <a class="fab-line needs-line" href="https://line.me/R/ti/p/%40007bbtpd" target="_blank" rel="noopener" aria-label="對頻設計 LINE 官方帳號 @007bbtpd" title="LINE 官方帳號（電腦版請搜尋 ID：@007bbtpd）"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.9 3 2.8 6.3 2.8 10.4c0 3.7 3.3 6.8 7.7 7.4.3.1.7.2.8.5.1.3.1.6 0 .9l-.1.8c0 .2-.2.9.8.5s5.3-3.1 7.2-5.3c1.3-1.4 2-2.9 2-4.8C21.2 6.3 17.1 3 12 3z"/></svg></a>
+  <a class="fab-map" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%8F%B0%E5%8D%97%E5%B8%82%E5%8C%97%E5%8D%80%E5%A4%A7%E8%88%88%E8%A1%97226%E5%B7%B737%E8%99%9F" target="_blank" rel="noopener" aria-label="對頻設計工作室地址（Google 地圖）" title="台南市北區大興街226巷37號"><img width="160" height="160" src="../assets/icon-gmap-colorful.webp" alt="" loading="lazy" decoding="async"></a>
+  <a class="fab-mail" href="mailto:tonpair711@gmail.com" aria-label="寄信給 tonpair711@gmail.com" title="寄信給 tonpair711@gmail.com"><img width="88" height="66" src="../assets/icon-gmail.svg" alt="" loading="lazy" decoding="async"></a>
+</div>
+</body>
+</html>
