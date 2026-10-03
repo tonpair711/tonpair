@@ -39,17 +39,18 @@
 - Chrome Education Upgrade 導入顧問
 
 ## 收費參考（新台幣，未稅起價，實際依需求範圍報價）
-- 一頁式網站 / 活動宣傳頁：NT$8,800 起
-- 形象官網（約 5～7 頁，含 RWD 與 SEO／AI 搜尋基礎優化）：NT$25,000 起
-- 網站改版與增修：NT$6,000 起
-- 小型客製工具 / LINE Bot：NT$15,000 起
+- 一頁式網站 / 活動宣傳頁：NT$12,000 起
+- 形象官網（約 5～7 頁，含 RWD 與 SEO／AI 搜尋基礎優化）：NT$36,000 起
+- 網站改版與增修：NT$10,000 起
+- 小型客製工具 / LINE Bot：NT$20,000 起
 - LINE官方帳號圖文選單重塑：NT$6,800 起（不含自動回覆設定）
-- LINE官方帳號接單自動化：NT$9,800 起（圖文選單＋關鍵字自動回覆規則設定）
-- Google 商家評論邀請包：NT$3,600 起（商家檔案建置／權限整理＋評論邀請頁面，常見加購項目）
-- 會員集點系統快速部署：NT$25,000 起（部署＋換品牌＋教學，不含功能客製）
-- 自動化腳本：NT$6,000 起
-- 網站維護方案：NT$1,500／月 起
-- 網站 × LINE × 自動化 整合方案：NT$60,000 起（形象官網＋LINE 官方帳號建置設定＋一支自動化腳本或小型客製工具＋上線後 3 個月維護）
+- LINE官方帳號接單自動化：NT$12,000 起（圖文選單＋關鍵字自動回覆規則設定）
+- Google 商家評論邀請包：NT$4,800 起（商家檔案建置／權限整理＋評論邀請頁面，常見加購項目）
+- AI 搜尋健檢與補強：NT$9,800 起（既有網站的 AEO／GEO 健檢：收錄、結構化資料、FAQ、llms.txt，實測 ChatGPT／Gemini／Perplexity 的回答並補強，附報告；不保證被 AI 推薦）
+- 會員集點系統快速部署：NT$30,000 起（部署＋換品牌＋教學，不含功能客製）
+- 自動化腳本：NT$8,000 起
+- 網站維護方案：NT$2,500／月 起
+- 網站 × LINE × 自動化 整合方案：NT$68,000 起（形象官網＋LINE 官方帳號建置設定＋一支自動化腳本或小型客製工具＋上線後 3 個月維護）
 - Google 導入顧問／教育訓練：依範圍專案報價
 估價前免費諮詢。詳細表格：https://tonpair.com/services#pricing
 
@@ -114,6 +115,10 @@
 - 客人搜「附近的店」，為什麼沒有出現我？：https://tonpair.com/knowledge/local-search-near-me
 - AI 把我的店講錯了，怎麼辦？：https://tonpair.com/knowledge/ai-wrong-info
 - Google 搜尋上面的 AI 摘要，會讓客人不點進我的網站嗎？：https://tonpair.com/knowledge/ai-overviews
+- AEO 是什麼？跟 SEO 差在哪，小店兩個都要做嗎：https://tonpair.com/knowledge/aeo-vs-seo
+- 網站常見問題（FAQ）怎麼寫，客人看得懂、AI 也抓得到：https://tonpair.com/knowledge/faq-writing
+- 保證排名第一、保證被 AI 推薦？聽到這幾句話先停下來：https://tonpair.com/knowledge/seo-guarantee-red-flags
+- 網站報價單怎麼看？簽約前要問清楚的八件事：https://tonpair.com/knowledge/website-quote-checklist
 
 ## 常見問題
 Q: 對頻設計是不是 Google 的官方合作夥伴？
@@ -123,10 +128,10 @@ Q: 對頻設計可以幫我做什麼？
 A: 網站開發、小型客製工具/腳本開發，以及 Google Workspace for Education、Google AI Pro For Education 等導入顧問。
 
 Q: 找對頻設計做網站大概要多少錢？
-A: 一頁式網站 NT$8,800 起、形象官網 NT$25,000 起、小型客製工具 NT$15,000 起、自動化腳本 NT$6,000 起、網站維護 NT$1,500／月 起，均為未稅參考起價，實際依需求報價，估價前免費諮詢。
+A: 一頁式網站 NT$12,000 起、形象官網 NT$36,000 起、小型客製工具 NT$20,000 起、自動化腳本 NT$8,000 起、網站維護 NT$2,500／月 起，均為未稅參考起價，實際依需求報價，估價前免費諮詢。
 
 Q: 網站、LINE 官方帳號、自動化可以一起做嗎？
-A: 可以，這是整合方案，NT$60,000 起，包含形象官網、LINE 官方帳號建置與設定（圖文選單、自動回應、加好友歡迎訊息）、一支自動化腳本或小型客製工具，以及上線後三個月維護。三件事一起做只需要對一次需求。
+A: 可以，這是整合方案，NT$68,000 起，包含形象官網、LINE 官方帳號建置與設定（圖文選單、自動回應、加好友歡迎訊息）、一支自動化腳本或小型客製工具，以及上線後三個月維護。三件事一起做只需要對一次需求。
 
 Q: 對頻設計有哪些 Google 認證？
 A: Google Certified Professional ChromeOS Administrator、Gemini Certified Faculty、Google AI for K12 Educators、Google Certified Educator Level 1、Gemini Certified Student。
