@@ -158,7 +158,7 @@
         '姓名：' + d.get('name'),
         '店家/單位：' + (d.get('organization') || '（未填）'),
         'Email：' + d.get('email'),
-        'LINE ID：' + (d.get('line') || '（未填）'),
+        'LINE ID／電話：' + (d.get('line') || '（未填）'),
         '想了解：' + d.get('topic'),
         '目前狀況：' + pains,
         '',
