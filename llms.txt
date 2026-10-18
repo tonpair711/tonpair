@@ -57,6 +57,7 @@
   - 一頁式網站製作（NT$12,000 起，包含項目、適合誰、要準備什麼、流程與加購）：https://tonpair.com/services/one-page-website
   - 形象官網製作（約 5～7 頁 NT$36,000 起，每項服務各自一頁、真實案例、產權歸店家）：https://tonpair.com/services/business-website
   - LINE 官方帳號代設定（圖文選單 NT$6,800 起、接單自動化 NT$12,000 起，做得到與做不到）：https://tonpair.com/services/line-official-account
+  - 新營網頁設計（服務台南新營與溪北各區店家，全程線上、價格同收費表、在地搜尋設定）：https://tonpair.com/services/tainan-xinying-website
 - 案例：https://tonpair.com/portfolio
   - 伊登森活 Idun Beauty SPA 品牌官網（台南美容 SPA，8 頁形象官網＋SEO 多頁架構）：https://idun10.pages.dev/
     完整案例說明（一頁式改多頁的原因、做法與交付內容）：https://tonpair.com/cases/idun-beauty-spa-website
