@@ -1625,3 +1625,15 @@ label.check {
   .contact-fab a.fab-map img { width: 22px; height: 22px; }
   .contact-fab a.fab-mail img { width: 21px; height: 16px; }
 }
+
+/* ── 換頁載入畫面（srt 特效包 page-preloader-logo-sweep 的純 CSS 版，2026-10-19）──
+   每次載入頁面：整片底色＋LOGO，一道遮罩由左往右掃過 LOGO，約 0.85 秒後淡出。
+   不用 JS、不改 HTML；CSS 自己收，所以 JS 壞了也不會卡住。減少動態的人不顯示。 */
+html{--pl-w:min(260px,70vw);--pl-h:calc(var(--pl-w) * 0.23881)}
+html::before,html::after{content:"";position:fixed;z-index:9999;pointer-events:none}
+html::before{inset:0;background:var(--bg,#fff) url("logo/synchord-logo.svg") no-repeat center / var(--pl-w) auto;animation:pl-out .35s ease .85s forwards}
+html::after{left:calc(50% - var(--pl-w) / 2);top:calc(50% - var(--pl-h) / 2);width:var(--pl-w);height:var(--pl-h);background:var(--bg,#fff);opacity:.85;animation:pl-sweep .6s ease-in-out forwards,pl-out .35s ease .85s forwards}
+:root[data-theme="dark"]::before{background-image:url("logo/synchord-logo-white.svg")}
+@keyframes pl-sweep{to{transform:translateX(101%)}}
+@keyframes pl-out{to{opacity:0;visibility:hidden}}
+@media (prefers-reduced-motion:reduce){html::before,html::after{display:none}}
