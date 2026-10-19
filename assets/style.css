@@ -1627,13 +1627,17 @@ label.check {
 }
 
 /* ── 換頁載入畫面（srt 特效包 page-preloader-logo-sweep 的純 CSS 版，2026-10-19）──
-   只在一次來訪的第一頁（每個瀏覽分頁一次，頁首小腳本加 pl-on）：整片底色＋LOGO，一道遮罩由左往右掃過 LOGO，約 0.85 秒後淡出。
+   第一次進站播 1 秒（pl-on），之後換頁播 0.5 秒快版（pl-q）；頁首小腳本用 sessionStorage 決定：整片底色＋LOGO，一道遮罩由左往右掃過 LOGO，約 0.85 秒後淡出。
    不用 JS、不改 HTML；CSS 自己收，所以 JS 壞了也不會卡住。減少動態的人不顯示。 */
 html{--pl-w:min(380px,80vw);--pl-h:calc(var(--pl-w) * 0.23881)}
 html.pl-on::before,html.pl-on::after{content:"";position:fixed;z-index:9999;pointer-events:none}
-html.pl-on::before{inset:0;background:var(--bg,#fff) url("logo/synchord-logo.svg") no-repeat center / var(--pl-w) auto;animation:pl-out .35s ease .85s forwards}
-html.pl-on::after{left:calc(50% - var(--pl-w) / 2);top:calc(50% - var(--pl-h) / 2);width:var(--pl-w);height:var(--pl-h);background:var(--bg,#fff);opacity:.85;animation:pl-sweep .6s ease-in-out forwards,pl-out .35s ease .85s forwards}
+html.pl-q::before,html.pl-q::after{content:"";position:fixed;z-index:9999;pointer-events:none}
+html.pl-on::before{inset:0;background:var(--bg,#fff) url("logo/synchord-logo.svg") no-repeat center / var(--pl-w) auto;animation:pl-out .3s ease .7s forwards}
+html.pl-q::before{inset:0;background:var(--bg,#fff) url("logo/synchord-logo.svg") no-repeat center / var(--pl-w) auto;animation:pl-out .25s ease .25s forwards}
+html.pl-on::after{left:calc(50% - var(--pl-w) / 2);top:calc(50% - var(--pl-h) / 2);width:var(--pl-w);height:var(--pl-h);background:var(--bg,#fff);opacity:.85;animation:pl-sweep .5s ease-in-out forwards,pl-out .3s ease .7s forwards}
+html.pl-q::after{left:calc(50% - var(--pl-w) / 2);top:calc(50% - var(--pl-h) / 2);width:var(--pl-w);height:var(--pl-h);background:var(--bg,#fff);opacity:.85;animation:pl-sweep .25s ease-in-out forwards,pl-out .25s ease .25s forwards}
 :root[data-theme="dark"].pl-on::before{background-image:url("logo/synchord-logo-white.svg")}
+:root[data-theme="dark"].pl-q::before{background-image:url("logo/synchord-logo-white.svg")}
 @keyframes pl-sweep{to{transform:translateX(101%)}}
 @keyframes pl-out{to{opacity:0;visibility:hidden}}
-@media (prefers-reduced-motion:reduce){html.pl-on::before,html.pl-on::after{display:none}}
+@media (prefers-reduced-motion:reduce){html.pl-on::before,html.pl-on::after,html.pl-q::before,html.pl-q::after{display:none}}
