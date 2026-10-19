@@ -11,8 +11,8 @@
    ⚠️ 不可以拿掉：.hero 的 background 吃的就是 --hero-bg，少了它 hero 會變成
    淺底配淺色字，整個開場等於看不見（2026-08-27 拿掉時踩過一次）。 */
 :root, :root[data-theme="dark"] {
-  --hero-bg: #060d18;
-  --hero-bg2: #0b1727;
+  --hero-bg: #12294a;
+  --hero-bg2: #183456;
 }
 
 /* ---------- Hero：深色開場 ---------- */
@@ -23,8 +23,8 @@
   /* hero 內部整組換成深底用色，子元素不必逐一改 */
   --ink: #eaf2fb;
   --text: #eaf2fb;
-  --muted: rgba(234, 242, 251, 0.66);
-  --muted-faint: rgba(234, 242, 251, 0.44);
+  --muted: rgba(244, 249, 255, 0.9);
+  --muted-faint: rgba(244, 249, 255, 0.74);
   --line: rgba(234, 242, 251, 0.16);
   --line-soft: rgba(234, 242, 251, 0.12);
   --line-strong: rgba(234, 242, 251, 0.4);
@@ -47,23 +47,23 @@
   content: "";
   position: absolute; z-index: 0;
   width: 900px; height: 900px; left: -260px; top: -320px;
-  background: radial-gradient(circle, rgba(34, 211, 238, 0.16), transparent 62%);
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.2), transparent 62%);
   pointer-events: none;
 }
 /* 對頻波 canvas：兩條青藍正弦波緩慢錯開又重合 */
 #tonWave {
   position: absolute; inset: 0; z-index: 0;
   width: 100%; height: 100%;
-  opacity: 0.9;
+  opacity: 0.4;
   pointer-events: none;
 }
 .hero > .wrap { z-index: 2; }
 
 .hero h1 { font-weight: 900; }
 .hero h1 .amp { color: #22d3ee; }
-.hero-quote { color: rgba(234, 242, 251, 0.44); }
+.hero-quote { color: rgba(244, 249, 255, 0.78); }
 .hero-price strong { color: #eaf2fb; }
-.hero-trust { border-top-color: rgba(234, 242, 251, 0.16); }
+.hero-trust { border-top-color: rgba(244, 249, 255, 0.28); }
 
 /* 深底上的按鈕：主鈕改實心青，次鈕細框 */
 .hero .btn.btn-primary {
@@ -71,7 +71,7 @@
   box-shadow: 0 8px 30px -8px rgba(34, 211, 238, 0.5);
 }
 .hero .btn.btn-primary:hover { background: #67e3f6; border-color: #67e3f6; color: #04121a; }
-.hero .btn.btn-ghost { color: #eaf2fb; border-color: rgba(234, 242, 251, 0.28); }
+.hero .btn.btn-ghost { color: #eaf2fb; border-color: rgba(244, 249, 255, 0.55); }
 .hero .btn.btn-ghost:hover { border-color: #22d3ee; color: #22d3ee; }
 .hero .link-arrow { color: #22d3ee; }
 .hero .link-arrow:hover { color: #67e3f6; }
@@ -88,7 +88,7 @@
 }
 .hero .shot-bar { background: #16273c; color: rgba(234, 242, 251, 0.5); }
 .hero .shot-bar i { background: rgba(234, 242, 251, 0.25); }
-.hero .shot-cap { color: rgba(234, 242, 251, 0.44); }
+.hero .shot-cap { color: rgba(244, 249, 255, 0.78); }
 
 /* hero 收尾：深底轉回亮底，中間補一道青線當交界 */
 .hero + .divider { margin-top: 0; }
@@ -320,3 +320,62 @@ body.home-hero .site-header:not(.scrolled) .brand img { filter: brightness(0) in
 .hero .shot-main {
   box-shadow: 0 40px 90px -30px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(34, 211, 238, 0.18);
 }
+
+/* ==========================================================================
+   2026-10-19 hero 淺色版（Steve：太暗字看不清，網站沒有 CIS 限制，底色可自由換）
+   淺色主題：hero 用淺底墨藍字，青色只留給按鈕與重點；深色主題維持深底。
+   ⚠️ 不動 --hero-bg：作品扇形舞台（.work-stage）還要靠它維持深色
+   ========================================================================== */
+:root:not([data-theme="dark"]) .hero {
+  background: #eef6fb;
+  --ink: #0d2847;
+  --text: #17202b;
+  --muted: #35424f;
+  --muted-faint: #4c5762;
+  --line: rgba(13, 40, 71, 0.16);
+  --line-soft: rgba(13, 40, 71, 0.1);
+  --line-strong: rgba(13, 40, 71, 0.4);
+  --gold: #0e7490;
+  --accent: #0e7490;
+}
+:root:not([data-theme="dark"]) .hero::before {
+  background-image:
+    linear-gradient(rgba(13, 40, 71, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(13, 40, 71, 0.05) 1px, transparent 1px);
+}
+:root:not([data-theme="dark"]) .hero::after {
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.22), transparent 62%);
+}
+:root:not([data-theme="dark"]) #tonWave { opacity: 0.75; }
+:root:not([data-theme="dark"]) .hero h1 { color: #0d2847; }
+:root:not([data-theme="dark"]) .hero h1 .amp { color: #0e7490; }
+:root:not([data-theme="dark"]) .hero-quote { color: #4c5762; }
+:root:not([data-theme="dark"]) .hero-price strong { color: #0d2847; }
+:root:not([data-theme="dark"]) .hero-trust { border-top-color: rgba(13, 40, 71, 0.18); }
+:root:not([data-theme="dark"]) .hero .btn.btn-primary {
+  background: #0d2847; color: #fff; border-color: #0d2847;
+  box-shadow: 0 8px 24px -10px rgba(13, 40, 71, 0.5);
+}
+:root:not([data-theme="dark"]) .hero .btn.btn-primary:hover { background: #0e7490; border-color: #0e7490; color: #fff; }
+:root:not([data-theme="dark"]) .hero .btn.btn-ghost { color: #0d2847; border-color: rgba(13, 40, 71, 0.4); }
+:root:not([data-theme="dark"]) .hero .btn.btn-ghost:hover { border-color: #0e7490; color: #0e7490; }
+:root:not([data-theme="dark"]) .hero .link-arrow { color: #0e7490; }
+:root:not([data-theme="dark"]) .hero .link-arrow:hover { color: #0d2847; }
+:root:not([data-theme="dark"]) .hero .shot,
+:root:not([data-theme="dark"]) .hero .shot-main {
+  border-color: rgba(13, 40, 71, 0.16);
+  box-shadow: 0 30px 70px -30px rgba(13, 40, 71, 0.45), 0 0 0 1px rgba(13, 40, 71, 0.06);
+}
+:root:not([data-theme="dark"]) .hero .shot-bar { background: #dfe9f2; color: #4c5762; }
+:root:not([data-theme="dark"]) .hero .shot-bar i { background: rgba(13, 40, 71, 0.25); }
+:root:not([data-theme="dark"]) .hero .shot-cap { color: #4c5762; }
+:root:not([data-theme="dark"]) .hero-edge { background: linear-gradient(90deg, transparent, rgba(14, 116, 144, 0.5), transparent); }
+/* 表頭疊在淺 hero 上：文字改墨藍、logo 不反白 */
+:root:not([data-theme="dark"]) body.home-hero .site-header:not(.scrolled) .brand-zh { color: #0d2847; }
+:root:not([data-theme="dark"]) body.home-hero .site-header:not(.scrolled) .brand-en { color: #4c5762; }
+:root:not([data-theme="dark"]) body.home-hero .site-header:not(.scrolled) .main-nav > a { color: #17202b; }
+:root:not([data-theme="dark"]) body.home-hero .site-header:not(.scrolled) .main-nav > a:hover { color: #0e7490; }
+:root:not([data-theme="dark"]) body.home-hero .site-header:not(.scrolled) .theme-toggle,
+:root:not([data-theme="dark"]) body.home-hero .site-header:not(.scrolled) .nav-toggle { color: #0d2847; border-color: rgba(13, 40, 71, 0.24); }
+:root:not([data-theme="dark"]) body.home-hero .site-header:not(.scrolled) .nav-cta { background: #0d2847; color: #fff !important; border-color: #0d2847; }
+:root:not([data-theme="dark"]) body.home-hero .site-header:not(.scrolled) .brand img { filter: none; opacity: 1; }
