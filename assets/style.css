@@ -17,7 +17,7 @@
    有新字沒被涵蓋會退回系統字型；重建後這裡與各頁 preload 的 ?v=N 要一起升。 */
 @font-face {
   font-family: "Tonpair Sans";
-  src: url("/assets/fonts/tonpair-notosanstc-vf.woff2?v=17") format("woff2-variations");
+  src: url("/assets/fonts/tonpair-notosanstc-vf.woff2?v=19") format("woff2-variations");
   font-weight: 200 700;
   font-style: normal;
   font-display: swap;
@@ -157,8 +157,9 @@ h1, h2, h3, h4 { line-height: 1.4; font-weight: 700; color: var(--ink); }
 }
 .skip-link:focus { left: 12px; top: 12px; }
 
-/* 中文不在詞中間斷行，但長句塞不下時仍允許換行 */
-.keep { word-break: keep-all; overflow-wrap: anywhere; }
+/* 斷行：中文遵守標點禁則（line-break: strict，「，。」不會跑到行首、「（」不會留在行尾）；英數字詞整個一起換行。
+   2026-10-24 原本 keep-all＋anywhere 會在任意位置硬斷，標點因此落在行首 */
+.keep { word-break: normal; line-break: strict; overflow-wrap: break-word; }
 
 /* ---------- 共用文字樣式 ---------- */
 .eyebrow {
@@ -599,7 +600,7 @@ html.search-lock { overflow: hidden; }
 .feature-list li {
   position: relative; padding-left: 22px;
   color: var(--muted); font-size: 0.94rem;
-  word-break: keep-all; overflow-wrap: anywhere;
+  word-break: normal; line-break: strict; overflow-wrap: break-word;
 }
 .feature-list li::before {
   content: ""; position: absolute; left: 2px; top: 0.75em;
@@ -779,7 +780,7 @@ table.price-table { width: 100%; border-collapse: collapse; min-width: 640px; fo
   position: relative;
   padding: 22px 46px 22px 2px;
   font-weight: 500;
-  word-break: keep-all; overflow-wrap: anywhere;
+  word-break: normal; line-break: strict; overflow-wrap: break-word;
 }
 .faq-item summary::-webkit-details-marker { display: none; }
 /* 展開符號：Outfit 的「＋」，展開時轉 45° 變「×」 */
@@ -1636,3 +1637,20 @@ html.pl-on::after{left:calc(50% - var(--pl-w) / 2);top:calc(50% - var(--pl-h) / 
 @keyframes pl-sweep{to{transform:translateX(101%)}}
 @keyframes pl-out{to{opacity:0;visibility:hidden}}
 @media (prefers-reduced-motion:reduce){html.pl-on::before,html.pl-on::after{display:none}}
+
+/* 手機頁首擠不下：375px 時漢堡鈕會被推出右緣（2026-10-24 斷行檢查抓到）。縮邊距與間距，並收掉英文小字 */
+@media (max-width: 480px) {
+  .header-inner { padding: 12px 14px; gap: 8px; }
+  .brand { gap: 8px; min-width: 0; }
+  .brand-en { display: none; }
+  .theme-toggle, .nav-toggle { width: 36px; height: 36px; }
+  .nav-cta { padding: 8px 12px; }
+}
+
+/* 標題平均分行、內文避免最後一行只剩一兩個字；末行字數另由 main.js 的 .tail-nowrap 保底（Chrome 114+／Safari 17.5+，舊瀏覽器忽略不影響閱讀） */
+h1, h2, h3, summary, .lead, .section-sub { text-wrap: balance; }
+p, li, td, figcaption, blockquote { text-wrap: pretty; }
+
+.tail-nowrap { white-space: nowrap; }
+
+.price, .link-arrow, .price-table td.amount { white-space: nowrap; }

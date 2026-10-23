@@ -482,3 +482,26 @@
   });
   if (location.hash) openTarget(location.hash);
 })();
+
+/* 斷行保底：段落最後 4 個字綁在一起不拆行，避免末行只剩一兩個字（孤字）。
+   只動「最後一個子節點是純文字」的區塊，文字內容不變，搜尋與 AI 讀到的一樣。 */
+(function () {
+  function fix(el) {
+    var n = el.lastChild;
+    while (n && n.nodeType === 3 && !n.nodeValue.trim()) n = n.previousSibling;
+    if (!n || n.nodeType !== 3) return;
+    var t = n.nodeValue.replace(/\s+$/, '');
+    if (t.length < 9) return;
+    var head = t.slice(0, -4), tail = t.slice(-4);
+    if (/[\s]/.test(tail)) return;
+    var span = document.createElement('span');
+    span.className = 'tail-nowrap';
+    span.textContent = tail;
+    n.nodeValue = head;
+    n.parentNode.insertBefore(span, n.nextSibling);
+  }
+  function run() {
+    document.querySelectorAll('main p, main li, main td, main figcaption, main summary, .site-footer p').forEach(fix);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
+})();
