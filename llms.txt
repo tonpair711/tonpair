@@ -59,6 +59,7 @@
   - LINE 官方帳號代設定（圖文選單 NT$6,800 起、接單自動化 NT$12,000 起，做得到與做不到）：https://tonpair.com/services/line-official-account
   - 新營網頁設計（服務台南新營與溪北各區店家，全程線上、價格同收費表、在地搜尋設定）：https://tonpair.com/services/tainan-xinying-website
   - 補習班與才藝教室的 LINE 官方帳號與網站（課表、學費、請假、試聽的自動回覆，價格同收費表，做得到與做不到）：https://tonpair.com/services/cram-school-line-website
+  - 小型 CRM 客戶管理工具（客戶資料、往來紀錄、標籤、跟進提醒，NT$20,000 起屬小型客製工具，適合與不適合誰）：https://tonpair.com/services/crm
 - 案例：https://tonpair.com/portfolio
   - 伊登森活 Idun Beauty SPA 品牌官網（台南美容 SPA，8 頁形象官網＋SEO 多頁架構）：https://idun10.pages.dev/
     完整案例說明（一頁式改多頁的原因、做法與交付內容）：https://tonpair.com/cases/idun-beauty-spa-website
