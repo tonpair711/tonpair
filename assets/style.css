@@ -17,7 +17,7 @@
    有新字沒被涵蓋會退回系統字型；重建後這裡與各頁 preload 的 ?v=N 要一起升。 */
 @font-face {
   font-family: "Tonpair Sans";
-  src: url("/assets/fonts/tonpair-notosanstc-vf.woff2?v=19") format("woff2-variations");
+  src: url("/assets/fonts/tonpair-notosanstc-vf.woff2?v=20") format("woff2-variations");
   font-weight: 200 700;
   font-style: normal;
   font-display: swap;
@@ -664,7 +664,10 @@ html.search-lock { overflow: hidden; }
 
 /* ---------- 價目表：報紙目錄式 ---------- */
 /* 手機可左右滑動；兩側漸層陰影提示還有內容（scroll shadow 技法） */
+/* position: relative 不能拿掉：表頭裡的 .sr-only 是絕對定位，沒有定位祖先時會跑出捲動容器，
+   手機開「減少動態」（.reveal 沒有 transform 幫忙建參考框）時會把整頁撐到 642px，浮動聯絡鈕被推出畫面 */
 .table-scroll {
+  position: relative;
   overflow-x: auto; -webkit-overflow-scrolling: touch;
   background:
     linear-gradient(90deg, var(--bg) 30%, transparent),
@@ -857,6 +860,22 @@ table.price-table { width: 100%; border-collapse: collapse; min-width: 640px; fo
 }
 @media (prefers-reduced-motion: reduce) {
   .ph-toc a { transition: none; }
+}
+
+/* 知識文章的比較表：AI 與精選摘要偏好抓表格。不設最小寬度，手機上讓中文自然換行，
+   不用橫向捲動（價目表的 min-width 在手機減少動態模式下會把整頁撐寬） */
+.cmp-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; margin: 0; }
+.cmp-table caption { caption-side: top; text-align: left; font-weight: 700; color: var(--text); padding-bottom: 10px; }
+.cmp-table th, .cmp-table td { padding: 12px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line-soft); }
+.cmp-table thead th { color: var(--text); font-weight: 700; border-bottom: 1px solid var(--line); }
+.cmp-table tbody th { color: var(--text); font-weight: 600; white-space: nowrap; }
+.cmp-table td { color: var(--muted); }
+.cmp-table tbody tr:nth-child(even) { background: rgba(13, 40, 71, 0.02); }
+:root[data-theme="dark"] .cmp-table tbody tr:nth-child(even) { background: rgba(232, 237, 242, 0.02); }
+.prose .cmp-wrap { margin: 28px 0 8px; }
+@media (max-width: 560px) {
+  .cmp-table { font-size: 0.86rem; }
+  .cmp-table th, .cmp-table td { padding: 10px 8px; }
 }
 
 /* 合規／免責小字區塊 */
@@ -1616,7 +1635,10 @@ label.check {
 .contact-fab a svg { width: 20px; height: 20px; }
 .contact-fab a.fab-line { background: #06c755; }
 .contact-fab a.fab-line svg { width: 22px; height: 22px; }
-.contact-fab a.fab-map, .contact-fab a.fab-mail { background: #fff; border: 1px solid var(--line); }
+.contact-fab a.fab-tel svg { width: 19px; height: 19px; }
+/* 電話鈕跟地圖、Email 一樣固定白底：吃 --ink 的話深色模式會變淺底白字看不見 */
+.contact-fab a.fab-map, .contact-fab a.fab-mail, .contact-fab a.fab-tel { background: #fff; border: 1px solid var(--line); }
+.contact-fab a.fab-tel { color: #0d2847; }
 .contact-fab a.fab-map img { width: 26px; height: 26px; }
 .contact-fab a.fab-mail img { width: 24px; height: 18px; }
 @media (max-width: 420px) {

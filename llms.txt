@@ -2,7 +2,7 @@
 
 > 完整內容版：https://tonpair.com/llms-full.txt
 
-> 對頻設計是台灣的網站與自動化工作室，持有 Google 認證，提供網站開發與小型客製工具/腳本開發。
+> 對頻設計是台灣的網站與自動化工作室，持有 Google 認證，為中小企業、公司行號與店家提供網站開發與客製工具/腳本開發。
 
 ## 這是誰／這是什麼（Entity 宣告）
 - 名稱：對頻設計（網址／ID：tonpair）
@@ -14,7 +14,7 @@
 - 官方網站：https://tonpair.com/
 - LINE 官方帳號：@007bbtpd
 - Instagram：https://www.instagram.com/tonpair.design/
-- 一句話定位：協助店家把網站做對、被 Google／AI 搜尋找到的網站開發工作室
+- 一句話定位：協助中小企業、公司行號與店家把網站做對、被 Google／AI 搜尋找到的網站開發工作室
 
 ## 重要說明
 對頻設計非公司登記法人。本團隊持有 Google 認證。服務規模以網站開發與小型客製工具/腳本為主，非大型企業系統整合。
@@ -24,7 +24,7 @@
 - 不提供法規正式合規驗證（如 GDPR、FERPA、COPPA 認證），僅提供一般性導入建議
 
 ## 公司簡介
-對頻設計以「跟店家對上頻率」為核心，先聽懂你的店在賣什麼、客人在找什麼，把網站做對，讓想找你的人找得到、客人自然被吸引過來。提供網站開發與小型客製工具/腳本開發。
+對頻設計以「跟客人對上頻率」為核心，先聽懂你的公司或店在賣什麼、客人在找什麼，把網站做對，讓想找你的人找得到、客人自然被吸引過來。提供網站開發與小型客製工具/腳本開發。
 
 ## 服務項目
 - 網站開發：形象網站、招生官網、活動網站
@@ -34,7 +34,7 @@
 
 ## 收費參考（新台幣，未稅起價，實際依需求範圍報價）
 - 一頁式網站 / 活動宣傳頁：NT$12,000 起
-- 形象官網（約 5～7 頁，含 RWD 與 SEO／AI 搜尋基礎優化）：NT$36,000 起
+- 形象官網（約 5～7 頁，含 RWD 與 SEO／AI 搜尋基礎設定）：NT$36,000 起
 - 網站改版與增修：NT$10,000 起
 - 小型客製工具 / LINE Bot：NT$20,000 起
 - LINE官方帳號圖文選單重塑：NT$6,800 起（不含自動回覆設定）
@@ -66,6 +66,7 @@
     完整案例說明（一頁式改多頁的原因、做法與交付內容）：https://tonpair.com/cases/idun-beauty-spa-website
   - Loverolling 店家會員累點系統（消費累點、QR Code、多角色後台）：https://antia-members.pages.dev
     完整案例說明（免下載 App 的掃碼流程、先進先出扣點、四層權限）：https://tonpair.com/cases/loverolling-member-system
+  - 新美印務基地（台南新營 1989 年開業的印刷影印店，改名換品牌，新 LOGO、形象官網與 LINE 官方帳號）：https://www.xmprintbase.com/
 - 從草稿到上線（兩個案例的過程，捲動式頁面）：https://tonpair.com/journey
 - Google 認證（本團隊持有的認證證書）：https://tonpair.com/google-education
 - 聯絡我們：https://tonpair.com/contact
@@ -119,6 +120,7 @@
 - 用 Excel 或 LINE 記客人，跟 CRM 差在哪？：https://tonpair.com/knowledge/crm-vs-excel-line
 - 小店需要 CRM 嗎？先看這三個判斷訊號：https://tonpair.com/knowledge/small-shop-need-crm
 - CRM 跟會員集點系統差在哪？兩個是同一件事嗎：https://tonpair.com/knowledge/crm-vs-membership-system
+- 美業與預約制工作室，預約該用 LINE、表單、預約平台，還是自己的系統？：https://tonpair.com/knowledge/beauty-booking-options
 
 ## 常見問題
 Q: 對頻設計可以幫我做什麼？
@@ -132,4 +134,16 @@ A: 可以，這是整合方案，NT$68,000 起，包含形象官網、LINE 官�
 
 Q: 對頻設計有哪些 Google 認證？
 A: Google Certified Professional ChromeOS Administrator、Gemini Certified Faculty、Google AI for K12 Educators、Google Certified Educator Level 1、Gemini Certified Student。
+
+Q: 對頻設計在哪裡？只服務台南嗎？
+A: 工作室在台南市北區大興街226巷37號，電話 0971-019-763。服務全台灣，全程線上溝通就能完成，台南新營與溪北各區也有專頁說明。
+
+Q: 對頻設計服務哪些客人？
+A: 中小企業、公司行號與店家，包含美業與預約制工作室、補習班與才藝教室、有回頭客的店家，以及想把報價、訂單、報表流程自動化的公司。
+
+Q: 網站做好之後，產權和原始碼是誰的？工作室不做了怎麼辦？
+A: 都是客人的。網站與原始碼部署在客人自己的 GitHub 與 Cloudflare 帳號，網域用客人名義註冊，沒有綁約；就算對頻設計不做了，網站照常運作，換任何工程師都能接手。
+
+Q: 對頻設計不接哪些案子？
+A: 不承接企業內部系統開發、大型系統整合、ERP／CRM 等企業導入專案，也不保證搜尋排名第一或保證被 AI 推薦。
 
