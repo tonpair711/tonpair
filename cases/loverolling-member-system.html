@@ -40,7 +40,7 @@
       "description": "Loverolling 店家會員累點系統開發案例。客人不需下載 App，以手機出示 QR Code 由店員掃碼累點；點數採先進先出扣點，優先扣除快到期的批次；會員、店員、老闆、管理員四種角色權限分離，並附老闆專用的操作說明頁。",
       "inLanguage": "zh-Hant",
       "datePublished": "2026-08-13",
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-10-26",
       "isPartOf": { "@id": "https://tonpair.com/#website" },
       "author": { "@id": "https://tonpair.com/#organization" },
       "publisher": { "@id": "https://tonpair.com/#organization" },
@@ -145,7 +145,7 @@
           <div class="tags">
             <span class="tag">小型客製工具</span><span class="tag">會員系統</span><span class="tag">QR Code</span><span class="tag">權限分層</span><span class="tag">免月費雲端架構</span>
           </div>
-          <p class="page-meta">最後更新：<time datetime="2026-08-27">2026 年 8 月 27 日</time>　·　對頻設計</p>
+          <p class="page-meta">最後更新：<time datetime="2026-10-26">2026 年 10 月 26 日</time>　·　對頻設計</p>
         </div>
         <div class="ph-side">
           <p class="ph-lede keep">Loverolling｜店家會員累點系統</p>
@@ -192,6 +192,22 @@
         <h2 id="delivery">交付了什麼、之後怎麼維護</h2>
         <p class="keep">交付的是一套可以直接營運的系統：客人端、店員端、老闆後台、管理員帳號管理，加上一份給老闆看的操作說明頁，直接放在系統裡，店員換人也能自己看。密碼可以自己在系統內修改，不用來找我們。</p>
         <p class="keep">日常支出主要是網域年費，沒有另外的系統月費。點數規則、兌換比例這些老闆自己在後台就能改；要加新功能再另外談，沒有綁約。</p>
+
+        <!-- 規格摘要：只整理本頁上面已寫過的事實，不加新說法 -->
+        <h3 id="spec">系統規格一覽</h3>
+        <div class="table-scroll">
+          <table class="price-table" style="min-width:0">
+            <tbody>
+              <tr><th scope="row" style="white-space:nowrap">客人端</th><td class="keep" style="text-align:left">手機瀏覽器打開就能用，不用下載 App、不用另外註冊流程</td></tr>
+              <tr><th scope="row" style="white-space:nowrap">櫃檯動線</th><td class="keep" style="text-align:left">出示 QR Code、店員掃碼叫出會員、輸入金額加點或扣點，三步完成</td></tr>
+              <tr><th scope="row" style="white-space:nowrap">角色權限</th><td class="keep" style="text-align:left">會員、店員、老闆、管理員四層，各自只看到自己用得到的畫面</td></tr>
+              <tr><th scope="row" style="white-space:nowrap">扣點規則</th><td class="keep" style="text-align:left">先進先出，兌換時自動先扣最快到期的那一批</td></tr>
+              <tr><th scope="row" style="white-space:nowrap">異動紀錄</th><td class="keep" style="text-align:left">每一筆加點、扣點都留紀錄，換班對帳打開後台就查得到</td></tr>
+              <tr><th scope="row" style="white-space:nowrap">架構</th><td class="keep" style="text-align:left">Cloudflare 雲端，資料庫用 D1，不用自己顧主機</td></tr>
+              <tr><th scope="row" style="white-space:nowrap">固定支出</th><td class="keep" style="text-align:left">沒有系統月費，主要是網域年費</td></tr>
+            </tbody>
+          </table>
+        </div>
 
         <div class="case-fact reveal">
           <h3>這個案子可以驗證的事實</h3>
