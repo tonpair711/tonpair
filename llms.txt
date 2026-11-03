@@ -64,8 +64,8 @@
 - 案例：https://tonpair.com/portfolio
   - 伊登森活 Idun Beauty SPA 品牌官網（台南美容 SPA，8 頁形象官網＋SEO 多頁架構）：https://idun10.pages.dev/
     完整案例說明（一頁式改多頁的原因、做法與交付內容）：https://tonpair.com/cases/idun-beauty-spa-website
-  - Loverolling 店家會員累點系統（消費累點、QR Code、多角色後台）：https://antia-members.pages.dev
-    完整案例說明（免下載 App 的掃碼流程、先進先出扣點、四層權限）：https://tonpair.com/cases/loverolling-member-system
+  - 喜翻親子感統遊戲空間（台南新營親子遊戲空間；官網、免下載 App 的會員累點系統、LINE 官方帳號）：https://xifun.tonpair.com
+    完整案例說明（官網與 LINE 官方帳號、免下載 App 的掃碼流程、先進先出扣點、四層權限）：https://tonpair.com/cases/xifun-website-member-system
   - 新美印務基地（台南新營 1989 年開業的印刷影印店，改名換品牌，新 LOGO、形象官網與 LINE 官方帳號）：https://www.xmprintbase.com/
 - 從草稿到上線（兩個案例的過程，捲動式頁面）：https://tonpair.com/journey
 - Google 認證（本團隊持有的認證證書）：https://tonpair.com/google-education

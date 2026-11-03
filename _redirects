@@ -15,4 +15,5 @@ https://www.tonpair.com/* https://tonpair.com/:splat 301
 # ── 已下架頁面（2026-10-06）──
 # 鴻綸科技案例與 Gemini 導入顧問頁下架，舊網址轉到相關頁，Google 已收錄的權重不會變成 404。
 /cases/hunglun-website /portfolio 301
+/cases/loverolling-member-system /cases/xifun-website-member-system 301
 /gemini-education /google-education 301
