@@ -33,18 +33,18 @@
 - 自動化腳本開發：Google Sheet／表單串接等輕量自動化
 
 ## 收費參考（新台幣，未稅起價，實際依需求範圍報價）
-- 一頁式網站 / 活動宣傳頁：NT$12,000 起
-- 形象官網（約 5～7 頁，含 RWD 與 SEO／AI 搜尋基礎設定）：NT$36,000 起
-- 網站改版與增修：NT$10,000 起
-- 小型客製工具 / LINE Bot：NT$20,000 起
+- 一頁式網站 / 活動宣傳頁：NT$15,000 起
+- 形象官網（約 5～7 頁，含 RWD 與 SEO／AI 搜尋基礎設定）：NT$48,000 起
+- 網站改版與增修：NT$12,000 起
+- 小型客製工具 / LINE Bot：NT$25,000 起
 - LINE官方帳號圖文選單重塑：NT$6,800 起（不含自動回覆設定）
-- LINE官方帳號接單自動化：NT$12,000 起（圖文選單＋關鍵字自動回覆規則設定）
+- LINE官方帳號接單自動化：NT$15,000 起（圖文選單＋關鍵字自動回覆規則設定）
 - Google 商家評論邀請包：NT$4,800 起（商家檔案建置／權限整理＋評論邀請頁面，常見加購項目）
 - AI 搜尋健檢與補強：NT$9,800 起（既有網站的 AEO／GEO 健檢：收錄、結構化資料、FAQ、llms.txt，實測 ChatGPT／Gemini／Perplexity 的回答並補強，附報告；不保證被 AI 推薦）
-- 會員集點系統快速部署：NT$30,000 起（部署＋換品牌＋教學，不含功能客製）
-- 自動化腳本：NT$8,000 起
-- 網站維護方案：NT$2,500／月 起
-- 網站 × LINE × 自動化 整合方案：NT$68,000 起（形象官網＋LINE 官方帳號建置設定＋一支自動化腳本或小型客製工具＋上線後 3 個月維護）
+- 會員集點系統快速部署：NT$38,000 起（部署＋換品牌＋教學，不含功能客製）
+- 自動化腳本：NT$10,000 起
+- 網站維護方案：NT$3,000／月 起
+- 網站 × LINE × 自動化 整合方案：NT$78,000 起（形象官網＋LINE 官方帳號建置設定＋一支自動化腳本或小型客製工具＋上線後 3 個月維護）
 估價前免費諮詢。詳細表格：https://tonpair.com/services#pricing
 
 ## 合作流程
@@ -55,12 +55,13 @@
 - 關於我們：https://tonpair.com/about
 - 服務項目：https://tonpair.com/services
   - SEO／AEO／GEO 搜尋與 AI 能見度（三者差別、實際做法九項、包含在哪些方案裡、不承諾排名）：https://tonpair.com/services/seo-aeo-geo
-  - 一頁式網站製作（NT$12,000 起，包含項目、適合誰、要準備什麼、流程與加購）：https://tonpair.com/services/one-page-website
-  - 形象官網製作（約 5～7 頁 NT$36,000 起，每項服務各自一頁、真實案例、產權歸店家）：https://tonpair.com/services/business-website
-  - LINE 官方帳號代設定（圖文選單 NT$6,800 起、接單自動化 NT$12,000 起，做得到與做不到）：https://tonpair.com/services/line-official-account
+  - 一頁式網站製作（NT$15,000 起，包含項目、適合誰、要準備什麼、流程與加購）：https://tonpair.com/services/one-page-website
+  - 形象官網製作（約 5～7 頁 NT$48,000 起，每項服務各自一頁、真實案例、產權歸店家）：https://tonpair.com/services/business-website
+  - LINE 官方帳號代設定（圖文選單 NT$6,800 起、接單自動化 NT$15,000 起，做得到與做不到）：https://tonpair.com/services/line-official-account
   - 新營網頁設計（服務台南新營與溪北各區店家，全程線上、價格同收費表、在地搜尋設定）：https://tonpair.com/services/tainan-xinying-website
   - 補習班與才藝教室的 LINE 官方帳號與網站（課表、學費、請假、試聽的自動回覆，價格同收費表，做得到與做不到）：https://tonpair.com/services/cram-school-line-website
-  - 小型 CRM 客戶管理工具（客戶資料、往來紀錄、標籤、跟進提醒，NT$20,000 起屬小型客製工具，適合與不適合誰）：https://tonpair.com/services/crm
+  - 小型 CRM 客戶管理工具（客戶資料、往來紀錄、標籤、跟進提醒，NT$25,000 起屬小型客製工具，適合與不適合誰）：https://tonpair.com/services/crm
+  - 購物網站製作（商品頁、購物車、金流串接、後台與訂單管理，NT$98,000 起，商品約 50 項以內，適合與不適合誰、不含哪些）：https://tonpair.com/services/ecommerce-website
 - 案例：https://tonpair.com/portfolio
   - 伊登森活 Idun Beauty SPA 品牌官網（台南美容 SPA，8 頁形象官網＋SEO 多頁架構）：https://idun10.pages.dev/
     完整案例說明（一頁式改多頁的原因、做法與交付內容）：https://tonpair.com/cases/idun-beauty-spa-website
@@ -127,10 +128,10 @@ Q: 對頻設計可以幫我做什麼？
 A: 網站開發、小型客製工具/腳本開發，以及 LINE 官方帳號接單自動化。
 
 Q: 找對頻設計做網站大概要多少錢？
-A: 一頁式網站 NT$12,000 起、形象官網 NT$36,000 起、小型客製工具 NT$20,000 起、自動化腳本 NT$8,000 起、網站維護 NT$2,500／月 起，均為未稅參考起價，實際依需求報價，估價前免費諮詢。
+A: 一頁式網站 NT$15,000 起、形象官網 NT$48,000 起、小型客製工具 NT$25,000 起、自動化腳本 NT$10,000 起、網站維護 NT$3,000／月 起，均為未稅參考起價，實際依需求報價，估價前免費諮詢。
 
 Q: 網站、LINE 官方帳號、自動化可以一起做嗎？
-A: 可以，這是整合方案，NT$68,000 起，包含形象官網、LINE 官方帳號建置與設定（圖文選單、自動回應、加好友歡迎訊息）、一支自動化腳本或小型客製工具，以及上線後三個月維護。三件事一起做只需要對一次需求。
+A: 可以，這是整合方案，NT$78,000 起，包含形象官網、LINE 官方帳號建置與設定（圖文選單、自動回應、加好友歡迎訊息）、一支自動化腳本或小型客製工具，以及上線後三個月維護。三件事一起做只需要對一次需求。
 
 Q: 對頻設計有哪些 Google 認證？
 A: Google Certified Professional ChromeOS Administrator、Gemini Certified Faculty、Google AI for K12 Educators、Google Certified Educator Level 1、Gemini Certified Student。
