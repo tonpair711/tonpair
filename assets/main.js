@@ -505,3 +505,19 @@
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
 })();
+
+/* 網站效果區「看更多效果」：展開後把被隱藏的卡片補演一次最終狀態（隱藏時不會觸發進場動畫） */
+(function () {
+  var btn = document.getElementById('fxMore');
+  var grid = document.getElementById('fxGrid');
+  if (!btn || !grid) return;
+  grid.classList.add('fx-collapsed');
+  btn.parentNode.hidden = false;
+  btn.addEventListener('click', function () {
+    grid.classList.remove('fx-collapsed');
+    btn.setAttribute('aria-expanded', 'true');
+    btn.parentNode.hidden = true;
+    grid.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+    window.dispatchEvent(new Event('resize'));
+  });
+})();

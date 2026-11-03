@@ -1416,6 +1416,12 @@ label.check {
 .fx-grid { display: grid; gap: 22px; grid-template-columns: 1fr; }
 @media (min-width: 700px) { .fx-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 1000px) { .fx-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+/* 預設只露出前 3 張，其餘按「看更多效果」才展開（手機上整區原本連續 7 張，約 2,500px）。
+   折疊由 main.js 加上 .fx-collapsed；沒 JS 時卡片全部可見，不會有被藏起來的內容。
+   跟 .js-fx（動畫開關）無關，減少動態模式的人也一樣折疊。 */
+.fx-collapsed .fx-card:nth-child(n+4) { display: none; }
+.fx-more-wrap { margin-top: 22px; }
+.fx-more-wrap[hidden] { display: none !important; }
 
 .fx-card {
   border: 1px solid var(--line);

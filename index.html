@@ -26,9 +26,9 @@
 <meta name="twitter:image" content="https://tonpair.com/assets/og/og-image.png">
 
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/tonpair-notosanstc-vf.woff2?v=20" crossorigin>
-<link rel="stylesheet" href="assets/style.css?v=22">
+<link rel="stylesheet" href="assets/style.css?v=24">
 <link rel="stylesheet" href="assets/tech.css?v=13">
-<script defer src="assets/main.js?v=11"></script>
+<script defer src="assets/main.js?v=13"></script>
 <script defer src="assets/search.js?v=1"></script>
 <script defer src="assets/tech.js?v=2"></script>
 
@@ -476,7 +476,7 @@
         <p class="section-sub keep" style="margin-top:14px">下面每一張卡片就是那個效果本人，不是截圖也不是影片。看到喜歡的，跟我們說編號就好，這些都能加進你的網站。</p>
       </div>
 
-      <div class="fx-grid stagger">
+      <div class="fx-grid stagger" id="fxGrid">
         <article class="fx-card reveal">
           <div class="fx-stage" data-fx="reveal">
             <span class="fx-reveal-box keep">捲到這裡才浮出來</span>
@@ -512,7 +512,7 @@
 
         <article class="fx-card reveal" style="--rd:.18s">
           <div class="fx-stage fx-tilt-wrap" data-fx="tilt">
-            <div class="fx-tilt keep">滑鼠移過來看看</div>
+            <div class="fx-tilt keep">手指或滑鼠移上來</div>
           </div>
           <div class="fx-body">
             <h3>3D 傾斜卡片</h3>
@@ -569,6 +569,7 @@
           </div>
         </article>
       </div>
+      <p class="fx-more-wrap" hidden><button type="button" class="btn btn-outline fx-more" id="fxMore" aria-expanded="false" aria-controls="fxGrid">看更多效果（還有 5 個）</button></p>
 
       <p style="margin-top:38px" class="keep">
         <a class="link-arrow" href="contact?topic=%E9%82%84%E4%B8%8D%E7%A2%BA%E5%AE%9A%EF%BC%8C%E5%85%88%E8%81%8A%E8%81%8A">跟我們說你喜歡哪幾個</a>
