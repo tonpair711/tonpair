@@ -85,6 +85,13 @@
 
 ## 店家知識庫（資訊型內容，主題群集：台灣店家的網站與自動化）
 索引：https://tonpair.com/knowledge/
+- 主題：選擇與費用（8 篇）：https://tonpair.com/knowledge/topic/choose-and-price
+- 主題：製作流程與維護（6 篇）：https://tonpair.com/knowledge/topic/build-and-maintain
+- 主題：在地搜尋與 Google 商家（5 篇）：https://tonpair.com/knowledge/topic/local-search
+- 主題：SEO 基本功與內容（6 篇）：https://tonpair.com/knowledge/topic/seo-and-content
+- 主題：AI 搜尋（5 篇）：https://tonpair.com/knowledge/topic/ai-search
+- 主題：LINE 與接單自動化（5 篇）：https://tonpair.com/knowledge/topic/line-automation
+- 主題：客戶管理 CRM（5 篇）：https://tonpair.com/knowledge/topic/crm
 - 只有 FB 粉專就夠了嗎？粉專、官網、Google 商家檔案差在哪：https://tonpair.com/knowledge/website-vs-fanpage
 - 台南店家做一個網站要多少錢？費用是怎麼算出來的：https://tonpair.com/knowledge/website-cost
 - LINE 訂單、手抄表單怎麼自動化？小店常見的三種做法：https://tonpair.com/knowledge/order-automation
