@@ -59,6 +59,10 @@
   - 形象官網製作（約 5～7 頁 NT$48,000 起，每項服務各自一頁、真實案例、產權歸店家）：https://tonpair.com/services/business-website
   - LINE 官方帳號代設定（圖文選單 NT$6,800 起、接單自動化 NT$15,000 起，做得到與做不到）：https://tonpair.com/services/line-official-account
   - 新營網頁設計（服務台南新營與溪北各區店家，全程線上、價格同收費表、在地搜尋設定）：https://tonpair.com/services/tainan-xinying-website
+  - 嘉義網頁設計（服務嘉義市與嘉義縣店家、工廠與公司，全程線上、價格同收費表；目前案例在台南與新營一帶，嘉義尚無）：https://tonpair.com/services/chiayi-website
+  - 美業工作室網站與 LINE 預約（作品價目、預約三種做法怎麼選，案例伊登森活）：https://tonpair.com/services/beauty-studio-website
+  - 工廠與傳統產業官網（產品規格、設備、詢價表單與 LINE，案例新美印務基地）：https://tonpair.com/services/factory-b2b-website
+  - 餐飲烘焙伴手禮的 LINE 接單與預購頁（目前沒有這類案例，做法同我們自己的官方帳號）：https://tonpair.com/services/food-line-ordering
   - 補習班與才藝教室的 LINE 官方帳號與網站（課表、學費、請假、試聽的自動回覆，價格同收費表，做得到與做不到）：https://tonpair.com/services/cram-school-line-website
   - 小型 CRM 客戶管理工具（客戶資料、往來紀錄、標籤、跟進提醒，NT$25,000 起屬小型客製工具，適合與不適合誰）：https://tonpair.com/services/crm
   - 購物網站製作（商品頁、購物車、金流串接、後台與訂單管理，NT$98,000 起，商品約 50 項以內，適合與不適合誰、不含哪些）：https://tonpair.com/services/ecommerce-website
@@ -94,6 +98,7 @@
 - 主題：客戶管理 CRM（5 篇）：https://tonpair.com/knowledge/topic/crm
 - 只有 FB 粉專就夠了嗎？粉專、官網、Google 商家檔案差在哪：https://tonpair.com/knowledge/website-vs-fanpage
 - 台南店家做一個網站要多少錢？費用是怎麼算出來的：https://tonpair.com/knowledge/website-cost
+- 台南、新營、嘉義找網頁設計怎麼選？平台、工作室、設計公司比較（2026）：https://tonpair.com/knowledge/choose-web-designer-tainan-chiayi
 - LINE 訂單、手抄表單怎麼自動化？小店常見的三種做法：https://tonpair.com/knowledge/order-automation
 - 台南店家 LINE 官方帳號怎麼自動接單？關鍵字自動回覆實務：https://tonpair.com/knowledge/line-bot-order-automation
 - 台南店家 Google 商家檔案怎麼設定，客人搜店名才找得到你：https://tonpair.com/knowledge/google-business-profile

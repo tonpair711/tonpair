@@ -24,8 +24,8 @@
 <meta name="twitter:description" content="網站開啟慢吞吞，客人還沒看到內容就先划走了。這篇講 Core Web Vitals 是什麼、網站速度跟 SEO 排名的關係、最常見拖慢速度的原因，以及不用花大錢也能改善的做法。">
 <meta name="twitter:image" content="https://tonpair.com/assets/og/og-image.png">
 
-<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/tonpair-notosanstc-vf.woff2?v=23" crossorigin>
-<link rel="stylesheet" href="../assets/style.css?v=27">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/tonpair-notosanstc-vf.woff2?v=24" crossorigin>
+<link rel="stylesheet" href="../assets/style.css?v=28">
 <script defer src="../assets/main.js?v=15"></script>
 <script defer src="../assets/search.js?v=1"></script>
 
@@ -91,7 +91,7 @@
       "name": "最常見拖慢網站速度的原因有哪些？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "常見原因有幾種：<strong>圖片檔案太大、沒壓縮</strong>（手機拍的原圖直接上傳，動輒好幾 MB）、載入太多不必要的第三方外掛或腳本（分析工具、彈跳視窗套件）、字型檔案太多或載入方式不對造成畫面閃爍、以及伺服器回應太慢（尤其是用未優化的 CMS，每次都要即時查資料庫）。 小店網站最常踩的其實就是第一項，上傳沒壓縮的原圖，隨便一張就拖慢整頁載入速度。"
+        "text": "常見原因有幾種：<strong>圖片檔案太大、沒壓縮</strong>（手機拍的原圖直接上傳，動輒好幾 MB）、載入太多不必要的第三方外掛或腳本（分析工具、彈跳視窗套件）、字型檔案太多或載入方式不對造成畫面閃爍、以及伺服器回應太慢（尤其是用沒調整過的 CMS，每次都要即時查資料庫）。 小店網站最常踩的其實就是第一項，上傳沒壓縮的原圖，隨便一張就拖慢整頁載入速度。"
       }
     },
     {
@@ -99,7 +99,7 @@
       "name": "為什麼純靜態網站通常比較快？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "純靜態網站的每一頁都是預先寫好的固定檔案，伺服器收到請求直接回傳檔案，不用即時查資料庫或跑後端運算；用 CMS 架的動態網站（例如沒優化過的 Wix、WordPress）常常每次請求都要組裝頁面，架構複雜度較高。 我們自己的網站就是走零 build 的純靜態架構，搭配 Cloudflare 的全球節點部署，不用犧牲速度換內容管理的方便。"
+        "text": "純靜態網站的每一頁都是預先寫好的固定檔案，伺服器收到請求直接回傳檔案，不用即時查資料庫或跑後端運算；用 CMS 架的動態網站（例如沒調整過的 Wix、WordPress）常常每次請求都要組裝頁面，架構複雜度較高。 我們自己的網站就是走零 build 的純靜態架構，搭配 Cloudflare 的全球節點部署，不用犧牲速度換內容管理的方便。"
       }
     },
     {
@@ -252,14 +252,14 @@
       <details class="faq-item" id="faq-3">
         <summary>最常見拖慢網站速度的原因有哪些？</summary>
         <div class="faq-a">
-          <p class="keep">常見原因有幾種：<strong>圖片檔案太大、沒壓縮</strong>（手機拍的原圖直接上傳，動輒好幾 MB）、載入太多不必要的第三方外掛或腳本（分析工具、彈跳視窗套件）、字型檔案太多或載入方式不對造成畫面閃爍、以及伺服器回應太慢（尤其是用未優化的 CMS，每次都要即時查資料庫）。</p>
+          <p class="keep">常見原因有幾種：<strong>圖片檔案太大、沒壓縮</strong>（手機拍的原圖直接上傳，動輒好幾 MB）、載入太多不必要的第三方外掛或腳本（分析工具、彈跳視窗套件）、字型檔案太多或載入方式不對造成畫面閃爍、以及伺服器回應太慢（尤其是用沒調整過的 CMS，每次都要即時查資料庫）。</p>
           <p class="keep">小店網站最常踩的其實就是第一項，上傳沒壓縮的原圖，隨便一張就拖慢整頁載入速度。</p>
         </div>
       </details>
       <details class="faq-item" id="faq-4">
         <summary>為什麼純靜態網站通常比較快？</summary>
         <div class="faq-a">
-          <p class="keep">純靜態網站的每一頁都是預先寫好的固定檔案，伺服器收到請求直接回傳檔案，不用即時查資料庫或跑後端運算；用 CMS 架的動態網站（例如沒優化過的 Wix、WordPress）常常每次請求都要組裝頁面，架構複雜度較高。</p>
+          <p class="keep">純靜態網站的每一頁都是預先寫好的固定檔案，伺服器收到請求直接回傳檔案，不用即時查資料庫或跑後端運算；用 CMS 架的動態網站（例如沒調整過的 Wix、WordPress）常常每次請求都要組裝頁面，架構複雜度較高。</p>
           <p class="keep">我們自己的網站就是走零 build 的純靜態架構，搭配 Cloudflare 的全球節點部署，不用犧牲速度換內容管理的方便。</p>
         </div>
       </details>
