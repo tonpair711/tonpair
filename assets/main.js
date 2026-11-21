@@ -521,3 +521,42 @@
     window.dispatchEvent(new Event('resize'));
   });
 })();
+
+/* 回到頂端鈕（2026-11-06 由 xmprintbase 樣板移植）：捲過 300px 才顯示，不需改任何頁面 HTML */
+(function () {
+  var b = document.createElement('button');
+  b.type = 'button';
+  b.className = 'to-top';
+  b.hidden = true;
+  b.setAttribute('aria-label', '回到頁面頂端');
+  b.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>';
+  document.body.appendChild(b);
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  b.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); });
+  var tick = false;
+  window.addEventListener('scroll', function () {
+    if (tick) return;
+    tick = true;
+    requestAnimationFrame(function () { b.hidden = window.scrollY < 300; tick = false; });
+  }, { passive: true });
+})();
+
+/* 文章分享框（2026-11-06 由 hunglun2026 移植）：只加在知識庫與案例文章尾端。
+   手機優先用系統分享選單，沒有就複製連結 */
+(function () {
+  var p = location.pathname;
+  if (!/^\/(knowledge|cases)\/[^\/]+/.test(p)) return;
+  var anchor = document.querySelector('main .prose-cta') || document.querySelector('main .prose');
+  if (!anchor) return;
+  var box = document.createElement('div');
+  box.className = 'share-box';
+  box.innerHTML = '<span class="share-label">覺得有用？分享給需要的朋友</span><button type="button" class="share-btn">分享這篇</button>';
+  anchor.parentNode.insertBefore(box, anchor.nextSibling);
+  var btn = box.querySelector('button');
+  btn.addEventListener('click', function () {
+    var data = { title: document.title, url: location.href.split('#')[0] };
+    if (navigator.share) { navigator.share(data).catch(function () {}); return; }
+    var done = function () { btn.textContent = '已複製連結'; setTimeout(function () { btn.textContent = '分享這篇'; }, 2000); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(data.url).then(done, function () {});
+  });
+})();

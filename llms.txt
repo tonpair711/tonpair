@@ -71,6 +71,9 @@
 - 從草稿到上線（兩個案例的過程，捲動式頁面）：https://tonpair.com/journey
 - Google 認證（本團隊持有的認證證書）：https://tonpair.com/google-education
 - 聯絡我們：https://tonpair.com/contact
+- 免費官網健檢（留下網址或 Google 地圖店名，兩個工作天內寄 6 項手機實測紀錄，免費）：https://tonpair.com/audit
+- 同業合作（設計師、印刷行、廣告公司的網頁技術後援，單一窗口、可用對方名義交付）：https://tonpair.com/partner
+- 隱私權政策：https://tonpair.com/privacy
 
 ## 免費資源（本團隊自製、免費開放的小工具）
 索引：https://tonpair.com/resources/

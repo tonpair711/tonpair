@@ -17,7 +17,7 @@
    有新字沒被涵蓋會退回系統字型；重建後這裡與各頁 preload 的 ?v=N 要一起升。 */
 @font-face {
   font-family: "Tonpair Sans";
-  src: url("/assets/fonts/tonpair-notosanstc-vf.woff2?v=22") format("woff2-variations");
+  src: url("/assets/fonts/tonpair-notosanstc-vf.woff2?v=23") format("woff2-variations");
   font-weight: 200 700;
   font-style: normal;
   font-display: swap;
@@ -1682,3 +1682,19 @@ p, li, td, figcaption, blockquote { text-wrap: pretty; }
 .tail-nowrap { white-space: nowrap; }
 
 .price, .link-arrow, .price-table td.amount { white-space: nowrap; }
+
+/* 回到頂端鈕、文章分享框（2026-11-06 移植）。顏色一律走變數以相容深色模式 */
+.to-top { position: fixed; right: 16px; bottom: 84px; z-index: 40; width: 40px; height: 40px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center; cursor: pointer;
+  background: var(--card); color: var(--ink); border: 1px solid var(--line); box-shadow: 0 2px 8px rgba(0,0,0,.12); }
+.to-top[hidden] { display: none; }
+.to-top svg { width: 20px; height: 20px; }
+.to-top:hover { opacity: .85; }
+@media (max-width: 640px) { .to-top { right: 10px; bottom: 140px; } }
+.share-box { max-width: var(--maxw-prose); margin: 28px auto 0; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.share-label { color: var(--muted); font-size: .92rem; }
+@media print { .site-header, .site-footer, .contact-fab, .to-top, .share-box, .nav-toggle { display: none !important; } body { background: #fff; color: #000; } a { color: inherit; text-decoration: underline; } }
+
+.footer-bottom a[href$="privacy"] { text-decoration: underline; text-underline-offset: 3px; }
+.share-box .share-btn { background: var(--card); color: var(--ink); border: 1px solid var(--line); border-radius: var(--radius, 14px); padding: 8px 18px; font: inherit; font-size: .92rem; cursor: pointer; }
+.share-box .share-btn:hover { border-color: var(--gold-pure); }
