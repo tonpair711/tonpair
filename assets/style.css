@@ -1655,6 +1655,12 @@ label.check {
   .contact-fab a.fab-mail img { width: 21px; height: 16px; }
 }
 
+.nb { display: inline-block; max-width: 100%; }  /* 標題裡不想被拆開的詞組，窄螢幕放不下時才自己換行 */
+@media (max-width: 700px) {
+  .contact-fab { transition: opacity 0.25s ease; }
+  .contact-fab.fab-quiet { opacity: 0; pointer-events: none; }
+}
+
 /* ── 換頁載入畫面（srt 特效包 page-preloader-logo-sweep 的純 CSS 版，2026-10-19）──
    不用 JS、不改 HTML；CSS 自己收，所以 JS 壞了也不會卡住。減少動態的人不顯示。 */
 html{--pl-w:min(380px,80vw);--pl-h:calc(var(--pl-w) * 0.23881)}

@@ -10,7 +10,9 @@
  */
 export async function onRequest({ request, next }) {
   const url = new URL(request.url);
-  if (url.hostname === 'www.tonpair.com') {
+  // tonpair.pages.dev 也轉（2026-11-24）：不轉的話同一份內容有兩個網址。只比對完全相同的主機，
+  // 預覽部署（xxxx.tonpair.pages.dev）不受影響，才看得到未發布的版本
+  if (url.hostname === 'www.tonpair.com' || url.hostname === 'tonpair.pages.dev') {
     url.hostname = 'tonpair.com';
     return Response.redirect(url.toString(), 301);
   }

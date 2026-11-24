@@ -29,6 +29,13 @@
 /assets/main.js
   Cache-Control: public, max-age=31536000, immutable
 
+/assets/tech.css
+  Cache-Control: public, max-age=31536000, immutable
+/assets/tech.js
+  Cache-Control: public, max-age=31536000, immutable
+/assets/search.js
+  Cache-Control: public, max-age=31536000, immutable
+
 # 這幾支要跟著網站內容更新，不能長快取
 /sitemap.xml
   Cache-Control: public, max-age=3600

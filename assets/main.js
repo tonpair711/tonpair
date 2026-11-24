@@ -541,6 +541,21 @@
   }, { passive: true });
 })();
 
+/* 首頁手機版：捲過 300px 前先淡出浮動聯絡鈕（2026-11-24）。原本會蓋住首屏次要按鈕與小字；
+   首屏已有主要 CTA 與頁首按鈕，捲動後鈕就出現。沒有 JS 時維持顯示，內容不會不見 */
+(function () {
+  var fab = document.querySelector('.contact-fab');
+  if (!fab || !document.querySelector('.hero')) return;
+  var tick = false;
+  function sync() { fab.classList.toggle('fab-quiet', window.scrollY < 300); tick = false; }
+  sync();
+  window.addEventListener('scroll', function () {
+    if (tick) return;
+    tick = true;
+    requestAnimationFrame(sync);
+  }, { passive: true });
+})();
+
 /* 文章分享框（2026-11-06 由 hunglun2026 移植）：只加在知識庫與案例文章尾端。
    手機優先用系統分享選單，沒有就複製連結 */
 (function () {

@@ -1,6 +1,6 @@
 # 對頻設計
 
-> 完整內容版：https://tonpair.com/llms-full.txt
+> 完整內容版：[llms-full.txt](https://tonpair.com/llms-full.txt)
 
 > 對頻設計是台灣的網站與自動化工作室，持有 Google 認證，為中小企業、公司行號與店家提供網站開發與客製工具/腳本開發。
 
@@ -11,9 +11,9 @@
 - 工作室地址：台南市北區大興街226巷37號
 - 聯絡電話：0971-019-763
 - 電子信箱：tonpair711@gmail.com
-- 官方網站：https://tonpair.com/
+- [官方網站](https://tonpair.com/)
 - LINE 官方帳號：@007bbtpd
-- Instagram：https://www.instagram.com/tonpair.design/
+- [Instagram](https://www.instagram.com/tonpair.design/)
 - 一句話定位：協助中小企業、公司行號與店家把網站做對、被 Google／AI 搜尋找到的網站開發工作室
 
 ## 重要說明
@@ -45,98 +45,98 @@
 - 自動化腳本：NT$10,000 起
 - 網站維護方案：NT$3,000／月 起
 - 網站 × LINE × 自動化 整合方案：NT$78,000 起（形象官網＋LINE 官方帳號建置設定＋一支自動化腳本或小型客製工具＋上線後 3 個月維護）
-估價前免費諮詢。詳細表格：https://tonpair.com/services#pricing
+估價前免費諮詢。詳細表格：[收費表](https://tonpair.com/services#pricing)
 
 ## 合作流程
 免費諮詢與估價 → 提案與確認 → 開發與階段確認 → 上線與後續維護，全程線上溝通即可完成。
 
 ## 重要頁面
-- 首頁：https://tonpair.com/
-- 關於我們：https://tonpair.com/about
-- 服務項目：https://tonpair.com/services
-  - SEO／AEO／GEO 搜尋與 AI 能見度（三者差別、實際做法九項、包含在哪些方案裡、不承諾排名）：https://tonpair.com/services/seo-aeo-geo
-  - 一頁式網站製作（NT$15,000 起，包含項目、適合誰、要準備什麼、流程與加購）：https://tonpair.com/services/one-page-website
-  - 形象官網製作（約 5～7 頁 NT$48,000 起，每項服務各自一頁、真實案例、產權歸店家）：https://tonpair.com/services/business-website
-  - LINE 官方帳號代設定（圖文選單 NT$6,800 起、接單自動化 NT$15,000 起，做得到與做不到）：https://tonpair.com/services/line-official-account
-  - 新營網頁設計（服務台南新營與溪北各區店家，全程線上、價格同收費表、在地搜尋設定）：https://tonpair.com/services/tainan-xinying-website
-  - 嘉義網頁設計（服務嘉義市與嘉義縣店家、工廠與公司，全程線上、價格同收費表；目前案例在台南與新營一帶，嘉義尚無）：https://tonpair.com/services/chiayi-website
-  - 美業工作室網站與 LINE 預約（作品價目、預約三種做法怎麼選，案例伊登森活）：https://tonpair.com/services/beauty-studio-website
-  - 工廠與傳統產業官網（產品規格、設備、詢價表單與 LINE，案例新美印務基地）：https://tonpair.com/services/factory-b2b-website
-  - 餐飲烘焙伴手禮的 LINE 接單與預購頁（目前沒有這類案例，做法同我們自己的官方帳號）：https://tonpair.com/services/food-line-ordering
-  - 補習班與才藝教室的 LINE 官方帳號與網站（課表、學費、請假、試聽的自動回覆，價格同收費表，做得到與做不到）：https://tonpair.com/services/cram-school-line-website
-  - 小型 CRM 客戶管理工具（客戶資料、往來紀錄、標籤、跟進提醒，NT$25,000 起屬小型客製工具，適合與不適合誰）：https://tonpair.com/services/crm
-  - 購物網站製作（商品頁、購物車、金流串接、後台與訂單管理，NT$98,000 起，商品約 50 項以內，適合與不適合誰、不含哪些）：https://tonpair.com/services/ecommerce-website
-- 案例：https://tonpair.com/portfolio
-  - 伊登森活 Idun Beauty SPA 品牌官網（台南美容 SPA，8 頁形象官網＋SEO 多頁架構）：https://idun10.pages.dev/
-    完整案例說明（一頁式改多頁的原因、做法與交付內容）：https://tonpair.com/cases/idun-beauty-spa-website
-  - 喜翻親子感統遊戲空間（台南新營親子遊戲空間；官網、免下載 App 的會員累點系統、LINE 官方帳號）：https://xifun.tonpair.com
-    完整案例說明（官網與 LINE 官方帳號、免下載 App 的掃碼流程、先進先出扣點、四層權限）：https://tonpair.com/cases/xifun-website-member-system
-  - 新美印務基地（台南新營 1989 年開業的印刷影印店，改名換品牌，新 LOGO、形象官網與 LINE 官方帳號）：https://www.xmprintbase.com/
-- 從草稿到上線（兩個案例的過程，捲動式頁面）：https://tonpair.com/journey
-- Google 認證（本團隊持有的認證證書）：https://tonpair.com/google-education
-- 聯絡我們：https://tonpair.com/contact
-- 免費官網健檢（留下網址或 Google 地圖店名，兩個工作天內寄 6 項手機實測紀錄，免費）：https://tonpair.com/audit
-- 同業合作（設計師、印刷行、廣告公司的網頁技術後援，單一窗口、可用對方名義交付）：https://tonpair.com/partner
-- 隱私權政策：https://tonpair.com/privacy
+- [首頁](https://tonpair.com/)
+- [關於我們](https://tonpair.com/about)
+- [服務項目](https://tonpair.com/services)
+  - [SEO／AEO／GEO 搜尋與 AI 能見度](https://tonpair.com/services/seo-aeo-geo)：三者差別、實際做法九項、包含在哪些方案裡、不承諾排名
+  - [一頁式網站製作](https://tonpair.com/services/one-page-website)：NT$15,000 起，包含項目、適合誰、要準備什麼、流程與加購
+  - [形象官網製作](https://tonpair.com/services/business-website)：約 5～7 頁 NT$48,000 起，每項服務各自一頁、真實案例、產權歸店家
+  - [LINE 官方帳號代設定](https://tonpair.com/services/line-official-account)：圖文選單 NT$6,800 起、接單自動化 NT$15,000 起，做得到與做不到
+  - [新營網頁設計](https://tonpair.com/services/tainan-xinying-website)：服務台南新營與溪北各區店家，全程線上、價格同收費表、在地搜尋設定
+  - [嘉義網頁設計](https://tonpair.com/services/chiayi-website)：服務嘉義市與嘉義縣店家、工廠與公司，全程線上、價格同收費表；目前案例在台南與新營一帶，嘉義尚無
+  - [美業工作室網站與 LINE 預約](https://tonpair.com/services/beauty-studio-website)：作品價目、預約三種做法怎麼選，案例伊登森活
+  - [工廠與傳統產業官網](https://tonpair.com/services/factory-b2b-website)：產品規格、設備、詢價表單與 LINE，案例新美印務基地
+  - [餐飲烘焙伴手禮的 LINE 接單與預購頁](https://tonpair.com/services/food-line-ordering)：目前沒有這類案例，做法同我們自己的官方帳號
+  - [補習班與才藝教室的 LINE 官方帳號與網站](https://tonpair.com/services/cram-school-line-website)：課表、學費、請假、試聽的自動回覆，價格同收費表，做得到與做不到
+  - [小型 CRM 客戶管理工具](https://tonpair.com/services/crm)：客戶資料、往來紀錄、標籤、跟進提醒，NT$25,000 起屬小型客製工具，適合與不適合誰
+  - [購物網站製作](https://tonpair.com/services/ecommerce-website)：商品頁、購物車、金流串接、後台與訂單管理，NT$98,000 起，商品約 50 項以內，適合與不適合誰、不含哪些
+- [案例](https://tonpair.com/portfolio)
+  - [伊登森活 Idun Beauty SPA 品牌官網](https://idun10.pages.dev/)：台南美容 SPA，8 頁形象官網＋SEO 多頁架構
+    完整案例說明（一頁式改多頁的原因、做法與交付內容）：[https://tonpair.com/cases/idun-beauty-spa-website](https://tonpair.com/cases/idun-beauty-spa-website)
+  - [喜翻親子感統遊戲空間](https://xifun.tonpair.com)：台南新營親子遊戲空間；官網、免下載 App 的會員累點系統、LINE 官方帳號
+    完整案例說明（官網與 LINE 官方帳號、免下載 App 的掃碼流程、先進先出扣點、四層權限）：[https://tonpair.com/cases/xifun-website-member-system](https://tonpair.com/cases/xifun-website-member-system)
+  - [新美印務基地](https://www.xmprintbase.com/)：台南新營 1989 年開業的印刷影印店，改名換品牌，新 LOGO、形象官網與 LINE 官方帳號
+- [從草稿到上線](https://tonpair.com/journey)：兩個案例的過程，捲動式頁面
+- [Google 認證](https://tonpair.com/google-education)：本團隊持有的認證證書
+- [聯絡我們](https://tonpair.com/contact)
+- [免費官網健檢](https://tonpair.com/audit)：留下網址或 Google 地圖店名，兩個工作天內寄 6 項手機實測紀錄，免費
+- [同業合作](https://tonpair.com/partner)：設計師、印刷行、廣告公司的網頁技術後援，單一窗口、可用對方名義交付
+- [隱私權政策](https://tonpair.com/privacy)
 
 ## 免費資源（本團隊自製、免費開放的小工具）
-索引：https://tonpair.com/resources/
-- 邊玩邊變強（給國小學生的數學練習遊戲）：https://game.tonpair.com/
+索引：[https://tonpair.com/resources/](https://tonpair.com/resources/)
+- [邊玩邊變強](https://game.tonpair.com/)：給國小學生的數學練習遊戲
   打怪練九九乘法、加法、減法，數字範圍可選 10／20／50／100；
   另有注音符號與英文字母題型，用聽發音選答案、題目會唸出來，適合還不認得字的低年級。
   網頁遊戲，不用安裝也不用註冊，手機與電腦都能玩，進度存在使用者自己的瀏覽器。
   由對頻設計自行開發並免費開放。
 
 ## 店家知識庫（資訊型內容，主題群集：台灣店家的網站與自動化）
-索引：https://tonpair.com/knowledge/
-- 主題：選擇與費用（8 篇）：https://tonpair.com/knowledge/topic/choose-and-price
-- 主題：製作流程與維護（6 篇）：https://tonpair.com/knowledge/topic/build-and-maintain
-- 主題：在地搜尋與 Google 商家（5 篇）：https://tonpair.com/knowledge/topic/local-search
-- 主題：SEO 基本功與內容（6 篇）：https://tonpair.com/knowledge/topic/seo-and-content
-- 主題：AI 搜尋（5 篇）：https://tonpair.com/knowledge/topic/ai-search
-- 主題：LINE 與接單自動化（5 篇）：https://tonpair.com/knowledge/topic/line-automation
-- 主題：客戶管理 CRM（5 篇）：https://tonpair.com/knowledge/topic/crm
-- 只有 FB 粉專就夠了嗎？粉專、官網、Google 商家檔案差在哪：https://tonpair.com/knowledge/website-vs-fanpage
-- 台南店家做一個網站要多少錢？費用是怎麼算出來的：https://tonpair.com/knowledge/website-cost
-- 台南、新營、嘉義找網頁設計怎麼選？平台、工作室、設計公司比較（2026）：https://tonpair.com/knowledge/choose-web-designer-tainan-chiayi
-- LINE 訂單、手抄表單怎麼自動化？小店常見的三種做法：https://tonpair.com/knowledge/order-automation
-- 台南店家 LINE 官方帳號怎麼自動接單？關鍵字自動回覆實務：https://tonpair.com/knowledge/line-bot-order-automation
-- 台南店家 Google 商家檔案怎麼設定，客人搜店名才找得到你：https://tonpair.com/knowledge/google-business-profile
-- 台南店家一頁式網站是什麼？跟形象官網怎麼選：https://tonpair.com/knowledge/landing-page-vs-website
-- 自己用 Wix、Canva 架站，還是找人做？誠實比較：https://tonpair.com/knowledge/diy-website-builder
-- 做一個網站要多久？流程、卡點與你要先準備的東西：https://tonpair.com/knowledge/website-process
-- 網域要自己買嗎？.com 與 .com.tw 怎麼選：https://tonpair.com/knowledge/domain-hosting
-- ChatGPT 會不會推薦我的店？AI 搜尋時代小店該做什麼：https://tonpair.com/knowledge/ai-search-visibility
-- 為什麼品牌需要官方網站？Google 與 AI 都在找一個信任的來源：https://tonpair.com/knowledge/why-official-website
-- AI 時代，還需要做官方網站嗎？：https://tonpair.com/knowledge/ai-era-official-website
-- 蝦皮、IG 賣場做得好好的，為什麼還要做官網？：https://tonpair.com/knowledge/shopee-ig-store-vs-own-website
-- 網站做好了，為什麼 Google 搜不到？：https://tonpair.com/knowledge/not-found-on-google
-- 舊網站要翻新還是重做？三個判斷點：https://tonpair.com/knowledge/website-redesign
-- 網站做完就不用管了嗎？維護費在付什麼：https://tonpair.com/knowledge/website-maintenance
-- 手機版跑版怎麼辦？RWD 是什麼、為什麼影響排名：https://tonpair.com/knowledge/mobile-friendly
-- 小店網站要做哪些 SEO 基本功，客人才搜得到你：https://tonpair.com/knowledge/seo-basics
-- 網址前面沒有小鎖頭，客人會不會不信任？：https://tonpair.com/knowledge/ssl-https
-- 要不要做會員或集點系統，先問這三個問題：https://tonpair.com/knowledge/membership-loyalty-system
-- 小店要不要寫文章、經營內容？先看這篇再決定：https://tonpair.com/knowledge/content-marketing
-- 結構化資料（Schema）是什麼？為什麼你的店在搜尋結果比較好看：https://tonpair.com/knowledge/schema-basics
-- SEO 要多久才看得到效果？合理的期待是什麼：https://tonpair.com/knowledge/seo-timeline
-- 台南店家 LINE 官方帳號怎麼經營？圖文選單與自動回覆實務：https://tonpair.com/knowledge/line-oa
-- 網站速度會不會影響排名？Core Web Vitals 是什麼：https://tonpair.com/knowledge/webperf
-- Google 評論怎麼經營？怎麼請客人留、負評怎麼回：https://tonpair.com/knowledge/google-reviews
-- Google Search Console 是什麼？店家新手要看哪幾個地方：https://tonpair.com/knowledge/search-console
-- 客人搜「附近的店」，為什麼沒有出現我？：https://tonpair.com/knowledge/local-search-near-me
-- AI 把我的店講錯了，怎麼辦？：https://tonpair.com/knowledge/ai-wrong-info
-- Google 搜尋上面的 AI 摘要，會讓客人不點進我的網站嗎？：https://tonpair.com/knowledge/ai-overviews
-- AEO 是什麼？跟 SEO 差在哪，小店兩個都要做嗎：https://tonpair.com/knowledge/aeo-vs-seo
-- 網站常見問題（FAQ）怎麼寫，客人看得懂、AI 也抓得到：https://tonpair.com/knowledge/faq-writing
-- 保證排名第一、保證被 AI 推薦？聽到這幾句話先停下來：https://tonpair.com/knowledge/seo-guarantee-red-flags
-- 網站報價單怎麼看？簽約前要問清楚的八件事：https://tonpair.com/knowledge/website-quote-checklist
-- CRM 是什麼？小店老闆也看得懂的白話解釋：https://tonpair.com/knowledge/what-is-crm
-- CRM 常見功能有哪些？小店真正用得到的是哪幾個：https://tonpair.com/knowledge/crm-features
-- 用 Excel 或 LINE 記客人，跟 CRM 差在哪？：https://tonpair.com/knowledge/crm-vs-excel-line
-- 小店需要 CRM 嗎？先看這三個判斷訊號：https://tonpair.com/knowledge/small-shop-need-crm
-- CRM 跟會員集點系統差在哪？兩個是同一件事嗎：https://tonpair.com/knowledge/crm-vs-membership-system
-- 美業與預約制工作室，預約該用 LINE、表單、預約平台，還是自己的系統？：https://tonpair.com/knowledge/beauty-booking-options
+索引：[https://tonpair.com/knowledge/](https://tonpair.com/knowledge/)
+- 主題：選擇與費用（8 篇）：[https://tonpair.com/knowledge/topic/choose-and-price](https://tonpair.com/knowledge/topic/choose-and-price)
+- 主題：製作流程與維護（6 篇）：[https://tonpair.com/knowledge/topic/build-and-maintain](https://tonpair.com/knowledge/topic/build-and-maintain)
+- 主題：在地搜尋與 Google 商家（5 篇）：[https://tonpair.com/knowledge/topic/local-search](https://tonpair.com/knowledge/topic/local-search)
+- 主題：SEO 基本功與內容（6 篇）：[https://tonpair.com/knowledge/topic/seo-and-content](https://tonpair.com/knowledge/topic/seo-and-content)
+- 主題：AI 搜尋（5 篇）：[https://tonpair.com/knowledge/topic/ai-search](https://tonpair.com/knowledge/topic/ai-search)
+- 主題：LINE 與接單自動化（5 篇）：[https://tonpair.com/knowledge/topic/line-automation](https://tonpair.com/knowledge/topic/line-automation)
+- 主題：客戶管理 CRM（5 篇）：[https://tonpair.com/knowledge/topic/crm](https://tonpair.com/knowledge/topic/crm)
+- [只有 FB 粉專就夠了嗎？粉專、官網、Google 商家檔案差在哪](https://tonpair.com/knowledge/website-vs-fanpage)
+- [台南店家做一個網站要多少錢？費用是怎麼算出來的](https://tonpair.com/knowledge/website-cost)
+- [台南、新營、嘉義找網頁設計怎麼選？平台、工作室、設計公司比較](https://tonpair.com/knowledge/choose-web-designer-tainan-chiayi)：2026
+- [LINE 訂單、手抄表單怎麼自動化？小店常見的三種做法](https://tonpair.com/knowledge/order-automation)
+- [台南店家 LINE 官方帳號怎麼自動接單？關鍵字自動回覆實務](https://tonpair.com/knowledge/line-bot-order-automation)
+- [台南店家 Google 商家檔案怎麼設定，客人搜店名才找得到你](https://tonpair.com/knowledge/google-business-profile)
+- [台南店家一頁式網站是什麼？跟形象官網怎麼選](https://tonpair.com/knowledge/landing-page-vs-website)
+- [自己用 Wix、Canva 架站，還是找人做？誠實比較](https://tonpair.com/knowledge/diy-website-builder)
+- [做一個網站要多久？流程、卡點與你要先準備的東西](https://tonpair.com/knowledge/website-process)
+- [網域要自己買嗎？.com 與 .com.tw 怎麼選](https://tonpair.com/knowledge/domain-hosting)
+- [ChatGPT 會不會推薦我的店？AI 搜尋時代小店該做什麼](https://tonpair.com/knowledge/ai-search-visibility)
+- [為什麼品牌需要官方網站？Google 與 AI 都在找一個信任的來源](https://tonpair.com/knowledge/why-official-website)
+- [AI 時代，還需要做官方網站嗎？](https://tonpair.com/knowledge/ai-era-official-website)
+- [蝦皮、IG 賣場做得好好的，為什麼還要做官網？](https://tonpair.com/knowledge/shopee-ig-store-vs-own-website)
+- [網站做好了，為什麼 Google 搜不到？](https://tonpair.com/knowledge/not-found-on-google)
+- [舊網站要翻新還是重做？三個判斷點](https://tonpair.com/knowledge/website-redesign)
+- [網站做完就不用管了嗎？維護費在付什麼](https://tonpair.com/knowledge/website-maintenance)
+- [手機版跑版怎麼辦？RWD 是什麼、為什麼影響排名](https://tonpair.com/knowledge/mobile-friendly)
+- [小店網站要做哪些 SEO 基本功，客人才搜得到你](https://tonpair.com/knowledge/seo-basics)
+- [網址前面沒有小鎖頭，客人會不會不信任？](https://tonpair.com/knowledge/ssl-https)
+- [要不要做會員或集點系統，先問這三個問題](https://tonpair.com/knowledge/membership-loyalty-system)
+- [小店要不要寫文章、經營內容？先看這篇再決定](https://tonpair.com/knowledge/content-marketing)
+- 結構化資料（Schema）是什麼？為什麼你的店在搜尋結果比較好看：[https://tonpair.com/knowledge/schema-basics](https://tonpair.com/knowledge/schema-basics)
+- [SEO 要多久才看得到效果？合理的期待是什麼](https://tonpair.com/knowledge/seo-timeline)
+- [台南店家 LINE 官方帳號怎麼經營？圖文選單與自動回覆實務](https://tonpair.com/knowledge/line-oa)
+- [網站速度會不會影響排名？Core Web Vitals 是什麼](https://tonpair.com/knowledge/webperf)
+- [Google 評論怎麼經營？怎麼請客人留、負評怎麼回](https://tonpair.com/knowledge/google-reviews)
+- [Google Search Console 是什麼？店家新手要看哪幾個地方](https://tonpair.com/knowledge/search-console)
+- [客人搜「附近的店」，為什麼沒有出現我？](https://tonpair.com/knowledge/local-search-near-me)
+- [AI 把我的店講錯了，怎麼辦？](https://tonpair.com/knowledge/ai-wrong-info)
+- [Google 搜尋上面的 AI 摘要，會讓客人不點進我的網站嗎？](https://tonpair.com/knowledge/ai-overviews)
+- [AEO 是什麼？跟 SEO 差在哪，小店兩個都要做嗎](https://tonpair.com/knowledge/aeo-vs-seo)
+- 網站常見問題（FAQ）怎麼寫，客人看得懂、AI 也抓得到：[https://tonpair.com/knowledge/faq-writing](https://tonpair.com/knowledge/faq-writing)
+- [保證排名第一、保證被 AI 推薦？聽到這幾句話先停下來](https://tonpair.com/knowledge/seo-guarantee-red-flags)
+- [網站報價單怎麼看？簽約前要問清楚的八件事](https://tonpair.com/knowledge/website-quote-checklist)
+- [CRM 是什麼？小店老闆也看得懂的白話解釋](https://tonpair.com/knowledge/what-is-crm)
+- [CRM 常見功能有哪些？小店真正用得到的是哪幾個](https://tonpair.com/knowledge/crm-features)
+- [用 Excel 或 LINE 記客人，跟 CRM 差在哪？](https://tonpair.com/knowledge/crm-vs-excel-line)
+- [小店需要 CRM 嗎？先看這三個判斷訊號](https://tonpair.com/knowledge/small-shop-need-crm)
+- [CRM 跟會員集點系統差在哪？兩個是同一件事嗎](https://tonpair.com/knowledge/crm-vs-membership-system)
+- [美業與預約制工作室，預約該用 LINE、表單、預約平台，還是自己的系統？](https://tonpair.com/knowledge/beauty-booking-options)
 
 ## 常見問題
 Q: 對頻設計可以幫我做什麼？
