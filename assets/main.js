@@ -292,6 +292,53 @@
     }
   });
 
+  /* ---------- 電腦版 LINE 連結：彈出 ID 小卡，不跳 QR Code ----------
+     line.me/R/ti/p 在電腦瀏覽器只會顯示要用手機掃的 QR Code，沒有意義。
+     有滑鼠的裝置改成在按鈕旁彈出 ID＋複製鈕；手機（觸控）照舊直接開 LINE。
+     沿用 hunglun2026 的 .fab-pop，但頁尾與頁內按鈕也要用，所以改成事件委派＋fixed 定位。 */
+  if (window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    var linePop = null, lineAnchor = null;
+    var LINE_ID = '@007bbtpd';
+    var closeLinePop = function () {
+      if (linePop) { linePop.remove(); linePop = null; lineAnchor = null; }
+    };
+    var openLinePop = function (a) {
+      closeLinePop();
+      linePop = document.createElement('div');
+      linePop.className = 'line-pop';
+      linePop.setAttribute('role', 'dialog');
+      linePop.setAttribute('aria-label', 'LINE 官方帳號 ID');
+      linePop.innerHTML = '<b></b><button type="button" class="fc-copy" data-label="複製 ID">複製 ID</button>' +
+        '<small>電腦版請在 LINE 搜尋這個 ID 加入好友</small>' +
+        '<a href="' + a.href + '" target="_blank" rel="noopener">或用手機開啟</a>';
+      linePop.querySelector('b').textContent = LINE_ID;
+      linePop.querySelector('.fc-copy').setAttribute('data-copy', LINE_ID);
+      document.body.appendChild(linePop);
+      lineAnchor = a;
+      // 定位：優先放在按鈕上方，上方空間不夠就放下方；水平貼齊按鈕右緣但不超出視窗
+      var r = a.getBoundingClientRect(), pw = linePop.offsetWidth, ph = linePop.offsetHeight;
+      var top = r.top - ph - 10;
+      if (top < 8) top = r.bottom + 10;
+      var left = Math.min(Math.max(8, r.right - pw), window.innerWidth - pw - 8);
+      linePop.style.top = top + 'px';
+      linePop.style.left = left + 'px';
+    };
+    document.addEventListener('click', function (e) {
+      var t = e.target.closest ? e.target : null;
+      if (!t) return;
+      var a = t.closest('a[href*="line.me/R/ti/p"], a[href*="lin.ee/"]');
+      if (a && !a.closest('.line-pop')) {
+        e.preventDefault();
+        if (lineAnchor === a) closeLinePop(); else openLinePop(a);
+        return;
+      }
+      if (linePop && !t.closest('.line-pop')) closeLinePop();
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLinePop(); });
+    window.addEventListener('scroll', closeLinePop, { passive: true });
+    window.addEventListener('resize', closeLinePop);
+  }
+
   /* ---------- 首頁的網站效果展示：每張卡片就是那個效果本人 ----------
      卡片進入視野時演一次，「再看一次」可重播。
      reduced-motion 時一律直接呈現最終狀態（文字打完、數字到位、線已重合）。 */

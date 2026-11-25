@@ -1305,6 +1305,18 @@ label.check {
 .fc-copy.copied { border-color: #06c755; color: #06c755; }
 @media (max-width: 420px) { .fc-copy { padding: 8px 10px; font-size: 0.74rem; } }
 
+/* 電腦版 LINE 小卡（main.js 動態插入，fixed 定位；顏色走變數，深色模式自動跟著換） */
+.line-pop {
+  position: fixed; z-index: 1000; width: max-content; max-width: 280px;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px;
+  padding: 14px 16px; background: var(--card); color: var(--text);
+  border: 1px solid var(--line); border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+}
+.line-pop b { font-size: 1.05rem; font-weight: 600; }
+.line-pop small { flex-basis: 100%; color: var(--muted); font-size: 0.82rem; }
+.line-pop a { flex-basis: 100%; font-size: 0.82rem; color: var(--gold); text-decoration: underline; }
+
 /* 複製按鈕固定寬度：不然「複製 ID／複製信箱／複製電話」字數不同，
    會把左邊的卡片擠成三種寬度，整排看起來像沒對齊 */
 .fc-copy { flex: none; min-width: 88px; justify-content: center; text-align: center; }
