@@ -46,7 +46,7 @@
       '    <input type="search" placeholder="搜尋頁面、服務、知識庫文章…" autocomplete="off" aria-label="搜尋關鍵字">' +
       '    <button type="button" class="search-modal-close" data-search-close aria-label="關閉搜尋">✕</button>' +
       '  </div>' +
-      '  <p class="search-modal-empty" hidden>找不到符合的頁面，可以看看 <a href="' + pagePath('contact.html') + '">直接聯絡我們</a>。</p>' +
+      '  <p class="search-modal-empty" hidden>找不到符合的頁面，可以看看 <a href="' + pagePath('contact') + '">直接聯絡我們</a>。</p>' +
       '  <ul class="search-modal-list"></ul>' +
       '</div>';
     document.body.appendChild(modal);
@@ -88,7 +88,7 @@
     hits.forEach(function (e) {
       var li = document.createElement('li');
       var a = document.createElement('a');
-      a.href = pagePath(e.url === '/' ? 'index.html' : e.url.slice(1) + '.html');
+      a.href = pagePath(e.url === '/' ? '' : e.url.slice(1)) || './';
       a.innerHTML = '<strong>' + escapeHtml(e.h1 || e.title) + '</strong><span>' + escapeHtml(e.desc) + '</span>';
       li.appendChild(a);
       list.appendChild(li);

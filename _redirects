@@ -17,3 +17,9 @@ https://www.tonpair.com/* https://tonpair.com/:splat 301
 /cases/hunglun-website /portfolio 301
 /cases/loverolling-member-system /cases/xifun-website-member-system 301
 /gemini-education /google-education 301
+
+# 舊網址的 .html 寫法（2026-11-25）：Search Console 回報 /cases/hunglun-website.html 與 /gemini-education.html 是 404，
+# 因為上面三條只涵蓋不帶副檔名的寫法；.html 版本檔案已不存在，Pages 不會自動接到上面的規則。
+/cases/hunglun-website.html /portfolio 301
+/cases/loverolling-member-system.html /cases/xifun-website-member-system 301
+/gemini-education.html /google-education 301
